@@ -25,10 +25,4 @@ export default {
 </script>
 
 <style>
-ul {
-  display: flex;
-}
-a {
-  color: black;
-}
 </style>

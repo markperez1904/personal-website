@@ -1,46 +1,59 @@
 <template>
   <div>
-    <nav class="navbar" role="navigation">
-      <ul class="navbar-start">
-        <li class="navbar-brand navbar-item">
-          <n-link to="/">Mark Perez</n-link>
-        </li>
-        <li class="navbar-item">
-          <n-link to="/blog">Blog</n-link>
-        </li>
-        <li class="navbar-item">
-          <n-link to="/gear">Gear</n-link>
-        </li>
-      </ul>
-      <ul class="navbar-end">
-        <li class="navbar-item">
-          <n-link to="/contact">Contact</n-link>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <n-link class="navbar-item" to="/">Mark Perez</n-link>
+
+        <div class="navbar-burger" @click="showNav = !showNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="navbar-menu" :class="{ 'is-active': showNav }">
+        <div class="navbar-start">
+          <n-link class="navbar-item" to="/blog">Blog</n-link>
+          <n-link class="navbar-item" to="/gear">Gear</n-link>
+        </div>
+
+        <div class="navbar-end">
+          <n-link class="navbar-item" to="/contact">Contact</n-link>
+        </div>
+      </div>
     </nav>
   </div>
 </template>
 
+
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      showNav: false
+    }
+  }
+}
 </script>
 
 <style scoped>
 /* elements */
-li{
-  margin-right: 1rem;
+a:hover,
+a:active,
+a:focus {
+  color: rgb(29, 88, 29);
+  background-color: white;
 }
 /* classes */
 
 .navbar {
-  display: flex;
   margin-top: 10px;
 }
-.navbar-item{
+.navbar-item {
   font-size: 18px;
+  margin: auto 1rem;
 }
-.navbar-brand{
+.navbar-brand {
   font-size: 22px;
 }
-
 </style>

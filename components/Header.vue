@@ -1,12 +1,13 @@
 <template>
-  <header class="container">
-
-  </header>
+  <div>
+    <header class="container">
+      <img src="/assets/images/dark_tree.jpg" alt />
+    </header>
+  </div>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style scoped>

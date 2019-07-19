@@ -50,5 +50,8 @@ ion-icon {
 a {
   color: rgb(29, 88, 29);
 }
+footer {
+	margin: auto 1rem;
+}
 </style>
 
