@@ -11,7 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.10"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
