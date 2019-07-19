@@ -30,9 +30,6 @@ export default {}
 li{
   margin-right: 1rem;
 }
-a {
-  color: black;
-}
 /* classes */
 
 .navbar {
