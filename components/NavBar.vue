@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="navbar">
+  <div class="container">
+    <nav class="navbar is-fixed-top">
       <div class="navbar-brand">
         <n-link class="navbar-item" to="/">Mark Perez</n-link>
 
@@ -12,16 +12,14 @@
       </div>
 
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
-        <div class="navbar-start">
+        <div @click="showNav = !showNav" class="navbar-end">
           <n-link class="navbar-item" to="/blog">Blog</n-link>
           <n-link class="navbar-item" to="/gear">Gear</n-link>
-        </div>
-
-        <div class="navbar-end">
-          <n-link class="navbar-item" to="/contact">Contact</n-link>
+			 <n-link class="navbar-item" to="/contact">Contact</n-link>
         </div>
       </div>
     </nav>
+	 <hr>
   </div>
 </template>
 
@@ -42,18 +40,18 @@ a:hover,
 a:active,
 a:focus {
   color: rgb(29, 88, 29);
-  background-color: white;
+  background-color: transparent;
 }
 /* classes */
-
-.navbar {
-  margin-top: 10px;
+.navbar{
+	padding: 0 5rem;
 }
+
 .navbar-item {
   font-size: 18px;
-  margin: auto 1rem;
+  margin: 0 1rem;
 }
 .navbar-brand {
-  font-size: 22px;
+  font-size: 22;
 }
 </style>

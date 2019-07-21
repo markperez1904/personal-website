@@ -1,25 +1,31 @@
 <template>
-  <div class="container">
-    <app-header></app-header>
-    <app-navbar></app-navbar>
-    <hr />
-    <nuxt />
-    <hr />
-    <app-footer></app-footer>
+  <div>
+    <no-ssr>
+      <app-homenav v-if="getPath == '/'"></app-homenav>
+      <app-navbar v-else class="container"></app-navbar>
+      <nuxt />
+      <hr />
+      <app-footer class="container"></app-footer>
+    </no-ssr>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
+import HomeNav from '@/components/HomeNav.vue'
 
 export default {
+  computed: {
+    getPath() {
+      return this.$route.fullPath
+    }
+  },
   components: {
-    'app-header': Header,
     'app-navbar': NavBar,
-    'app-footer': Footer
+    'app-footer': Footer,
+    'app-homenav': HomeNav
   }
 }
 </script>

@@ -42,6 +42,7 @@ export default {
 <style scoped>
 footer {
   text-align: center;
+  	margin: auto 11rem;
 }
 ion-icon {
   font-size: 28px;
@@ -50,8 +51,8 @@ ion-icon {
 a {
   color: rgb(29, 88, 29);
 }
-footer {
-	margin: auto 1rem;
+.level{
+	margin-bottom: 1rem;
 }
 </style>
 
