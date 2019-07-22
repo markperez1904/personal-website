@@ -7,6 +7,7 @@
       <hr />
       <app-footer class="container"></app-footer>
     </no-ssr>
+	 <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </div>
 </template>
@@ -31,4 +32,7 @@ export default {
 </script>
 
 <style>
+body {
+	font-family: 'Oxygen', sans-serif;
+}
 </style>

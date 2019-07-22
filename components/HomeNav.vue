@@ -51,7 +51,7 @@
       </section>
       <section class="hero-foot">
         <div class="container has-text-centered">
-          <a href="#my-summary">
+          <a href="#" v-scroll-to="'#my-summary'">
             <b-button id="button" rounded>Read More</b-button>
           </a>
         </div>

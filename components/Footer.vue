@@ -18,7 +18,7 @@
       <small class="level-left">&copy; {{ getYear }} Mark Perez</small>
       <small>
         Made with &#x2764; in
-        <a href="nuxtjs.org" target="_blank">Nuxt</a>
+        <a href="https://nuxtjs.org" target="_blank">Nuxt</a>
       </small>
     </footer>
   </div>

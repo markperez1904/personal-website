@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.10"
+    "nuxt-buefy": "^0.3.10",
+    "vue-scrollto": "^2.15.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
