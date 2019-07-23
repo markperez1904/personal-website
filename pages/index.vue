@@ -3,7 +3,7 @@
     <h3 class="hero-head has-text-centered">Portfolio</h3>
 
     <header class="hero-body">
-      <section class="level">
+      <section class="level container">
         <figure class="has-text-centered box">
           <p class="title is-6 has-text-black">Personal Website</p>
           <p
@@ -35,7 +35,7 @@
             <b-button type="is-dark">
               <ion-icon id="icon" name="pulse"></ion-icon>Demo
             </b-button>
-          </a> -->
+          </a>-->
         </figure>
 
         <figure class="has-text-centered box">
@@ -52,7 +52,7 @@
             <b-button type="is-dark">
               <ion-icon id="icon" name="pulse"></ion-icon>Demo
             </b-button>
-          </a> -->
+          </a>-->
         </figure>
         <figure class="has-text-centered box">
           <p class="title is-6 has-text-black">Coming Soon...</p>
@@ -68,7 +68,7 @@
             <b-button type="is-dark">
               <ion-icon id="icon" name="pulse"></ion-icon>Demo
             </b-button>
-          </a> -->
+          </a>-->
         </figure>
       </section>
     </header>
@@ -90,6 +90,6 @@ button {
   letter-spacing: 15px;
 }
 .box {
-  margin: 0 2rem;
+  margin: 1rem 1rem;
 }
 </style>

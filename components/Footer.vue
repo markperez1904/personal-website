@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <footer class="container">
+  <div class="container">
+    <footer>
       <a href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos" target="_blank">
         <ion-icon name="logo-youtube"></ion-icon>
       </a>

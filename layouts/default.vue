@@ -2,10 +2,10 @@
   <div>
     <no-ssr>
       <app-homenav v-if="getPath == '/'"></app-homenav>
-      <app-navbar v-else class="container"></app-navbar>
+      <app-navbar v-else></app-navbar>
       <nuxt />
       <hr />
-      <app-footer class="container"></app-footer>
+      <app-footer></app-footer>
     </no-ssr>
 	 <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
