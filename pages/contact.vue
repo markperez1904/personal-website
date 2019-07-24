@@ -7,20 +7,13 @@
       <b-message class="column is-5" type="is-success">Message Sent!</b-message>
     </section>
 
-    <form
-      v-else
-      @submit="messageSent = !messageSent"
-      name="contact"
-      method="POST"
-      action="/contact"
-      netlify
-    >
+    <form @submit.prevent="handleSubmit" name="contact" method="POST" netlify>
       <b-field class="columns is-centered">
         <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
       </b-field>
 
       <b-field class="columns is-centered">
-        <b-input name="email" class="column is-5" placeholder="Email" type="email"></b-input>
+        <b-input name="email" class="column is-5" placeholder="Email" type="email" required></b-input>
       </b-field>
 
       <b-field class="columns is-centered">
@@ -31,11 +24,12 @@
           minlength="20"
           maxlength="500"
           placeholder="Message..."
+          required
         ></b-input>
       </b-field>
 
       <b-field class="columns is-centered">
-        <b-button type="submit" class="is-dark">Submit</b-button>
+        <button type="submit" class="button is-dark">Submit</button>
       </b-field>
     </form>
   </div>
@@ -55,13 +49,17 @@ export default {
     return {
       title: this.title,
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
           content: this.content
         }
       ]
+    }
+  },
+  methods: {
+    handleSubmit() {
+      this.messageSent = true
     }
   }
 }
