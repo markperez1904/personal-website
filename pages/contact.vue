@@ -12,7 +12,7 @@
       @submit="messageSent = !messageSent"
       name="contact"
       method="POST"
-      action="https://markperez.dev/contact"
+      action="/contact"
       netlify
     >
       <b-field class="columns is-centered">
