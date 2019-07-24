@@ -3,7 +3,7 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-    <form name="contact" method="POST" netlify>
+    <form name="contact" method="POST" action="/contact" netlify>
       <b-field class="columns is-centered">
         <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
       </b-field>
@@ -35,7 +35,6 @@
 export default {
   data() {
     return {
-      messageSent: false,
       title: 'Contact',
       content:
         'Feel free to send me an email. If possible, direct messages through LinkedIn is more preferable.'
