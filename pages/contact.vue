@@ -3,7 +3,7 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-    <form name="contact" method="POST" action="/contact" netlify>
+    <form name="contact" method="POST" action="/contact" netlify-honeypot="bot-field" data-netlify="true">
       <b-field class="columns is-centered">
         <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
       </b-field>
