@@ -3,12 +3,16 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-    <form name="contact" method="POST" action="/contact" netlify-honeypot="bot-field" data-netlify="true">
-      <p class="hidden">
-			<label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-		</p>
+	<section v-if="messageSent" class="columns is-centered">
+    <b-message type="is-success" class="column is-5">Message Sent!</b-message>
+	</section>
 
-		<b-field class="columns is-centered">
+    <form
+      @submit="handleRequest"
+      action="https://formspree.io/markperez1904@gmail.com"
+      method="POST"
+    >
+      <b-field class="columns is-centered">
         <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
       </b-field>
 
@@ -39,6 +43,7 @@
 export default {
   data() {
     return {
+      messageSent: false,
       title: 'Contact',
       content:
         'Feel free to send me an email. If possible, direct messages through LinkedIn is more preferable.'
@@ -55,6 +60,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    handleRequest() {
+      this.messageSent = true
+    }
   }
 }
 </script>
@@ -63,8 +73,8 @@ export default {
 .container {
   padding: 0 2rem;
 }
-.hidden{
-	display: none;
+.hidden {
+  display: none;
 }
 h1 {
   font-size: 30px;
