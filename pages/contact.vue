@@ -3,7 +3,18 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-    <form name="contact" method="POST" netlify>
+    <section v-if="messageSent" class="columns is-centered">
+      <b-message class="column is-5" type="is-success">Message Sent!</b-message>
+    </section>
+
+    <form
+      v-else
+      @submit="messageSent = !messageSent"
+      name="contact"
+      method="POST"
+      action="https://markperez.dev/contact"
+      netlify
+    >
       <b-field class="columns is-centered">
         <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
       </b-field>
@@ -24,7 +35,7 @@
       </b-field>
 
       <b-field class="columns is-centered">
-        <b-button class="is-dark" type="submit">Submit</b-button>
+        <b-button type="submit" class="is-dark">Submit</b-button>
       </b-field>
     </form>
   </div>
@@ -34,6 +45,7 @@
 export default {
   data() {
     return {
+      messageSent: false,
       title: 'Contact',
       content:
         'Feel free to send me an email. If possible, direct messages through LinkedIn is more preferable.'
