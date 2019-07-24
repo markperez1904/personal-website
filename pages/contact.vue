@@ -3,11 +3,7 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-    <section v-if="messageSent" class="columns is-centered">
-      <b-message class="column is-5" type="is-success">Message Sent!</b-message>
-    </section>
-
-    <form @submit.prevent="handleSubmit" name="contact" method="POST" netlify>
+    <form name="contact" method="POST" netlify>
       <b-field class="columns is-centered">
         <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
       </b-field>
@@ -55,11 +51,6 @@ export default {
           content: this.content
         }
       ]
-    }
-  },
-  methods: {
-    handleSubmit() {
-      this.messageSent = true
     }
   }
 }
