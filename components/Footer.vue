@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <footer>
+  <div class="container has-text-centered">
+    <footer class="columns is-centered">
       <a href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos" target="_blank">
         <ion-icon name="logo-youtube"></ion-icon>
       </a>
@@ -14,9 +14,9 @@
         <ion-icon name="logo-instagram"></ion-icon>
       </a>
     </footer>
-    <footer class="level">
-      <small class="level-left">&copy; {{ getYear }} Mark Perez</small>
-      <small>
+    <footer class="columns is-centered">
+      <small class="column is-narrow">&copy; {{ getYear }} Mark Perez</small>
+      <small class="column is-narrow">
         Made with &#x2764; in
         <a href="https://nuxtjs.org" target="_blank">Nuxt</a>
       </small>
@@ -40,19 +40,12 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  text-align: center;
-  margin: auto 5.5rem;
-}
 ion-icon {
   font-size: 28px;
   margin-right: 10px;
 }
 a {
   color: rgb(29, 88, 29);
-}
-.level {
-  margin-bottom: 1rem;
 }
 </style>
 

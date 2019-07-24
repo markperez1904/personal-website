@@ -1,6 +1,33 @@
 <template>
   <div class="container">
-    <form action method="get"></form>
+    <h1>{{title}}</h1>
+    <h2>{{content}}</h2>
+
+    <div class="field">
+      <form action method="get">
+        <b-field class="columns is-centered">
+          <b-input class="column is-5" placeholder="Name" type="text" required></b-input>
+        </b-field>
+
+        <b-field class="columns is-centered">
+          <b-input class="column is-5" placeholder="Email" type="email"></b-input>
+        </b-field>
+
+        <b-field class="columns is-centered">
+          <b-input
+            class="column is-5"
+            type="textarea"
+            minlength="20"
+            maxlength="500"
+            placeholder="Message..."
+          ></b-input>
+        </b-field>
+
+        <b-field class="columns is-centered">
+          <b-button class="is-dark" type="submit">Submit</b-button>
+        </b-field>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -30,4 +57,19 @@ export default {
 </script>
 
 <style scoped>
+.field .field {
+	margin-bottom: 0;
+}
+
+.container {
+  padding: 0 2rem;
+}
+h1 {
+  font-size: 30px;
+}
+
+h2,
+p {
+  margin: 2rem 0;
+}
 </style>
