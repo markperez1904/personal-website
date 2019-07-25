@@ -14,7 +14,6 @@ export default {
 }
 </script>
 
-
 <style scoped>
 .hero-head {
   margin-top: 2rem;
