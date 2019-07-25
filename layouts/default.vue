@@ -10,7 +10,6 @@
     <!-- Links to Google Fonts, Ion Icons, and Headless CMS -->
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </div>
 </template>
 
@@ -24,22 +23,6 @@ export default {
     getPath() {
       return this.$route.fullPath
     }
-  },
-  methods: {
-    netlifyWidget() {
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', user => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/'
-            })
-          }
-        })
-      }
-    }
-  },
-  created() {
-    this.netlifyWidget()
   },
   components: {
     'app-navbar': NavBar,
