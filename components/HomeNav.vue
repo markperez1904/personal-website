@@ -110,7 +110,7 @@ a:focus {
 }
 /* classes */
 .hero {
-  background-image: url('~assets/images/dark_tree.jpg');
+  background-image: url('~static/images/uploads/dark_tree.jpg');
   background-size: cover;
   height: 100vh;
 }
