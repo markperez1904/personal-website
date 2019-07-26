@@ -17,7 +17,7 @@
         <h5>Hardware</h5>
         <ul>
           <li>Laptop: XPS 13 (9360)</li>
-          <li>Keyboard: Velocifire VM01</li>
+          <li>Keyboard: Ducky One TKL LED</li>
           <li>Mouse: Logitech G402</li>
           <li>Monitor: Dell SE2219H</li>
           <li>Mic: Fifine USB Microphone</li>

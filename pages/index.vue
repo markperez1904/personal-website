@@ -1,5 +1,5 @@
 <template>
-  <div id="my-summary" class="hero is-black is-medium">
+  <div id="portfolio" class="hero is-black is-medium">
     <h3 class="hero-head has-text-centered">Portfolio</h3>
     <app-portfolio></app-portfolio>
   </div>

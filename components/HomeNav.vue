@@ -51,7 +51,7 @@
       </section>
       <section class="hero-foot">
         <div class="container has-text-centered">
-          <a href="#" v-scroll-to="'#my-summary'">
+          <a href="#" v-scroll-to="'#portfolio'">
             <b-button id="button" rounded>My Work</b-button>
           </a>
         </div>
@@ -110,7 +110,7 @@ a:focus {
 }
 /* classes */
 .hero {
-  background-image: url('~static/images/uploads/dark_tree.jpg');
+  background-image: url('~assets/images/dark_tree.jpg');
   background-size: cover;
   height: 100vh;
 }
