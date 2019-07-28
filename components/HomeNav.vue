@@ -1,66 +1,65 @@
 <template>
-    <div class="hero is-fullheight-with-navbar">
-      <section class="hero-head">
-        <nav class="navbar is-fixed-top">
-          <div class="navbar-brand">
+  <div class="hero is-fullheight-with-navbar">
+    <section class="hero-head navbar is-fixed-top">
+      <nav class="container">
+        <div class="navbar-brand">
+          <n-link
+            :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
+            class="navbar-item"
+            to="/"
+          >Mark Perez</n-link>
+
+          <div
+            class="navbar-burger burger"
+            :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
+            @click="showNav = !showNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="navbar-menu" :class="{ 'is-active': showNav }">
+          <div @click="showNav = !showNav" class="navbar-end">
             <n-link
               :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
               class="navbar-item"
-              to="/"
-            >Mark Perez</n-link>
-
-            <div
-              class="navbar-burger burger"
+              to="/blog"
+            >Blog</n-link>
+            <n-link
               :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-              @click="showNav = !showNav"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+              class="navbar-item"
+              to="/gear"
+            >Gear</n-link>
+            <n-link
+              :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
+              class="navbar-item"
+              to="/contact"
+            >Contact</n-link>
           </div>
-
-          <div class="navbar-menu" :class="{ 'is-active': showNav }">
-            <div @click="showNav = !showNav" class="navbar-end">
-              <n-link
-                :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-                class="navbar-item"
-                to="/blog"
-              >Blog</n-link>
-              <n-link
-                :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-                class="navbar-item"
-                to="/gear"
-              >Gear</n-link>
-              <n-link
-                :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-                class="navbar-item"
-                to="/contact"
-              >Contact</n-link>
-            </div>
-          </div>
-        </nav>
-      </section>
-      <section class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">Mark Perez</h1>
-          <h2
-            class="subtitle"
-          >Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.</h2>
         </div>
-      </section>
-      <section class="hero-foot">
-        <div class="container has-text-centered">
-          <a href="#" v-scroll-to="'#portfolio'">
-            <b-button id="button" rounded>My Work</b-button>
-          </a>
-        </div>
-      </section>
-    </div>
+      </nav>
+    </section>
+    <section class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Mark Perez</h1>
+        <h2
+          class="subtitle"
+        >Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.</h2>
+      </div>
+    </section>
+    <section class="hero-foot">
+      <div class="container has-text-centered">
+        <a href="#" v-scroll-to="'#portfolio'">
+          <b-button id="button" rounded>My Work</b-button>
+        </a>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -118,7 +117,7 @@ a:focus {
   color: white;
 }
 .navbar {
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 
 .navbar-change {
@@ -133,17 +132,18 @@ a:focus {
   color: white;
 }
 
-.navbar-menu {
-  background-color: transparent;
-}
-
 .navbar-item {
   font-size: 18px;
-  margin: 0 1rem;
+  padding-right: 2rem;
 }
 .navbar-brand {
   font-size: 22;
 }
+
+.navbar-menu {
+	background-color: transparent;
+}
+
 h1 {
   font-size: 2.3rem;
   letter-spacing: 15px;

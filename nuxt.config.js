@@ -1,3 +1,5 @@
+const PrismicConfig = require('./prismic.config')
+
 export default {
 	mode: 'universal',
 	/*
@@ -15,7 +17,19 @@ export default {
 					'Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.'
 			}
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/tux.ico' }]
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/tux.ico' }],
+
+		// Prismic CMS Configuration
+		script: [
+			{
+				innerHTML:
+					'{ window.prismic = { endpoint: "' +
+					PrismicConfig.apiEndpoint +
+					'"} }'
+			},
+			{ src: '//static.cdn.prismic.io/prismic.min.js' }
+		],
+		__dangerouslyDisableSanitizers: ['script']
 	},
 	/*
 	 ** Customize the progress-bar color

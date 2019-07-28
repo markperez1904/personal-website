@@ -7,6 +7,7 @@
 
 <script>
 import Portfolio from '@/components/Portfolio.vue'
+
 export default {
   components: {
     'app-portfolio': Portfolio
