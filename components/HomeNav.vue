@@ -109,15 +109,12 @@ a:focus {
 }
 /* classes */
 .hero {
-  background-image: url('~assets/images/dark_tree.jpg');
+  background-image: url('~assets/images/night_mountain.jpg');
   background-size: cover;
   height: 100vh;
 }
 .hero-body * {
   color: white;
-}
-.navbar {
-  padding: 0 2rem;
 }
 
 .navbar-change {
@@ -130,14 +127,6 @@ a:focus {
   background-color: transparent;
   transition: 0.2s;
   color: white;
-}
-
-.navbar-item {
-  font-size: 18px;
-  padding-right: 2rem;
-}
-.navbar-brand {
-  font-size: 22;
 }
 
 .navbar-menu {

@@ -45,16 +45,4 @@ a:focus {
   color: rgb(29, 88, 29);
   background-color: transparent;
 }
-/* classes */
-.navbar {
-  padding: 0 2rem;
-}
-
-.navbar-item {
-  font-size: 18px;
-  padding-right: 2rem;
-}
-.navbar-brand {
-  font-size: 22;
-}
 </style>

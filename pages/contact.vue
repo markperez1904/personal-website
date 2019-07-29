@@ -3,9 +3,9 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-	<section v-if="messageSent" class="columns is-centered">
-    <b-message type="is-success" class="column is-5">Message Sent!</b-message>
-	</section>
+    <section v-if="messageSent" class="columns is-centered">
+      <b-message type="is-success" class="column is-5">Message Sent!</b-message>
+    </section>
 
     <form
       @submit="handleRequest"
