@@ -17,7 +17,7 @@ export default {
 					'Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.'
 			}
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/tux.ico' }],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' }],
 
 		// Prismic CMS Configuration
 		script: [
