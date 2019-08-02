@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="link">
-    <h2 class="title is-6">{{ $prismic.richTextAsPlain(post.data.title) }}</h2>
-	 <img :src="post.data.image.url" alt="">
+    <h2 class="title is-4">{{ $prismic.richTextAsPlain(post.data.title) }}</h2>
+    <img :src="post.data.image.url" alt />
   </nuxt-link>
 </template>
 

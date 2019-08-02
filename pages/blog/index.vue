@@ -1,7 +1,8 @@
 <template>
   <div class="container">
-	  <h1>Blog</h1>
-	  <h2>Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.</h2>
+    <h1>Blog</h1>
+    <h2>Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.</h2>
+
     <section class="columns is-multiline is-centered">
       <article v-for="post in posts" :key="post.id" :post="post" class="box column is-3">
         <app-blogpost :post="post"></app-blogpost>
@@ -29,9 +30,6 @@ export default {
         Prismic.Predicates.at('document.type', 'blog_posts')
       )
 
-      // Load the edit button
-      if (process.client) window.prismic.setupEditButton()
-
       return {
         posts: document.results
       }
@@ -47,7 +45,7 @@ h1 {
   font-size: 30px;
 }
 
-h2{
+h2 {
   margin: 2rem 0;
 }
 .container {

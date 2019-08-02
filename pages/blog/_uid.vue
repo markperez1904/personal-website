@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-
-	   <h1 class="blog-title">{{ $prismic.richTextAsPlain(title) }}</h1>
-      <!-- Template for published date -->
+    <h1 class="blog-title">{{ $prismic.richTextAsPlain(title) }}</h1>
+	 <img :src="image" alt="">
+    <p>{{ $prismic.richTextAsPlain(content) }}</p>
   </div>
 </template>
 
@@ -20,8 +20,9 @@ export default {
 
       // Returns data to be used in template
       return {
-        title: post.data.title,
-        documents: post.data.body
+		  title: post.data.title,
+		  image: post.data.image.url,
+        content: post.data.content
       }
     } catch (e) {
       // Returns error page
