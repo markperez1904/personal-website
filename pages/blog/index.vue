@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    <h1>Blog</h1>
-    <h2>Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.</h2>
-
+    <h1>{{ title }}</h1>
+    <h2>{{ content }}</h2>
     <section class="columns is-multiline is-centered">
       <article v-for="post in posts" :key="post.id" :post="post" class="box column is-3">
         <app-blogpost :post="post"></app-blogpost>
@@ -21,7 +20,6 @@ export default {
   components: {
     'app-blogpost': BlogPost
   },
-
   async asyncData({ context, error, req }) {
     try {
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req })
@@ -31,10 +29,25 @@ export default {
       )
 
       return {
-        posts: document.results
+        posts: document.results,
+        title: 'Blog',
+        content:
+          'Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.'
       }
     } catch (e) {
       error({ statusCode: 404, message: 'Page not found' })
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.content
+        }
+      ]
     }
   }
 }
@@ -43,6 +56,7 @@ export default {
 <style scoped>
 h1 {
   font-size: 30px;
+  padding-top: 2rem;
 }
 
 h2 {

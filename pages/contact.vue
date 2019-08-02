@@ -78,6 +78,7 @@ export default {
 }
 h1 {
   font-size: 30px;
+  padding-top: 2rem;
 }
 
 h2,
