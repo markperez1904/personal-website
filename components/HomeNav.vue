@@ -41,6 +41,7 @@
         </div>
       </nav>
     </section>
+
     <section class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title">Mark Perez</h1>
@@ -49,6 +50,7 @@
         >Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.</h2>
       </div>
     </section>
+
     <section class="hero-foot">
       <div class="container has-text-centered">
         <a href="#" v-scroll-to="'#portfolio'">
@@ -130,7 +132,7 @@ a:focus {
 }
 
 .navbar-menu {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 h1 {

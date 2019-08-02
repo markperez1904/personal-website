@@ -19,7 +19,6 @@ export default {
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' }],
 
-		// Prismic CMS Configuration
 		script: [
 			{
 				innerHTML:
@@ -42,7 +41,12 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: ['./plugins/smoothScroll.js'],
+	plugins: [
+		'./plugins/smoothScroll.js',
+		'~/plugins/link-resolver.js',
+		'~/plugins/html-serializer.js',
+		'~/plugins/prismic-vue.js'
+	],
 	/*
 	 ** Nuxt.js modules
 	 */
@@ -51,9 +55,8 @@ export default {
 	 ** Build configuration
 	 */
 	build: {
-		/*
-		 ** You can extend webpack config here
-		 */
-		extend(config, ctx) {}
+		extend(config, ctx) {
+			config.resolve.alias['vue'] = 'vue/dist/vue.common'
+		}
 	}
 }
