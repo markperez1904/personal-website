@@ -8,13 +8,13 @@
             class="subtitle is-6 has-text-black"
           >My personal website built in Nuxt, statically generated. Backend implemeted with a headless CMS</p>
           <a
-            class="button is-dark"
+            class="button is-black"
             href="https://github.com/markperez1904/personal-website"
             target="_blank"
           >
             <ion-icon id="icon" name="code"></ion-icon>Code
           </a>
-          <a class="button is-dark" href="https://markperez.dev" target="_blank">
+          <a class="button is-black" href="https://markperez.dev" target="_blank">
             <ion-icon id="icon" name="pulse"></ion-icon>Demo
           </a>
         </figure>

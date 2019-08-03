@@ -33,7 +33,7 @@
       </b-field>
 
       <b-field class="columns is-centered">
-        <button type="submit" class="button is-dark">Submit</button>
+        <button type="submit" class="button is-black">Submit</button>
       </b-field>
     </form>
   </div>
