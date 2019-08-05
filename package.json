@@ -14,7 +14,7 @@
     "install": "^0.13.0",
     "npm": "^6.10.2",
     "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.10",
+    "nuxt-buefy": "^0.3.13",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.1",
     "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",

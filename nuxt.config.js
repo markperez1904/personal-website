@@ -18,7 +18,16 @@ export default {
 					'Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.'
 			}
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' }]
+		// Link to Google Fonts and Website Image
+		link: [
+			{ rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' },
+			{
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css?family=Oxygen&display=swap'
+			}
+		],
+		// Link to custom SVG icons
+		script: [{ src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js' }]
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -37,7 +46,7 @@ export default {
 	 */
 	modules: ['nuxt-buefy', 'vue-scrollto/nuxt'],
 	/*
-	 ** Build configuration
+	 ** Generate an index.html for each blog post (making it a complete static website)
 	 */
 	generate: {
 		routes() {
@@ -77,7 +86,9 @@ export default {
 			})
 		}
 	},
-
+	/*
+	 ** Build configuration
+	 */
 	build: {
 		extend(config, ctx) {}
 	}

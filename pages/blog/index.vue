@@ -3,13 +3,23 @@
     <h1>{{ title }}</h1>
     <h2>{{ content }}</h2>
     <section class="columns is-multiline is-centered">
-      <article class="post box column is-3" v-for="(post, index) in posts" :key="index">
+      <article
+        class="post box column is-3-widescreen is-4-tablet"
+        v-for="(post, index) in posts"
+        :key="index"
+      >
         <nuxt-link :to="`/blog/${post.uid}`">
           <img :src="post.data.image.url" alt />
           <h3 class="title is-6">{{ Dom.RichText.asText(post.data.title) }}</h3>
         </nuxt-link>
       </article>
     </section>
+
+    <!-- I want to PAGINATE my posts here -->
+    <nav class="pagination column">
+      <a class="pagination-previous button is-black">&#x3c;</a>
+      <a class="pagination-next button is-black">&#x3e;</a>
+    </nav>
   </div>
 </template>
 
@@ -32,7 +42,6 @@ export default {
     return {
       title: this.title,
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
@@ -49,7 +58,7 @@ export default {
       return initApi().then(api => {
         return api
           .query(Prismic.Predicates.at('document.type', 'blog_posts'), {
-            pageSize: 4,
+            pageSize: 3,
             page: 1
           })
           .then(response => {
@@ -71,10 +80,6 @@ h2 {
   margin: 2rem 0;
 }
 
-img {
-	margin: 0;
-}
-
 .container {
   padding: 0 2rem;
 }
@@ -82,7 +87,14 @@ img {
   margin: 1rem;
 }
 .title {
-	text-align: center;
-	padding: 1rem 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.pagination {
+  margin: 1rem;
+}
+.button {
+  font-weight: bold;
 }
 </style>

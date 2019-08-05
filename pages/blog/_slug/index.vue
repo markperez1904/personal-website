@@ -1,10 +1,10 @@
 <!-- pages/blog/_slug/index.vue -->
 <template>
   <div class="container">
-    <h1>{{ title }}</h1>
-    <h2>{{ description }}</h2>
-    <img :src="image" />
-    <p>{{ content }}</p>
+    <h1 v-html="title"></h1>
+    <h2 v-html="description"></h2>
+    <img :src="image" /> <br>
+    <p v-html="content"></p>
   </div>
 </template>
 
