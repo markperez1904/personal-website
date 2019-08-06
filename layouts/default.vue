@@ -1,8 +1,6 @@
 <template>
   <div>
-    <no-ssr v-if="getPath == '/'">
-      <app-homenav></app-homenav>
-    </no-ssr>
+    <app-homenav v-if="getPath == '/'"></app-homenav>
     <app-navbar v-else></app-navbar>
 
     <nuxt />

@@ -69,6 +69,7 @@ export default {
       changeTextColor: false
     }
   },
+
   methods: {
     handleScroll() {
       // selected the (.navbar) class
@@ -87,11 +88,13 @@ export default {
       }
     }
   },
+
   created() {
-    window.addEventListener('scroll', this.handleScroll)
+    if (process.client) window.addEventListener('scroll', this.handleScroll)
   },
+
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll)
+    if (process.client) window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -136,11 +139,10 @@ a:focus {
 }
 
 h1 {
-  font-size: 2.3rem;
-  letter-spacing: 15px;
+  font-size: 2.8rem;
+  letter-spacing: 1rem;
 }
 h2 {
-  font-size: 1.3rem;
-  padding: 0 1rem;
+  font-size: 1.4rem;
 }
 </style>
