@@ -17,8 +17,13 @@
 
     <!-- I want to PAGINATE my posts here -->
     <nav class="pagination column">
-      <a class="pagination-previous button is-black">&#x3c;</a>
-      <a class="pagination-next button is-black">&#x3e;</a>
+      <nuxt-link :to="`?page=${currentPage}`" class="pagination-previous">
+        <b-button @click="previousPage" class="is-black">&#x3c;</b-button>
+      </nuxt-link>
+
+      <nuxt-link :to="`?page=${currentPage}`" class="pagination-next">
+        <b-button @click="nextPage" class="is-black">&#x3e;</b-button>
+      </nuxt-link>
     </nav>
   </div>
 </template>
@@ -29,12 +34,25 @@ import PrismicDOM from 'prismic-dom'
 import { initApi, generatePageData } from '@/prismic.config'
 
 export default {
+  watchQuery: ['page'],
+
   data() {
     return {
-      Dom: PrismicDOM,
+		Dom: PrismicDOM,
+		currentPage: 1,
       title: 'Blog',
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.'
+    }
+  },
+
+  methods: {
+    nextPage() {
+      this.currentPage++
+    },
+    previousPage() {
+      if (this.currentPage > 1) this.currentPage--
+      else this.currentPage
     }
   },
 
@@ -58,8 +76,8 @@ export default {
       return initApi().then(api => {
         return api
           .query(Prismic.Predicates.at('document.type', 'blog_posts'), {
-            pageSize: 3,
-            page: 1
+            pageSize: 2,
+            page: 2
           })
           .then(response => {
             return generatePageData('blog_page', response.results)

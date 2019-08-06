@@ -135,6 +135,8 @@ export const generatePageData = (documentType, data) => {
 			}
 		case 'blog_posts':
 			return {
+				metaTitle: PrismicDOM.RichText.asText(data.title),
+				metaDescription: PrismicDOM.RichText.asText(data.description),
 				title: PrismicDOM.RichText.asHtml(
 					data.title,
 					linkResolver,

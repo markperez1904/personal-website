@@ -4,7 +4,7 @@
     <h1 v-html="title"></h1>
     <h2 v-html="description"></h2>
     <img :src="image" /> <br>
-    <p v-html="content"></p>
+    <div v-html="content"></div>
   </div>
 </template>
 
@@ -15,13 +15,13 @@ import { initApi, generatePageData } from '@/prismic.config'
 export default {
   head() {
     return {
-      title: this.title,
+      title: this.metaTitle,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.metaDescription
         }
       ]
     }
