@@ -19,12 +19,16 @@ export default {
 		title: 'Mark Perez',
 		meta: [
 			{ charset: 'utf-8' },
-			{ name: 'google-site-verification', content: 'hfQ1kFhd7ql6fNI0zUdzKuyPMej04HQ59g5GAk936cw' },
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{
 				hid: 'description',
 				name: 'description',
 				content:
 					'Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.'
+			},
+			{
+				name: 'google-site-verification',
+				content: 'hfQ1kFhd7ql6fNI0zUdzKuyPMej04HQ59g5GAk936cw'
 			}
 		],
 		// Link to Google Fonts and Website Image

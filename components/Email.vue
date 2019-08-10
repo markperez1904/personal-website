@@ -51,9 +51,9 @@
             </aside>
           </section>
 
-          <!-- <div class="indicates-required">
+          <div class="indicates-required">
             <span class="asterisk">*</span> indicates required
-          </div>-->
+          </div>
 
           <div class="mc-field-group">
             <label for="mce-EMAIL">
