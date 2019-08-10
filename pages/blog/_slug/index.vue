@@ -1,16 +1,26 @@
 <!-- pages/blog/_slug/index.vue -->
 <template>
   <div class="container">
-    <article>
-      <h1>{{ blog_posts.title[0].text }}</h1>
+    <section class="columns">
+      <!-- Blog Post -->
+      <article class="column is-8">
+        <h1>{{ blog_posts.title[0].text }}</h1>
 
-      <h2>{{ blog_posts.description[0].text }}</h2>
+        <h2>
+          <strong>{{ blog_posts.description[0].text }}</strong>
+        </h2>
 
-      <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
-      <br />
+        <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
+        <br />
 
-      <div v-html="PrismicDOM.RichText.asHtml(blog_posts.content, linkResolver, htmlSerializer)"></div>
-    </article>
+        <div v-html="PrismicDOM.RichText.asHtml(blog_posts.content, linkResolver, htmlSerializer)"></div>
+      </article>
+
+		<!-- Side Bar -->
+      <aside class="section">
+        <app-sidebar></app-sidebar>
+      </aside>
+    </section>
   </div>
 </template>
 
@@ -18,6 +28,8 @@
 import { linkResolver, htmlSerializer } from '@/plugins/prismic-config.js'
 import PrismicDOM from 'prismic-dom'
 import gql from 'graphql-tag'
+
+import SideBar from '@/components/SideBar.vue'
 
 const post = gql`
   query blog_posts($uid: String!) {
@@ -31,6 +43,10 @@ const post = gql`
 `
 
 export default {
+  components: {
+    'app-sidebar': SideBar
+  },
+
   data() {
     return {
       PrismicDOM,
@@ -71,6 +87,7 @@ export default {
 .container {
   padding: 0 2rem;
 }
+
 h1 {
   font-size: 30px;
   padding-top: 2rem;
@@ -80,10 +97,9 @@ h2 {
   margin: 2rem 0;
 }
 
-img {
-  display: block;
-  width: 50%;
-  margin: 0 auto;
+aside {
+  margin: 1rem;
+  margin-top: 3rem;
 }
 
 h1,
