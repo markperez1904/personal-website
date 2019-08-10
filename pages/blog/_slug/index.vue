@@ -2,11 +2,9 @@
 <template>
   <div class="container">
     <article>
-      <h1 v-html="PrismicDOM.RichText.asHtml(blog_posts.title, linkResolver, htmlSerializer)"></h1>
+      <h1>{{ blog_posts.title[0].text }}</h1>
 
-      <h2
-        v-html="PrismicDOM.RichText.asHtml(blog_posts.description, linkResolver, htmlSerializer)"
-      ></h2>
+      <h2>{{ blog_posts.description[0].text }}</h2>
 
       <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
       <br />
@@ -37,25 +35,23 @@ export default {
     return {
       PrismicDOM,
       linkResolver,
-      htmlSerializer
+      htmlSerializer,
+      blog_posts: '' // reqiured in order to set the meta tag
     }
   },
 
   head() {
     return {
-      title: 'nice',
+      title: this.blog_posts.title[0].text,
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
-          content: 'hi'
+          content: this.blog_posts.description[0].text
         }
       ]
     }
   },
-
-  layout: 'default',
 
   apollo: {
     blog_posts: {
