@@ -1,17 +1,6 @@
-import Prismic from 'prismic-javascript'
 import PrismicDOM from 'prismic-dom'
 
-const Elements = PrismicDOM.RichText.Elements // for htmlSerializer
-const config = {
-	baseUrl: 'https://marks-personal-website.cdn.prismic.io/api/v2'
-}
-
-// Fetch the prismic repo
-export const initApi = req => {
-	return Prismic.getApi(config.baseUrl, {
-		req: req
-	})
-}
+const Elements = PrismicDOM.RichText.Elements
 
 // Fetch the link resolver
 export const linkResolver = doc => {
@@ -126,33 +115,3 @@ export const htmlSerializer = (type, element, content, children) => {
 	}
 }
 
-// Fetch and send props to 'blog_posts' custom type
-export const generatePageData = (documentType, data) => {
-	switch (documentType) {
-		case 'blog_page':
-			return {
-				posts: data
-			}
-		case 'blog_posts':
-			return {
-				metaTitle: PrismicDOM.RichText.asText(data.title),
-				metaDescription: PrismicDOM.RichText.asText(data.description),
-				title: PrismicDOM.RichText.asHtml(
-					data.title,
-					linkResolver,
-					htmlSerializer
-				),
-				description: PrismicDOM.RichText.asHtml(
-					data.description,
-					linkResolver,
-					htmlSerializer
-				),
-				image: data.image.url,
-				content: PrismicDOM.RichText.asHtml(
-					data.content,
-					linkResolver,
-					htmlSerializer
-				)
-			}
-	}
-}

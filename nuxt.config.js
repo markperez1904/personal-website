@@ -1,5 +1,14 @@
-const Prismic = require('prismic-javascript')
-import { initApi } from './prismic.config'
+import { PrismicLink } from 'apollo-link-prismic'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import ApolloClient from 'apollo-client'
+import gql from 'graphql-tag'
+
+const client = new ApolloClient({
+	link: PrismicLink({
+		uri: 'https://marks-personal-website.prismic.io/graphql'
+	}),
+	cache: new InMemoryCache()
+})
 
 export default {
 	mode: 'universal',
@@ -44,46 +53,41 @@ export default {
 	/*
 	 ** Nuxt.js modules
 	 */
-	modules: ['nuxt-buefy', 'vue-scrollto/nuxt'],
+	modules: ['nuxt-buefy', 'vue-scrollto/nuxt', '@nuxtjs/apollo'],
 	/*
-	 ** Generate an index.html for each blog post (making it a complete static website)
+	 ** Using apollo to query blog posts
+	 */
+	apollo: {
+		clientConfigs: {
+			default: '~/plugins/apollo.js'
+		}
+	},
+	/*
+	 ** Generate index.html files for each blog post
 	 */
 	generate: {
-		routes() {
-			// Fetch all the blog posts to generate the Blog page
-			const blogPage = initApi().then(api => {
-				return api
-					.query(Prismic.Predicates.at('document.type', 'blog_posts'))
-					.then(response => {
-						return [
-							{
-								route: `/blog`,
-								payload: response.results
+		routes: function() {
+			return client
+				.query({
+					query: gql`
+						{
+							allBlog_postss(sortBy: title_ASC) {
+								edges {
+									node {
+										_meta {
+											uid
+										}
+									}
+								}
 							}
-						]
+						}
+					`
+				})
+				.then(res => {
+					return res.data.allBlog_postss.edges.map(posts => {
+						return '/blog/' + posts.node._meta.uid
 					})
-			})
-
-			// Fetch again all the blog posts, but this time generating each post's page
-			const blogPosts = initApi().then(api => {
-				return api
-					.query(Prismic.Predicates.at('document.type', 'blog_posts'))
-					.then(response => {
-						return response.results.map(payload => {
-							return {
-								route: `/blog/${payload.uid}`,
-								payload
-							}
-						})
-					})
-			})
-
-			// Here I return an array of the results of each promise using the spread operator.
-			// It will be passed to each page as the `payload` property of the `context` object,
-			// which is used to generate the markup of the page.
-			return Promise.all([blogPage, blogPosts]).then(values => {
-				return [...values[0], ...values[1]]
-			})
+				})
 		}
 	},
 	/*

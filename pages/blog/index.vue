@@ -4,55 +4,59 @@
     <h2>{{ content }}</h2>
     <section class="columns is-multiline is-centered">
       <article
-        class="post box column is-3-widescreen is-4-tablet"
-        v-for="(post, index) in posts"
-        :key="index"
+        v-for="post in allBlog_postss.edges"
+        :key="post.node._meta.id"
+        class="box column is-3-widescreen is-4-tablet"
       >
-        <nuxt-link :to="`/blog/${post.uid}`">
-          <img :src="post.data.image.url" alt />
-          <h3 class="title is-6">{{ Dom.RichText.asText(post.data.title) }}</h3>
+        <nuxt-link :to="`/blog/${post.node._meta.uid}`">
+          <img :src="post.node.image.url" :alt="post.node.image.alt" />
+          <h3 class="title is-6">{{post.node.title[0].text}}</h3>
         </nuxt-link>
       </article>
+      <p></p>
     </section>
 
     <!-- I want to PAGINATE my posts here -->
     <nav class="pagination column">
-      <nuxt-link :to="`?page=${currentPage}`" class="pagination-previous">
-        <b-button @click="previousPage" class="is-black">&#x3c;</b-button>
-      </nuxt-link>
+      <a class="pagination-previous">
+        <b-button class="is-black">&#x3c;</b-button>
+      </a>
 
-      <nuxt-link :to="`?page=${currentPage}`" class="pagination-next">
-        <b-button @click="nextPage" class="is-black">&#x3e;</b-button>
-      </nuxt-link>
+      <a class="pagination-next">
+        <b-button class="is-black">&#x3e;</b-button>
+      </a>
     </nav>
   </div>
 </template>
 
 <script>
-import Prismic from 'prismic-javascript'
+import gql from 'graphql-tag'
 import PrismicDOM from 'prismic-dom'
-import { initApi, generatePageData } from '@/prismic.config'
+
+const posts = gql`
+  {
+    allBlog_postss(sortBy: title_ASC) {
+      edges {
+        node {
+          title
+          image
+          content
+          _meta {
+            uid
+            id
+          }
+        }
+      }
+    }
+  }
+`
 
 export default {
-  watchQuery: ['page'],
-
   data() {
     return {
-		Dom: PrismicDOM,
-		currentPage: 1,
       title: 'Blog',
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.'
-    }
-  },
-
-  methods: {
-    nextPage() {
-      this.currentPage++
-    },
-    previousPage() {
-      if (this.currentPage > 1) this.currentPage--
-      else this.currentPage
     }
   },
 
@@ -69,21 +73,10 @@ export default {
     }
   },
 
-  asyncData(context) {
-    if (context.payload) {
-      return generatePageData('blog_page', context.payload)
-    } else {
-      return initApi().then(api => {
-        return api
-          .query(Prismic.Predicates.at('document.type', 'blog_posts'), {
-            pageSize: 2,
-            page: 2
-          })
-          .then(response => {
-            return generatePageData('blog_page', response.results)
-          })
-      })
-    }
+  apollo: {
+    allBlog_postss: {
+		 query: posts
+	 }
   }
 }
 </script>

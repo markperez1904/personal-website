@@ -1,50 +1,77 @@
 <!-- pages/blog/_slug/index.vue -->
 <template>
   <div class="container">
-    <h1 v-html="title"></h1>
-    <h2 v-html="description"></h2>
-    <img :src="image" /> <br>
-    <div v-html="content"></div>
+    <article>
+      <h1 v-html="PrismicDOM.RichText.asHtml(blog_posts.title, linkResolver, htmlSerializer)"></h1>
+
+      <h2
+        v-html="PrismicDOM.RichText.asHtml(blog_posts.description, linkResolver, htmlSerializer)"
+      ></h2>
+
+      <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
+      <br />
+
+      <div v-html="PrismicDOM.RichText.asHtml(blog_posts.content, linkResolver, htmlSerializer)"></div>
+    </article>
   </div>
 </template>
 
 <script>
-import Prismic from 'prismic-javascript'
-import { initApi, generatePageData } from '@/prismic.config'
+import { linkResolver, htmlSerializer } from '@/plugins/prismic-config.js'
+import PrismicDOM from 'prismic-dom'
+import gql from 'graphql-tag'
+
+const post = gql`
+  query blog_posts($uid: String!) {
+    blog_posts(uid: $uid, lang: "en-us") {
+      title
+      description
+      image
+      content
+    }
+  }
+`
 
 export default {
+  data() {
+    return {
+      PrismicDOM,
+      linkResolver,
+      htmlSerializer
+    }
+  },
+
   head() {
     return {
-      title: this.metaTitle,
+      title: 'nice',
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
-          content: this.metaDescription
+          content: 'hi'
         }
       ]
     }
   },
 
-  asyncData(context) {
-    if (context.payload) {
-      return generatePageData('blog_posts', context.payload.data)
-    } else {
-      return initApi().then(api => {
-        return api
-          .query(
-            Prismic.Predicates.at('my.blog_posts.uid', context.params.slug)
-          )
-          .then(response => {
-            return generatePageData('blog_posts', response.results[0].data)
-          })
-      })
+  layout: 'default',
+
+  apollo: {
+    blog_posts: {
+      query: post,
+
+      variables() {
+        return {
+          uid: this.$route.params.slug
+        }
+      }
     }
   }
 }
 </script>
- <style scoped>
+
+<style scoped>
 .container {
   padding: 0 2rem;
 }
