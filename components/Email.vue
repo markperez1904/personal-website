@@ -14,10 +14,6 @@
       href="https://fontlibrary.org/face/archicoco"
       type="text/css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Bungee|Ubuntu&display=swap"
-      rel="stylesheet"
-    />
 
     <div id="mc_embed_signup">
       <form
@@ -75,7 +71,7 @@
           <div class="clear">
             <input
               type="submit"
-              value="Totally, I'm in!"
+              value="Of Course!"
               name="subscribe"
               id="mc-embedded-subscribe"
               class="button"
@@ -134,5 +130,11 @@ span {
   font-size: 20px;
   border-radius: 20px;
 }
+
+#mc_embed_signup input {
+	font-family: 'Ubuntu';
+	font-size: 18px;
+}
+
 </style>
 

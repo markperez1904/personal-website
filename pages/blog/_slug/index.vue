@@ -13,11 +13,21 @@
         <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
         <br />
 
+        <!-- Blog Content -->
         <div v-html="PrismicDOM.RichText.asHtml(blog_posts.content, linkResolver, htmlSerializer)"></div>
+
+        <!-- Disqus Comment Section -->
+        <div class="comments">
+          <vue-disqus
+            shortname="mark-perez"
+            :identifier="blog_posts._meta.id"
+            :url="`http://markperez.dev/blog/${getRoute}`"
+          ></vue-disqus>
+        </div>
       </article>
 
-		<!-- Side Bar -->
-      <aside class="section">
+      <!-- Side Bar -->
+      <aside class="column is-4 section">
         <app-sidebar></app-sidebar>
       </aside>
     </section>
@@ -38,6 +48,9 @@ const post = gql`
       description
       image
       content
+      _meta {
+        id
+      }
     }
   }
 `
@@ -69,13 +82,19 @@ export default {
     }
   },
 
+  computed: {
+    getRoute() {
+      return this.$route.params.slug
+    }
+  },
+
   apollo: {
     blog_posts: {
       query: post,
 
       variables() {
         return {
-          uid: this.$route.params.slug
+          uid: this.getRoute
         }
       }
     }

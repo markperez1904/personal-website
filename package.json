@@ -23,6 +23,7 @@
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.1",
     "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",
+    "vue-disqus": "^3.0.5",
     "vue-scrollto": "^2.15.0"
   },
   "devDependencies": {

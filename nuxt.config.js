@@ -36,7 +36,7 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' },
 			{
 				rel: 'stylesheet',
-				href: 'https://fonts.googleapis.com/css?family=Oxygen&display=swap'
+				href: 'https://fonts.googleapis.com/css?family=Oxygen|Bungee|Ubuntu&display=swap'
 			}
 		],
 		// Link to custom SVG icons
@@ -53,7 +53,7 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: ['./plugins/smoothScroll.js'],
+	plugins: ['./plugins/smoothScroll.js', '~/plugins/disqus'],
 	/*
 	 ** Nuxt.js modules
 	 */
