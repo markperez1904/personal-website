@@ -1,15 +1,25 @@
 <template>
   <div>
     <app-email></app-email>
-
     <script src="https://apis.google.com/js/platform.js"></script>
-    <div
-      class="g-ytsubscribe"
-      data-channelid="UCCZ1Yo4NOdWW03jamsNFA8w"
-      data-layout="full"
-      data-count="default"
-    ></div>
-    <br />
+
+    <section class="columns is-multiline is-vcentered is-centered">
+      <aside class="column is-narrow is-6-widescreen is-12-desktop">
+        <div
+          class="g-ytsubscribe"
+          data-channelid="UCCZ1Yo4NOdWW03jamsNFA8w"
+          data-layout="full"
+          data-count="default"
+        ></div>
+      </aside>
+
+      <aside class="column is-narrow is-6-widescreen is-12-desktop">
+        <a href="https://www.paypal.me/markperez1904" target="_blank">
+          <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+        </a>
+      </aside>
+    </section>
+
   </div>
 </template>
 

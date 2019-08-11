@@ -47,11 +47,11 @@ export default {
         'Here is a list of all of the gear I use on a daily basis. I will try out more equipment whenever I get the chance.'
     }
   },
+
   head() {
     return {
       title: this.title,
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',

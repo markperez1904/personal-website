@@ -118,10 +118,10 @@ span {
   color: red;
 }
 
-.leads {
+/* .leads {
   background: linear-gradient(#000000, #122b14);
   color: white;
-}
+} */
 
 #mc_embed_signup .button {
   background-color: rgb(30, 190, 133);

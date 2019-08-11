@@ -1,0 +1,57 @@
+<template>
+  <div class="container">
+    <h1>{{title}}</h1>
+    <h2>{{content}}</h2>
+
+    <aside class="links">
+      <nuxt-link to="/">Return Home >></nuxt-link>
+      <br />
+      <nuxt-link to="/blog">Return to Blog >></nuxt-link>
+    </aside>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      title: 'Thank You',
+      content:
+        'Your Linux Guide will be availible in your inbox. Give it around a few minutes to arrive.'
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.content
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style scoped>
+.container {
+  padding: 0 2rem;
+}
+.links {
+  text-align: center;
+}
+h1 {
+  font-size: 30px;
+  padding-top: 2rem;
+}
+
+h2 {
+  margin: 2rem 0;
+}
+a {
+  color: rgb(29, 88, 29);
+}
+</style>

@@ -65,7 +65,7 @@ export default {
       PrismicDOM,
       linkResolver,
       htmlSerializer,
-      blog_posts: '' // reqiured in order to set the meta tag
+      blog_posts: '' // required in order to set the meta tag
     }
   },
 

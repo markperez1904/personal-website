@@ -36,7 +36,8 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' },
 			{
 				rel: 'stylesheet',
-				href: 'https://fonts.googleapis.com/css?family=Oxygen|Bungee|Ubuntu&display=swap'
+				href:
+					'https://fonts.googleapis.com/css?family=Oxygen|Bungee|Ubuntu&display=swap'
 			}
 		],
 		// Link to custom SVG icons
