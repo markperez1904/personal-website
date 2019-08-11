@@ -1,15 +1,15 @@
 <!-- pages/blog/_slug/index.vue -->
 <template>
   <div class="container">
-    <section class="columns">
+    <section class="columns is-centered">
       <!-- Blog Post -->
-      <article class="column is-8">
+      <article class="column is-7">
+        <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
+        <h6>{{ blog_posts._meta.firstPublicationDate | moment("MMM DD, YYYY") }}</h6>
+        <h2>{{ blog_posts.description[0].text }}</h2>
 
-        <h2>
-          <strong>{{ blog_posts.description[0].text }}</strong>
-        </h2>
-
+        <!-- Main image -->
         <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
         <br />
 
@@ -50,6 +50,7 @@ const post = gql`
       content
       _meta {
         id
+        firstPublicationDate
       }
     }
   }
@@ -107,13 +108,25 @@ export default {
   padding: 0 2rem;
 }
 
+img {
+  margin: 1rem 0;
+}
+
 h1 {
   font-size: 30px;
   padding-top: 2rem;
+  letter-spacing: 1px;
 }
 
 h2 {
-  margin: 2rem 0;
+  margin: 1rem;
+}
+
+h6 {
+  font-size: 15px;
+  color: #999;
+  margin: 0 0 30px;
+  letter-spacing: 1px;
 }
 
 aside {
@@ -122,7 +135,8 @@ aside {
 }
 
 h1,
-h2 {
+h2,
+h6 {
   text-align: center;
 }
 </style>

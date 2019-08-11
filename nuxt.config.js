@@ -54,7 +54,11 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: ['./plugins/smoothScroll.js', '~/plugins/disqus'],
+	plugins: [
+		'~/plugins/smoothScroll.js',
+		'~/plugins/disqus.js',
+		'~/plugins/moment.js'
+	],
 	/*
 	 ** Nuxt.js modules
 	 */

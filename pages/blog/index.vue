@@ -35,7 +35,7 @@ import PrismicDOM from 'prismic-dom'
 
 const posts = gql`
   {
-    allBlog_postss(sortBy: title_ASC) {
+    allBlog_postss(sortBy: meta_firstPublicationDate_DESC) {
       edges {
         node {
           title
@@ -54,6 +54,7 @@ const posts = gql`
 export default {
   data() {
     return {
+      allBlog_postss: '',
       title: 'Blog',
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.'

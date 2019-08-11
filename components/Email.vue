@@ -1,5 +1,5 @@
 <template>
-  <div class="box leads">
+  <div class="box">
     <!-- Begin Mailchimp Signup Form -->
     <link
       href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
@@ -31,20 +31,6 @@
 
           <section class="columns is-multiline">
             <img class="column is-12" src="~assets/images/6_tips_linux.png" alt="linux guide" />
-
-            <aside class="column is-12">
-              <ul>
-                <li>️️✔️ Become Self-Reliant</li>
-                <li>
-                  ✔️ Become
-                  <span>actually</span> tech-savvy
-                </li>
-                <li>
-                  ✔️ Nullify
-                  <span>technological crutches</span>
-                </li>
-              </ul>
-            </aside>
           </section>
 
           <div class="indicates-required">
@@ -56,7 +42,14 @@
               Email Address
               <span class="asterisk">*</span>
             </label>
-            <input type="email" value name="EMAIL" class="required email" id="mce-EMAIL" />
+            <input
+              type="email"
+              value
+              name="EMAIL"
+              class="required email"
+              placeholder="example@gmail.com"
+              id="mce-EMAIL"
+            />
           </div>
 
           <div id="mce-responses" class="clear">
@@ -71,7 +64,7 @@
           <div class="clear">
             <input
               type="submit"
-              value="Of Course!"
+              value="I Need it!"
               name="subscribe"
               id="mc-embedded-subscribe"
               class="button"
@@ -96,8 +89,8 @@ h4 {
 }
 
 h3 {
-  color: rgb(126, 217, 87);
-  font-family: 'ArchicocoRegular';
+  color: rgb(109, 177, 80);
+  font-family: 'ArchicocoRegular', sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 25px;
@@ -105,34 +98,24 @@ h3 {
 
 h4 {
   color: rgb(175, 175, 8);
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', cursive, sans-serif;
   margin-bottom: 1rem;
-}
-
-ul {
-  font-family: 'Ubuntu';
-  font-weight: bold;
 }
 
 span {
   color: red;
 }
 
-/* .leads {
-  background: linear-gradient(#000000, #122b14);
-  color: white;
-} */
-
 #mc_embed_signup .button {
   background-color: rgb(30, 190, 133);
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 20px;
   border-radius: 20px;
 }
 
 #mc_embed_signup input {
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
 }
 </style>
