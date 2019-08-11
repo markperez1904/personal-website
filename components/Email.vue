@@ -27,20 +27,20 @@
       >
         <div id="mc_embed_signup_scroll">
           <h3>Suck With Terminal?</h3>
-          <h4>⭐ Free Linux Guide</h4>
+          <h4>&#x2B50; Free Linux Guide</h4>
 
           <section class="columns is-multiline">
             <img class="column is-12" src="~assets/images/6_tips_linux.png" alt="linux guide" />
 
             <aside class="column is-12">
               <ul>
-                <li>✅ Become Self-Reliant</li>
+                <li>️️✔️ Become Self-Reliant</li>
                 <li>
-                  ✅ Become
+                  ✔️ Become
                   <span>actually</span> tech-savvy
                 </li>
                 <li>
-                  ✅ Nullify
+                  ✔️ Nullify
                   <span>technological crutches</span>
                 </li>
               </ul>
@@ -132,9 +132,8 @@ span {
 }
 
 #mc_embed_signup input {
-	font-family: 'Ubuntu';
-	font-size: 18px;
+  font-family: 'Ubuntu';
+  font-size: 18px;
 }
-
 </style>
 
