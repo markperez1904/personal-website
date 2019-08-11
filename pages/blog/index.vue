@@ -19,11 +19,11 @@
     <!-- I want to PAGINATE my posts here -->
     <nav class="pagination column">
       <a class="pagination-previous">
-        <b-button class="is-black">&#x3c;</b-button>
+        <b-button class="is-black" disabled>&#x3c;</b-button>
       </a>
 
       <a class="pagination-next">
-        <b-button class="is-black">&#x3e;</b-button>
+        <b-button class="is-black" disabled>&#x3e;</b-button>
       </a>
     </nav>
   </div>
@@ -75,8 +75,8 @@ export default {
 
   apollo: {
     allBlog_postss: {
-		 query: posts
-	 }
+      query: posts
+    }
   }
 }
 </script>
@@ -107,5 +107,9 @@ h2 {
 }
 .button {
   font-weight: bold;
+}
+
+.button:hover:after {
+  content: '** Pagination coming soon! **';
 }
 </style>
