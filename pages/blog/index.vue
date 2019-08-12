@@ -57,7 +57,7 @@ export default {
       allBlog_postss: '',
       title: 'Blog',
       content:
-        'Welcome to my blog. Browse through a streamline of tech tutorials that suits you needs.'
+        'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.'
     }
   },
 
