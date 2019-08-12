@@ -17,7 +17,7 @@ export const htmlSerializer = (type, element, content, children) => {
 		const url = PrismicDOM.Link.url(element.data, linkResolver)
 
 		if (element.data.link_type === 'Document') {
-			result = `<nuxt-link to="${url}">${content}</nuxt-link>`
+			result = `<nuxt-link style="font-weight: bold" target="_blank" to="${url}">${content}</nuxt-link>`
 		} else {
 			const target = element.data.target
 				? `target="'${element.data.target}'" rel="noopener"`
