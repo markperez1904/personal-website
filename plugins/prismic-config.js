@@ -22,7 +22,7 @@ export const htmlSerializer = (type, element, content, children) => {
 			const target = element.data.target
 				? `target="'${element.data.target}'" rel="noopener"`
 				: ''
-			result = `<a href="${url}" ${target}>${content}</a>`
+			result = `<a style="font-weight: bold" href="${url}" ${target}>${content}</a>`
 		}
 		return result
 	}
@@ -95,13 +95,15 @@ export const htmlSerializer = (type, element, content, children) => {
 
 		case Elements.embed:
 			return `
-		 <div data-oembed="${element.oembed.embed_url}"
-			data-oembed-type="${element.oembed.type}"
-			data-oembed-provider="${element.oembed.provider_name}"
-		 >
-			${element.oembed.html}
-		 </div>
-	  `
+				<figure
+					style="text-align: center"
+					data-oembed="${element.oembed.embed_url}"
+					data-oembed-type="${element.oembed.type}"
+					data-oembed-provider="${element.oembed.provider_name}"
+				>
+					${element.oembed.html}
+				</figure> <br>
+	  		`
 
 		case Elements.label:
 			const label = element.data.label ? ` class="${element.data.label}"` : ''
@@ -114,4 +116,3 @@ export const htmlSerializer = (type, element, content, children) => {
 			return null
 	}
 }
-

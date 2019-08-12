@@ -63,10 +63,10 @@ export default {
 
   data() {
     return {
+      blog_posts: '',
       PrismicDOM,
       linkResolver,
-      htmlSerializer,
-      blog_posts: '' // required in order to set the meta tag
+      htmlSerializer
     }
   },
 
@@ -139,4 +139,5 @@ h2,
 h6 {
   text-align: center;
 }
+
 </style>

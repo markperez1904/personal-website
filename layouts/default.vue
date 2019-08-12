@@ -31,6 +31,6 @@ export default {
 <style>
 body {
   font-family: 'Oxygen', sans-serif;
-  color: #666666;
+  color: #666;
 }
 </style>

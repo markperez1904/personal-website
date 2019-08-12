@@ -1,13 +1,33 @@
 /* classes */
 .navbar {
 	padding: 0 2rem;
- }
+}
 
- .navbar-item {
+.navbar-item {
 	font-size: 18px;
 	padding-right: 2rem;
- }
+}
 
- .navbar-brand {
+.navbar-brand {
 	font-size: 22px;
- }
+}
+
+/* This snippet of code here fixes the stupid iframe issue */
+embed,
+iframe,
+video {
+	max-width: 100%;
+	height: 300px;
+}
+
+/* Makes hyperlinks on blog content green! */
+a,
+a:hover,
+a:active,
+a:focus {
+	color: rgb(33, 112, 33);
+	background-color: transparent;
+}
+a:hover {
+	text-decoration: underline;
+}
