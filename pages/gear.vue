@@ -2,8 +2,8 @@
   <div class="container">
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
-    <section class="columns is-centered">
-      <div class="content column">
+    <section class="columns is-centered is-multiline">
+      <div class="content column is-4-widescreen is-6-tablet">
         <h5>Software</h5>
         <ul>
           <li>OS: Ubuntu 18.04</li>
@@ -13,7 +13,7 @@
         </ul>
       </div>
 
-      <div class="content column">
+      <div class="content column is-4-widescreen is-6-tablet">
         <h5>Hardware</h5>
         <ul>
           <li>Laptop: XPS 13 (9360)</li>
@@ -24,7 +24,7 @@
         </ul>
       </div>
 
-      <div class="content column">
+      <div class="content column is-4-widescreen is-6-tablet">
         <h5>Equipment</h5>
         <ul>
           <li>Table: Tribesigns Modern L-Shaped Desk</li>
