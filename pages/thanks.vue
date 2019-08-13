@@ -4,8 +4,6 @@
     <h2>{{content}}</h2>
 
     <aside class="links">
-      <nuxt-link to="/">Return Home >></nuxt-link>
-      <br />
       <nuxt-link to="/blog">Return to Blog >></nuxt-link>
     </aside>
   </div>
