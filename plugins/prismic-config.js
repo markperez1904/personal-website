@@ -58,7 +58,9 @@ export const htmlSerializer = (type, element, content, children) => {
 			return `<h2>${children.join('')}</h2>`
 
 		case Elements.heading3:
-			return `<h3>${children.join('')}</h3> <br>`
+			return `<h3 style="font-size: 22px; letter-spacing: 1px; font-weight: bold">${children.join(
+				''
+			)}</h3> <br>`
 
 		case Elements.heading4:
 			return `<h4>${children.join('')}</h4> <br>`
@@ -87,11 +89,14 @@ export const htmlSerializer = (type, element, content, children) => {
 		case Elements.oListItem:
 			return `<li>${children.join('')}</li>`
 
+		// In Bulma.io, add "content" class to style <ol> and <ul>
 		case Elements.list:
-			return `<ul>${children.join('')}</ul> <br>`
+			return `<div class="content"><ul>${children.join('')}</ul></div> <br>`
 
 		case Elements.oList:
-			return `<ol>${children.join('')}</ol> <br>`
+			return `<div class="content"><ol type="1">${children.join(
+				''
+			)}</ol></div> <br>`
 
 		case Elements.embed:
 			return `

@@ -116,10 +116,12 @@ h1 {
   font-size: 30px;
   padding-top: 2rem;
   letter-spacing: 1px;
+  font-weight: bold
 }
 
 h2 {
   margin: 1rem;
+  font-weight: bold
 }
 
 h6 {
@@ -127,6 +129,7 @@ h6 {
   color: #999;
   margin: 0 0 30px;
   letter-spacing: 1px;
+  font-weight: bold
 }
 
 aside {
