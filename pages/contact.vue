@@ -7,34 +7,32 @@
       <b-message type="is-success" class="column is-5">Message Sent!</b-message>
     </section>
 
+    <!-- Email API form submission -->
     <form
       @submit="handleRequest"
       action="https://formspree.io/markperez1904@gmail.com"
       method="POST"
     >
-      <b-field class="columns is-centered">
-        <b-input name="name" class="column is-5" placeholder="Name" type="text" required></b-input>
-      </b-field>
+      <!-- Name nad Email -->
+      <section class="field control columns is-centered">
+        <input type="text" name="name" class="input column is-3" placeholder="Name" required />
+        <br />
+        <input type="email" name="email" class="input column is-3" placeholder="Email" required />
+      </section>
+      <br />
 
-      <b-field class="columns is-centered">
-        <b-input name="email" class="column is-5" placeholder="Email" type="email" required></b-input>
-      </b-field>
+      <!-- Message -->
+      <section class="field control columns is-centered">
+        <div class="column is-6">
+          <textarea class="textarea" placeholder="Message..." required></textarea>
+        </div>
+      </section>
+      <br />
 
-      <b-field class="columns is-centered">
-        <b-input
-          name="message"
-          class="column is-5"
-          type="textarea"
-          minlength="20"
-          maxlength="500"
-          placeholder="Message..."
-          required
-        ></b-input>
-      </b-field>
-
-      <b-field class="columns is-centered">
-        <button type="submit" class="button is-black">Submit</button>
-      </b-field>
+      <!-- Submit -->
+      <section class="field control columns is-centered is-mobile">
+        <input type="submit" value="Submit" class="button is-black" />
+      </section>
     </form>
   </div>
 </template>
