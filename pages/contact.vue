@@ -24,7 +24,7 @@
       <!-- Message -->
       <section class="field control columns is-centered">
         <div class="column is-6">
-          <textarea class="textarea" placeholder="Message..." required></textarea>
+          <textarea class="textarea" name="message" placeholder="Message..." required></textarea>
         </div>
       </section>
       <br />
