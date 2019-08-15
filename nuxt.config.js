@@ -53,7 +53,8 @@ export default {
 	plugins: [
 		'~/plugins/smoothScroll.js',
 		'~/plugins/disqus.js',
-		'~/plugins/moment.js'
+		'~/plugins/moment.js',
+		// '~/plugins/carousel.js'
 	],
 
 	// Nuxt.js modules

@@ -10,7 +10,7 @@
       >
         <nuxt-link :to="`/blog/${post.node._meta.uid}`">
           <img :src="post.node.image.url" :alt="post.node.image.alt" />
-          <h3 class="title is-6">{{post.node.title[0].text}}</h3>
+          <h6 class="title is-6">{{post.node.title[0].text}}</h6>
         </nuxt-link>
       </article>
       <p></p>
@@ -40,7 +40,6 @@ const posts = gql`
         node {
           title
           image
-          content
           _meta {
             uid
             id
@@ -95,9 +94,11 @@ h2 {
 .container {
   padding: 0 2rem;
 }
+
 .box {
   margin: 1rem;
 }
+
 .title {
   text-align: center;
   padding: 1rem 0;
@@ -106,6 +107,7 @@ h2 {
 .pagination {
   margin: 1rem;
 }
+
 .button {
   font-weight: bold;
 }
