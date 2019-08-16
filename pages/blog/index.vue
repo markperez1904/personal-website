@@ -45,6 +45,12 @@ const posts = gql`
             id
           }
         }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        startCursor
+        endCursor
       }
     }
   }

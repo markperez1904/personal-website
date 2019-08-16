@@ -53,8 +53,16 @@
 
     <section class="hero-foot">
       <div class="container has-text-centered">
+        <!-- Scroll to Portfolio -->
         <a href="#" v-scroll-to="'#portfolio'">
           <b-button id="button" rounded>My Work</b-button>
+        </a>
+        <!-- Resume Download -->
+        <a
+          href="https://drive.google.com/file/d/1q9V_yzOMI1m9A0yE4KpTJGpEpOWjBr1q/view?usp=sharing"
+          target="_blank"
+        >
+          <b-button id="button" rounded>Resume</b-button>
         </a>
       </div>
     </section>
@@ -109,6 +117,7 @@ a:focus {
 }
 /* id */
 #button {
+  margin: 0 1rem;
   margin-bottom: 2rem;
   transition: 0.2s;
 }
