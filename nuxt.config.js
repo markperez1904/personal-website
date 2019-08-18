@@ -53,11 +53,12 @@ export default {
 	plugins: [
 		'~/plugins/smoothScroll.js',
 		'~/plugins/disqus.js',
-		'~/plugins/moment.js',
+		'~/plugins/moment.js'
 	],
 
 	// Nuxt.js modules
 	modules: [
+		'@nuxtjs/pwa', // this module will give me PWA benefits be default!
 		'nuxt-buefy',
 		'vue-scrollto/nuxt',
 		'@nuxtjs/apollo',

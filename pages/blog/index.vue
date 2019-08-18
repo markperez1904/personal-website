@@ -33,6 +33,10 @@
 import gql from 'graphql-tag'
 import PrismicDOM from 'prismic-dom'
 
+// Amount of blog posts shown on each interation
+// const POST_PER_PAGE = 6
+
+// GraphQL Query
 const posts = gql`
   {
     allBlog_postss(sortBy: meta_firstPublicationDate_DESC) {
@@ -45,12 +49,6 @@ const posts = gql`
             id
           }
         }
-        cursor
-      }
-      pageInfo {
-        hasNextPage
-        startCursor
-        endCursor
       }
     }
   }
@@ -59,7 +57,10 @@ const posts = gql`
 export default {
   data() {
     return {
+      // Apollo variables
       allBlog_postss: '',
+
+      // Meta variables
       title: 'Blog',
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.'
@@ -82,6 +83,12 @@ export default {
   apollo: {
     allBlog_postss: {
       query: posts
+
+      // variables() {
+      //   return {
+      //     first: POST_PER_PAGE
+      //   }
+      // }
     }
   }
 }
