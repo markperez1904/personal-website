@@ -1,7 +1,7 @@
 <!-- pages/blog/_slug/index.vue -->
 <template>
   <div class="container">
-    <section class="columns is-centered">
+    <section class="columns is-centered is-multiline">
       <!-- Blog Post -->
       <article class="column is-7">
         <!-- Title, Date, and Description -->
@@ -27,7 +27,7 @@
       </article>
 
       <!-- Side Bar -->
-      <aside class="column is-4 section">
+      <aside class="section column is-3-desktop is-7-tablet is-10-touch is-12-mobile">
         <app-sidebar></app-sidebar>
       </aside>
     </section>

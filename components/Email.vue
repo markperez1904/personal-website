@@ -85,7 +85,7 @@ h3 {
   font-family: 'Slackey', sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: 23px;
+  font-size: 22px;
 }
 
 h4 {
@@ -106,7 +106,7 @@ span {
 
 .ebook {
   margin: 0 auto;
-  width: 55%;
+  width: 65%;
 }
 
 #mc_embed_signup .button {
@@ -119,7 +119,7 @@ span {
 
 #mc_embed_signup input {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;
+  font-size: 12px;
 }
 </style>
 
