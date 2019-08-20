@@ -1,17 +1,9 @@
 <template>
-  <div class="box">
+  <div class="box leads">
     <!-- Begin Mailchimp Signup Form -->
     <link
       href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
       rel="stylesheet"
-      type="text/css"
-    />
-
-    <!-- fonts -->
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="https://fontlibrary.org/face/archicoco"
       type="text/css"
     />
 
@@ -26,10 +18,10 @@
         novalidate
       >
         <div id="mc_embed_signup_scroll">
-          <h3>Suck With Terminal?</h3>
-          <h4>&#x2B50; Free Linux Guide</h4>
+          <h3>Suck With Terminal? 😭</h3>
+          <h4>🤓 Free Linux Guide</h4>
 
-          <section class="columns is-multiline">
+          <section class="ebook columns is-multiline">
             <img class="column is-12" src="~assets/images/6_tips_linux.png" alt="linux guide" />
           </section>
 
@@ -90,10 +82,10 @@ h4 {
 
 h3 {
   color: rgb(109, 177, 80);
-  font-family: 'ArchicocoRegular', sans-serif;
+  font-family: 'Slackey', sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 h4 {
@@ -104,6 +96,17 @@ h4 {
 
 span {
   color: red;
+}
+
+.leads {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  color: white;
+}
+
+.ebook {
+  margin: 0 auto;
+  width: 55%;
 }
 
 #mc_embed_signup .button {

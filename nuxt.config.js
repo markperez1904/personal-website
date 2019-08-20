@@ -36,7 +36,7 @@ export default {
 			{
 				rel: 'stylesheet',
 				href:
-					'https://fonts.googleapis.com/css?family=Oxygen|Bungee|Ubuntu&display=swap'
+					'https://fonts.googleapis.com/css?family=Oxygen|Bungee|Ubuntu|Slackey&display=swap'
 			}
 		],
 		// Link to custom SVG icons
@@ -58,7 +58,7 @@ export default {
 
 	// Nuxt.js modules
 	modules: [
-		'@nuxtjs/pwa', // this module will give me PWA benefits be default!
+		'@nuxtjs/pwa', // this module will give me PWA benefits by default!
 		'nuxt-buefy',
 		'vue-scrollto/nuxt',
 		'@nuxtjs/apollo',
