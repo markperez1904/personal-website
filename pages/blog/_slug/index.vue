@@ -120,7 +120,7 @@ h1 {
 
 h2 {
   margin: 1rem;
-  font-weight: bold
+  font-weight: bold;
 }
 
 h6 {

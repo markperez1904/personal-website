@@ -13,25 +13,47 @@
         </ul>
       </div>
 
+      <!-- Amazon Affiliate Links for Hardware -->
       <div class="content column is-4-widescreen is-6-tablet">
         <h5>Hardware</h5>
         <ul>
-          <li>Laptop: XPS 13 (9360)</li>
-          <li>Keyboard: Velocifire VM01</li>
-          <li>Mouse: Logitech G402</li>
-          <li>Monitor: Dell SE2219H</li>
-          <li>Mic: Fifine USB Microphone</li>
+          <li>
+            <a href="https://amzn.to/33NjmP9" target="_blank">Laptop: XPS 13 (9360)</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/2He16Vg" target="_blank">Keyboard: Velocifire VM01</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/2KHskFW" target="_blank">Mouse: Logitech G402</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/2KItIIi" target="_blank">Monitor: Dell SE2219H</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/2Hgm3ie" target="_blank">Mic: Fifine USB Microphone</a>
+          </li>
         </ul>
       </div>
 
+      <!-- Amazon Affiliate Links for Equipment -->
       <div class="content column is-4-widescreen is-6-tablet">
         <h5>Equipment</h5>
         <ul>
-          <li>Table: Tribesigns Modern L-Shaped Desk</li>
-          <li>Camera: OnePlus 5</li>
-          <li>Chair: BestOffice Racing Gaming Chair</li>
-          <li>Lamp: TaoTronics LED Desk Lamp</li>
-          <li>Laptop Stand: Seenda Adjustable Laptop Stand</li>
+          <li>
+            <a href="https://amzn.to/2Z3uHMj" target="_blank">Table: Tribesigns Modern L-Shaped Desk</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/320xxPd" target="_blank">Camera: OnePlus 5</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/2HgtFkR" target="_blank">Chair: BestOffice Racing Gaming Chair</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/2Hgekkj" target="_blank">Lamp: TaoTronics LED Desk Lamp</a>
+          </li>
+          <li>
+            <a href="https://amzn.to/31PleFa" target="_blank">Laptop Stand: Seenda Laptop Stand</a>
+          </li>
         </ul>
       </div>
     </section>
@@ -44,7 +66,7 @@ export default {
     return {
       title: 'Gear',
       content:
-        'Here is a list of all of the gear I use on a daily basis. I will try out more equipment whenever I get the chance.'
+        'Here is a list of all of the gear I use on a daily basis. As an Amazon Associate, I will earn from qualified commissions.'
     }
   },
 
@@ -72,7 +94,18 @@ h1 {
   padding-top: 2rem;
 }
 
-h2{
+h2 {
   margin: 2rem 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: #304455;
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: underline;
 }
 </style>

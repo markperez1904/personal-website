@@ -44,7 +44,7 @@ export default {
       messageSent: false,
       title: 'Contact',
       content:
-        'Feel free to send me an email. If possible, direct messages through LinkedIn is more preferable.'
+        'Feel free to send me an email. I will get back to them in no time!'
     }
   },
   head() {
