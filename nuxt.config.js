@@ -62,12 +62,18 @@ export default {
 		'nuxt-buefy',
 		'vue-scrollto/nuxt',
 		'@nuxtjs/apollo',
-		'@nuxtjs/google-analytics'
+		'@nuxtjs/google-analytics',
+		'@nuxtjs/google-adsense'
 	],
 
 	// Keep Tracking ID private
 	googleAnalytics: {
-		id: process.env.GA_ID
+		id: process.env.GOOGLE_ANALYTICS
+	},
+
+	// Keep Google AdSense code private
+	'google-adsense': {
+		id: process.env.GOOGLE_ADSENSE
 	},
 
 	// Using apollo to query blog posts
