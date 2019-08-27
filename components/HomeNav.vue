@@ -9,18 +9,21 @@
             to="/"
           >Mark Perez</n-link>
 
-          <div
+          <!-- Navbar Burger -->
+          <span
             class="navbar-burger burger"
             :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
             @click="showNav = !showNav"
+            data-target="navMenu"
           >
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
         </div>
 
-        <div class="navbar-menu" :class="{ 'is-active': showNav }">
+        <!-- Navbar Menu -->
+        <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
           <div @click="showNav = !showNav" class="navbar-end">
             <n-link
               :class="changeTextColor ? 'has-text-black' : 'has-text-white'"

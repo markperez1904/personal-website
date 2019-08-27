@@ -5,14 +5,16 @@
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/">Mark Perez</n-link>
 
-          <div class="navbar-burger" @click="showNav = !showNav">
+          <!-- Navbar Burger -->
+          <span class="navbar-burger" @click="showNav = !showNav" data-target="navMenu">
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
         </div>
 
-        <div class="navbar-menu" :class="{ 'is-active': showNav }">
+        <!-- Navbar Menu -->
+        <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
           <div @click="showNav = !showNav" class="navbar-end">
             <n-link class="navbar-item" to="/blog">Blog</n-link>
             <n-link class="navbar-item" to="/gear">Gear</n-link>
