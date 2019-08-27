@@ -21,8 +21,8 @@
           <p class="emailTitle">Suck With Terminal? 😭</p>
           <p class="emailMessage">🤓 Free Linux Guide</p>
 
-          <section class="ebook columns is-multiline">
-            <img class="column is-12" src="~assets/images/6_tips_linux.png" alt="linux guide" />
+          <section class="columns is-multiline">
+            <img class="column is-12 ebook" src="~assets/images/6_tips_linux.png" alt="linux guide" />
           </section>
 
           <div class="indicates-required">
@@ -104,6 +104,7 @@ export default {}
 .ebook {
   margin: 0 auto;
   width: 65%;
+  height: 100%;
 }
 
 #mc_embed_signup .button {
