@@ -10,7 +10,7 @@
       >
         <nuxt-link :to="`/blog/${post.node._meta.uid}`">
           <img :src="post.node.image.url" :alt="post.node.image.alt" />
-          <h6 class="title is-6">{{post.node.title[0].text}}</h6>
+          <p class="title is-6">{{post.node.title[0].text}}</p>
         </nuxt-link>
       </article>
       <p></p>

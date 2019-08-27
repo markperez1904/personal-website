@@ -6,7 +6,7 @@
       <article class="column is-7">
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
-        <h6>{{ blog_posts._meta.firstPublicationDate | moment("MMM DD, YYYY") }}</h6>
+        <p class="date">{{ blog_posts._meta.firstPublicationDate | moment("MMM DD, YYYY") }}</p>
         <h2>{{ blog_posts.description[0].text }}</h2>
 
         <!-- Main image -->
@@ -108,6 +108,13 @@ export default {
   padding: 0 2rem;
 }
 
+.date {
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+}
+
 img {
   margin: 1rem 0;
 }
@@ -123,12 +130,6 @@ h2 {
   font-weight: bold;
 }
 
-h6 {
-  font-size: 15px;
-  color: #999;
-  margin: 0 0 30px;
-  letter-spacing: 1px;
-}
 
 aside {
   margin: 1rem;
@@ -137,7 +138,7 @@ aside {
 
 h1,
 h2,
-h6 {
+.date {
   text-align: center;
 }
 </style>

@@ -18,8 +18,8 @@
         novalidate
       >
         <div id="mc_embed_signup_scroll">
-          <h3>Suck With Terminal? 😭</h3>
-          <h4>🤓 Free Linux Guide</h4>
+          <p class="emailTitle">Suck With Terminal? 😭</p>
+          <p class="emailMessage">🤓 Free Linux Guide</p>
 
           <section class="ebook columns is-multiline">
             <img class="column is-12" src="~assets/images/6_tips_linux.png" alt="linux guide" />
@@ -41,6 +41,7 @@
               class="required email"
               placeholder="example@gmail.com"
               id="mce-EMAIL"
+				  aria-required="true"
             />
           </div>
 
@@ -75,12 +76,12 @@ export default {}
 </script>
 
 <style scoped>
-h3,
-h4 {
+.emailTitle,
+.emailMessage {
   text-align: center;
 }
 
-h3 {
+.emailTitle {
   color: rgb(109, 177, 80);
   font-family: 'Slackey', sans-serif;
   font-weight: bold;
@@ -88,14 +89,10 @@ h3 {
   font-size: 22px;
 }
 
-h4 {
+.emailMessage {
   color: rgb(175, 175, 8);
   font-family: 'Bungee', cursive, sans-serif;
   margin-bottom: 1rem;
-}
-
-span {
-  color: red;
 }
 
 .leads {
@@ -120,6 +117,10 @@ span {
 #mc_embed_signup input {
   font-family: 'Ubuntu', sans-serif;
   font-size: 12px;
+}
+
+span {
+  color: red;
 }
 </style>
 

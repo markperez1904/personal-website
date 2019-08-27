@@ -47,7 +47,7 @@
         <h1 class="title">Mark Perez</h1>
         <h2
           class="subtitle"
-        >Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.</h2>
+        >Front-End Developer and self-learning enthusiast on technology. Producing content on YouTube.</h2>
       </div>
     </section>
 
@@ -59,7 +59,7 @@
         </a>
         <!-- Resume Download -->
         <a
-          href="https://drive.google.com/file/d/1q9V_yzOMI1m9A0yE4KpTJGpEpOWjBr1q/view?usp=sharing"
+          href="https://drive.google.com/file/d/1d7HIDmhGX3dYoWTX0Ob1Cnckeii-1nI9/view"
           target="_blank"
         >
           <b-button id="button" rounded>Resume</b-button>
