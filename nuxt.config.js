@@ -40,7 +40,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Oxygen|Bungee|Ubuntu|Slackey&display=swap'
+          'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono|Bungee|Ubuntu|Slackey&display=swap'
       }
     ],
     // Link to custom SVG icons
