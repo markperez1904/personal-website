@@ -46,12 +46,12 @@ pre {
   border-radius: 0.5rem;
 }
 
-/* Font on <code> tage */
+/* Font on <code> tags */
 code {
   font-family: monospace;
   font-size: 14px;
-  background-color: #eee;
-  color: #304455;
+  background-color: #333;
+  color: #fff;
   padding: 0.125rem 0.25rem;
   border-radius: 5px;
 }
