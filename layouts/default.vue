@@ -29,8 +29,29 @@ export default {
 </script>
 
 <style>
+/* Main font on website */
 body {
   font-family: 'Oxygen', sans-serif;
   color: #304455;
+}
+
+/* Font on unix commands */
+pre {
+  font-family: monospace;
+  font-size: 14px;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+/* Font on <code> tage */
+code {
+  font-family: monospace;
+  font-size: 16px;
+  background: #eee;
+  padding: 0.125rem 0.25rem;
+  border-radius: 2px;
 }
 </style>
