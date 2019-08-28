@@ -49,9 +49,10 @@ pre {
 /* Font on <code> tage */
 code {
   font-family: monospace;
-  font-size: 16px;
-  background: #eee;
+  font-size: 14px;
+  background-color: #eee;
+  color: #304455;
   padding: 0.125rem 0.25rem;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 </style>
