@@ -10,7 +10,7 @@
         <h2>{{ blog_posts.description[0].text }}</h2>
 
         <!-- Main image -->
-        <img :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
+        <img class="featured-img" :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
         <br />
 
         <!-- Blog Content -->
@@ -115,8 +115,9 @@ export default {
   letter-spacing: 1px;
 }
 
-img {
+.featured-img {
   margin: 1rem 0;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -129,7 +130,6 @@ h2 {
   margin: 1rem;
   font-weight: bold;
 }
-
 
 aside {
   margin: 1rem;

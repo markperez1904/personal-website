@@ -60,9 +60,9 @@
         <a href="#" v-scroll-to="'#portfolio'">
           <b-button id="button" rounded>My Work</b-button>
         </a>
-        <!-- Resume Download -->
+        <!-- View my Resume -->
         <a
-          href="https://drive.google.com/file/d/1d7HIDmhGX3dYoWTX0Ob1Cnckeii-1nI9/view"
+          href="https://drive.google.com/file/d/1F4uiGInzza7EbNbmcHR6fA-PbsndBmsQ/view?usp=sharing"
           target="_blank"
         >
           <b-button id="button" rounded>Resume</b-button>

@@ -41,7 +41,7 @@
               class="required email"
               placeholder="example@gmail.com"
               id="mce-EMAIL"
-				  aria-required="true"
+              aria-required="true"
             />
           </div>
 
@@ -96,9 +96,10 @@ export default {}
 }
 
 .leads {
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
   color: white;
+  background-color: #000000;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 }
 
 .ebook {
