@@ -27,7 +27,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Vue Developer and self-learning enthusiast on technology. Producing content on YouTube.'
+          'SEO Specialist and Front-End Developer. Self-learning enthusiast in tech. Producing content on YouTube.'
       },
       {
         name: 'google-site-verification',

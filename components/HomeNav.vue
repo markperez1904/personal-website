@@ -50,7 +50,7 @@
         <h1 class="title">Mark Perez</h1>
         <h2
           class="subtitle"
-        >Front-End Developer and self-learning enthusiast on technology. Producing content on YouTube.</h2>
+        >SEO Specialist and Front-End Developer. Self-learning enthusiast in tech. Producing content on YouTube.</h2>
       </div>
     </section>
 
