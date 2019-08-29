@@ -7,14 +7,16 @@
         <h6 class="title is-6">Personal Website</h6>
 
         <a href="https://markperez.dev" target="_blank" class="button is-black">
-          <ion-icon name="pulse" id="icon"></ion-icon>Demo
+          <i class="far fa-eye"></i>
+          Demo
         </a>
         <a
           href="https://github.com/markperez1904/personal-website"
           target="_blank"
           class="button is-black"
         >
-          <ion-icon name="code" id="icon"></ion-icon>Code
+          <i class="fas fa-code"></i>
+          Code
         </a>
       </article>
     </section>
@@ -26,7 +28,7 @@ article {
   text-align: center;
 }
 
-#icon {
+i {
   margin-right: 3px;
 }
 

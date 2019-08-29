@@ -36,22 +36,32 @@ export default {
     ],
     // Link to Google Fonts and Website Image
     link: [
+      // Favicon icon
       { rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' },
+
+      // Google Fonts CDN
       {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono|Bungee|Ubuntu|Slackey&display=swap'
+      },
+
+      // FontAwesome icon pack
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css',
+        integrity: 'sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=',
+        crossorigin: 'anonymous'
       }
-    ],
-    // Link to custom SVG icons
-    script: [{ src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js' }]
+    ]
   },
 
   // Customize the progress-bar color
   loading: { color: '#fff' },
 
   // Global CSS
-  css: ['@/static/css/main.css'],
+  css: ['@/static/css/main.css', '@/static/css/fonts.css'],
 
   // Plugins to load before mounting the App
   plugins: [

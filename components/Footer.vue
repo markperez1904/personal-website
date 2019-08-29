@@ -1,17 +1,34 @@
 <template>
   <div class="container has-text-centered">
     <footer class="columns is-centered">
+      <!-- YouTube -->
       <a href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos" target="_blank">
-        <ion-icon name="logo-youtube"></ion-icon>
+        <i class="fab fa-youtube"></i>
       </a>
+
+      <!-- LinkedIn -->
       <a href="https://www.linkedin.com/in/markpereztech/" target="_blank">
-        <ion-icon name="logo-linkedin"></ion-icon>
+        <i class="fab fa-linkedin"></i>
       </a>
+
+      <!-- GitHub -->
       <a href="https://github.com/markperez1904" target="_blank">
-        <ion-icon name="logo-github"></ion-icon>
+        <i class="fab fa-github"></i>
       </a>
+
+      <!-- AngelList -->
+      <a href="https://angel.co/mark-perez-10" target="_blank">
+        <i class="fab fa-angellist"></i>
+      </a>
+
+      <!-- Upwork -->
+      <a href="https://www.upwork.com/o/profiles/users/_~01ed84530004e0fd8c/" target="_blank">
+        <i class="icon-upwork"></i>
+      </a>
+
+      <!-- Instagram -->
       <a href="https://www.instagram.com/mperez1904/" target="_blank">
-        <ion-icon name="logo-instagram"></ion-icon>
+        <i class="fab fa-instagram"></i>
       </a>
     </footer>
     <footer class="columns is-centered">
@@ -40,12 +57,13 @@ export default {
 </script>
 
 <style scoped>
-ion-icon {
+i {
   font-size: 28px;
   margin-right: 10px;
 }
+
 a {
   color: rgb(29, 88, 29);
+  text-decoration: unset;
 }
 </style>
-
