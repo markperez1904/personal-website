@@ -18,19 +18,44 @@
         <h5>Hardware</h5>
         <ul>
           <li>
-            <a href="https://amzn.to/33NjmP9" target="_blank">Laptop: XPS 13 (9360)</a>
+            <a
+              href="https://amzn.to/33NjmP9"
+              target="_blank"
+              aria-label="laptop"
+              rel="noopener"
+            >Laptop: XPS 13 (9360)</a>
           </li>
           <li>
-            <a href="https://amzn.to/2He16Vg" target="_blank">Keyboard: Velocifire VM01</a>
+            <a
+              href="https://amzn.to/2He16Vg"
+              target="_blank"
+              aria-label="keyboard"
+              rel="noopener"
+            >Keyboard: Velocifire VM01</a>
           </li>
           <li>
-            <a href="https://amzn.to/2KHskFW" target="_blank">Mouse: Logitech G402</a>
+            <a
+              href="https://amzn.to/2KHskFW"
+              target="_blank"
+              aria-label="mouse"
+              rel="noopener"
+            >Mouse: Logitech G402</a>
           </li>
           <li>
-            <a href="https://amzn.to/2KItIIi" target="_blank">Monitor: Dell SE2219H</a>
+            <a
+              href="https://amzn.to/2KItIIi"
+              target="_blank"
+              aria-label="monitor"
+              rel="noopener"
+            >Monitor: Dell SE2219H</a>
           </li>
           <li>
-            <a href="https://amzn.to/2Hgm3ie" target="_blank">Mic: Fifine USB Microphone</a>
+            <a
+              href="https://amzn.to/2Hgm3ie"
+              target="_blank"
+              aria-label="mic"
+              rel="noopener"
+            >Mic: Fifine USB Microphone</a>
           </li>
         </ul>
       </div>
@@ -40,19 +65,44 @@
         <h5>Equipment</h5>
         <ul>
           <li>
-            <a href="https://amzn.to/2Z3uHMj" target="_blank">Table: Tribesigns Modern L-Shaped Desk</a>
+            <a
+              href="https://amzn.to/2Z3uHMj"
+              target="_blank"
+              aria-label="table"
+              rel="noopener"
+            >Table: Tribesigns Modern L-Shaped Desk</a>
           </li>
           <li>
-            <a href="https://amzn.to/320xxPd" target="_blank">Camera: OnePlus 5</a>
+            <a
+              href="https://amzn.to/320xxPd"
+              target="_blank"
+              aria-label="camera"
+              rel="noopener"
+            >Camera: OnePlus 5</a>
           </li>
           <li>
-            <a href="https://amzn.to/2HgtFkR" target="_blank">Chair: BestOffice Racing Gaming Chair</a>
+            <a
+              href="https://amzn.to/2HgtFkR"
+              target="_blank"
+              aria-label="chair"
+              rel="noopener"
+            >Chair: BestOffice Racing Gaming Chair</a>
           </li>
           <li>
-            <a href="https://amzn.to/2Hgekkj" target="_blank">Lamp: TaoTronics LED Desk Lamp</a>
+            <a
+              href="https://amzn.to/2Hgekkj"
+              target="_blank"
+              aria-label="lamp"
+              rel="noopener"
+            >Lamp: TaoTronics LED Desk Lamp</a>
           </li>
           <li>
-            <a href="https://amzn.to/31PleFa" target="_blank">Laptop Stand: Seenda Laptop Stand</a>
+            <a
+              href="https://amzn.to/31PleFa"
+              target="_blank"
+              aria-label="laptop stand"
+              rel="noopener"
+            >Laptop Stand: Seenda Laptop Stand</a>
           </li>
         </ul>
       </div>

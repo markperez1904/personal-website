@@ -6,7 +6,7 @@
         <img src="~assets/images/night_mountain.jpg" alt="first project" />
         <h6 class="title is-6">Personal Website</h6>
 
-        <a href="https://markperez.dev" target="_blank" class="button is-black">
+        <a href="https://markperez.dev" target="_blank" class="button is-black" rel="noopener">
           <i class="far fa-eye"></i>
           Demo
         </a>
@@ -14,6 +14,7 @@
           href="https://github.com/markperez1904/personal-website"
           target="_blank"
           class="button is-black"
+          rel="noopener"
         >
           <i class="fas fa-code"></i>
           Code

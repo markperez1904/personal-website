@@ -64,6 +64,7 @@
         <a
           href="https://drive.google.com/file/d/1F4uiGInzza7EbNbmcHR6fA-PbsndBmsQ/view?usp=sharing"
           target="_blank"
+          rel="noopener"
         >
           <b-button id="button" rounded>Resume</b-button>
         </a>

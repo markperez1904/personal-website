@@ -2,32 +2,62 @@
   <div class="container has-text-centered">
     <footer class="columns is-centered">
       <!-- YouTube -->
-      <a href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos" target="_blank">
+      <a
+        href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos"
+        target="_blank"
+        aria-label="youtube"
+        rel="noopener"
+      >
         <i class="fab fa-youtube"></i>
       </a>
 
       <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/markpereztech/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/markpereztech/"
+        target="_blank"
+        aria-label="linkedin"
+        rel="noopener"
+      >
         <i class="fab fa-linkedin"></i>
       </a>
 
       <!-- GitHub -->
-      <a href="https://github.com/markperez1904" target="_blank">
+      <a
+        href="https://github.com/markperez1904"
+        target="_blank"
+        aria-label="github"
+        rel="noopener"
+      >
         <i class="fab fa-github"></i>
       </a>
 
       <!-- AngelList -->
-      <a href="https://angel.co/mark-perez-10" target="_blank">
+      <a
+        href="https://angel.co/mark-perez-10"
+        target="_blank"
+        aria-label="angellist"
+        rel="noopener"
+      >
         <i class="fab fa-angellist"></i>
       </a>
 
       <!-- Upwork -->
-      <a href="https://www.upwork.com/o/profiles/users/_~01ed84530004e0fd8c/" target="_blank">
+      <a
+        href="https://www.upwork.com/o/profiles/users/_~01ed84530004e0fd8c/"
+        target="_blank"
+        aria-label="upwork"
+        rel="noopener"
+      >
         <i class="icon-upwork"></i>
       </a>
 
       <!-- Instagram -->
-      <a href="https://www.instagram.com/mperez1904/" target="_blank">
+      <a
+        href="https://www.instagram.com/mperez1904/"
+        target="_blank"
+        aria-label="instagram"
+        rel="noopener"
+      >
         <i class="fab fa-instagram"></i>
       </a>
     </footer>
@@ -35,7 +65,12 @@
       <small class="column is-narrow">&copy; {{ getYear }} Mark Perez</small>
       <small class="column is-narrow">
         Made with ❤️ in
-        <a href="https://nuxtjs.org" target="_blank">Nuxt</a>
+        <a
+          href="https://nuxtjs.org"
+          target="_blank"
+          aria-label="nuxt"
+          rel="noopener"
+        >Nuxt</a>
       </small>
     </footer>
   </div>
