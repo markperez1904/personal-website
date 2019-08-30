@@ -14,12 +14,19 @@
       </aside>
 
       <aside class="column is-narrow is-12-widescreen is-12-desktop">
-        <a href="https://www.paypal.com/paypalme2/markperez1904" target="_blank">
-          <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+        <a
+          href="https://www.paypal.com/paypalme2/markperez1904"
+          target="_blank"
+          aria-label="paypal"
+          rel="noopener"
+        >
+          <img
+            src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png"
+            alt="PayPal"
+          />
         </a>
       </aside>
     </section>
-
   </div>
 </template>
 

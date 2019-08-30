@@ -22,7 +22,7 @@ export const htmlSerializer = (type, element, content, children) => {
       const target = element.data.target
         ? `target="'${element.data.target}'" rel="noopener"`
         : ''
-      result = `<a style="font-weight: bold" target="_blank" href="${url}" ${target}>${content}</a>`
+      result = `<a style="font-weight: bold" target="_blank" rel="noopener" href="${url}" ${target}>${content}</a>`
     }
     return result
   }
