@@ -16,6 +16,7 @@
 body {
   font-family: 'Oxygen', sans-serif;
   color: #304455;
+  touch-action: manipulation; /* This will disable double-tap zoom on mobile devices */
 }
 
 /* This snippet of code here fixes the stupid iframe issue */
