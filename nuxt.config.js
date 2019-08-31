@@ -41,18 +41,11 @@ export default {
 
   // Headers of the page
   head: {
-    title: 'Mark Perez',
     meta: [
       { charset: 'utf-8' },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'SEO Specialist and Front-End Developer. Self-learning enthusiast in tech. Producing content on YouTube.'
       },
       {
         name: 'google-site-verification',

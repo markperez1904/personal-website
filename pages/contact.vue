@@ -15,16 +15,36 @@
     >
       <!-- Name nad Email -->
       <section class="field control columns is-centered">
-        <input type="text" name="name" class="input column is-3" placeholder="Name" aria-label="full name" required />
+        <input
+          type="text"
+          name="name"
+          class="input column is-3"
+          placeholder="Name"
+          aria-label="full name"
+          required
+        />
         <br />
-        <input type="email" name="email" class="input column is-3" placeholder="Email" aria-label="email address" required />
+        <input
+          type="email"
+          name="email"
+          class="input column is-3"
+          placeholder="Email"
+          aria-label="email address"
+          required
+        />
       </section>
       <br />
 
       <!-- Message -->
       <section class="field control columns is-centered">
         <div class="column is-6">
-          <textarea class="textarea" name="message" placeholder="Message..." aria-label="message" required></textarea>
+          <textarea
+            class="textarea"
+            name="message"
+            placeholder="Message..."
+            aria-label="message"
+            required
+          ></textarea>
         </div>
       </section>
       <br />
@@ -47,6 +67,7 @@ export default {
         'Feel free to send me an email. I will get back to them in no time!'
     }
   },
+
   head() {
     return {
       title: this.title,
@@ -59,6 +80,7 @@ export default {
       ]
     }
   },
+
   methods: {
     handleRequest() {
       this.messageSent = true
