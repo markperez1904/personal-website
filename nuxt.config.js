@@ -3,12 +3,38 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 import gql from 'graphql-tag'
 
+// GraphQL fecthing Prismic API
 const client = new ApolloClient({
   link: PrismicLink({
     uri: 'https://marks-personal-website.prismic.io/graphql'
   }),
   cache: new InMemoryCache()
 })
+
+// storing all the website links
+const linkages = () => {
+  return client
+    .query({
+      query: gql`
+        {
+          allBlog_postss(sortBy: title_ASC) {
+            edges {
+              node {
+                _meta {
+                  uid
+                }
+              }
+            }
+          }
+        }
+      `
+    })
+    .then(res => {
+      return res.data.allBlog_postss.edges.map(posts => {
+        return '/blog/' + posts.node._meta.uid
+      })
+    })
+}
 
 export default {
   mode: 'universal',
@@ -20,8 +46,7 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content:
-          'width=device-width, initial-scale=1, shrink-to-fit=no'
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
       {
         hid: 'description',
@@ -77,7 +102,8 @@ export default {
     'vue-scrollto/nuxt',
     '@nuxtjs/apollo',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/google-adsense'
+    '@nuxtjs/google-adsense',
+    '@nuxtjs/sitemap'
   ],
 
   // Keep Tracking ID private
@@ -99,29 +125,12 @@ export default {
 
   // Generate index.html files for each blog post
   generate: {
-    routes: function() {
-      return client
-        .query({
-          query: gql`
-            {
-              allBlog_postss(sortBy: title_ASC) {
-                edges {
-                  node {
-                    _meta {
-                      uid
-                    }
-                  }
-                }
-              }
-            }
-          `
-        })
-        .then(res => {
-          return res.data.allBlog_postss.edges.map(posts => {
-            return '/blog/' + posts.node._meta.uid
-          })
-        })
-    }
+    routes: linkages
+  },
+
+  // generate sitemap.xml for Search Console
+  sitemap: {
+    routes: linkages
   },
 
   // Build configuration
