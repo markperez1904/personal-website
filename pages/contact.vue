@@ -15,16 +15,16 @@
     >
       <!-- Name nad Email -->
       <section class="field control columns is-centered">
-        <input type="text" name="name" class="input column is-3" placeholder="Name" required />
+        <input type="text" name="name" class="input column is-3" placeholder="Name" aria-label="full name" required />
         <br />
-        <input type="email" name="email" class="input column is-3" placeholder="Email" required />
+        <input type="email" name="email" class="input column is-3" placeholder="Email" aria-label="email address" required />
       </section>
       <br />
 
       <!-- Message -->
       <section class="field control columns is-centered">
         <div class="column is-6">
-          <textarea class="textarea" name="message" placeholder="Message..." required></textarea>
+          <textarea class="textarea" name="message" placeholder="Message..." aria-label="message" required></textarea>
         </div>
       </section>
       <br />
