@@ -130,6 +130,7 @@ export default {
 
   // generate sitemap.xml for Search Console
   sitemap: {
+    hostname: 'https://markperez.dev',
     routes: linkages
   },
 
