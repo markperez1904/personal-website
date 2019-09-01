@@ -7,7 +7,7 @@
         <h6 class="title is-6">Personal Website</h6>
 
         <a href="https://markperez.dev" target="_blank" class="button is-black" rel="noopener">
-          <i class="far fa-eye"></i>
+          <i class="icon-eye"></i>
           Demo
         </a>
         <a
@@ -16,7 +16,7 @@
           class="button is-black"
           rel="noopener"
         >
-          <i class="fas fa-code"></i>
+          <i class="icon-code"></i>
           Code
         </a>
       </article>

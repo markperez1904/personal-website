@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?evf1ip');
-  src: url('../fonts/icomoon.eot?evf1ip#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?evf1ip') format('truetype'),
-    url('../fonts/icomoon.woff?evf1ip') format('woff'),
-    url('../fonts/icomoon.svg?evf1ip#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?vc2l3n');
+  src: url('../fonts/icomoon.eot?vc2l3n#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?vc2l3n') format('truetype'),
+    url('../fonts/icomoon.woff?vc2l3n') format('woff'),
+    url('../fonts/icomoon.svg?vc2l3n#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-angellist:before {
+  content: '\e900';
+}
 .icon-upwork:before {
-  content: '\75';
+  content: '\e906';
+}
+.icon-eye:before {
+  content: '\e9ce';
+}
+.icon-code:before {
+  content: '\ea80';
+}
+.icon-instagram:before {
+  content: '\ea92';
+}
+.icon-youtube:before {
+  content: '\ea9d';
+}
+.icon-github:before {
+  content: '\eab0';
+}
+.icon-linkedin:before {
+  content: '\eaca';
 }

@@ -8,7 +8,7 @@
         aria-label="youtube"
         rel="noopener"
       >
-        <i class="fab fa-youtube"></i>
+        <i class="icon-youtube"></i>
       </a>
 
       <!-- LinkedIn -->
@@ -18,7 +18,7 @@
         aria-label="linkedin"
         rel="noopener"
       >
-        <i class="fab fa-linkedin"></i>
+        <i class="icon-linkedin"></i>
       </a>
 
       <!-- GitHub -->
@@ -28,7 +28,7 @@
         aria-label="github"
         rel="noopener"
       >
-        <i class="fab fa-github"></i>
+        <i class="icon-github"></i>
       </a>
 
       <!-- AngelList -->
@@ -38,7 +38,7 @@
         aria-label="angellist"
         rel="noopener"
       >
-        <i class="fab fa-angellist"></i>
+        <i class="icon-angellist"></i>
       </a>
 
       <!-- Upwork -->
@@ -58,7 +58,7 @@
         aria-label="instagram"
         rel="noopener"
       >
-        <i class="fab fa-instagram"></i>
+        <i class="icon-instagram"></i>
       </a>
     </footer>
     <footer class="columns is-centered">
