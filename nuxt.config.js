@@ -96,7 +96,8 @@ export default {
     '@nuxtjs/apollo',
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-adsense',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
 
   // Keep Tracking ID private
@@ -125,6 +126,24 @@ export default {
   sitemap: {
     hostname: 'https://markperez.dev',
     routes: linkages
+  },
+
+  // tell web crawlers where to crawl
+  robots: {
+    UserAgent: '*',
+
+    Disallow: () => [
+      '/_nuxt/',
+      '/css/',
+      '/fonts/',
+      '/thanks/',
+      '/sw.js',
+      '/200.html',
+      '/README.md',
+      '/tux_penguin.ico'
+    ],
+
+    Sitemap: 'https://markperez.dev/sitemap.xml'
   },
 
   // Build configuration
