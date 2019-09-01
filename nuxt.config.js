@@ -55,7 +55,7 @@ export default {
     // Link to Google Fonts and Website Image
     link: [
       // Favicon icon
-      { rel: 'icon', type: 'image/x-icon', href: '/tux_penguin.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/mark.ico' },
 
       // Google Fonts CDN
       {
@@ -130,8 +130,7 @@ export default {
       '/thanks/',
       '/sw.js',
       '/200.html',
-      '/README.md',
-      '/tux_penguin.ico'
+      '/README.md'
     ],
 
     Sitemap: 'https://markperez.dev/sitemap.xml'
