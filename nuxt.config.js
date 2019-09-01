@@ -124,11 +124,7 @@ export default {
     UserAgent: '*',
 
     Disallow: () => [
-      '/_nuxt/',
-      '/css/',
-      '/fonts/',
       '/thanks/',
-      '/sw.js',
       '/200.html',
       '/README.md'
     ],
