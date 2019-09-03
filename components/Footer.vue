@@ -22,12 +22,7 @@
       </a>
 
       <!-- GitHub -->
-      <a
-        href="https://github.com/markperez1904"
-        target="_blank"
-        aria-label="github"
-        rel="noopener"
-      >
+      <a href="https://github.com/markperez1904" target="_blank" aria-label="github" rel="noopener">
         <i class="icon-github"></i>
       </a>
 
@@ -49,16 +44,6 @@
         rel="noopener"
       >
         <i class="icon-upwork"></i>
-      </a>
-
-      <!-- Instagram -->
-      <a
-        href="https://www.instagram.com/mperez1904/"
-        target="_blank"
-        aria-label="instagram"
-        rel="noopener"
-      >
-        <i class="icon-instagram"></i>
       </a>
     </footer>
     <footer class="columns is-centered">

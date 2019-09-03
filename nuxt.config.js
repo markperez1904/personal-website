@@ -17,7 +17,7 @@ const linkages = () => {
     .query({
       query: gql`
         {
-          allBlog_postss(sortBy: title_ASC) {
+          allBlog_postss(sortBy: meta_firstPublicationDate_DESC) {
             edges {
               node {
                 _meta {
