@@ -55,7 +55,7 @@ export default {
     // Link to Google Fonts and Website Image
     link: [
       // Favicon icon
-      { rel: 'icon', type: 'image/x-icon', href: '/mark.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/markperez_logo.ico' },
 
       // Google Fonts CDN
       {
