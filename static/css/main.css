@@ -60,6 +60,6 @@ a:focus {
   color: rgb(33, 112, 33);
   background-color: transparent;
 }
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
