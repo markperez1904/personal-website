@@ -62,7 +62,7 @@
         </a>
         <!-- View my Resume -->
         <a
-          href="https://drive.google.com/file/d/1F4uiGInzza7EbNbmcHR6fA-PbsndBmsQ/view?usp=sharing"
+          href="https://drive.google.com/file/d/1_6T4vaxjppLAj2D_z05xVu_vohNcJQJC/view?usp=sharing"
           target="_blank"
           rel="noopener"
         >
