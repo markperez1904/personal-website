@@ -1,8 +1,10 @@
 <template>
   <div>
+    <!-- Email Lead Generator -->
     <app-email></app-email>
-    <script src="https://apis.google.com/js/platform.js"></script>
 
+    <!-- YouTube Subscription Button -->
+    <script src="https://apis.google.com/js/platform.js"></script>
     <section class="columns is-multiline is-vcentered is-centered">
       <aside class="column is-narrow is-12-widescreen is-12-desktop">
         <div
@@ -13,6 +15,7 @@
         ></div>
       </aside>
 
+      <!-- PayPal Link -->
       <aside class="column is-narrow is-12-widescreen is-12-desktop">
         <a
           href="https://www.paypal.com/paypalme2/markperez1904"
@@ -25,6 +28,11 @@
             alt="PayPal"
           />
         </a>
+      </aside>
+
+      <!-- AdSense component -->
+      <aside class="column is-narrow is-12-widescreen is-12-desktop">
+        <adsbygoogle />
       </aside>
     </section>
   </div>
