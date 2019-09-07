@@ -32,7 +32,7 @@
 
       <!-- AdSense component -->
       <aside class="column is-narrow is-12-widescreen is-12-desktop">
-        <adsbygoogle />
+        <adsbygoogle :ad-slot="2763616750" />
       </aside>
     </section>
   </div>

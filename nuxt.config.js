@@ -99,7 +99,8 @@ export default {
 
   // Keep Google AdSense code private
   'google-adsense': {
-    id: process.env.GOOGLE_ADSENSE
+    id: process.env.GOOGLE_ADSENSE_PUBLISHER,
+    analyticsUacct: process.env.GOOGLE_ANALYTICS
   },
 
   // Using apollo to query blog posts
