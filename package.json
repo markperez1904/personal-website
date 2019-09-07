@@ -25,6 +25,7 @@
     "install": "^0.13.0",
     "nuxt": "^2.9.2",
     "nuxt-buefy": "^0.3.14",
+    "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.1",
     "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",

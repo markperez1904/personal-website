@@ -8,7 +8,7 @@
         :key="post.node._meta.id"
         class="box column is-3-widescreen is-4-tablet"
       >
-        <nuxt-link :to="`/blog/${post.node._meta.uid}`">
+        <nuxt-link :to="`/blog/${post.node._meta.uid}/`">
           <img :src="post.node.image.url" :alt="post.node.image.alt" />
           <p class="title is-6">{{post.node.title[0].text}}</p>
         </nuxt-link>

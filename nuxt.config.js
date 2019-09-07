@@ -82,6 +82,7 @@ export default {
   // Nuxt.js modules
   modules: [
     '@nuxtjs/pwa', // this module will give me PWA benefits by default!
+    'nuxt-trailingslash-module', // add trailing slash on URLs
     'nuxt-buefy',
     'vue-scrollto/nuxt',
     '@nuxtjs/apollo',
@@ -116,7 +117,8 @@ export default {
   // generate sitemap.xml for Search Console
   sitemap: {
     hostname: 'https://markperez.dev',
-    routes: linkages
+    routes: linkages,
+    trailingSlash: true
   },
 
   // tell web crawlers where to crawl

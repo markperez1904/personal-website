@@ -21,7 +21,7 @@
           <vue-disqus
             shortname="mark-perez"
             :identifier="blog_posts._meta.id"
-            :url="`http://markperez.dev/blog/${getRoute}`"
+            :url="`http://markperez.dev/blog/${getRoute}/`"
           ></vue-disqus>
         </div>
       </article>

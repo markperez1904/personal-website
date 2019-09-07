@@ -28,17 +28,17 @@
             <n-link
               :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
               class="navbar-item"
-              to="/blog"
+              to="/blog/"
             >Blog</n-link>
             <n-link
               :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
               class="navbar-item"
-              to="/gear"
+              to="/gear/"
             >Gear</n-link>
             <n-link
               :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
               class="navbar-item"
-              to="/contact"
+              to="/contact/"
             >Contact</n-link>
           </div>
         </div>
