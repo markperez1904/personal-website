@@ -14,7 +14,7 @@
     "@nuxtjs/apollo": "^4.0.0-rc12",
     "@nuxtjs/google-adsense": "^1.1.3",
     "@nuxtjs/google-analytics": "^2.2.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.16",
+    "@nuxtjs/pwa": "^3.0.0-beta.17",
     "@nuxtjs/robots": "^2.4.0",
     "@nuxtjs/sitemap": "^1.3.0",
     "apollo-cache-inmemory": "^1.6.3",
@@ -24,7 +24,7 @@
     "graphql-tag": "^2.10.1",
     "install": "^0.13.0",
     "nuxt": "^2.9.2",
-    "nuxt-buefy": "^0.3.13",
+    "nuxt-buefy": "^0.3.14",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.1",
     "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.19.2",
+    "prettier": "^1.16.4"
   }
 }

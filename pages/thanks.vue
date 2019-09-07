@@ -21,12 +21,12 @@ export default {
 
   head() {
     return {
-      title: this.title,
+      title: 'robots',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.content
+          content: 'noindex'
         }
       ]
     }
