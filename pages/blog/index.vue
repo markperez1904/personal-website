@@ -9,7 +9,7 @@
         class="box column is-3-widescreen is-4-tablet"
       >
         <nuxt-link :to="`/blog/${post.node._meta.uid}/`">
-          <img :src="post.node.image.url" :alt="post.node.image.alt" />
+          <img class="post-image" :src="post.node.image.url" :alt="post.node.image.alt" />
           <p class="title is-6">{{post.node.title[0].text}}</p>
         </nuxt-link>
       </article>
@@ -32,9 +32,6 @@
 <script>
 import gql from 'graphql-tag'
 import PrismicDOM from 'prismic-dom'
-
-// Amount of blog posts shown on each interation
-// const POST_PER_PAGE = 6
 
 // GraphQL Query
 const posts = gql`
@@ -83,12 +80,6 @@ export default {
   apollo: {
     allBlog_postss: {
       query: posts
-
-      // variables() {
-      //   return {
-      //     first: POST_PER_PAGE
-      //   }
-      // }
     }
   }
 }
@@ -102,6 +93,14 @@ h1 {
 
 h2 {
   margin: 2rem 0;
+}
+
+.column {
+  padding: unset;
+}
+
+.post-image {
+  border-radius: 6px;
 }
 
 .container {
