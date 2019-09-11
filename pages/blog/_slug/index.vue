@@ -117,6 +117,7 @@ export default {
 
 .featured-img {
   margin: 1rem 0;
+  border-radius: 6px;
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
