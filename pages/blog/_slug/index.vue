@@ -6,7 +6,7 @@
       <article class="column is-7">
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
-        <p class="date">{{ blog_posts._meta.firstPublicationDate | moment("MMM DD, YYYY") }}</p>
+        <p class="date">{{ blog_posts.date | moment("MMM DD, YYYY") }}</p>
         <h2>{{ blog_posts.description[0].text }}</h2>
 
         <!-- Main image -->
@@ -45,12 +45,12 @@ const post = gql`
   query blog_posts($uid: String!) {
     blog_posts(uid: $uid, lang: "en-us") {
       title
+      date
       description
       image
       content
       _meta {
         id
-        firstPublicationDate
       }
     }
   }

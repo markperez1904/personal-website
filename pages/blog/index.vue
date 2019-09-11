@@ -36,7 +36,7 @@ import PrismicDOM from 'prismic-dom'
 // GraphQL Query
 const posts = gql`
   {
-    allBlog_postss(sortBy: meta_firstPublicationDate_DESC) {
+    allBlog_postss(sortBy: date_DESC) {
       edges {
         node {
           title
