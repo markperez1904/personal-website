@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?vc2l3n');
-  src: url('../fonts/icomoon.eot?vc2l3n#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?vc2l3n') format('truetype'),
-    url('../fonts/icomoon.woff?vc2l3n') format('woff'),
-    url('../fonts/icomoon.svg?vc2l3n#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?w03u4d');
+  src: url('../fonts/icomoon.eot?w03u4d#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?w03u4d') format('truetype'),
+    url('../fonts/icomoon.woff?w03u4d') format('woff'),
+    url('../fonts/icomoon.svg?w03u4d#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,16 +30,13 @@
   content: '\e900';
 }
 .icon-upwork:before {
-  content: '\e906';
+  content: '\e901';
 }
 .icon-eye:before {
   content: '\e9ce';
 }
 .icon-code:before {
   content: '\ea80';
-}
-.icon-instagram:before {
-  content: '\ea92';
 }
 .icon-youtube:before {
   content: '\ea9d';
@@ -49,4 +46,7 @@
 }
 .icon-linkedin:before {
   content: '\eaca';
+}
+.icon-paypal:before {
+  content: '\ead8';
 }
