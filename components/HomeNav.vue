@@ -50,7 +50,7 @@
         <h1 class="title">Mark Perez</h1>
         <h2
           class="subtitle"
-        >SEO Specialist and Front-End Developer. Self-learning enthusiast in tech. Producing content on YouTube.</h2>
+        >SEO Specialist and Self-learning enthusiast in technology. Producing content on YouTube.</h2>
       </div>
     </section>
 
@@ -62,7 +62,7 @@
         </a>
         <!-- View my Resume -->
         <a
-          href="https://drive.google.com/file/d/1_6T4vaxjppLAj2D_z05xVu_vohNcJQJC/view?usp=sharing"
+          href="https://drive.google.com/open?id=1dx8t_IKZKLtfs4I6nIZsQtaW5qJvL22VEaPZ04L0RsE"
           target="_blank"
           rel="noopener"
         >

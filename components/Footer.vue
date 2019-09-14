@@ -26,16 +26,6 @@
         <i class="icon-github"></i>
       </a>
 
-      <!-- AngelList -->
-      <a
-        href="https://angel.co/mark-perez-10"
-        target="_blank"
-        aria-label="angellist"
-        rel="noopener"
-      >
-        <i class="icon-angellist"></i>
-      </a>
-
       <!-- Upwork -->
       <a
         href="https://www.upwork.com/o/profiles/users/_~01ed84530004e0fd8c/"

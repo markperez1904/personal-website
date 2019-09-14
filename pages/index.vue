@@ -15,7 +15,7 @@ export default {
     return {
       title: 'Mark Perez',
       content:
-        'SEO Specialist and Front-End Developer. Self-learning enthusiast in tech. Producing content on YouTube.'
+        'SEO Specialist and Self-learning enthusiast in technology. Producing content on YouTube.'
     }
   },
 
