@@ -7,14 +7,14 @@
         <!-- CJ Affiliate Banner -->
         <figure class="banner">
           <a
-            href="http://www.kqzyfj.com/click-9174765-10658620"
+            href="https://www.kqzyfj.com/click-9174765-10658620"
             target="_blank"
             rel="noopener"
             aria-label="logitech banner"
           >
             <img
               class="box banner-image"
-              src="http://www.awltovhc.com/image-9174765-10658620"
+              src="https://www.awltovhc.com/image-9174765-10658620"
               alt="Shop for Keyboards, Mice, and more at Logitech"
             />
           </a>
@@ -37,7 +37,7 @@
           <vue-disqus
             shortname="mark-perez"
             :identifier="blog_posts._meta.id"
-            :url="`http://markperez.dev/blog/${getRoute}/`"
+            :url="`https://markperez.dev/blog/${getRoute}/`"
           ></vue-disqus>
         </div>
       </article>
