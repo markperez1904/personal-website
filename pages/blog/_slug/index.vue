@@ -14,7 +14,7 @@
           >
             <img
               class="box banner-image"
-              src="https://www.awltovhc.com/image-9174765-10658620"
+              src="~assets/images/logitech_banner.jpg"
               alt="Shop for Keyboards, Mice, and more at Logitech"
             />
           </a>
