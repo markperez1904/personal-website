@@ -1,17 +1,3 @@
-/* classes */
-.navbar {
-  padding: 0 2rem;
-}
-
-.navbar-item {
-  font-size: 18px;
-  padding-right: 2rem;
-}
-
-.navbar-brand {
-  font-size: 22px;
-}
-
 /* Main font on website */
 body {
   font-family: 'Oxygen', sans-serif;
@@ -59,4 +45,18 @@ a:active,
 a:focus {
   color: rgb(33, 112, 33);
   background-color: transparent;
+}
+
+/* classes */
+.navbar {
+  padding: 0 2rem;
+}
+
+.navbar-item {
+  font-size: 18px;
+  padding-right: 2rem;
+}
+
+.navbar-brand {
+  font-size: 22px;
 }
