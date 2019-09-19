@@ -59,24 +59,24 @@ export const htmlSerializer = (type, element, content, children) => {
       return `<h2>${children.join('')}</h2>`
 
     case Elements.heading3:
-      return `<h3 style="font-size: 22px; letter-spacing: 1px; font-weight: bold">${children.join(
+      return `<h3 style="margin-bottom: 1.5rem; font-size: 22px; letter-spacing: 1px; font-weight: bold">${children.join(
         ''
-      )}</h3> <br>`
+      )}</h3>`
 
     case Elements.heading4:
-      return `<h4>${children.join('')}</h4> <br>`
+      return `<h4>${children.join('')}</h4>`
 
     case Elements.heading5:
-      return `<h5>${children.join('')}</h5> <br>`
+      return `<h5>${children.join('')}</h5>`
 
     case Elements.heading6:
-      return `<h6>${children.join('')}</h6> <br>`
+      return `<h6>${children.join('')}</h6>`
 
     case Elements.paragraph:
-      return `<p>${children.join('')}</p> <br>`
+      return `<p style="margin-bottom: 1.5rem">${children.join('')}</p>`
 
     case Elements.preformatted:
-      return `<pre>${children.join('')}</pre> <br>`
+      return `<pre style="margin-bottom: 1.5rem">${children.join('')}</pre>`
 
     case Elements.strong:
       return `<strong>${children.join('')}</strong>`
@@ -92,23 +92,23 @@ export const htmlSerializer = (type, element, content, children) => {
 
     // In Bulma.io, add "content" class to style <ol> and <ul>
     case Elements.list:
-      return `<div class="content"><ul>${children.join('')}</ul></div> <br>`
+      return `<div class="content"><ul>${children.join('')}</ul></div>`
 
     case Elements.oList:
       return `<div class="content"><ol type="1">${children.join(
         ''
-      )}</ol></div> <br>`
+      )}</ol></div>`
 
     case Elements.embed:
       return `
 				<div
-					style="text-align: center"
+					style="margin-bottom: 1.5rem; text-align: center"
 					data-oembed="${element.oembed.embed_url}"
 					data-oembed-type="${element.oembed.type}"
 					data-oembed-provider="${element.oembed.provider_name}"
 				>
 					${element.oembed.html}
-				</div> <br>
+				</div>
 	  		`
 
     case Elements.label:
