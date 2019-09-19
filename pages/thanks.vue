@@ -44,10 +44,6 @@ h2 {
   margin: 2rem 0;
 }
 
-a {
-  color: rgb(29, 88, 29);
-}
-
 .container {
   padding: 0 2rem;
 }

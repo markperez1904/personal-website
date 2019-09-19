@@ -27,6 +27,12 @@ code {
   border-radius: 6px;
 }
 
+/* apply consistent color theme on anchor text  */
+a,
+a:hover {
+  color: #00b196;
+}
+
 /* This snippet of code here fixes the stupid iframe issue */
 embed,
 iframe,

@@ -51,6 +51,7 @@
       <small class="column is-narrow">
         Made with ❤️ in
         <a
+          class="framework"
           href="https://nuxtjs.org"
           target="_blank"
           aria-label="nuxt"
@@ -83,7 +84,10 @@ i {
 }
 
 a {
-  color: #00b196;
   text-decoration: unset;
+}
+
+.framework {
+  font-weight: bold;
 }
 </style>
