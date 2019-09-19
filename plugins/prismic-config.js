@@ -100,6 +100,7 @@ export const htmlSerializer = (type, element, content, children) => {
     case Elements.embed:
       return `
         <div
+          class="youtube-embed"
 					style="margin-bottom: 1.5rem; text-align: center"
 					data-oembed="${element.oembed.embed_url}"
 					data-oembed-type="${element.oembed.type}"
