@@ -37,6 +37,7 @@ a:hover {
 embed,
 iframe,
 video {
+  height: 28vh;
   max-width: 100%;
-  height: 300px;
+  border-radius: 6px;
 }

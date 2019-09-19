@@ -30,7 +30,7 @@ export const htmlSerializer = (type, element, content, children) => {
   // If the image is also a link to a Prismic Document, it will return a <router-link> component
   // Present by default, it is recommended to keep this
   if (type === Elements.image) {
-    let result = `<img style="box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3)" src="${
+    let result = `<img style="border-radius: 6px; box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3)" src="${
       element.url
     }" alt="${element.alt || ''}" copyright="${element.copyright || ''}">`
 
@@ -95,13 +95,11 @@ export const htmlSerializer = (type, element, content, children) => {
       return `<div class="content"><ul>${children.join('')}</ul></div>`
 
     case Elements.oList:
-      return `<div class="content"><ol type="1">${children.join(
-        ''
-      )}</ol></div>`
+      return `<div class="content"><ol type="1">${children.join('')}</ol></div>`
 
     case Elements.embed:
       return `
-				<div
+        <div
 					style="margin-bottom: 1.5rem; text-align: center"
 					data-oembed="${element.oembed.embed_url}"
 					data-oembed-type="${element.oembed.type}"
