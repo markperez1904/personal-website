@@ -40,12 +40,23 @@ export default {
 </script>
 
 <style scoped>
-/* elements */
 a:hover,
 a:active,
 a:focus {
-  color: rgb(29, 88, 29);
+  color: #00b196;
   background-color: transparent;
 }
 
+.navbar {
+  padding: 0 2rem;
+}
+
+.navbar-item {
+  font-size: 18px;
+  padding-right: 2rem;
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
 </style>

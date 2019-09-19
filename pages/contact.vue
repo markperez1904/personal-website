@@ -3,10 +3,6 @@
     <h1>{{title}}</h1>
     <h2>{{content}}</h2>
 
-    <section v-if="messageSent" class="columns is-centered">
-      <b-message type="is-success" class="column is-5">Message Sent!</b-message>
-    </section>
-
     <!-- Email API form submission -->
     <form
       @submit="handleRequest"
@@ -61,7 +57,6 @@
 export default {
   data() {
     return {
-      messageSent: false,
       title: 'Contact',
       content:
         'Feel free to send me an email. I will get back to them in no time!'
@@ -79,23 +74,11 @@ export default {
         }
       ]
     }
-  },
-
-  methods: {
-    handleRequest() {
-      this.messageSent = true
-    }
   }
 }
 </script>
 
 <style scoped>
-.container {
-  padding: 0 2rem;
-}
-.hidden {
-  display: none;
-}
 h1 {
   font-size: 30px;
   padding-top: 2rem;
@@ -104,5 +87,18 @@ h1 {
 h2,
 p {
   margin: 2rem 0;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00b196;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.hidden {
+  display: none;
 }
 </style>

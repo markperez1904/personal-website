@@ -35,12 +35,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  padding: 0 2rem;
-}
-.links {
-  text-align: center;
-}
 h1 {
   font-size: 30px;
   padding-top: 2rem;
@@ -49,7 +43,16 @@ h1 {
 h2 {
   margin: 2rem 0;
 }
+
 a {
   color: rgb(29, 88, 29);
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.links {
+  text-align: center;
 }
 </style>

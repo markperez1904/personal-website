@@ -83,8 +83,8 @@ export default {
   modules: [
     '@nuxtjs/pwa', // this module will give me PWA benefits by default!
     'nuxt-trailingslash-module', // add trailing slash on URLs
-    'nuxt-buefy',
     'vue-scrollto/nuxt',
+    'nuxt-buefy',
     '@nuxtjs/apollo',
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-adsense',

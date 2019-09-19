@@ -19,11 +19,11 @@
     <!-- I want to PAGINATE my posts here -->
     <nav class="pagination column">
       <a class="pagination-previous">
-        <b-button class="is-black" disabled>&#x3c;</b-button>
+        <button class="button is-black" disabled>&#x3c;</button>
       </a>
 
       <a class="pagination-next">
-        <b-button class="is-black" disabled>&#x3e;</b-button>
+        <button class="button is-black" disabled>&#x3e;</button>
       </a>
     </nav>
   </div>

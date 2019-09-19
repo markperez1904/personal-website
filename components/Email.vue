@@ -71,11 +71,11 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style scoped>
+span {
+  color: red;
+}
+
 .emailTitle,
 .emailMessage {
   text-align: center;
@@ -97,9 +97,9 @@ export default {}
 
 .leads {
   color: white;
-  background-color: #000000;
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  background-color: #55efc4;
+  background-image: linear-gradient(315deg, #55efc4 0%, #000000 74%);
 }
 
 .ebook {
@@ -109,7 +109,7 @@ export default {}
 }
 
 #mc_embed_signup .button {
-  background-color: rgb(30, 190, 133);
+  background-color: black;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -119,10 +119,6 @@ export default {}
 #mc_embed_signup input {
   font-family: 'Ubuntu', sans-serif;
   font-size: 12px;
-}
-
-span {
-  color: red;
 }
 </style>
 

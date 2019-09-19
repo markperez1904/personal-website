@@ -83,7 +83,7 @@ i {
 }
 
 a {
-  color: rgb(29, 88, 29);
+  color: #00b196;
   text-decoration: unset;
 }
 </style>

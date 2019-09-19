@@ -136,9 +136,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  padding: 0 2rem;
-}
 h1 {
   font-size: 30px;
   padding-top: 2rem;
@@ -155,7 +152,12 @@ a:focus {
   color: #304455;
   background-color: transparent;
 }
+
 a:hover {
   text-decoration: underline;
+}
+
+.container {
+  padding: 0 2rem;
 }
 </style>

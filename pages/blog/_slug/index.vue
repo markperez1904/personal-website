@@ -120,6 +120,28 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 30px;
+  padding-top: 1rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+aside {
+  margin: 1rem;
+  margin-top: 3rem;
+}
+
+h1,
+h2,
+.date {
+  text-align: center;
+}
+
 .container {
   padding: 0 2rem;
 }
@@ -145,31 +167,10 @@ export default {
 .banner .box {
   padding: unset;
   display: inline-block;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
 .banner-image {
   border-radius: 6px;
-}
-
-h1 {
-  font-size: 30px;
-  padding-top: 2rem;
-  letter-spacing: 1px;
-}
-
-h2 {
-  margin: 1rem;
-  font-weight: bold;
-}
-
-aside {
-  margin: 1rem;
-  margin-top: 3rem;
-}
-
-h1,
-h2,
-.date {
-  text-align: center;
 }
 </style>

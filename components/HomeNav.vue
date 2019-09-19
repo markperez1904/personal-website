@@ -58,7 +58,7 @@
       <div class="container has-text-centered">
         <!-- Scroll to Portfolio -->
         <a href="#" v-scroll-to="'#portfolio'">
-          <b-button id="button" rounded>My Work</b-button>
+          <button class="button is-rounded" id="button">My Work</button>
         </a>
         <!-- View my Resume -->
         <a
@@ -66,7 +66,7 @@
           target="_blank"
           rel="noopener"
         >
-          <b-button id="button" rounded>Resume</b-button>
+          <button class="button is-rounded" id="button">Resume</button>
         </a>
       </div>
     </section>
@@ -112,27 +112,46 @@ export default {
 </script>
 
 <style scoped>
-/* elements */
+h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+
 a:hover,
 a:active,
 a:focus {
-  color: rgb(29, 88, 29);
+  color: #00b196;
   background-color: transparent;
 }
-/* id */
-#button {
-  margin: 0 1rem;
-  margin-bottom: 2rem;
-  transition: 0.2s;
-}
-/* classes */
+
 .hero {
   background-image: url('~assets/images/night_mountain.jpg');
   background-size: cover;
   height: 100vh;
 }
+
 .hero-body * {
   color: white;
+}
+
+.hero-foot a {
+  color: #00b196;
+}
+
+.navbar {
+  padding: 0 2rem;
+}
+
+.navbar-item {
+  font-size: 18px;
+  padding-right: 2rem;
+}
+
+.navbar-brand {
+  font-size: 22px;
 }
 
 .navbar-change {
@@ -151,11 +170,9 @@ a:focus {
   background-color: transparent;
 }
 
-h1 {
-  font-size: 2.8rem;
-  letter-spacing: 1rem;
-}
-h2 {
-  font-size: 1.4rem;
+#button {
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+  transition: 0.2s;
 }
 </style>
