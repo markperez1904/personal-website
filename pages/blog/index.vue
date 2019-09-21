@@ -17,15 +17,13 @@
     </section>
 
     <!-- I want to PAGINATE my posts here -->
-    <nav class="pagination column">
-      <a class="pagination-previous">
-        <button class="button is-black" disabled>&#x3c;</button>
-      </a>
-
-      <a class="pagination-next">
-        <button class="button is-black" disabled>&#x3e;</button>
-      </a>
-    </nav>
+    <section class="columns is-multiline is-centered is-mobile">
+      <button
+        v-if="allBlog_postss.pageInfo.hasNextPage"
+        class="button is-black"
+        @click="loadMore()"
+      >Show more</button>
+    </section>
   </div>
 </template>
 
@@ -33,10 +31,18 @@
 import gql from 'graphql-tag'
 import PrismicDOM from 'prismic-dom'
 
+const POSTS_PER_PAGE = 6
+
 // GraphQL Query
 const posts = gql`
-  {
-    allBlog_postss(sortBy: date_DESC) {
+  query($first: Int, $cursor: String) {
+    allBlog_postss(sortBy: date_DESC, first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
       edges {
         node {
           title
@@ -46,7 +52,9 @@ const posts = gql`
             id
           }
         }
+        cursor
       }
+      totalCount
     }
   }
 `
@@ -79,7 +87,34 @@ export default {
 
   apollo: {
     allBlog_postss: {
-      query: posts
+      query: posts,
+
+      variables() {
+        return {
+          first: POSTS_PER_PAGE
+        }
+      }
+    }
+  },
+
+  methods: {
+    loadMore() {
+      this.$apollo.queries.allBlog_postss.fetchMore({
+        variables: {
+          cursor: this.allBlog_postss.pageInfo.endCursor
+        },
+
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          if (!fetchMoreResult) return previousResult
+
+          return Object.assign({}, previousResult, {
+            allBlog_postss: [
+              ...previousResult.allBlog_postss,
+              ...fetchMoreResult.allBlog_postss
+            ]
+          })
+        }
+      })
     }
   }
 }
@@ -129,9 +164,10 @@ h2 {
 
 .button {
   font-weight: bold;
+  margin: 1.5rem 0;
 }
 
 .button:hover:after {
-  content: '** Pagination coming soon! **';
+  /* content: '** Pagination coming soon! **'; */
 }
 </style>

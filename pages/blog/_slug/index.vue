@@ -52,11 +52,11 @@
 
 <script>
 import { linkResolver, htmlSerializer } from '@/plugins/prismic-config.js'
+import SideBar from '@/components/SideBar.vue'
 import PrismicDOM from 'prismic-dom'
 import gql from 'graphql-tag'
 
-import SideBar from '@/components/SideBar.vue'
-
+// blog post query
 const post = gql`
   query blog_posts($uid: String!) {
     blog_posts(uid: $uid, lang: "en-us") {
