@@ -1,7 +1,7 @@
 {
-  "name": "marks-site",
-  "version": "1.0.0",
-  "description": "My epic Nuxt.js project",
+  "name": "personal-website",
+  "version": "1.1.0",
+  "description": "😎 My personal website built with Nuxt.js, Prismic.io, and GraphQL",
   "author": "Mark Perez",
   "private": true,
   "scripts": {
@@ -34,9 +34,13 @@
     "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^4.1.0",
+    "@vue/cli-shared-utils": "^3.11.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "nodemon": "^1.19.2",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2"
   }
 }

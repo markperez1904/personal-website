@@ -107,7 +107,8 @@ export default {
   apollo: {
     clientConfigs: {
       default: '~/plugins/apollo.js'
-    }
+    },
+    includeNodeModules: true
   },
 
   // Generate index.html files for each blog post

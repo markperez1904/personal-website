@@ -2,7 +2,7 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <h2>{{ content }}</h2>
-    <section class="columns is-multiline is-centered">
+    <section class="posts columns is-multiline is-centered">
       <article
         v-for="post in allBlog_postss.edges"
         :key="post.node._meta.id"
@@ -29,8 +29,8 @@
 
 <script>
 import gql from 'graphql-tag'
-import PrismicDOM from 'prismic-dom'
 
+// blog posts per query
 const POSTS_PER_PAGE = 20
 
 // GraphQL Query
@@ -52,9 +52,7 @@ const posts = gql`
             id
           }
         }
-        cursor
       }
-      totalCount
     }
   }
 `
@@ -134,6 +132,10 @@ h2 {
   padding: unset;
 }
 
+.posts {
+  margin-bottom: 2rem;
+}
+
 .post-image {
   border-radius: 6px;
 }
@@ -164,10 +166,7 @@ h2 {
 
 .button {
   font-weight: bold;
-  margin: 1.5rem 0;
-}
-
-.button:hover:after {
-  content: ' > Pagination coming soon!';
+  margin-bottom: 2rem;
 }
 </style>
+ 
