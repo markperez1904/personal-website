@@ -31,7 +31,7 @@
 import gql from 'graphql-tag'
 import PrismicDOM from 'prismic-dom'
 
-const POSTS_PER_PAGE = 6
+const POSTS_PER_PAGE = 20
 
 // GraphQL Query
 const posts = gql`
@@ -168,6 +168,6 @@ h2 {
 }
 
 .button:hover:after {
-  /* content: '** Pagination coming soon! **'; */
+  content: ' > Pagination coming soon!';
 }
 </style>
