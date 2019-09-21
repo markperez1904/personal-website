@@ -1,6 +1,18 @@
 <!-- pages/blog/_slug/index.vue -->
 <template>
   <div class="container">
+    <!-- MailChimp popup form -->
+    <script type="text/javascript">
+  window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
+    L.start({
+      baseUrl: 'mc.us20.list-manage.com',
+      uuid: '0e646f9cc09aa7c7a450ae8b6',
+      lid: 'a5dd106a2e',
+      uniqueMethods: true
+    })
+  })
+    </script>
+
     <section class="columns is-centered is-multiline">
       <!-- Blog Post -->
       <article class="column is-7">
@@ -88,12 +100,22 @@ export default {
 
   head() {
     return {
+      // SEO on <title> and <meta> tags
       title: this.blog_posts.title[0].text,
       meta: [
         {
           hid: 'description',
           name: 'description',
           content: this.blog_posts.description[0].text
+        }
+      ],
+      // MailChimp code injection
+      script: [
+        {
+          type: 'text/javascript',
+          src:
+            '//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js',
+          'data-dojo-config': 'usePlainJson: true, isDebug: false'
         }
       ]
     }
