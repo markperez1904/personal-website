@@ -1,5 +1,6 @@
 <template>
   <div class="container has-text-centered">
+    <hr>
     <footer class="columns is-centered">
       <!-- YouTube -->
       <a

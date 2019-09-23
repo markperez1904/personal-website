@@ -183,7 +183,7 @@ h2,
 
 .banner {
   text-align: center;
-  margin: 3rem 0 0 0;
+  margin: 0.5rem 0 0 0;
 }
 
 .banner .box {

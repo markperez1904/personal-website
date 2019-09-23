@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="navbar is-fixed-top">
+    <section class="navbar">
       <nav class="container">
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/">

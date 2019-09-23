@@ -4,7 +4,6 @@
     <app-navbar v-else></app-navbar>
 
     <nuxt />
-    <hr />
     <app-footer></app-footer>
   </div>
 </template>

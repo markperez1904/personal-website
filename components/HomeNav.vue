@@ -1,13 +1,9 @@
 <template>
   <div class="hero is-fullheight-with-navbar">
-    <section class="hero-head navbar is-fixed-top">
+    <section class="navbar hero-head">
       <nav class="container">
         <div class="navbar-brand">
-          <n-link
-            :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-            class="navbar-item"
-            to="/"
-          >
+          <n-link class="navbar-item has-text-white" to="/">
             <img
               class="logo"
               src="~assets/images/markperez_digital_white.png"
@@ -17,8 +13,7 @@
 
           <!-- Navbar Burger -->
           <span
-            class="navbar-burger burger"
-            :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
+            class="navbar-burger burger has-text-white"
             @click="showNav = !showNav"
             data-target="navMenu"
           >
@@ -31,21 +26,9 @@
         <!-- Navbar Menu -->
         <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
           <div @click="showNav = !showNav" class="navbar-end">
-            <n-link
-              :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-              class="navbar-item"
-              to="/blog/"
-            >Blog</n-link>
-            <n-link
-              :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-              class="navbar-item"
-              to="/gear/"
-            >Gear</n-link>
-            <n-link
-              :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
-              class="navbar-item"
-              to="/contact/"
-            >Contact</n-link>
+            <n-link class="navbar-item has-text-white" to="/blog/">Blog</n-link>
+            <n-link class="navbar-item has-text-white" to="/gear/">Gear</n-link>
+            <n-link class="navbar-item has-text-white" to="/contact/">Contact</n-link>
           </div>
         </div>
       </nav>
@@ -83,43 +66,8 @@
 export default {
   data() {
     return {
-      showNav: false,
-      changeTextColor: false
+      showNav: false
     }
-  },
-
-  methods: {
-    handleScroll() {
-      // selected the navbar and logo classes
-      let nav = document.querySelector('.navbar').classList
-      let logo = document.querySelector('.logo').classList
-
-      if (window.scrollY > 120) {
-        // change navbar to white
-        nav.remove('navbar-restore')
-        nav.add('navbar-change')
-        this.changeTextColor = true
-
-        // change logo to black text
-        logo.add('logo-change')
-      } else {
-        // change navbar to transparent
-        nav.remove('navbar-change')
-        nav.add('navbar-restore')
-        this.changeTextColor = false
-
-        // change logo to white text
-        logo.remove('logo-change')
-      }
-    }
-  },
-
-  created() {
-    if (process.client) window.addEventListener('scroll', this.handleScroll)
-  },
-
-  destroyed() {
-    if (process.client) window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -155,14 +103,7 @@ a:focus {
 }
 
 .logo {
-  transition: 0.2s;
   max-height: 3rem;
-}
-
-.logo-change {
-  transition: 0.2s;
-  background-size: cover;
-  background-image: url('~assets/images/markperez_digital_black.png');
 }
 
 .navbar {
@@ -177,18 +118,6 @@ a:focus {
 
 .navbar-brand {
   font-size: 22px;
-}
-
-.navbar-change {
-  background-color: white;
-  transition: 0.2s;
-  color: black;
-}
-
-.navbar-restore {
-  background-color: transparent;
-  transition: 0.2s;
-  color: white;
 }
 
 .navbar-menu {

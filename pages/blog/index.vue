@@ -121,7 +121,7 @@ export default {
 <style scoped>
 h1 {
   font-size: 30px;
-  padding-top: 3rem;
+  padding-top: 0.5rem;
 }
 
 h2 {
