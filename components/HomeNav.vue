@@ -101,7 +101,6 @@ export default {
         this.changeTextColor = true
 
         // change logo to black text
-        logo.remove('logo-restore')
         logo.add('logo-change')
       } else {
         // change navbar to transparent
@@ -111,7 +110,6 @@ export default {
 
         // change logo to white text
         logo.remove('logo-change')
-        logo.add('logo-restore')
       }
     }
   },
@@ -157,6 +155,7 @@ a:focus {
 }
 
 .logo {
+  transition: 0.2s;
   max-height: 3rem;
 }
 
@@ -186,14 +185,10 @@ a:focus {
   color: white;
 }
 
-.logo-change {
-  transition: 0.2s;
-  background: url('~assets/images/markperez_digital_black.png');
-}
-
 .logo-restore {
   transition: 0.2s;
-  background: url('~assets/images/markperez_digital_white.png');
+  background-size: cover;
+  background-image: url('~assets/images/markperez_digital_white.png');
 }
 
 .navbar-menu {
