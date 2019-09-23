@@ -92,24 +92,26 @@ export default {
     handleScroll() {
       // selected the navbar and logo classes
       let nav = document.querySelector('.navbar').classList
-      let logo = document.querySelector('.logo')
+      let logo = document.querySelector('.logo').classList
 
       if (window.scrollY > 120) {
-        // change logo to black text
-        logo.src = '~assets/images/markperez_digital_black.png'
-
         // change navbar to white
         nav.remove('navbar-restore')
         nav.add('navbar-change')
         this.changeTextColor = true
-      } else {
-        // change logo to white text
-        logo.src = '~assets/images/markperez_digital_white.png'
 
+        // change logo to black text
+        logo.remove('logo-restore')
+        logo.add('logo-change')
+      } else {
         // change navbar to transparent
         nav.remove('navbar-change')
         nav.add('navbar-restore')
         this.changeTextColor = false
+
+        // change logo to white text
+        logo.remove('logo-change')
+        logo.add('logo-restore')
       }
     }
   },
@@ -155,7 +157,6 @@ a:focus {
 }
 
 .logo {
-  transition: 0.2s;
   max-height: 3rem;
 }
 
@@ -183,6 +184,16 @@ a:focus {
   background-color: transparent;
   transition: 0.2s;
   color: white;
+}
+
+.logo-change {
+  transition: 0.2s;
+  background: url('~assets/images/markperez_digital_black.png');
+}
+
+.logo-restore {
+  transition: 0.2s;
+  background: url('~assets/images/markperez_digital_white.png');
 }
 
 .navbar-menu {
