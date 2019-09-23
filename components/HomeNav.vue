@@ -7,7 +7,13 @@
             :class="changeTextColor ? 'has-text-black' : 'has-text-white'"
             class="navbar-item"
             to="/"
-          >Mark Perez</n-link>
+          >
+            <img
+              class="logo"
+              src="~assets/images/markperez_digital_white.png"
+              alt="Mark Perez Digital"
+            />
+          </n-link>
 
           <!-- Navbar Burger -->
           <span
@@ -84,16 +90,23 @@ export default {
 
   methods: {
     handleScroll() {
-      // selected the (.navbar) class
+      // selected the navbar and logo classes
       let nav = document.querySelector('.navbar').classList
+      let logo = document.querySelector('.logo')
 
-      // change the navbar color if scrolled
       if (window.scrollY > 120) {
+        // change logo to black text
+        logo.src = '~assets/images/markperez_digital_black.png'
+
+        // change navbar to white
         nav.remove('navbar-restore')
         nav.add('navbar-change')
         this.changeTextColor = true
-        // restore navbar color if it's back to top
       } else {
+        // change logo to white text
+        logo.src = '~assets/images/markperez_digital_white.png'
+
+        // change navbar to transparent
         nav.remove('navbar-change')
         nav.add('navbar-restore')
         this.changeTextColor = false
@@ -141,8 +154,14 @@ a:focus {
   color: #00b196;
 }
 
+.logo {
+  transition: 0.2s;
+  max-height: 3rem;
+}
+
 .navbar {
   padding: 0 2rem;
+  height: 4rem;
 }
 
 .navbar-item {

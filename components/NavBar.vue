@@ -3,7 +3,9 @@
     <section class="navbar is-fixed-top">
       <nav class="container">
         <div class="navbar-brand">
-          <n-link class="navbar-item" to="/">Mark Perez</n-link>
+          <n-link class="navbar-item" to="/">
+            <img class="logo" src="~assets/images/markperez_digital_black.png" alt="Mark Perez Digital" />
+          </n-link>
 
           <!-- Navbar Burger -->
           <span class="navbar-burger" @click="showNav = !showNav" data-target="navMenu">
@@ -47,8 +49,13 @@ a:focus {
   background-color: transparent;
 }
 
+.logo {
+  max-height: 3rem;
+}
+
 .navbar {
   padding: 0 2rem;
+  height: 4rem;
 }
 
 .navbar-item {
