@@ -159,6 +159,12 @@ a:focus {
   max-height: 3rem;
 }
 
+.logo-change {
+  transition: 0.2s;
+  background-size: cover;
+  background-image: url('~assets/images/markperez_digital_black.png');
+}
+
 .navbar {
   padding: 0 2rem;
   height: 4rem;
@@ -183,12 +189,6 @@ a:focus {
   background-color: transparent;
   transition: 0.2s;
   color: white;
-}
-
-.logo-restore {
-  transition: 0.2s;
-  background-size: cover;
-  background-image: url('~assets/images/markperez_digital_white.png');
 }
 
 .navbar-menu {
