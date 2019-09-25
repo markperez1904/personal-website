@@ -85,9 +85,10 @@ export default {
 
       variables() {
         return {
-          cursor: this.cursor
+          cursor: ''
         }
-      }
+      },
+      fetchPolicy: 'cache-and-network'
     }
   },
 
@@ -103,18 +104,15 @@ export default {
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
-          const newEdges = fetchMoreResult.allBlog_postss.edges
-          const pageInfo = fetchMoreResult.allBlog_postss.pageInfo
+          if (!fetchMoreResult) return previousResult
 
-          return newEdges.length
-            ? {
-                allBlog_postss: {
-                  __typename: previousResult.allBlog_postss.__typename,
-                  edges: [...previousResult.allBlog_postss.edges, ...newEdges],
-                  pageInfo
-                }
-              }
-            : previousResult
+          return Object.assign({}, previousResult, {
+            allBlog_postss: [
+              ...previousResult.allBlog_postss,
+              ...fetchMoreResult.allBlog_postss,
+              previousResult.allBlog_postss.__typename
+            ]
+          })
         }
       })
     }
