@@ -3,7 +3,6 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 import gql from 'graphql-tag'
 
-// GraphQL fecthing Prismic API
 const client = new ApolloClient({
   link: PrismicLink({
     uri: 'https://marks-personal-website.prismic.io/graphql'
@@ -11,7 +10,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-// storing all the website links
 const linkages = () => {
   return client
     .query({
@@ -107,8 +105,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: '~/plugins/apollo.js'
-    },
-    includeNodeModules: true
+    }
   },
 
   // Generate index.html files for each blog post

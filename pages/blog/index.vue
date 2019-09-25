@@ -21,7 +21,7 @@
       <button
         v-if="allBlog_postss.pageInfo.hasNextPage"
         class="button is-black"
-        @click="loadMore()"
+        @click="showMore"
       >Show more</button>
     </section>
   </div>
@@ -31,15 +31,14 @@
 import gql from 'graphql-tag'
 
 // blog posts per query
-const POSTS_PER_PAGE = 20
+const first = 6
 
 // GraphQL Query
 const posts = gql`
-  query($first: Int, $cursor: String) {
+  query($first: Int!, $cursor: String!) {
     allBlog_postss(sortBy: date_DESC, first: $first, after: $cursor) {
       pageInfo {
         hasNextPage
-        hasPreviousPage
         startCursor
         endCursor
       }
@@ -60,10 +59,8 @@ const posts = gql`
 export default {
   data() {
     return {
-      // Apollo variables
-      allBlog_postss: '',
+      cursor: 'nothing',
 
-      // Meta variables
       title: 'Blog',
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.'
@@ -89,28 +86,36 @@ export default {
 
       variables() {
         return {
-          first: POSTS_PER_PAGE
+          cursor: '',
+          first
         }
       }
     }
   },
 
   methods: {
-    loadMore() {
+    showMore() {
+      this.cursor = this.allBlog_postss.pageInfo.endCursor
+
       this.$apollo.queries.allBlog_postss.fetchMore({
-        variables: {
-          cursor: this.allBlog_postss.pageInfo.endCursor
+        variables() {
+          return {
+            cursor: this.cursor,
+            first
+          }
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
-          if (!fetchMoreResult) return previousResult
+          const newEdges = fetchMoreResult.allBlog_postss.edges
+          const pageInfo = fetchMoreResult.allBlog_postss.pageInfo
 
-          return Object.assign({}, previousResult, {
-            allBlog_postss: [
-              ...previousResult.allBlog_postss,
-              ...fetchMoreResult.allBlog_postss
-            ]
-          })
+          return {
+            allBlog_postss: {
+              __typename: previousResult.allBlog_postss.__typename,
+              edges: [...previousResult.allBlog_postss.edges, ...newEdges],
+              pageInfo
+            }
+          }
         }
       })
     }

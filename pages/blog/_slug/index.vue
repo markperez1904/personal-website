@@ -79,7 +79,6 @@ export default {
 
   data() {
     return {
-      blog_posts: '', // required in order to set the meta field
       PrismicDOM,
       linkResolver,
       htmlSerializer
