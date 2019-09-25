@@ -31,13 +31,10 @@
 <script>
 import gql from 'graphql-tag'
 
-// blog posts per query
-const first = 6
-
 // GraphQL Query
 const posts = gql`
-  query($first: Int!, $cursor: String!) {
-    allBlog_postss(sortBy: date_DESC, first: $first, after: $cursor) {
+  query($cursor: String!) {
+    allBlog_postss(sortBy: date_DESC, first: 6, after: $cursor) {
       pageInfo {
         hasNextPage
         startCursor
@@ -60,7 +57,7 @@ const posts = gql`
 export default {
   data() {
     return {
-      cursor: 'none',
+      cursor: '',
 
       title: 'Blog',
       content:
@@ -87,8 +84,7 @@ export default {
 
       variables() {
         return {
-          cursor: '',
-          first
+          cursor: this.cursor
         }
       }
     }
@@ -101,8 +97,7 @@ export default {
       this.$apollo.queries.allBlog_postss.fetchMore({
         variables() {
           return {
-            cursor: this.cursor,
-            first
+            cursor: this.cursor
           }
         },
 
@@ -113,7 +108,7 @@ export default {
           return {
             allBlog_postss: {
               __typename: previousResult.allBlog_postss.__typename,
-              edges: [...newEdges],
+              edges: [...previousResult.allBlog_postss.edges, ...newEdges],
               pageInfo
             }
           }
