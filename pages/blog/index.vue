@@ -2,7 +2,6 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <h2>{{ content }}</h2>
-    <h2>Blog page is under construction.</h2>
     <section class="posts columns is-multiline is-centered">
       <article
         v-for="post in allBlog_postss.edges"
@@ -57,12 +56,7 @@ const queryPost = gql`
 export default {
   data() {
     return {
-      counter: 0,
-      allBlog_postss: '',
       title: 'Blog',
-      load: function() {
-        console.log('LOAD')
-      },
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.'
     }
@@ -95,17 +89,13 @@ export default {
 
   methods: {
     loadMorePosts() {
-      // window.toto = this
-
       this.$apollo.queries.allBlog_postss.fetchMore({
         variables: {
           cursor: this.allBlog_postss.pageInfo.endCursor
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
-          // console.log('previous results ', previousResult.allBlog_postss)
           if (!fetchMoreResult) return previousResult
-          // console.log('more data incoming', fetchMoreResult.allBlog_postss)
 
           return {
             allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
@@ -117,9 +107,6 @@ export default {
         }
       })
     }
-    // addTodo: function(e) {
-    //   console.log(e)
-    // }
   }
 }
 </script>
