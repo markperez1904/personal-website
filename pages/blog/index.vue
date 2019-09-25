@@ -24,6 +24,7 @@
         @click="showMore"
       >Show more</button>
     </section>
+    <p>{{cursor}}</p>
   </div>
 </template>
 
@@ -59,7 +60,8 @@ const posts = gql`
 export default {
   data() {
     return {
-      cursor: 'nothing',
+      cursor: 'none',
+      allBlog_postss,
 
       title: 'Blog',
       content:
