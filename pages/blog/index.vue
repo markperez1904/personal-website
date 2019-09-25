@@ -22,23 +22,23 @@
       <button
         v-if="allBlog_postss.pageInfo.hasNextPage"
         class="button is-black"
-        @click="showMore"
+        @click="loadMorePosts"
       >Show More</button>
     </section>
 
-    <p>Cursor: {{cursor}}</p>
   </div>
 </template>
 
 <script>
 import gql from 'graphql-tag'
 
-// GraphQL Query
-const posts = gql`
-  query($cursor: String!) {
-    allBlog_postss(sortBy: date_DESC, first: 4, after: $cursor) {
+const queryPost = gql`
+  query($cursor: String) {
+    allBlog_postss(sortBy: date_DESC, first: 6, after: $cursor) {
       pageInfo {
         hasNextPage
+        hasPreviousPage
+        startCursor
         endCursor
       }
       edges {
@@ -58,9 +58,12 @@ const posts = gql`
 export default {
   data() {
     return {
-      cursor: '',
-
+      counter: 0,
+      allBlog_postss: '',
       title: 'Blog',
+      load: function() {
+        console.log('LOAD')
+      },
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.'
     }
@@ -81,44 +84,48 @@ export default {
 
   apollo: {
     allBlog_postss: {
-      query: posts,
-
+      query: queryPost,
       variables() {
         return {
           cursor: ''
         }
-      },
-      fetchPolicy: 'cache-and-network'
+      }
     }
-  },
 
+    //allBlog_postss: posts
+  },
   methods: {
-    showMore() {
-      this.cursor = this.allBlog_postss.pageInfo.endCursor
+    loadMorePosts() {
+      window.toto = this
 
       this.$apollo.queries.allBlog_postss.fetchMore({
-        variables() {
-          return {
-            cursor: this.cursor
-          }
+        variables: {
+          cursor: this.allBlog_postss.pageInfo.endCursor
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
+          console.log('previous results ', previousResult.allBlog_postss)
           if (!fetchMoreResult) return previousResult
+          console.log('more data incoming', fetchMoreResult.allBlog_postss)
 
-          return Object.assign({}, previousResult, {
-            allBlog_postss: [
-              ...previousResult.allBlog_postss,
-              ...fetchMoreResult.allBlog_postss,
-              previousResult.allBlog_postss.__typename
-            ]
-          })
+          return {
+            allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
+              edges: previousResult.allBlog_postss.edges.concat(
+                fetchMoreResult.allBlog_postss.edges
+              )
+            })
+          }
         }
       })
+    },
+    addTodo: function(e) {
+      console.log(e)
     }
   }
 }
 </script>
+
+
 
 <style scoped>
 h1 {
