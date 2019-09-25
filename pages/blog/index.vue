@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       cursor: 'none',
-      allBlog_postss,
+      allBlog_postss: '',
 
       title: 'Blog',
       content:
