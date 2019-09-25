@@ -2,6 +2,7 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <h2>{{ content }}</h2>
+    <h2>Blog page is under construction.</h2>
     <section class="posts columns is-multiline is-centered">
       <article
         v-for="post in allBlog_postss.edges"
@@ -22,9 +23,10 @@
         v-if="allBlog_postss.pageInfo.hasNextPage"
         class="button is-black"
         @click="showMore"
-      >Show more</button>
+      >Show More</button>
     </section>
-    <p>{{cursor}}</p>
+
+    <p>Cursor: {{cursor}}</p>
   </div>
 </template>
 
@@ -34,10 +36,9 @@ import gql from 'graphql-tag'
 // GraphQL Query
 const posts = gql`
   query($cursor: String!) {
-    allBlog_postss(sortBy: date_DESC, first: 6, after: $cursor) {
+    allBlog_postss(sortBy: date_DESC, first: 4, after: $cursor) {
       pageInfo {
         hasNextPage
-        startCursor
         endCursor
       }
       edges {
@@ -105,13 +106,15 @@ export default {
           const newEdges = fetchMoreResult.allBlog_postss.edges
           const pageInfo = fetchMoreResult.allBlog_postss.pageInfo
 
-          return {
-            allBlog_postss: {
-              __typename: previousResult.allBlog_postss.__typename,
-              edges: [...previousResult.allBlog_postss.edges, ...newEdges],
-              pageInfo
-            }
-          }
+          return newEdges.length
+            ? {
+                allBlog_postss: {
+                  __typename: previousResult.allBlog_postss.__typename,
+                  edges: [...previousResult.allBlog_postss.edges, ...newEdges],
+                  pageInfo
+                }
+              }
+            : previousResult
         }
       })
     }
@@ -127,6 +130,10 @@ h1 {
 
 h2 {
   margin: 2rem 0;
+}
+
+button {
+  margin: 1rem;
 }
 
 .column {
