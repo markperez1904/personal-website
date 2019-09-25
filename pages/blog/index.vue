@@ -61,7 +61,6 @@ export default {
   data() {
     return {
       cursor: 'none',
-      allBlog_postss: '',
 
       title: 'Blog',
       content:
@@ -114,7 +113,7 @@ export default {
           return {
             allBlog_postss: {
               __typename: previousResult.allBlog_postss.__typename,
-              edges: [...previousResult.allBlog_postss.edges, ...newEdges],
+              edges: [...newEdges],
               pageInfo
             }
           }

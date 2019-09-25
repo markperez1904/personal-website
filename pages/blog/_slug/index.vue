@@ -79,7 +79,6 @@ export default {
 
   data() {
     return {
-      blog_posts: '',
       PrismicDOM,
       linkResolver,
       htmlSerializer
