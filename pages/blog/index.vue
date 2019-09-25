@@ -25,7 +25,6 @@
         @click="loadMorePosts"
       >Show More</button>
     </section>
-
   </div>
 </template>
 
@@ -34,7 +33,7 @@ import gql from 'graphql-tag'
 
 const queryPost = gql`
   query($cursor: String) {
-    allBlog_postss(sortBy: date_DESC, first: 6, after: $cursor) {
+    allBlog_postss(sortBy: date_DESC, first: 9, after: $cursor) {
       pageInfo {
         hasNextPage
         hasPreviousPage
@@ -89,14 +88,14 @@ export default {
         return {
           cursor: ''
         }
-      }
+      },
+      fetchPolicy: 'cache-and-network'
     }
-
-    //allBlog_postss: posts
   },
+
   methods: {
     loadMorePosts() {
-      window.toto = this
+      // window.toto = this
 
       this.$apollo.queries.allBlog_postss.fetchMore({
         variables: {
@@ -104,9 +103,9 @@ export default {
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
-          console.log('previous results ', previousResult.allBlog_postss)
+          // console.log('previous results ', previousResult.allBlog_postss)
           if (!fetchMoreResult) return previousResult
-          console.log('more data incoming', fetchMoreResult.allBlog_postss)
+          // console.log('more data incoming', fetchMoreResult.allBlog_postss)
 
           return {
             allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
@@ -117,10 +116,10 @@ export default {
           }
         }
       })
-    },
-    addTodo: function(e) {
-      console.log(e)
     }
+    // addTodo: function(e) {
+    //   console.log(e)
+    // }
   }
 }
 </script>
