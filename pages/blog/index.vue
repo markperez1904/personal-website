@@ -84,7 +84,7 @@ export default {
 
       variables() {
         return {
-          cursor: this.cursor
+          cursor: ''
         }
       }
     }
