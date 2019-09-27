@@ -1,5 +1,5 @@
 <template>
-  <div id="portfolio" class="hero is-black is-medium">
+  <div id="portfolio" class="hero is-light is-bold is-medium">
     <h3 class="hero-head has-text-centered">Portfolio</h3>
     <header class="hero-body container">
       <app-portfolio></app-portfolio>

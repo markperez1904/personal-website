@@ -2,7 +2,7 @@
   <div>
     <section class="columns is-multiline is-vcentered is-centered">
       <!-- Email Lead Generator -->
-      <aside class="section column">
+      <aside class="column">
         <app-email></app-email>
       </aside>
 

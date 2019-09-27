@@ -125,6 +125,11 @@ a:focus {
   background-color: transparent;
 }
 
+.button:focus,
+.button.is-focused {
+  border-color: #00b196;
+}
+
 #button {
   margin: 0 1rem;
   margin-bottom: 2rem;
