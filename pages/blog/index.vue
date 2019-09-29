@@ -121,13 +121,15 @@ export default {
         updateQuery: (previousResult, { fetchMoreResult }) => {
           if (!fetchMoreResult) return previousResult
 
+          this.hasMorePosts =
+            fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+
           return {
             allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
               edges: previousResult.allBlog_postss.edges.concat(
                 fetchMoreResult.allBlog_postss.edges
               )
-            }),
-            hasMorePosts: previousResult.allBlog_postss.pageInfo.hasNextPage
+            })
           }
         }
       })
@@ -143,11 +145,13 @@ export default {
         updateQuery: (previousResult, { fetchMoreResult }) => {
           if (!fetchMoreResult) return previousResult
 
+          this.hasMorePosts =
+            fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+
           return {
             allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
               edges: [...fetchMoreResult.allBlog_postss.edges]
-            }),
-            hasMorePosts: previousResult.allBlog_postss.pageInfo.hasNextPage
+            })
           }
         }
       })
