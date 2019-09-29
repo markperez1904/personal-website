@@ -35,7 +35,11 @@
 
     <!-- I want to PAGINATE my posts here -->
     <section class="columns is-multiline is-centered is-mobile">
-      <button v-if="hasMorePosts" class="button is-black" @click="loadMorePosts">Show More</button>
+      <button
+        v-if="hasMorePosts"
+        class="button is-black"
+        @click="loadMorePosts(allBlog_postss.pageInfo.endCursor)"
+      >Show More</button>
     </section>
   </div>
 </template>
@@ -111,11 +115,11 @@ export default {
   },
 
   methods: {
-    loadMorePosts() {
+    loadMorePosts(currentCursor) {
       this.$apollo.queries.allBlog_postss.fetchMore({
         variables: {
           fulltext: '',
-          cursor: this.allBlog_postss.pageInfo.endCursor
+          cursor: currentCursor
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
