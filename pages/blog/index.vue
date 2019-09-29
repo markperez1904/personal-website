@@ -35,11 +35,7 @@
 
     <!-- I want to PAGINATE my posts here -->
     <section class="columns is-multiline is-centered is-mobile">
-      <button
-        v-if="allBlog_postss.pageInfo.hasNextPage"
-        class="button is-black"
-        @click="loadMorePosts"
-      >Show More</button>
+      <button v-if="hasMorePosts" class="button is-black" @click="loadMorePosts">Show More</button>
     </section>
   </div>
 </template>
@@ -83,7 +79,8 @@ export default {
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.',
 
-      keyword: '' // for searchPosts()
+      keyword: '', // for searchPosts()
+      hasMorePosts: true // needs local variable since hasNextPage won't update
     }
   },
 
@@ -129,7 +126,8 @@ export default {
               edges: previousResult.allBlog_postss.edges.concat(
                 fetchMoreResult.allBlog_postss.edges
               )
-            })
+            }),
+            hasMorePosts: fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
           }
         }
       })
@@ -148,7 +146,8 @@ export default {
           return {
             allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
               edges: [...fetchMoreResult.allBlog_postss.edges]
-            })
+            }),
+            hasMorePosts: fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
           }
         }
       })
