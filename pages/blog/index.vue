@@ -127,7 +127,7 @@ export default {
                 fetchMoreResult.allBlog_postss.edges
               )
             }),
-            hasMorePosts: fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+            hasMorePosts: previousResult.allBlog_postss.pageInfo.hasNextPage
           }
         }
       })
@@ -147,7 +147,7 @@ export default {
             allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
               edges: [...fetchMoreResult.allBlog_postss.edges]
             }),
-            hasMorePosts: fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+            hasMorePosts: previousResult.allBlog_postss.pageInfo.hasNextPage
           }
         }
       })
