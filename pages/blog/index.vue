@@ -130,9 +130,11 @@ export default {
 
           return {
             allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
+              __typename: fetchMoreResult.allBlog_postss.__typename,
               edges: previousResult.allBlog_postss.edges.concat(
                 fetchMoreResult.allBlog_postss.edges
-              )
+              ),
+              pageInfo: fetchMoreResult.allBlog_postss.pageInfo
             })
           }
         }
@@ -154,8 +156,10 @@ export default {
 
           return {
             allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
+              __typename: fetchMoreResult.allBlog_postss.__typename,
               edges: [...fetchMoreResult.allBlog_postss.edges]
-            })
+            }),
+            pageInfo: fetchMoreResult.allBlog_postss.pageInfo
           }
         }
       })
