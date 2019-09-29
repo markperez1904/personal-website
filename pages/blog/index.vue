@@ -136,25 +136,50 @@ export default {
     },
 
     searchPosts() {
-      this.$apollo.queries.allBlog_postss.fetchMore({
-        variables: {
-          fulltext: this.keyword,
-          cursor: ''
-        },
+      // reset query if user clears out search
+      if (this.keyword == '') {
+        this.$apollo.queries.allBlog_postss.fetchMore({
+          variables: {
+            fulltext: '',
+            cursor: ''
+          },
 
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          if (!fetchMoreResult) return previousResult
+          updateQuery: (previousResult, { fetchMoreResult }) => {
+            if (!fetchMoreResult) return previousResult
 
-          this.hasMorePosts =
-            fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+            this.hasMorePosts =
+              fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
 
-          return {
-            allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
-              edges: [...fetchMoreResult.allBlog_postss.edges]
-            })
+            return {
+              allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
+                edges: [...fetchMoreResult.allBlog_postss.edges]
+              })
+            }
           }
-        }
-      })
+        })
+
+        // if user enters keyword, filter out the posts
+      } else {
+        this.$apollo.queries.allBlog_postss.fetchMore({
+          variables: {
+            fulltext: this.keyword,
+            cursor: ''
+          },
+
+          updateQuery: (previousResult, { fetchMoreResult }) => {
+            if (!fetchMoreResult) return previousResult
+
+            this.hasMorePosts =
+              fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+
+            return {
+              allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
+                edges: [...fetchMoreResult.allBlog_postss.edges]
+              })
+            }
+          }
+        })
+      }
     }
   }
 }
