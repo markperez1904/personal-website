@@ -191,6 +191,7 @@ input:focus {
 }
 
 .posts {
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
