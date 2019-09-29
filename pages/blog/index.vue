@@ -2,6 +2,22 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <h2>{{ content }}</h2>
+
+    <!-- search bar -->
+    <section class="field columns is-centered">
+      <div class="control column is-4 has-icons-left">
+        <input
+          @keyup.enter="searchPosts"
+          v-model="keyword"
+          type="search"
+          class="input"
+          placeholder="Press ↵ to search"
+        />
+        <i class="icon is-small is-left icon-search"></i>
+      </div>
+    </section>
+
+    <!-- blog posts -->
     <section class="posts columns is-multiline is-centered">
       <article
         v-for="post in allBlog_postss.edges"
@@ -31,8 +47,14 @@
 import gql from 'graphql-tag'
 
 const queryPost = gql`
-  query($cursor: String) {
-    allBlog_postss(sortBy: date_DESC, first: 9, after: $cursor) {
+  query($fulltext: String, $cursor: String) {
+    allBlog_postss(
+      lang: "en-us"
+      fulltext: $fulltext
+      sortBy: date_DESC
+      first: 9
+      after: $cursor
+    ) {
       pageInfo {
         hasNextPage
         hasPreviousPage
@@ -58,7 +80,9 @@ export default {
     return {
       title: 'Blog',
       content:
-        'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.'
+        'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.',
+
+      keyword: '' // for searchPosts()
     }
   },
 
@@ -80,6 +104,7 @@ export default {
       query: queryPost,
       variables() {
         return {
+          fulltext: '',
           cursor: ''
         }
       },
@@ -91,7 +116,29 @@ export default {
     loadMorePosts() {
       this.$apollo.queries.allBlog_postss.fetchMore({
         variables: {
+          fulltext: '',
           cursor: this.allBlog_postss.pageInfo.endCursor
+        },
+
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          if (!fetchMoreResult) return previousResult
+
+          return {
+            allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
+              edges: previousResult.allBlog_postss.edges.concat(
+                fetchMoreResult.allBlog_postss.edges
+              )
+            })
+          }
+        }
+      })
+    },
+
+    searchPosts() {
+      this.$apollo.queries.allBlog_postss.fetchMore({
+        variables: {
+          fulltext: this.keyword,
+          cursor: ''
         },
 
         updateQuery: (previousResult, { fetchMoreResult }) => {
@@ -125,6 +172,10 @@ h2 {
 
 button {
   margin: 1rem;
+}
+
+input:focus {
+  border-color: #00b196;
 }
 
 .column {
