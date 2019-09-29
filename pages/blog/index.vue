@@ -148,8 +148,8 @@ export default {
           return {
             allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
               edges: [
-                previousResult.allBlog_postss.edges,
-                fetchMoreResult.allBlog_postss.edges
+                ...previousResult.allBlog_postss.edges,
+                ...fetchMoreResult.allBlog_postss.edges
               ]
             })
           }
