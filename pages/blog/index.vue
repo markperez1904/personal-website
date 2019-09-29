@@ -8,7 +8,7 @@
     <section class="field columns is-centered">
       <div class="control column is-4 has-icons-left">
         <input
-          @keyup.enter="searchPosts"
+          @keyup.enter="searchPosts(keyword)"
           v-model="keyword"
           type="search"
           class="input"
@@ -135,51 +135,26 @@ export default {
       })
     },
 
-    searchPosts() {
-      // reset query if user clears out search
-      if (this.keyword == '') {
-        this.$apollo.queries.allBlog_postss.fetchMore({
-          variables: {
-            fulltext: '',
-            cursor: ''
-          },
+    searchPosts(searchTerm) {
+      this.$apollo.queries.allBlog_postss.fetchMore({
+        variables: {
+          fulltext: searchTerm,
+          cursor: ''
+        },
 
-          updateQuery: (previousResult, { fetchMoreResult }) => {
-            if (!fetchMoreResult) return previousResult
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          if (!fetchMoreResult) return previousResult
 
-            this.hasMorePosts =
-              fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
+          this.hasMorePosts =
+            fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
 
-            return {
-              allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
-                edges: [...fetchMoreResult.allBlog_postss.edges]
-              })
-            }
+          return {
+            allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
+              edges: [...fetchMoreResult.allBlog_postss.edges]
+            })
           }
-        })
-
-        // if user enters keyword, filter out the posts
-      } else {
-        this.$apollo.queries.allBlog_postss.fetchMore({
-          variables: {
-            fulltext: this.keyword,
-            cursor: ''
-          },
-
-          updateQuery: (previousResult, { fetchMoreResult }) => {
-            if (!fetchMoreResult) return previousResult
-
-            this.hasMorePosts =
-              fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
-
-            return {
-              allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
-                edges: [...fetchMoreResult.allBlog_postss.edges]
-              })
-            }
-          }
-        })
-      }
+        }
+      })
     }
   }
 }
