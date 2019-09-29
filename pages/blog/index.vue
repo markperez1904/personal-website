@@ -2,17 +2,17 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <h2>{{ content }}</h2>
-    <p>❗ Blog page is under construction ❗</p>
+    <!-- <p>❗ Blog page is under construction ❗</p> -->
 
     <!-- search bar -->
     <section class="field columns is-centered">
       <div class="control column is-4 has-icons-left">
         <input
-          @keyup.enter="searchPosts(keyword)"
+          @keyup="searchPosts(keyword)"
           v-model="keyword"
           type="search"
           class="input"
-          placeholder="Press ↵ to search"
+          placeholder="Type to search (press ↵ to confirm)"
         />
         <i class="icon is-small is-left icon-search"></i>
       </div>
@@ -167,8 +167,6 @@ export default {
   }
 }
 </script>
-
-
 
 <style scoped>
 h1 {
