@@ -36,7 +36,7 @@
     <!-- I want to PAGINATE my posts here -->
     <section class="columns is-multiline is-centered is-mobile">
       <button
-        v-if="hasMorePosts"
+        v-if="allBlog_postss.pageInfo.hasNextPage"
         class="button is-black"
         @click="loadMorePosts(allBlog_postss.pageInfo.endCursor)"
       >Show More</button>
@@ -83,8 +83,7 @@ export default {
       content:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.',
 
-      keyword: '', // for searchPosts()
-      hasMorePosts: true // needs local variable since hasNextPage won't update
+      keyword: '' // for searchPosts()
     }
   },
 
@@ -125,9 +124,6 @@ export default {
         updateQuery: (previousResult, { fetchMoreResult }) => {
           if (!fetchMoreResult) return previousResult
 
-          this.hasMorePosts =
-            fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
-
           return {
             allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
               __typename: fetchMoreResult.allBlog_postss.__typename,
@@ -151,15 +147,12 @@ export default {
         updateQuery: (previousResult, { fetchMoreResult }) => {
           if (!fetchMoreResult) return previousResult
 
-          this.hasMorePosts =
-            fetchMoreResult.allBlog_postss.pageInfo.hasNextPage
-
           return {
             allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
               __typename: fetchMoreResult.allBlog_postss.__typename,
-              edges: [...fetchMoreResult.allBlog_postss.edges]
-            }),
-            pageInfo: fetchMoreResult.allBlog_postss.pageInfo
+              edges: [...fetchMoreResult.allBlog_postss.edges],
+              pageInfo: fetchMoreResult.allBlog_postss.pageInfo
+            })
           }
         }
       })
