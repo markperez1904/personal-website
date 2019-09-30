@@ -148,7 +148,7 @@ export default {
           if (!fetchMoreResult) return previousResult
 
           return {
-            allBlog_postss: Object.assign({}, previousResult.allBlog_postss, {
+            allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
               __typename: fetchMoreResult.allBlog_postss.__typename,
               edges: [...fetchMoreResult.allBlog_postss.edges],
               pageInfo: fetchMoreResult.allBlog_postss.pageInfo
