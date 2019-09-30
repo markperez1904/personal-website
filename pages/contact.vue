@@ -89,9 +89,11 @@ p {
   margin: 2rem 0;
 }
 
+/* adopt color scheme to input boxes */
 input:focus,
 textarea:focus {
   border-color: #42b983;
+  transition: all 0.2s;
 }
 
 .container {

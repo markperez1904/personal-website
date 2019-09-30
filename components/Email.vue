@@ -76,6 +76,12 @@ span {
   color: red;
 }
 
+/* adopt color scheme to input boxes */
+input:focus {
+  border-color: #42b983;
+  transition: all 0.2s;
+}
+
 .emailTitle,
 .emailMessage {
   text-align: center;

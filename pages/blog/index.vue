@@ -6,7 +6,7 @@
 
     <!-- search bar -->
     <section class="field columns is-centered">
-      <div class="control column is-4 has-icons-left">
+      <div class="control has-icons-left column is-3-widescreen is-4-tablet">
         <input
           @keyup="searchPosts(keyword)"
           v-model="keyword"
@@ -175,8 +175,10 @@ button {
   margin: 1rem;
 }
 
+/* adopt color scheme to input boxes */
 input:focus {
   border-color: #42b983;
+  transition: all 0.2s;
 }
 
 .column {
