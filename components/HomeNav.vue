@@ -84,7 +84,7 @@ h2 {
 a:hover,
 a:active,
 a:focus {
-  color: #00b196;
+  color: #42b983;
   background-color: transparent;
 }
 
@@ -99,7 +99,7 @@ a:focus {
 }
 
 .hero-foot a {
-  color: #00b196;
+  color: #42b983;
 }
 
 .logo {
@@ -127,7 +127,7 @@ a:focus {
 
 .button:focus,
 .button.is-focused {
-  border-color: #00b196;
+  border-color: #42b983;
 }
 
 #button {

@@ -1,7 +1,7 @@
 /* Main font on website */
 body {
   font-family: 'Oxygen', sans-serif;
-  color: #304455;
+  color: #304455; /* VueJS color scheme */
   touch-action: manipulation; /* This will disable double-tap zoom on mobile devices */
 }
 
@@ -30,7 +30,7 @@ code {
 /* apply consistent color theme on anchor text  */
 a,
 a:hover {
-  color: #00b196;
+  color: #42b983; /* VueJS color scheme */
 }
 
 /* This snippet of code here fixes the stupid iframe issue */

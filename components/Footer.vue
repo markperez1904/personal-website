@@ -1,6 +1,6 @@
 <template>
   <div class="container has-text-centered">
-    <hr>
+    <hr />
     <footer class="columns is-centered">
       <!-- YouTube -->
       <a
@@ -65,14 +65,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      currentYear: ''
-    }
-  },
   computed: {
     getYear() {
-      return (this.currentYear = new Date().getFullYear())
+      return new Date().getFullYear()
     }
   }
 }

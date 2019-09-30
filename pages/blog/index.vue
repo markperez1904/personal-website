@@ -11,8 +11,8 @@
           @keyup="searchPosts(keyword)"
           v-model="keyword"
           type="search"
-          class="input"
-          placeholder="Type to search (press ↵ to confirm)"
+          class="input is-rounded"
+          placeholder="Press ↵ to search"
         />
         <i class="icon is-small is-left icon-search"></i>
       </div>
@@ -176,7 +176,7 @@ button {
 }
 
 input:focus {
-  border-color: #00b196;
+  border-color: #42b983;
 }
 
 .column {

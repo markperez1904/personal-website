@@ -98,8 +98,8 @@ span {
 .leads {
   color: white;
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-  background-color: #55efc4;
-  background-image: linear-gradient(315deg, #55efc4 0%, #000000 74%);
+  background-color: #42b983;
+  background-image: linear-gradient(315deg, #42b983 0%, #000000 74%);
 }
 
 .ebook {

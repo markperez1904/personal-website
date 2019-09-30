@@ -91,7 +91,7 @@ p {
 
 input:focus,
 textarea:focus {
-  border-color: #00b196;
+  border-color: #42b983;
 }
 
 .container {

@@ -45,7 +45,7 @@ export default {
 a:hover,
 a:active,
 a:focus {
-  color: #00b196;
+  color: #42b983;
   background-color: transparent;
 }
 
