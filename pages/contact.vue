@@ -103,6 +103,10 @@ textarea:focus {
   border-color: #00c58e;
 }
 
+textarea:active {
+  border-color: #00c58e;
+}
+
 .container {
   padding: 0 2rem;
 }
