@@ -89,11 +89,18 @@ p {
   margin: 2rem 0;
 }
 
+/* add transitions to input boxes */
+input,
+textarea {
+  transition: all 0.2s;
+  background-color: #edf2f7;
+}
+
 /* adopt color scheme to input boxes */
 input:focus,
 textarea:focus {
-  border-color: #00c58e;
   transition: all 0.2s;
+  border-color: #00c58e;
 }
 
 .container {

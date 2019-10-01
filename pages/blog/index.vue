@@ -175,10 +175,16 @@ button {
   margin: 1rem;
 }
 
+/* add transitions to input boxes */
+input {
+  transition: all 0.2s;
+  background-color: #edf2f7;
+}
+
 /* adopt color scheme to input boxes */
 input:focus {
-  border-color: #00c58e;
   transition: all 0.2s;
+  border-color: #00c58e;
 }
 
 .column {

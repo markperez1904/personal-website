@@ -76,6 +76,12 @@ span {
   color: red;
 }
 
+/* add transitions to input boxes */
+.mc-field-group input {
+  transition: all 0.2s;
+  background-color: #edf2f7;
+}
+
 .emailTitle,
 .emailMessage {
   text-align: center;
