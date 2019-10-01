@@ -92,7 +92,7 @@ p {
 /* adopt color scheme to input boxes */
 input:focus,
 textarea:focus {
-  border-color: #42b983;
+  border-color: #00c58e;
   transition: all 0.2s;
 }
 

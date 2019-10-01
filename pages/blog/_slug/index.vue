@@ -169,7 +169,7 @@ h2,
 
 .date {
   font-size: 15px;
-  color: #666;
+  color: #718096;
   margin: 0 0 30px;
   letter-spacing: 1px;
 }

@@ -149,7 +149,7 @@ a,
 a:hover,
 a:active,
 a:focus {
-  color: #304455;
+  color: #2f495e;
   background-color: transparent;
 }
 

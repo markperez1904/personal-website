@@ -76,12 +76,6 @@ span {
   color: red;
 }
 
-/* adopt color scheme to input boxes */
-input:focus {
-  border-color: #42b983;
-  transition: all 0.2s;
-}
-
 .emailTitle,
 .emailMessage {
   text-align: center;
@@ -104,8 +98,8 @@ input:focus {
 .leads {
   color: white;
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-  background-color: #42b983;
-  background-image: linear-gradient(315deg, #42b983 0%, #000000 74%);
+  background-color: #00c58e;
+  background-image: linear-gradient(315deg, #00c58e 0%, #000000 74%);
 }
 
 .ebook {
@@ -115,7 +109,7 @@ input:focus {
 }
 
 #mc_embed_signup .button {
-  background-color: black;
+  background-color: #000000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 20px;

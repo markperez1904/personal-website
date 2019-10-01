@@ -1,7 +1,7 @@
 /* Main font on website */
 body {
   font-family: 'Oxygen', sans-serif;
-  color: #304455; /* VueJS color scheme */
+  color: #2f495e; /* NuxtJS color scheme */
   touch-action: manipulation; /* This will disable double-tap zoom on mobile devices */
 }
 
@@ -9,8 +9,8 @@ body {
 pre,
 code {
   font-family: 'Oxygen Mono', monospace;
-  background-color: #333;
-  color: #fff;
+  background-color: #2f495e; /* NuxtJS color scheme */
+  color: #ffffff;
   font-size: 14px;
 }
 
@@ -30,7 +30,7 @@ code {
 /* apply consistent color theme on anchor text  */
 a,
 a:hover {
-  color: #42b983; /* VueJS color scheme */
+  color: #00c58e; /* NuxtJS color scheme */
 }
 
 /* This snippet of code here fixes the stupid iframe issue */
