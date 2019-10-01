@@ -14,14 +14,12 @@
           aria-label="paypal"
           rel="noopener"
         >
-          <img
-            src="~assets/images/paypal.png"
-            alt="PayPal"
-          />
+          <img src="~assets/images/paypal.png" alt="PayPal" />
         </a>
       </aside>
 
       <!-- YouTube Subscription Button -->
+      <script src="https://apis.google.com/js/platform.js"></script>
       <aside class="column is-narrow is-12-widescreen is-12-desktop">
         <div
           class="g-ytsubscribe"
@@ -45,16 +43,6 @@ import Email from '@/components/Email.vue'
 export default {
   components: {
     'app-email': Email
-  },
-
-  head() {
-    return {
-      script: [
-        {
-          src: 'https://apis.google.com/js/platform.js' // YouTube Sub Button
-        }
-      ]
-    }
   }
 }
 </script>
