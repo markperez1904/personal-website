@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>{{ title }}</h1>
-    <h2>{{ content }}</h2>
+    <h2>{{ description }}</h2>
     <!-- <p>❗ Blog page is under construction ❗</p> -->
 
     <!-- search bar -->
