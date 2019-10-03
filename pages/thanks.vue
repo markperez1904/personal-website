@@ -26,7 +26,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'noindex'
+          content: 'noindex,noarchive,nofollow'
         }
       ]
     }

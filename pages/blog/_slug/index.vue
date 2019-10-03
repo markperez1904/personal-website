@@ -94,6 +94,36 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.blog_posts.description[0].text
+        },
+        {
+          hid: 'og:type', // open graph type
+          name: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:title', // open graph title
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description', // open graph description
+          name: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:url', // open graph url
+          name: 'og:url',
+          content: 'https://markperez.dev' + this.$route.fullPath
+        },
+        {
+          hid: 'og:image', // open graph image
+          name: 'og:image',
+          content: this.blog_posts.image.url
+        },
+        {
+          hid: 'og:image:secure_url', // open graph image secure url
+          name: 'og:image:secure_url',
+          content: this.blog_posts.image.url
         }
       ],
       // MailChimp code injection
@@ -134,7 +164,9 @@ export default {
         return {
           uid: this.getRoute
         }
-      }
+      },
+
+      fetchPolicy: 'cache-and-network'
     }
   }
 }

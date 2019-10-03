@@ -95,6 +95,36 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.content
+        },
+        {
+          hid: 'og:type', // open graph type
+          name: 'og:type',
+          content: 'blog'
+        },
+        {
+          hid: 'og:title', // open graph title
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description', // open graph description
+          name: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:url', // open graph url
+          name: 'og:url',
+          content: 'https://markperez.dev' + this.$route.fullPath
+        },
+        {
+          hid: 'og:image', // open graph image
+          name: 'og:image',
+          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
+        },
+        {
+          hid: 'og:image:secure_url', // open graph image secure url
+          name: 'og:image:secure_url',
+          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
         }
       ]
     }
@@ -103,12 +133,14 @@ export default {
   apollo: {
     allBlog_postss: {
       query: queryPost,
+
       variables() {
         return {
           fulltext: '',
           cursor: ''
         }
       },
+
       fetchPolicy: 'cache-and-network'
     }
   },
