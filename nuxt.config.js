@@ -69,8 +69,8 @@ export default {
     ]
   },
 
-  // Customize the progress-bar color
-  loading: { color: '#00c58e' },
+  // Customize the progress-bar color on mobile devices
+  loading: { color: '#2f495e' },
 
   // Global CSS
   css: ['@/static/css/main.css', '@/static/css/fonts.css'],
