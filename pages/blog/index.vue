@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       title: 'Blog',
-      content:
+      description:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.',
 
       keyword: '' // for searchPosts()
@@ -94,7 +94,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.content
+          content: this.description
         },
         {
           hid: 'og:type', // open graph type

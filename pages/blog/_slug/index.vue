@@ -103,12 +103,12 @@ export default {
         {
           hid: 'og:title', // open graph title
           name: 'og:title',
-          content: this.title
+          content: this.blog_posts.title[0].text
         },
         {
           hid: 'og:description', // open graph description
           name: 'og:description',
-          content: this.description
+          content: this.blog_posts.description[0].text
         },
         {
           hid: 'og:url', // open graph url

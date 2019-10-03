@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       title: 'Contact',
-      content:
+      description:
         'Feel free to send me an email. I will get back to them in no time!'
     }
   },
@@ -70,7 +70,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.content
+          content: this.description
         },
         {
           hid: 'og:type', // open graph type

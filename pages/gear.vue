@@ -115,7 +115,7 @@ export default {
   data() {
     return {
       title: 'Gear',
-      content:
+      description:
         'Here is a list of all of the gear I use on a daily basis. As an Amazon Associate, I will earn from qualified commissions.'
     }
   },
@@ -127,7 +127,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.content
+          content: this.description
         },
         {
           hid: 'og:type', // open graph type

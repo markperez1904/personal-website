@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>{{title}}</h1>
-    <h2>{{content}}</h2>
+    <h2>{{description}}</h2>
 
     <aside class="links">
       <nuxt-link to="/blog/">Return to Blog >></nuxt-link>
@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       title: 'Thank You',
-      content:
+      description:
         'Your Linux Guide will be availible in your inbox. Give it around a few minutes to arrive.'
     }
   },
