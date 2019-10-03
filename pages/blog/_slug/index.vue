@@ -101,6 +101,11 @@ export default {
           content: 'article'
         },
         {
+          hid: 'apple-mobile-web-app-title', // open graph mobile web app title
+          name: 'apple-mobile-web-app-title',
+          content: this.blog_posts.title[0].text
+        },
+        {
           hid: 'og:title', // open graph title
           name: 'og:title',
           content: this.blog_posts.title[0].text
