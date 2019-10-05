@@ -27,6 +27,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'noindex'
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'noindex'
         }
       ]
     }

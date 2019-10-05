@@ -52,16 +52,6 @@ export default {
           hid: 'og:url', // open graph url
           name: 'og:url',
           content: 'https://markperez.dev' + this.$route.fullPath
-        },
-        {
-          hid: 'og:image', // open graph image
-          name: 'og:image',
-          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
-        },
-        {
-          hid: 'og:image:secure_url', // open graph image secure url
-          name: 'og:image:secure_url',
-          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
         }
       ]
     }

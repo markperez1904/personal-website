@@ -124,11 +124,6 @@ export default {
           hid: 'og:image', // open graph image
           name: 'og:image',
           content: this.blog_posts.image.url
-        },
-        {
-          hid: 'og:image:secure_url', // open graph image secure url
-          name: 'og:image:secure_url',
-          content: this.blog_posts.image.url
         }
       ],
       // MailChimp code injection

@@ -48,11 +48,6 @@ export default {
       {
         name: 'google-site-verification',
         content: 'hfQ1kFhd7ql6fNI0zUdzKuyPMej04HQ59g5GAk936cw'
-      },
-      {
-        hid: 'og:site_name',
-        name: 'og:site_name', // open graph site name
-        content: 'Mark Perez'
       }
     ],
     // Link to Google Fonts and Website Image

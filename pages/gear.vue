@@ -45,17 +45,25 @@
             <a
               href="https://amzn.to/2KItIIi"
               target="_blank"
-              aria-label="monitor"
+              aria-label="first monitor"
               rel="noopener"
-            >Monitor: Dell SE2219H</a>
+            >1st Monitor: Dell SE2219H</a>
           </li>
           <li>
             <a
-              href="https://amzn.to/2Hgm3ie"
+              href="https://amzn.to/2oYHIVS"
+              target="_blank"
+              aria-label="second monitor"
+              rel="noopener"
+            >2nd Monitor: ASUS VS229H</a>
+          </li>
+          <li>
+            <a
+              href="https://amzn.to/2ALZpuB"
               target="_blank"
               aria-label="mic"
               rel="noopener"
-            >Mic: Fifine USB Microphone</a>
+            >Mic: Blue Snowball iCE</a>
           </li>
         </ul>
       </div>
@@ -157,11 +165,6 @@ export default {
         {
           hid: 'og:image', // open graph image
           name: 'og:image',
-          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
-        },
-        {
-          hid: 'og:image:secure_url', // open graph image secure url
-          name: 'og:image:secure_url',
           content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
         }
       ]
