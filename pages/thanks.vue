@@ -29,6 +29,11 @@ export default {
           content: 'noindex'
         },
         {
+          hid: 'og:title',
+          name: 'og:title',
+          content: 'robots'
+        },
+        {
           hid: 'og:description',
           name: 'og:description',
           content: 'noindex'
