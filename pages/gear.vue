@@ -7,7 +7,7 @@
         <h5>Software</h5>
         <ul>
           <li>OS: Ubuntu 18.04</li>
-          <li>Editor: VSCode</li>
+          <li>Text Editor: VSCode</li>
           <li>Screen Recorder: OBS</li>
           <li>Video Editor: Kdenlive</li>
         </ul>
@@ -79,6 +79,14 @@
               aria-label="table"
               rel="noopener"
             >Table: Tribesigns Modern L-Shaped Desk</a>
+          </li>
+          <li>
+            <a
+              href="https://amzn.to/2OlHoey"
+              target="_blank"
+              aria-label="hdmi adapter"
+              rel="noopener"
+            >HDMI Adapter: CableCreation USB Type C - Dual HDMI</a>
           </li>
           <li>
             <a
