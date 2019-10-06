@@ -86,7 +86,7 @@
               target="_blank"
               aria-label="hdmi adapter"
               rel="noopener"
-            >HDMI Adapter: CableCreation USB Type C - Dual HDMI</a>
+            >HDMI Adapter: CableCreation USB Type C - 2 HDMI</a>
           </li>
           <li>
             <a
