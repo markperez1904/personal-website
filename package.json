@@ -22,7 +22,7 @@
     "apollo-link-prismic": "^1.0.4",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
-    "nuxt": "^2.10.0",
+    "nuxt": "^2.9.2",
     "nuxt-buefy": "^0.3.16",
     "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",
