@@ -38,7 +38,7 @@
       <button
         v-if="allBlog_postss.pageInfo.hasNextPage"
         class="button is-black"
-        @click="loadMorePosts(allBlog_postss.pageInfo.endCursor)"
+        @click="loadMorePosts(keyword, allBlog_postss.pageInfo.endCursor)"
       >Show More</button>
     </section>
   </div>
@@ -146,10 +146,10 @@ export default {
   },
 
   methods: {
-    loadMorePosts(currentCursor) {
+    loadMorePosts(searchTerm, currentCursor) {
       this.$apollo.queries.allBlog_postss.fetchMore({
         variables: {
-          fulltext: '',
+          fulltext: searchTerm,
           cursor: currentCursor
         },
 
