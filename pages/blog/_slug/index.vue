@@ -22,7 +22,7 @@
 
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
-        <p class="date">{{ blog_posts.date | moment("MMM DD, YYYY") }}</p>
+        <p class="date">Updated {{ blog_posts._meta.lastPublicationDate | moment("MMM DD, YYYY") }}</p>
         <h2>{{ blog_posts.description[0].text }}</h2>
 
         <!-- Main image -->
@@ -67,6 +67,7 @@ const post = gql`
       content
       _meta {
         id
+        lastPublicationDate
       }
     }
   }
