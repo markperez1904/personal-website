@@ -6,7 +6,23 @@
         <aside class="container section column is-narrow">
           <!-- titles -->
           <h1 class="title">{{title}}</h1>
-          <h2 class="subtitle">{{description}}</h2>
+
+          <!-- subtitles with vue-typer -->
+          <h2 class="subtitle">
+            <vue-typer
+              :text="['SEO Specialist','Self-learning enthusiast','YouTube Producer']"
+              :repeat="Infinity"
+              :shuffle="false"
+              initial-action="typing"
+              :pre-type-delay="70"
+              :type-delay="70"
+              :pre-erase-delay="2000"
+              :erase-delay="250"
+              erase-style="select-all"
+              :erase-on-complete="false"
+              caret-animation="blink"
+            ></vue-typer>
+          </h2>
 
           <!-- resume button -->
           <a
