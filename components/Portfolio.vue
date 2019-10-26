@@ -1,26 +1,29 @@
 <template>
-  <div>
-    <section class="columns is-multiline is-centered">
-      <!-- Project #1 -->
-      <article class="box column is-3-widescreen is-4-tablet">
-        <div class="project-image">
-          <a
-            href="https://github.com/markperez1904/personal-website"
-            target="_blank"
-            aria-label="personal website"
-            rel="noopener"
-          >
-            <img src="~assets/images/night_mountain.jpg" alt="first project" />
-            <section class="overlay">
-              <i class="icon-search"></i>
-            </section>
-          </a>
-        </div>
-        <h6 class="title is-6">Personal Website</h6>
-      </article>
+  <div class="hero is-bold is-medium">
+    <h3 class="hero-head has-text-centered">Portfolio</h3>
 
-      <!-- Project #2 -->
-      <!-- <article class="box column is-3-widescreen is-4-tablet">
+    <header class="hero-body container">
+      <section class="columns is-multiline is-centered">
+        <!-- Project #1 -->
+        <article class="box column is-3-widescreen is-4-tablet">
+          <div class="project-image">
+            <a
+              href="https://github.com/markperez1904/personal-website"
+              target="_blank"
+              aria-label="personal website"
+              rel="noopener"
+            >
+              <img src="~assets/images/night_mountain.jpg" alt="first project" />
+              <section class="overlay">
+                <i class="icon-search"></i>
+              </section>
+            </a>
+          </div>
+          <h6 class="title is-6">Personal Website</h6>
+        </article>
+
+        <!-- Project #2 -->
+        <!-- <article class="box column is-3-widescreen is-4-tablet">
         <div class="project-image">
           <a
             href="https://github.com/markperez1904/personal-website"
@@ -35,8 +38,9 @@
           </a>
         </div>
         <h6 class="title is-6">Personal Website</h6>
-      </article>-->
-    </section>
+        </article>-->
+      </section>
+    </header>
   </div>
 </template>
 
@@ -51,6 +55,12 @@ i {
 
 img {
   border-radius: 6px;
+}
+
+.hero-head {
+  margin-top: 2rem;
+  font-size: 40px;
+  letter-spacing: 12px;
 }
 
 .project-image:hover .overlay {

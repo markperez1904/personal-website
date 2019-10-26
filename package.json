@@ -27,8 +27,7 @@
     "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",
     "vue-disqus": "^3.0.5",
-    "vue-moment": "^4.0.0",
-    "vue-scrollto": "^2.17.1"
+    "vue-moment": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-shared-utils": "^3.12.1",

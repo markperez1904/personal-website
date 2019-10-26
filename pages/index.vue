@@ -1,9 +1,26 @@
 <template>
-  <div id="portfolio" class="hero is-light is-bold is-medium">
-    <h3 class="hero-head has-text-centered">Portfolio</h3>
-    <header class="hero-body container">
-      <app-portfolio></app-portfolio>
-    </header>
+  <div>
+    <section class="hero is-fullheight">
+      <div class="hero-body columns is-centered is-vcentered">
+        <!-- titles and resume button -->
+        <aside class="container section column is-narrow">
+          <!-- titles -->
+          <h1 class="title">{{title}}</h1>
+          <h2 class="subtitle">{{description}}</h2>
+
+          <!-- resume button -->
+          <a
+            rel="noopener"
+            href="https://drive.google.com/open?id=1dx8t_IKZKLtfs4I6nIZsQtaW5qJvL22VEaPZ04L0RsE"
+            target="_blank"
+          >
+            <button class="button is-black is-centered">Resume</button>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <app-portfolio></app-portfolio>
   </div>
 </template>
 
@@ -56,7 +73,7 @@ export default {
         {
           hid: 'og:image', // open graph image
           name: 'og:image',
-          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
+          content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
         }
       ]
     }
@@ -69,9 +86,28 @@ export default {
 </script>
 
 <style scoped>
-.hero-head {
-  margin-top: 2rem;
-  font-size: 2.3rem;
-  letter-spacing: 15px;
+button {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 70px;
+  letter-spacing: 12px;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
+.is-fullheight {
+  min-height: calc(100vh - 6rem);
+  background-image: url('~assets/images/markperez_digital_logo.png');
+  background-color: rgba(255, 255, 255, 0.85);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center right;
 }
 </style>

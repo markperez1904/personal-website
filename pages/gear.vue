@@ -173,7 +173,7 @@ export default {
         {
           hid: 'og:image', // open graph image
           name: 'og:image',
-          content: 'https://markperez.dev/_nuxt/img/588a4a6.png'
+          content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
         }
       ]
     }

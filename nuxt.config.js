@@ -71,17 +71,12 @@ export default {
   css: ['@/static/css/main.css', '@/static/css/fonts.css'],
 
   // Plugins to load before mounting the App
-  plugins: [
-    '~/plugins/smoothScroll.js',
-    '~/plugins/disqus.js',
-    '~/plugins/moment.js'
-  ],
+  plugins: ['~/plugins/disqus.js', '~/plugins/moment.js'],
 
   // Nuxt.js modules
   modules: [
     '@nuxtjs/pwa', // this module will give me PWA benefits by default!
     'nuxt-trailingslash-module', // add trailing slash on URLs
-    'vue-scrollto/nuxt',
     'nuxt-buefy',
     '@nuxtjs/apollo',
     '@nuxtjs/google-analytics',
