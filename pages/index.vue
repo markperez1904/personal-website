@@ -104,7 +104,7 @@ button {
 .is-fullheight {
   min-height: calc(100vh - 6rem);
   background-image: url('~assets/images/markperez_digital_logo.png');
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.75);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: 60%;
