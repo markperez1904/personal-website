@@ -107,7 +107,7 @@ button {
   background-color: rgba(255, 255, 255, 0.75);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: center right;
+  background-size: 55%;
+  background-position: center right 25px;
 }
 </style>
