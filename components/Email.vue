@@ -22,7 +22,7 @@
           <p class="emailMessage">🤓 Free Linux Guide</p>
 
           <section class="columns is-multiline">
-            <img class="column is-12 ebook" src="~assets/images/6_tips_linux.png" alt="linux guide" />
+            <img class="column is-12 ebook" src="~assets/images/linux_tips.png" alt="linux guide" />
           </section>
 
           <div class="indicates-required">
@@ -112,6 +112,7 @@ span {
   margin: 0 auto;
   width: 65%;
   height: 100%;
+  filter: drop-shadow(0 0 1rem #fff);
 }
 
 #mc_embed_signup .button {
