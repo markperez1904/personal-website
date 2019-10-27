@@ -112,7 +112,7 @@ span {
   margin: 0 auto;
   width: 65%;
   height: 100%;
-  filter: drop-shadow(0 0 1rem #fff);
+  filter: drop-shadow(0 0 1rem #000);
 }
 
 #mc_embed_signup .button {
