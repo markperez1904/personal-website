@@ -47,7 +47,7 @@ export default {
       },
       {
         name: 'google-site-verification',
-        content: 'hfQ1kFhd7ql6fNI0zUdzKuyPMej04HQ59g5GAk936cw'
+        content: process.env.GOOGLE_VERIFICATION
       }
     ],
     // Link to Google Fonts and Website Image
@@ -61,7 +61,17 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono|Bungee|Ubuntu|Slackey&display=swap'
       }
-    ]
+    ],
+    script: [
+      {
+        innerHTML: process.env.CLICKY
+      },
+      {
+        async: true,
+        src: '//static.getclicky.com/js'
+      }
+    ],
+    __dangerouslyDisableSanitizers: ['script'] // required when using "dangerous" scripts
   },
 
   // Customize the progress-bar color on mobile devices
