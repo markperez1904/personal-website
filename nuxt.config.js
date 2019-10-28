@@ -61,17 +61,7 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono|Bungee|Ubuntu|Slackey&display=swap'
       }
-    ],
-    script: [
-      {
-        innerHTML: process.env.CLICKY
-      },
-      {
-        async: true,
-        src: '//static.getclicky.com/js'
-      }
-    ],
-    __dangerouslyDisableSanitizers: ['script'] // required when using "dangerous" scripts
+    ]
   },
 
   // Customize the progress-bar color on mobile devices
