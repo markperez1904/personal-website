@@ -54,7 +54,7 @@ export default {
 
   head() {
     return {
-      title: this.title,
+      title: 'SEO Specialist',
       meta: [
         {
           hid: 'description',

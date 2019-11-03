@@ -21,22 +21,12 @@ export default {
 
   head() {
     return {
-      title: 'robots',
+      title: this.title,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
-          content: 'noindex'
-        },
-        {
-          hid: 'og:title',
-          name: 'og:title',
-          content: 'robots'
-        },
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: 'noindex'
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex,noarchive,nofollow'
         }
       ]
     }

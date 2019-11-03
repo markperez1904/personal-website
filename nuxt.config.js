@@ -39,6 +39,7 @@ export default {
 
   // Headers of the page
   head: {
+    titleTemplate: '%s - Mark Perez',
     meta: [
       { charset: 'utf-8' },
       {
