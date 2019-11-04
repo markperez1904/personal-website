@@ -119,11 +119,28 @@ button {
 
 .is-fullheight {
   min-height: calc(100vh - 6rem);
-  background-image: url('~assets/images/markperez_digital_logo.png');
-  background-color: rgba(255, 255, 255, 0.75);
+  background-image: url('~assets/images/marks_headshot.png');
+  background-color: rgba(255, 255, 255, 0);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
-  background-size: 55%;
-  background-position: center right 25px;
+  background-size: 19%;
+  background-position: center right 300px;
+}
+
+/* change background image when window is smaller */
+@media only screen and (max-width: 1023px) {
+  .is-fullheight {
+    background-color: rgba(255, 255, 255, 0.75);
+    background-position: center right 100px;
+    background-size: 31%;
+  }
+}
+
+/* change background image size when h1 collapses */
+@media only screen and (max-width: 556px) {
+  .is-fullheight {
+    background-position: center right 50px;
+    background-size: 58%;
+  }
 }
 </style>
