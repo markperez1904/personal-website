@@ -123,24 +123,52 @@ button {
   background-color: rgba(255, 255, 255, 0);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
-  background-size: 19%;
-  background-position: center right 300px;
+  background-size: 17%;
+  background-position: bottom right 300px;
 }
 
-/* change background image when window is smaller */
-@media only screen and (max-width: 1023px) {
+/* specify background image size on certain breakpoint */
+@media only screen and (max-width: 1630px) {
   .is-fullheight {
-    background-color: rgba(255, 255, 255, 0.75);
-    background-position: center right 100px;
-    background-size: 31%;
+    background-size: 19%;
+    background-position: bottom right 250px;
   }
 }
 
-/* change background image size when h1 collapses */
+@media only screen and (max-width: 1407px) {
+  .is-fullheight {
+    background-size: 22%;
+    background-position: bottom right 200px;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .is-fullheight {
+    background-size: 26%;
+    background-position: bottom right 100px;
+  }
+}
+
+/* change image transparency when window is smaller */
+@media only screen and (max-width: 1023px) {
+  .is-fullheight {
+    background-color: rgba(255, 255, 255, 0.75);
+    background-size: 31%;
+    background-position: bottom right 75px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .is-fullheight {
+    background-size: 40%;
+    background-position: bottom right 40px;
+  }
+}
+
 @media only screen and (max-width: 556px) {
   .is-fullheight {
-    background-position: center right 50px;
     background-size: 58%;
+    background-position: bottom right 50px;
   }
 }
 </style>
