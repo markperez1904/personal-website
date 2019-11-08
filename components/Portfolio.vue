@@ -8,12 +8,30 @@
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a
+              href="https://www.youtube.com/watch?v=vHuQMaVGMW8"
+              target="_blank"
+              aria-label="seo testimonial"
+              rel="noopener"
+            >
+              <img src="~assets/images/seo_testimonial.jpg" alt="seo testimonial" />
+              <section class="overlay">
+                <i class="icon-search"></i>
+              </section>
+            </a>
+          </div>
+          <h6 class="title is-6">SEO Testimonial</h6>
+        </article>
+
+        <!-- Project #2 -->
+        <article class="box column is-3-widescreen is-4-tablet">
+          <div class="project-image">
+            <a
               href="https://github.com/markperez1904/personal-website"
               target="_blank"
               aria-label="personal website"
               rel="noopener"
             >
-              <img src="~assets/images/night_mountain.jpg" alt="first project" />
+              <img src="~assets/images/personal_website.jpg" alt="personal website" />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
@@ -21,24 +39,6 @@
           </div>
           <h6 class="title is-6">Personal Website</h6>
         </article>
-
-        <!-- Project #2 -->
-        <!-- <article class="box column is-3-widescreen is-4-tablet">
-        <div class="project-image">
-          <a
-            href="https://github.com/markperez1904/personal-website"
-            target="_blank"
-            aria-label="personal website"
-            rel="noopener"
-          >
-            <img src="~assets/images/night_mountain.jpg" alt="first project" />
-            <section class="overlay">
-              <i class="icon-search"></i>
-            </section>
-          </a>
-        </div>
-        <h6 class="title is-6">Personal Website</h6>
-        </article>-->
       </section>
     </header>
   </div>
