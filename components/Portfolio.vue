@@ -82,7 +82,7 @@ img {
 }
 
 .icon-search {
-  color: #ffffff;
+  color: #00c58e;
   font-size: 100px;
   position: absolute;
   top: 40%;
