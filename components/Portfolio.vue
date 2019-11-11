@@ -19,7 +19,7 @@
               </section>
             </a>
           </div>
-          <h6 class="title is-6">SEO Testimonial</h6>
+          <p class="title is-6">SEO Testimonial</p>
         </article>
 
         <!-- Project #2 -->
@@ -37,7 +37,7 @@
               </section>
             </a>
           </div>
-          <h6 class="title is-6">Personal Website</h6>
+          <p class="title is-6">Personal Website</p>
         </article>
       </section>
     </header>

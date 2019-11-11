@@ -20,6 +20,7 @@
           <div @click="showNav = !showNav" class="navbar-end">
             <n-link class="navbar-item" to="/blog/">Blog</n-link>
             <n-link class="navbar-item" to="/gear/">Gear</n-link>
+            <n-link class="navbar-item" to="/seo-services/">SEO Services</n-link>
             <n-link class="navbar-item" to="/contact/">Contact</n-link>
           </div>
         </div>

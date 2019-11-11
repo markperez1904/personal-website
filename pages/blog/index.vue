@@ -30,7 +30,6 @@
           <p class="title is-6">{{post.node.title[0].text}}</p>
         </nuxt-link>
       </article>
-      <p></p>
     </section>
 
     <!-- I want to PAGINATE my posts here -->
