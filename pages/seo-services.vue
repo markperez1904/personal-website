@@ -100,7 +100,7 @@ export default {
     return {
       title: 'SEO Services',
       description:
-        'Here are the SEO services packages that I offer, each including a free case study. Once a package is selected, I will charge a one-time payment.'
+        'Here are the SEO services packages that I offer. Each package includes a free case study before I charge a one-time payment'
     }
   },
 
