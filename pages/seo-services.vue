@@ -110,7 +110,7 @@ export default {
         {
           hid: 'og:type', // open graph type
           property: 'og:type',
-          content: 'blog'
+          content: 'website'
         },
         {
           hid: 'apple-mobile-web-app-title', // open graph mobile web app title
