@@ -73,7 +73,7 @@ export default {
       {
         innerHTML: `{
           "@context" : "http://schema.org",
-          "@type" : "LocalBusiness",
+          "@type" : "Organization",
           "name" : "Mark Perez Digital",
           "image" : "https://markperez.dev/_nuxt/img/ec3ab3b.png",
           "url" : "https://markperez.dev/"
