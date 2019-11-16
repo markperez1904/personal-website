@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>{{title}}</h1>
-    <h2>{{description}}</h2>
+    <h1>{{ title }}</h1>
+    <h2>{{ description }}</h2>
     <section class="columns is-centered is-multiline">
       <div class="content column is-4-widescreen is-6-tablet">
         <h5>Software</h5>
@@ -23,7 +23,8 @@
               target="_blank"
               aria-label="laptop"
               rel="noopener"
-            >Laptop: XPS 13 (9360)</a>
+              >Laptop: XPS 13 (9360)</a
+            >
           </li>
           <li>
             <a
@@ -31,7 +32,8 @@
               target="_blank"
               aria-label="keyboard"
               rel="noopener"
-            >Keyboard: Velocifire VM01</a>
+              >Keyboard: Velocifire VM01</a
+            >
           </li>
           <li>
             <a
@@ -39,7 +41,8 @@
               target="_blank"
               aria-label="mouse"
               rel="noopener"
-            >Mouse: Logitech G402</a>
+              >Mouse: Logitech G402</a
+            >
           </li>
           <li>
             <a
@@ -47,7 +50,8 @@
               target="_blank"
               aria-label="first monitor"
               rel="noopener"
-            >1st Monitor: Dell SE2219H</a>
+              >1st Monitor: Dell SE2219H</a
+            >
           </li>
           <li>
             <a
@@ -55,7 +59,8 @@
               target="_blank"
               aria-label="second monitor"
               rel="noopener"
-            >2nd Monitor: ASUS VS229H</a>
+              >2nd Monitor: ASUS VS229H</a
+            >
           </li>
           <li>
             <a
@@ -63,7 +68,8 @@
               target="_blank"
               aria-label="mic"
               rel="noopener"
-            >Mic: Blue Snowball iCE</a>
+              >Mic: Blue Snowball iCE</a
+            >
           </li>
         </ul>
       </div>
@@ -78,7 +84,8 @@
               target="_blank"
               aria-label="table"
               rel="noopener"
-            >Table: Tribesigns Modern L-Shaped Desk</a>
+              >Table: Tribesigns Modern L-Shaped Desk</a
+            >
           </li>
           <li>
             <a
@@ -86,7 +93,8 @@
               target="_blank"
               aria-label="hdmi adapter"
               rel="noopener"
-            >HDMI Adapter: CableCreation USB Type C - 2 HDMI</a>
+              >HDMI Adapter: CableCreation USB Type C - 2 HDMI</a
+            >
           </li>
           <li>
             <a
@@ -94,7 +102,8 @@
               target="_blank"
               aria-label="camera"
               rel="noopener"
-            >Camera: OnePlus 5</a>
+              >Camera: OnePlus 5</a
+            >
           </li>
           <li>
             <a
@@ -102,7 +111,8 @@
               target="_blank"
               aria-label="chair"
               rel="noopener"
-            >Chair: BestOffice Racing Gaming Chair</a>
+              >Chair: BestOffice Racing Gaming Chair</a
+            >
           </li>
           <li>
             <a
@@ -110,7 +120,8 @@
               target="_blank"
               aria-label="lamp"
               rel="noopener"
-            >Lamp: TaoTronics LED Desk Lamp</a>
+              >Lamp: TaoTronics LED Desk Lamp</a
+            >
           </li>
           <li>
             <a
@@ -118,7 +129,8 @@
               target="_blank"
               aria-label="laptop stand"
               rel="noopener"
-            >Laptop Stand: Seenda Laptop Stand</a>
+              >Laptop Stand: Seenda Laptop Stand</a
+            >
           </li>
         </ul>
       </div>
@@ -147,7 +159,7 @@ export default {
         },
         {
           hid: 'og:type', // open graph type
-          name: 'og:type',
+          property: 'og:type',
           content: 'website'
         },
         {
@@ -157,22 +169,22 @@ export default {
         },
         {
           hid: 'og:title', // open graph title
-          name: 'og:title',
+          property: 'og:title',
           content: this.title
         },
         {
           hid: 'og:description', // open graph description
-          name: 'og:description',
+          property: 'og:description',
           content: this.description
         },
         {
           hid: 'og:url', // open graph url
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://markperez.dev' + this.$route.fullPath
         },
         {
           hid: 'og:image', // open graph image
-          name: 'og:image',
+          property: 'og:image',
           content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
         }
       ]

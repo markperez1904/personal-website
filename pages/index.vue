@@ -5,12 +5,16 @@
         <!-- titles and resume button -->
         <aside class="container section column is-narrow">
           <!-- titles -->
-          <h1 class="title">{{title}}</h1>
+          <h1 class="title">{{ title }}</h1>
 
           <!-- subtitles with vue-typer -->
           <h2 class="subtitle">
             <vue-typer
-              :text="['SEO Specialist','Self-learning enthusiast','YouTube Producer']"
+              :text="[
+                'SEO Specialist',
+                'Self-learning enthusiast',
+                'YouTube Producer'
+              ]"
               :repeat="Infinity"
               :shuffle="false"
               initial-action="typing"
@@ -63,7 +67,7 @@ export default {
         },
         {
           hid: 'og:type', // open graph type
-          name: 'og:type',
+          property: 'og:type',
           content: 'website'
         },
         {
@@ -73,22 +77,22 @@ export default {
         },
         {
           hid: 'og:title', // open graph title
-          name: 'og:title',
+          property: 'og:title',
           content: this.title
         },
         {
           hid: 'og:description', // open graph description
-          name: 'og:description',
+          property: 'og:description',
           content: this.description
         },
         {
           hid: 'og:url', // open graph url
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://markperez.dev' + this.$route.fullPath
         },
         {
           hid: 'og:image', // open graph image
-          name: 'og:image',
+          property: 'og:image',
           content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
         }
       ]

@@ -49,6 +49,11 @@ export default {
       {
         name: 'google-site-verification',
         content: process.env.GOOGLE_VERIFICATION
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Mark Perez'
       }
     ],
     // Link to Google Fonts and Website Image
@@ -62,7 +67,21 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono|Bungee|Ubuntu|Slackey&display=swap'
       }
-    ]
+    ],
+    // structured data
+    script: [
+      {
+        innerHTML: `{
+          "@context" : "http://schema.org",
+          "@type" : "LocalBusiness",
+          "name" : "Mark Perez Digital",
+          "image" : "https://markperez.dev/_nuxt/img/ec3ab3b.png",
+          "url" : "https://markperez.dev/"
+        }`,
+        type: 'application/ld+json'
+      }
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
 
   // Customize the progress-bar color on mobile devices

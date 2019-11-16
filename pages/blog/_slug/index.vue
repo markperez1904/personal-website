@@ -22,15 +22,30 @@
 
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
-        <p class="date">Updated {{ blog_posts._meta.lastPublicationDate | moment("MMM DD, YYYY") }}</p>
+        <p class="date">
+          Updated
+          {{ blog_posts._meta.lastPublicationDate | moment('MMM DD, YYYY') }}
+        </p>
         <h2>{{ blog_posts.description[0].text }}</h2>
 
         <!-- Main image -->
-        <img class="featured-img" :src="blog_posts.image.url" :alt="blog_posts.image.alt" />
+        <img
+          class="featured-img"
+          :src="blog_posts.image.url"
+          :alt="blog_posts.image.alt"
+        />
         <br />
 
         <!-- Blog Content -->
-        <div v-html="PrismicDOM.RichText.asHtml(blog_posts.content, linkResolver, htmlSerializer)"></div>
+        <div
+          v-html="
+            PrismicDOM.RichText.asHtml(
+              blog_posts.content,
+              linkResolver,
+              htmlSerializer
+            )
+          "
+        ></div>
 
         <!-- Disqus Comment Section -->
         <div class="comments">
@@ -43,7 +58,9 @@
       </article>
 
       <!-- Side Bar -->
-      <aside class="section column is-3-desktop is-7-tablet is-10-touch is-12-mobile">
+      <aside
+        class="section column is-3-desktop is-7-tablet is-10-touch is-12-mobile"
+      >
         <app-sidebar></app-sidebar>
       </aside>
     </section>
@@ -98,7 +115,7 @@ export default {
         },
         {
           hid: 'og:type', // open graph type
-          name: 'og:type',
+          property: 'og:type',
           content: 'article'
         },
         {
@@ -108,22 +125,22 @@ export default {
         },
         {
           hid: 'og:title', // open graph title
-          name: 'og:title',
+          property: 'og:title',
           content: this.blog_posts.title[0].text
         },
         {
           hid: 'og:description', // open graph description
-          name: 'og:description',
+          property: 'og:description',
           content: this.blog_posts.description[0].text
         },
         {
           hid: 'og:url', // open graph url
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://markperez.dev' + this.$route.fullPath
         },
         {
           hid: 'og:image', // open graph image
-          name: 'og:image',
+          property: 'og:image',
           content: this.blog_posts.image.url
         }
       ],

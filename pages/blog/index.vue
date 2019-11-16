@@ -97,7 +97,7 @@ export default {
         },
         {
           hid: 'og:type', // open graph type
-          name: 'og:type',
+          property: 'og:type',
           content: 'blog'
         },
         {
@@ -107,22 +107,22 @@ export default {
         },
         {
           hid: 'og:title', // open graph title
-          name: 'og:title',
+          property: 'og:title',
           content: this.title
         },
         {
           hid: 'og:description', // open graph description
-          name: 'og:description',
+          property: 'og:description',
           content: this.description
         },
         {
           hid: 'og:url', // open graph url
-          name: 'og:url',
+          property: 'og:url',
           content: 'https://markperez.dev' + this.$route.fullPath
         },
         {
           hid: 'og:image', // open graph image
-          name: 'og:image',
+          property: 'og:image',
           content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
         }
       ]
