@@ -52,7 +52,7 @@ export default {
     return {
       title: 'Mark Perez',
       description:
-        'SEO Specialist and Self-learning enthusiast in technology. Producing content on YouTube.'
+        'Mark Perez is an SEO Specialist and Self-learning enthusiast in technology. Produces content on YouTube.'
     }
   },
 
