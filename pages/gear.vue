@@ -10,6 +10,7 @@
           <li>Text Editor: VSCode</li>
           <li>Screen Recorder: OBS</li>
           <li>Video Editor: Kdenlive</li>
+          <li>Photo Editor: GIMP</li>
         </ul>
       </div>
 
