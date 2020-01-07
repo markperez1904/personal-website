@@ -28,6 +28,7 @@
     "prismic-dom": "^2.1.0",
     "vue-disqus": "^3.0.5",
     "vue-moment": "^4.1.0",
+    "vue-spinner": "^1.0.3",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {

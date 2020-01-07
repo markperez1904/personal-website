@@ -91,7 +91,12 @@ export default {
   css: ['@/static/css/main.css', '@/static/css/fonts.css'],
 
   // Plugins to load before mounting the App
-  plugins: ['~/plugins/disqus.js', '~/plugins/moment.js', '~/plugins/typer.js'],
+  plugins: [
+    '~/plugins/disqus.js',
+    '~/plugins/moment.js',
+    '~/plugins/typer.js',
+    '~/plugins/spinner.js'
+  ],
 
   // Nuxt.js modules
   modules: [

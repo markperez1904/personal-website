@@ -8,7 +8,7 @@
     <section class="field columns is-centered">
       <div class="control has-icons-left column is-3-widescreen is-4-tablet">
         <input
-          @keyup="searchPosts(keyword)"
+          @keyup.enter="searchPosts(keyword)"
           v-model="keyword"
           type="search"
           class="input is-rounded"
@@ -19,27 +19,43 @@
     </section>
 
     <!-- blog posts -->
-    <section class="posts columns is-multiline is-centered">
-      <article
-        v-for="post in allBlog_postss.edges"
-        :key="post.node._meta.id"
-        class="box column is-3-widescreen is-4-tablet"
+    <transition name="fade">
+      <section
+        class="posts columns is-multiline is-centered"
+        v-if="loading == 0"
       >
-        <nuxt-link :to="`/blog/${post.node._meta.uid}/`">
-          <img class="post-image" :src="post.node.image.url" :alt="post.node.image.alt" />
-          <p class="title is-6">{{post.node.title[0].text}}</p>
-        </nuxt-link>
-      </article>
-    </section>
+        <article
+          v-for="post in allBlog_postss.edges"
+          :key="post.node._meta.id"
+          class="box column is-3-widescreen is-4-tablet"
+        >
+          <nuxt-link :to="`/blog/${post.node._meta.uid}/`">
+            <img
+              class="post-image"
+              :src="post.node.image.url"
+              :alt="post.node.image.alt"
+            />
+            <p class="title is-6">{{ post.node.title[0].text }}</p>
+          </nuxt-link>
+        </article>
+      </section>
+    </transition>
 
-    <!-- I want to PAGINATE my posts here -->
-    <section class="columns is-multiline is-centered is-mobile">
+    <!-- loading bar -->
+    <aside class="loading-bar columns is-centered">
+      <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader>
+    </aside>
+
+    <!-- button -->
+    <aside class="columns is-centered">
       <button
         v-if="allBlog_postss.pageInfo.hasNextPage"
-        class="button is-black"
+        class="button is-black "
         @click="loadMorePosts(keyword, allBlog_postss.pageInfo.endCursor)"
-      >Show More</button>
-    </section>
+      >
+        {{ loading ? 'Loading...' : 'Show more' }}
+      </button>
+    </aside>
   </div>
 </template>
 
@@ -82,6 +98,8 @@ export default {
       description:
         'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.',
 
+      loading: 0,
+      color: '#00c58e',
       keyword: '' // for searchPosts()
     }
   },
@@ -139,6 +157,8 @@ export default {
           cursor: ''
         }
       },
+
+      loadingKey: 'loading', // loading animation
 
       fetchPolicy: 'cache-and-network'
     }
@@ -202,10 +222,6 @@ h2 {
   margin: 2rem 0;
 }
 
-button {
-  margin: 1rem;
-}
-
 /* add transitions to input boxes */
 input {
   transition: all 0.2s;
@@ -216,6 +232,11 @@ input {
 input:focus {
   transition: all 0.2s;
   border-color: #00c58e;
+}
+
+.loading-bar {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .column {
@@ -260,4 +281,3 @@ input:focus {
   margin-bottom: 2rem;
 }
 </style>
- 
