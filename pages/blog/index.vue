@@ -42,15 +42,19 @@
     </transition>
 
     <!-- loading bar -->
-    <aside class="loading-bar columns is-centered">
-      <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader>
+    <aside class="loading-bar columns is-multiline is-centered is-mobile">
+      <pulse-loader
+        :loading="loading"
+        :color="color"
+        :size="size"
+      ></pulse-loader>
     </aside>
 
     <!-- button -->
-    <aside class="columns is-centered">
+    <aside class="columns is-multiline is-centered is-mobile">
       <button
-        v-if="allBlog_postss.pageInfo.hasNextPage"
-        class="button is-black "
+        v-if="allBlog_postss.pageInfo.hasNextPage && loading == 0"
+        class="button is-black"
         @click="loadMorePosts(keyword, allBlog_postss.pageInfo.endCursor)"
       >
         {{ loading ? 'Loading...' : 'Show more' }}
@@ -244,7 +248,7 @@ input:focus {
 }
 
 .posts {
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   margin-bottom: 2rem;
 }
 
