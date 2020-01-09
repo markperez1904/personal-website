@@ -8,11 +8,11 @@
     <section class="field columns is-centered">
       <div class="control has-icons-left column is-3-widescreen is-4-tablet">
         <input
-          @keyup.enter="searchPosts(keyword)"
+          @keyup.passive="searchPosts(keyword)"
           v-model="keyword"
           type="search"
           class="input is-rounded"
-          placeholder="Press ↵ to search"
+          placeholder="Type to search..."
         />
         <i class="icon is-small is-left icon-search"></i>
       </div>
