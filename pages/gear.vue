@@ -20,11 +20,11 @@
         <ul>
           <li>
             <a
-              href="https://amzn.to/33NjmP9"
+              href="https://amzn.to/30yEbMW"
               target="_blank"
               aria-label="laptop"
               rel="noopener"
-              >Laptop: XPS 13 (9360)</a
+              >Laptop: X1 Carbon (Gen 7)</a
             >
           </li>
           <li>
