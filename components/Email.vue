@@ -18,11 +18,12 @@
         novalidate
       >
         <div id="mc_embed_signup_scroll">
-          <p class="emailTitle">Suck With Terminal? 😭</p>
-          <p class="emailMessage">🤓 Free Linux Guide</p>
-
           <section class="columns is-multiline">
-            <img class="column is-12 ebook" src="~assets/images/linux_tips.png" alt="linux guide" />
+            <img
+              class="column is-12 ebook"
+              src="~assets/images/linux_tips.png"
+              alt="linux guide"
+            />
           </section>
 
           <div class="indicates-required">
@@ -46,15 +47,28 @@
           </div>
 
           <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
+            <div
+              class="response"
+              id="mce-error-response"
+              style="display:none"
+            ></div>
+            <div
+              class="response"
+              id="mce-success-response"
+              style="display:none"
+            ></div>
           </div>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_0e646f9cc09aa7c7a450ae8b6_a5dd106a2e" tabindex="-1" value />
+            <input
+              type="text"
+              name="b_0e646f9cc09aa7c7a450ae8b6_a5dd106a2e"
+              tabindex="-1"
+              value
+            />
           </div>
 
-          <div class="clear">
+          <div class="clear columns is-centered is-mobile">
             <input
               type="submit"
               value="I Need it!"
@@ -79,53 +93,29 @@ span {
 /* add transitions to input boxes */
 .mc-field-group input {
   transition: all 0.2s;
-  background-color: #edf2f7;
-}
-
-.emailTitle,
-.emailMessage {
-  text-align: center;
-}
-
-.emailTitle {
-  color: rgb(109, 177, 80);
-  font-family: 'Slackey', sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 22px;
-}
-
-.emailMessage {
-  color: rgb(175, 175, 8);
-  font-family: 'Bungee', cursive, sans-serif;
-  margin-bottom: 1rem;
 }
 
 .leads {
-  color: white;
-  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-  background-color: #00c58e;
-  background-image: linear-gradient(315deg, #00c58e 0%, #000000 74%);
+  box-shadow: unset;
+  padding: 0.5rem;
 }
 
 .ebook {
   margin: 0 auto;
   width: 65%;
   height: 100%;
-  filter: drop-shadow(0 0 1rem #000);
+  filter: drop-shadow(0 0 0.7rem #000);
 }
 
 #mc_embed_signup .button {
-  background-color: #000000;
-  font-family: 'Ubuntu', sans-serif;
+  background-color: #00c58e;
+  /* font-family: 'Ubuntu', sans-serif; */
   font-weight: bold;
   font-size: 20px;
-  border-radius: 20px;
 }
 
 #mc_embed_signup input {
-  font-family: 'Ubuntu', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
   font-size: 12px;
 }
 </style>
-

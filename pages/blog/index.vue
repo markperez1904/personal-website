@@ -54,7 +54,7 @@
     <aside class="columns is-multiline is-centered is-mobile">
       <button
         v-if="allBlog_postss.pageInfo.hasNextPage && loading == 0"
-        class="button is-black"
+        class="button"
         @click="loadMorePosts(keyword, allBlog_postss.pageInfo.endCursor)"
       >
         {{ loading ? 'Loading...' : 'Show more' }}
@@ -281,7 +281,11 @@ input:focus {
 }
 
 .button {
+  font-size: 16px;
+  letter-spacing: 1px;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: #fff;
+  background-color: #00c58e;
 }
 </style>

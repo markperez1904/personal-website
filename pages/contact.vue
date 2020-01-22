@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>{{title}}</h1>
-    <h2>{{description}}</h2>
+    <h1>{{ title }}</h1>
+    <h2>{{ description }}</h2>
 
     <!-- Email API form submission -->
     <form
@@ -47,7 +47,7 @@
 
       <!-- Submit -->
       <section class="field control columns is-centered is-mobile">
-        <input type="submit" value="Submit" class="button is-black" />
+        <input type="submit" value="Submit" class="button" />
       </section>
     </form>
   </div>
@@ -143,5 +143,14 @@ textarea:active {
 
 .hidden {
   display: none;
+}
+
+.button {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: #00c58e;
 }
 </style>

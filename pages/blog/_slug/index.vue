@@ -59,7 +59,7 @@
 
       <!-- Side Bar -->
       <aside
-        class="section column is-3-desktop is-7-tablet is-10-touch is-12-mobile"
+        class="column is-3-desktop is-7-tablet is-10-touch is-12-mobile"
       >
         <app-sidebar></app-sidebar>
       </aside>

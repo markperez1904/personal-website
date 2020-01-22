@@ -34,7 +34,7 @@
             href="https://drive.google.com/open?id=1dx8t_IKZKLtfs4I6nIZsQtaW5qJvL22VEaPZ04L0RsE"
             target="_blank"
           >
-            <button class="button is-black is-centered">Resume</button>
+            <button class="button is-centered">Resume</button>
           </a>
         </aside>
       </div>
@@ -110,6 +110,8 @@ button {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: bold;
+  color: #fff;
+  background-color: #00c58e;
 }
 
 .title {

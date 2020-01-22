@@ -65,7 +65,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono|Bungee|Ubuntu|Slackey&display=swap'
+          'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono&display=swap'
       }
     ],
     // structured data
