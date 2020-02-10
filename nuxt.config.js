@@ -72,13 +72,14 @@ export default {
     script: [
       {
         type: 'application/ld+json',
-        innerHTML: `{
-          "@context" : "http://schema.org",
-          "@type" : "Organization",
-          "name" : "Mark Perez Digital",
-          "image" : "https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png",
-          "url" : "https://markperez.dev/"
-        }`
+        innerHTML: JSON.stringify({
+          '@context': 'http://schema.org',
+          '@type': 'Organization',
+          name: 'Mark Perez Digital',
+          image:
+            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
+          url: 'https://markperez.dev/'
+        })
       }
     ],
     __dangerouslyDisableSanitizers: ['script']
@@ -95,8 +96,7 @@ export default {
     '~/plugins/disqus.js',
     '~/plugins/moment.js',
     '~/plugins/typer.js',
-    '~/plugins/spinner.js',
-    '~/plugins/jsonld.js'
+    '~/plugins/spinner.js'
   ],
 
   // Nuxt.js modules

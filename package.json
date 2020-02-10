@@ -24,7 +24,6 @@
     "graphql-tag": "^2.10.3",
     "nuxt": "^2.11.0",
     "nuxt-buefy": "^0.3.21",
-    "nuxt-jsonld": "^1.4.5",
     "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",
     "vue-disqus": "^3.0.5",
