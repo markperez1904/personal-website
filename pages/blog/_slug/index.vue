@@ -153,16 +153,14 @@ export default {
         },
         {
           type: 'text/javascript',
-          innerHTML: `window.dojoRequire(['mojo/signup-forms/Loader'], function(
-            L
-          ) {
-            L.start({
-              baseUrl: 'mc.us20.list-manage.com',
-              uuid: '0e646f9cc09aa7c7a450ae8b6',
-              lid: 'a5dd106a2e',
-              uniqueMethods: true
-            })
-          })`
+          innerHTML: `window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
+                          L.start({
+                            baseUrl: 'mc.us20.list-manage.com',
+                            uuid: '0e646f9cc09aa7c7a450ae8b6',
+                            lid: 'a5dd106a2e',
+                            uniqueMethods: true
+                          })
+                        })`
         }
       ],
       __dangerouslyDisableSanitizers: ['script'] // required when using "dangerous" scripts

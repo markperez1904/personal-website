@@ -71,15 +71,15 @@ export default {
 
     script: [
       {
-        innerHTML: `{
-          '@context': 'http://schema.org',
-          '@type': 'Organization',
+        type: 'application/ld+json',
+        innerHTML: {
+          "@context": 'http://schema.org',
+          "@type": 'Organization',
           name: 'Mark Perez Digital',
           image:
             'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
           url: 'https://markperez.dev/'
-        }`,
-        type: 'application/ld+json'
+        }
       }
     ],
     __dangerouslyDisableSanitizers: ['script']
