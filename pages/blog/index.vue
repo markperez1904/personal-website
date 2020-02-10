@@ -66,7 +66,7 @@
 <script>
 import gql from 'graphql-tag'
 
-const queryPost = gql`
+const articles = gql`
   query($fulltext: String, $cursor: String) {
     allBlog_postss(
       lang: "en-us"
@@ -153,7 +153,7 @@ export default {
 
   apollo: {
     allBlog_postss: {
-      query: queryPost,
+      query: articles,
 
       variables() {
         return {
@@ -163,7 +163,6 @@ export default {
       },
 
       loadingKey: 'loading', // loading animation
-
       fetchPolicy: 'cache-and-network'
     }
   },

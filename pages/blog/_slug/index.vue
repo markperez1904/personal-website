@@ -58,9 +58,7 @@
       </article>
 
       <!-- Side Bar -->
-      <aside
-        class="column is-3-desktop is-7-tablet is-10-touch is-12-mobile"
-      >
+      <aside class="column is-3-desktop is-7-tablet is-10-touch is-12-mobile">
         <app-sidebar></app-sidebar>
       </aside>
     </section>
@@ -74,7 +72,7 @@ import PrismicDOM from 'prismic-dom'
 import gql from 'graphql-tag'
 
 // blog post query
-const post = gql`
+const currentPost = gql`
   query blog_posts($uid: String!) {
     blog_posts(uid: $uid, lang: "en-us") {
       title
@@ -84,6 +82,7 @@ const post = gql`
       content
       _meta {
         id
+        firstPublicationDate
         lastPublicationDate
       }
     }
@@ -154,17 +153,51 @@ export default {
         },
         {
           type: 'text/javascript',
-          innerHTML: `window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
-                          L.start({
-                            baseUrl: 'mc.us20.list-manage.com',
-                            uuid: '0e646f9cc09aa7c7a450ae8b6',
-                            lid: 'a5dd106a2e',
-                            uniqueMethods: true
-                          })
-                        })`
+          innerHTML: `window.dojoRequire(['mojo/signup-forms/Loader'], function(
+            L
+          ) {
+            L.start({
+              baseUrl: 'mc.us20.list-manage.com',
+              uuid: '0e646f9cc09aa7c7a450ae8b6',
+              lid: 'a5dd106a2e',
+              uniqueMethods: true
+            })
+          })`
         }
       ],
       __dangerouslyDisableSanitizers: ['script'] // required when using "dangerous" scripts
+    }
+  },
+
+  // schema markup for specific article
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://markperez.dev' + this.$route.fullPath
+      },
+      headline: this.blog_posts.title[0].text,
+      description: this.blog_posts.description[0].text,
+      image: this.blog_posts.image.url,
+      author: {
+        '@type': 'Person',
+        name: 'Mark Perez'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Mark Perez Digital',
+        logo: {
+          '@type': 'ImageObject',
+          url:
+            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
+          width: 169.66,
+          height: 47.98
+        }
+      },
+      datePublished: this.blog_posts._meta.firstPublicationDate,
+      dateModified: this.blog_posts._meta.lastPublicationDate
     }
   },
 
@@ -176,7 +209,7 @@ export default {
 
   apollo: {
     blog_posts: {
-      query: post,
+      query: currentPost,
 
       variables() {
         return {

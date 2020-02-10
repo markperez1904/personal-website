@@ -68,15 +68,16 @@ export default {
           'https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono&display=swap'
       }
     ],
-    // structured data
+
     script: [
       {
         innerHTML: `{
-          "@context" : "http://schema.org",
-          "@type" : "Organization",
-          "name" : "Mark Perez Digital",
-          "image" : "https://markperez.dev/_nuxt/img/ec3ab3b.png",
-          "url" : "https://markperez.dev/"
+          '@context': 'http://schema.org',
+          '@type': 'Organization',
+          name: 'Mark Perez Digital',
+          image:
+            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
+          url: 'https://markperez.dev/'
         }`,
         type: 'application/ld+json'
       }
@@ -95,7 +96,8 @@ export default {
     '~/plugins/disqus.js',
     '~/plugins/moment.js',
     '~/plugins/typer.js',
-    '~/plugins/spinner.js'
+    '~/plugins/spinner.js',
+    '~/plugins/jsonld.js'
   ],
 
   // Nuxt.js modules
