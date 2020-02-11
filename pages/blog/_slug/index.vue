@@ -144,57 +144,21 @@ export default {
         }
       ],
 
-      // MailChimp code injection
+      // schema markup for mailchimp & current article
       script: [
         {
-          type: 'text/javascript',
+          type: 'text/javascript', // mailchimp universal script
           src:
             '//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js',
           'data-dojo-config': 'usePlainJson: true, isDebug: false'
         },
         {
-          type: 'text/javascript',
-          innerHTML: `window.dojoRequire(['mojo/signup-forms/Loader'], function(
-            L
-          ) {
-            L.start({
-              baseUrl: 'mc.us20.list-manage.com',
-              uuid: '0e646f9cc09aa7c7a450ae8b6',
-              lid: 'a5dd106a2e',
-              uniqueMethods: true
-            })
-          })`
+          type: 'text/javascript', // mailchimp script for specific popup form
+          innerHTML: this.getMailchimp
         },
         {
           type: 'application/ld+json',
-          innerHTML: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://markperez.dev' + this.$route.fullPath
-            },
-            headline: this.blog_posts.title[0].text,
-            description: this.blog_posts.description[0].text,
-            image: this.blog_posts.image.url,
-            author: {
-              '@type': 'Person',
-              name: 'Mark Perez'
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Mark Perez Digital',
-              logo: {
-                '@type': 'ImageObject',
-                url:
-                  'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
-                width: 169.66,
-                height: 47.98
-              }
-            },
-            datePublished: this.blog_posts._meta.firstPublicationDate,
-            dateModified: this.blog_posts._meta.lastPublicationDate
-          })
+          innerHTML: this.getArticleSchema
         }
       ],
       __dangerouslyDisableSanitizers: ['script']
@@ -204,6 +168,52 @@ export default {
   computed: {
     getRoute() {
       return this.$route.params.slug
+    },
+
+    getMailchimp() {
+      if (process.client) {
+        return JSON.stringify(
+          window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
+            L.start({
+              baseUrl: 'mc.us20.list-manage.com',
+              uuid: '0e646f9cc09aa7c7a450ae8b6',
+              lid: 'a5dd106a2e',
+              uniqueMethods: true
+            })
+          })
+        )
+      }
+    },
+
+    getArticleSchema() {
+      return JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://markperez.dev' + this.$route.fullPath
+        },
+        headline: this.blog_posts.title[0].text,
+        description: this.blog_posts.description[0].text,
+        image: this.blog_posts.image.url,
+        author: {
+          '@type': 'Person',
+          name: 'Mark Perez'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Mark Perez Digital',
+          logo: {
+            '@type': 'ImageObject',
+            url:
+              'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
+            width: 169.66,
+            height: 47.98
+          }
+        },
+        datePublished: this.blog_posts._meta.firstPublicationDate,
+        dateModified: this.blog_posts._meta.lastPublicationDate
+      })
     }
   },
 
