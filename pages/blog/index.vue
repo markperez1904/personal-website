@@ -140,7 +140,7 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath
+          content: 'https://markperez.dev' + this.$route.fullPath + '/'
         },
         {
           hid: 'og:image', // open graph image
