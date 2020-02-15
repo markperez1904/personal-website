@@ -35,6 +35,6 @@
     "@vue/cli-shared-utils": "^3.12.1",
     "core-js": "^2.6.11",
     "typescript": "^3.7.5",
-    "webpack": "^4.41.5"
+    "webpack": "^4.41.6"
   }
 }
