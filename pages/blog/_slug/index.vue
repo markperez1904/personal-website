@@ -24,7 +24,9 @@
         <h1>{{ blog_posts.title[0].text }}</h1>
         <p class="date">
           Updated
-          {{ blog_posts._meta.lastPublicationDate | moment('MMM DD, YYYY') }}
+          <time>
+            {{ blog_posts._meta.lastPublicationDate | moment('MMM DD, YYYY') }}
+          </time>
         </p>
         <h2>{{ blog_posts.description[0].text }}</h2>
 
@@ -36,9 +38,9 @@
         />
         <br />
 
-        <!-- Blog Content -->
+        <!-- Blog Content (lazy load dynamic HTML) -->
         <div
-          v-html="
+          v-lazy-load="
             PrismicDOM.RichText.asHtml(
               blog_posts.content,
               linkResolver,

@@ -108,7 +108,8 @@ export default {
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-adsense',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    'nuxt-lazy-load'
   ],
 
   // Keep Tracking ID private
@@ -148,5 +149,16 @@ export default {
     Disallow: () => ['/thanks/', '/200.html', '/README.md'],
 
     Sitemap: 'https://markperez.dev/sitemap.xml'
-  }
+  },
+
+  // minify CSS and JS files
+  collapseBooleanAttributes: true,
+  decodeEntities: true,
+  minifyCSS: true,
+  minifyJS: true,
+  processConditionalComments: true,
+  removeEmptyAttributes: true,
+  removeRedundantAttributes: true,
+  trimCustomFragments: true,
+  useShortDoctype: true
 }
