@@ -148,16 +148,5 @@ export default {
     Disallow: () => ['/thanks/', '/200.html', '/README.md'],
 
     Sitemap: 'https://markperez.dev/sitemap.xml'
-  },
-
-  // minify CSS and JS files
-  collapseBooleanAttributes: true,
-  decodeEntities: true,
-  minifyCSS: true,
-  minifyJS: true,
-  processConditionalComments: true,
-  removeEmptyAttributes: true,
-  removeRedundantAttributes: true,
-  trimCustomFragments: true,
-  useShortDoctype: true
+  }
 }

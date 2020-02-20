@@ -128,7 +128,7 @@ button {
 .is-fullheight {
   min-height: calc(100vh - 6rem);
   background-color: #b8c6db;
-  background-image: linear-gradient(bottom, #b8c6db 55%, #fff 100%);
+  background-image: linear-gradient(to top, #b8c6db 55%, #fff 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
