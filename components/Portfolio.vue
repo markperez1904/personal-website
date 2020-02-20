@@ -13,7 +13,7 @@
               aria-label="seo testimonial"
               rel="noopener"
             >
-              <img src="~assets/images/seo_testimonial.jpg" alt="seo testimonial" />
+              <img src="~assets/images/seo-testimonial.jpg" alt="seo testimonial" />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
@@ -31,7 +31,7 @@
               aria-label="personal website"
               rel="noopener"
             >
-              <img src="~assets/images/personal_website.jpg" alt="personal website" />
+              <img src="~assets/images/personal-website.jpg" alt="personal website" />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>

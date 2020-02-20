@@ -108,8 +108,7 @@ export default {
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-adsense',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-    'nuxt-lazy-load'
+    '@nuxtjs/robots'
   ],
 
   // Keep Tracking ID private

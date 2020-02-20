@@ -14,7 +14,7 @@
           >
             <img
               class="box banner-image"
-              src="~assets/images/logitech_banner.jpg"
+              src="~assets/images/logitech-banner.jpg"
               alt="Shop for Keyboards, Mice, and more at Logitech"
             />
           </a>
@@ -40,7 +40,7 @@
 
         <!-- Blog Content (lazy load dynamic HTML) -->
         <div
-          v-lazy-load="
+          v-html="
             PrismicDOM.RichText.asHtml(
               blog_posts.content,
               linkResolver,

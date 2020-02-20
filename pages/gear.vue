@@ -186,7 +186,7 @@ export default {
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
+          content: 'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
         }
       ]
     }

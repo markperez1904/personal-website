@@ -1,7 +1,8 @@
 <template>
   <div>
+    <!-- main background image -->
     <section class="hero is-fullheight">
-      <div class="hero-body columns is-centered is-vcentered">
+      <div class="hero-body columns is-centered is-vcentered headshot">
         <!-- titles and resume button -->
         <aside class="container section column is-narrow">
           <!-- titles -->
@@ -93,7 +94,8 @@ export default {
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content: 'https://markperez.dev/_nuxt/img/ec3ab3b.png'
+          content:
+            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
         }
       ]
     }
@@ -125,56 +127,63 @@ button {
 
 .is-fullheight {
   min-height: calc(100vh - 6rem);
-  background-image: url('~assets/images/marks_headshot.png');
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #b8c6db;
+  background-image: linear-gradient(bottom, #b8c6db 55%, #fff 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headshot {
+  min-height: calc(100vh - 6rem);
+  background-image: url('~assets/images/marks-headshot.png');
   background-blend-mode: lighten;
   background-repeat: no-repeat;
-  background-size: 17%;
-  background-position: bottom right 300px;
+  background-size: 33%;
+  background-position: bottom 12px right 150px;
 }
 
 /* specify background image size on certain breakpoint */
 @media only screen and (max-width: 1630px) {
-  .is-fullheight {
-    background-size: 19%;
-    background-position: bottom right 250px;
+  .headshot {
+    background-size: 35%;
+    background-position: bottom 12px right 250px;
   }
 }
 
 @media only screen and (max-width: 1407px) {
-  .is-fullheight {
-    background-size: 22%;
-    background-position: bottom right 200px;
+  .headshot {
+    background-size: 40%;
+    background-position: bottom 12px right 200px;
   }
 }
 
 @media only screen and (max-width: 1215px) {
-  .is-fullheight {
-    background-size: 26%;
-    background-position: bottom right 100px;
+  .headshot {
+    background-size: 45%;
+    background-position: bottom 12px right 100px;
   }
 }
 
 /* change image transparency when window is smaller */
 @media only screen and (max-width: 1023px) {
-  .is-fullheight {
-    background-color: rgba(255, 255, 255, 0.75);
-    background-size: 31%;
-    background-position: bottom right 75px;
+  .headshot {
+    background-color: rgba(255, 255, 255, 0.65);
+    background-size: 60%;
+    background-position: bottom 12px right 75px;
   }
 }
 
 @media only screen and (max-width: 780px) {
-  .is-fullheight {
-    background-size: 40%;
-    background-position: bottom right 40px;
+  .headshot {
+    background-size: 75%;
+    background-position: bottom 12px right 40px;
   }
 }
 
 @media only screen and (max-width: 556px) {
-  .is-fullheight {
-    background-size: 58%;
-    background-position: bottom right 50px;
+  .headshot {
+    background-size: 80%;
+    background-position: bottom 12px right 50px;
   }
 }
 </style>

@@ -4,7 +4,7 @@
       <nav class="container">
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/">
-            <img class="logo" src="~assets/images/markperez_digital_black.png" alt="Mark Perez Digital" />
+            <img class="logo" src="~assets/images/markperez-digital-black.png" alt="Mark Perez Digital" />
           </n-link>
 
           <!-- Navbar Burger -->
