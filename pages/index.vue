@@ -12,9 +12,9 @@
           <h2 class="subtitle">
             <vue-typer
               :text="[
-                'SEO Specialist',
-                'Self-learning enthusiast',
-                'YouTube Producer'
+                'SEO specialist',
+                'Produced over ' + allBlog_postss.edges.length + ' tutorials',
+                'Tech enthusiast'
               ]"
               :repeat="Infinity"
               :shuffle="false"
@@ -47,6 +47,17 @@
 
 <script>
 import Portfolio from '@/components/Portfolio.vue'
+import gql from 'graphql-tag'
+
+const articles = gql`
+  {
+    allBlog_postss(sortBy: date_DESC) {
+      edges {
+        cursor
+      }
+    }
+  }
+`
 
 export default {
   data() {
@@ -103,6 +114,13 @@ export default {
 
   components: {
     'app-portfolio': Portfolio
+  },
+
+  apollo: {
+    allBlog_postss: {
+      query: articles,
+      fetchPolicy: 'cache-and-network'
+    }
   }
 }
 </script>
