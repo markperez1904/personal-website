@@ -154,13 +154,7 @@ export default {
   // purge unnecessary CSS
   purgeCSS: {
     mode: 'postcss',
-    paths: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'static/css/main.css'
-    ]
+    paths: ['static/css/main.css']
   },
 
   // minify HTML
