@@ -2,7 +2,6 @@ import { PrismicLink } from 'apollo-link-prismic'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 import gql from 'graphql-tag'
-import { ModuleResolutionKind } from 'typescript'
 
 const client = new ApolloClient({
   link: PrismicLink({
@@ -110,6 +109,7 @@ export default {
     '@nuxtjs/google-adsense',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    'nuxt-purgecss'
   ],
 
   // Keep Tracking ID private
@@ -149,6 +149,18 @@ export default {
     Disallow: () => ['/thanks/', '/200.html', '/README.md'],
 
     Sitemap: 'https://markperez.dev/sitemap.xml'
+  },
+
+  // purge unnecessary CSS
+  purgeCSS: {
+    mode: 'postcss',
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'static/css/main.css'
+    ]
   },
 
   // minify HTML
