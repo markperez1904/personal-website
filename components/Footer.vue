@@ -32,16 +32,6 @@
         <i class="icon-github"></i>
       </a>
 
-      <!-- Upwork -->
-      <a
-        href="https://www.upwork.com/o/profiles/users/_~01ed84530004e0fd8c/"
-        target="_blank"
-        aria-label="upwork"
-        rel="noopener"
-      >
-        <i class="icon-upwork"></i>
-      </a>
-
       <!-- Paypal -->
       <a
         href="https://www.paypal.com/paypalme2/markperez1904"
