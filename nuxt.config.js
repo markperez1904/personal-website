@@ -110,7 +110,6 @@ export default {
     '@nuxtjs/google-adsense',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    'nuxt-purgecss'
   ],
 
   // Keep Tracking ID private
@@ -150,11 +149,6 @@ export default {
     Disallow: () => ['/thanks/', '/200.html', '/README.md'],
 
     Sitemap: 'https://markperez.dev/sitemap.xml'
-  },
-
-  // remove bloated CSS
-  purgeCSS: {
-    mode: 'postcss'
   },
 
   // minify HTML
