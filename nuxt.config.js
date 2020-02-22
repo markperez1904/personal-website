@@ -154,7 +154,8 @@ export default {
   // purge unnecessary CSS
   purgeCSS: {
     mode: 'postcss',
-    paths: ['static/css/main.css']
+    paths: ['static/css/main.css'], // whitelist the main.css file
+    whitelistPatterns: [/-leave/, /-enter/] // whitelist the page transition CSS classes
   },
 
   // minify HTML
