@@ -29,11 +29,11 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/2He16Vg"
+              href="https://amzn.to/2V9WOpT"
               target="_blank"
               aria-label="keyboard"
               rel="noopener"
-              >Keyboard: Velocifire VM01</a
+              >Keyboard: Fnatic miniSTREAK (Cherry Browns)</a
             >
           </li>
           <li>

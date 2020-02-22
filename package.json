@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "😎 My personal website built with Nuxt.js, Prismic.io, and GraphQL",
   "author": "Mark Perez",
   "private": true,
@@ -23,7 +23,7 @@
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "nuxt": "^2.11.0",
-    "nuxt-buefy": "^0.3.22",
+    "nuxt-buefy": "^0.3.23",
     "nuxt-purgecss": "^0.2.1",
     "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",
