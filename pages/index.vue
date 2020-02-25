@@ -13,7 +13,7 @@
             <vue-typer
               :text="[
                 'SEO specialist',
-                'Produced over ' + allBlog_postss.edges.length + ' tutorials',
+                'Produced over ' + allBlog_postss.totalCount + ' tutorials',
                 'Tech enthusiast'
               ]"
               :repeat="Infinity"
@@ -51,10 +51,8 @@ import gql from 'graphql-tag'
 
 const articles = gql`
   {
-    allBlog_postss(sortBy: date_DESC) {
-      edges {
-        cursor
-      }
+    allBlog_postss {
+      totalCount
     }
   }
 `
