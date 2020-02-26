@@ -156,20 +156,5 @@ export default {
     mode: 'postcss',
     paths: ['static/css/main.css'], // whitelist the main.css file
     whitelistPatterns: [/-leave/, /-enter/] // whitelist the page transition CSS classes
-  },
-
-  // minify HTML
-  html: {
-    minify: {
-      collapseBooleanAttributes: true,
-      decodeEntities: true,
-      minifyCSS: true,
-      minifyJS: true,
-      processConditionalComments: true,
-      removeEmptyAttributes: true,
-      removeRedundantAttributes: true,
-      trimCustomFragments: true,
-      useShortDoctype: true
-    }
   }
 }
