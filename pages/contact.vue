@@ -6,7 +6,7 @@
     <!-- Email API form submission -->
     <form
       @submit="handleRequest"
-      action="https://formspree.io/markperez1904@gmail.com"
+      action="https://formspree.io/info@markperez.dev"
       method="POST"
     >
       <!-- Name nad Email -->
