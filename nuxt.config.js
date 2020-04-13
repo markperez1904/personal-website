@@ -73,12 +73,19 @@ export default {
       {
         type: 'application/ld+json',
         innerHTML: JSON.stringify({
-          '@context': 'http://schema.org',
+          '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Mark Perez Digital',
-          image:
+          alternateName: 'MP Digital',
+          url: 'https://markperez.dev/',
+          logo:
             'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
-          url: 'https://markperez.dev/'
+          email: 'info@markperez.dev',
+          sameAs: [
+            'https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w',
+            'https://www.linkedin.com/in/markpereztech/',
+            'https://github.com/markperez1904'
+          ]
         })
       }
     ],
