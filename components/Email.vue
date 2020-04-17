@@ -21,7 +21,7 @@
           <section class="columns is-multiline">
             <img
               class="column is-12 ebook"
-              src="~assets/images/linux-tips.png"
+              src="~assets/images/linux-book-v3.png"
               alt="linux guide"
             />
           </section>
