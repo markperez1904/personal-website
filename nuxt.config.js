@@ -83,7 +83,6 @@ export default {
           email: 'info@markperez.dev',
           sameAs: [
             'https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w',
-            'https://www.linkedin.com/in/markpereztech/',
             'https://github.com/markperez1904'
           ]
         })

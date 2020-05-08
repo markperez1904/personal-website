@@ -12,16 +12,6 @@
         <i class="icon-youtube"></i>
       </a>
 
-      <!-- LinkedIn -->
-      <a
-        href="https://www.linkedin.com/in/markpereztech/"
-        target="_blank"
-        aria-label="linkedin"
-        rel="noopener"
-      >
-        <i class="icon-linkedin"></i>
-      </a>
-
       <!-- GitHub -->
       <a
         href="https://github.com/markperez1904"
