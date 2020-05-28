@@ -6,7 +6,7 @@
       <div class="content column is-4-widescreen is-6-tablet">
         <h5>Software</h5>
         <ul>
-          <li>OS: Ubuntu 18.04</li>
+          <li>OS: Ubuntu 20.04</li>
           <li>Text Editor: VSCode</li>
           <li>Screen Recorder: OBS</li>
           <li>Video Editor: Kdenlive</li>
