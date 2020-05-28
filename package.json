@@ -36,6 +36,7 @@
     "@vue/cli-shared-utils": "^3.12.1",
     "core-js": "^2.6.11",
     "typescript": "^3.9.3",
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "yarn": "^1.22.4"
   }
 }
