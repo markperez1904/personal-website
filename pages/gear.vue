@@ -6,10 +6,10 @@
       <div class="content column is-4-widescreen is-6-tablet">
         <h5>Software</h5>
         <ul>
-          <li>OS: Ubuntu 20.04</li>
+          <li>OS: macOS Catalina</li>
           <li>Text Editor: VSCode</li>
           <li>Screen Recorder: OBS</li>
-          <li>Video Editor: Kdenlive</li>
+          <li>Video Editor: FCPX</li>
           <li>Photo Editor: GIMP</li>
         </ul>
       </div>
@@ -20,11 +20,11 @@
         <ul>
           <li>
             <a
-              href="https://amzn.to/30yEbMW"
+              href="https://amzn.to/30BkKoC"
               target="_blank"
               aria-label="laptop"
               rel="noopener"
-              >Laptop: X1 Carbon (Gen 7)</a
+              >Macbook Pro (A2251)</a
             >
           </li>
           <li>
@@ -49,20 +49,12 @@
             <a
               href="https://amzn.to/2KItIIi"
               target="_blank"
-              aria-label="first monitor"
+              aria-label="monitor"
               rel="noopener"
-              >1st Monitor: Dell SE2219H</a
+              >Monitor: Dell SE2219H</a
             >
           </li>
-          <li>
-            <a
-              href="https://amzn.to/2oYHIVS"
-              target="_blank"
-              aria-label="second monitor"
-              rel="noopener"
-              >2nd Monitor: ASUS VS229H</a
-            >
-          </li>
+
           <li>
             <a
               href="https://amzn.to/2ALZpuB"
@@ -90,11 +82,11 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/2OlHoey"
+              href="https://amzn.to/3fm3KHi"
               target="_blank"
-              aria-label="hdmi adapter"
+              aria-label="usb-c adapter"
               rel="noopener"
-              >HDMI Adapter: CableCreation USB Type C - 2 HDMI</a
+              >USB-C Adapter: FlePow Multiport Adapter</a
             >
           </li>
           <li>
@@ -108,11 +100,11 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/2HgtFkR"
+              href="https://amzn.to/2B8T4N9"
               target="_blank"
               aria-label="chair"
               rel="noopener"
-              >Chair: BestOffice Racing Gaming Chair</a
+              >Chair: CLATINA Executive Chair</a
             >
           </li>
           <li>
@@ -122,15 +114,6 @@
               aria-label="lamp"
               rel="noopener"
               >Lamp: TaoTronics LED Desk Lamp</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://amzn.to/31PleFa"
-              target="_blank"
-              aria-label="laptop stand"
-              rel="noopener"
-              >Laptop Stand: Seenda Laptop Stand</a
             >
           </li>
         </ul>
@@ -186,7 +169,8 @@ export default {
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content: 'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
+          content:
+            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
         }
       ]
     }
