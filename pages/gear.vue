@@ -10,7 +10,7 @@
           <li>Text Editor: VSCode</li>
           <li>Screen Recorder: OBS</li>
           <li>Video Editor: FCPX</li>
-          <li>Photo Editor: GIMP</li>
+          <li>Photo Editor: Affinity Photo</li>
         </ul>
       </div>
 
@@ -29,11 +29,11 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/2V9WOpT"
+              href="https://amzn.to/38scGJ3"
               target="_blank"
               aria-label="keyboard"
               rel="noopener"
-              >Keyboard: Fnatic miniSTREAK (Cherry Browns)</a
+              >Keyboard: Magic Keyboard 2 (TKL)</a
             >
           </li>
           <li>
@@ -82,20 +82,20 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/3fm3KHi"
+              href="https://amzn.to/3dOIubY"
               target="_blank"
               aria-label="usb-c adapter"
               rel="noopener"
-              >USB-C Adapter: FlePow Multiport Adapter</a
+              >USB-C Adapter: Anker 5-in-1</a
             >
           </li>
           <li>
             <a
-              href="https://amzn.to/320xxPd"
+              href="https://amzn.to/31vmFvy"
               target="_blank"
               aria-label="camera"
               rel="noopener"
-              >Camera: OnePlus 5</a
+              >Camera: iPhone SE2</a
             >
           </li>
           <li>

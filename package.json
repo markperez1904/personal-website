@@ -22,7 +22,7 @@
     "apollo-link-prismic": "^1.0.7",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.13.2",
     "nuxt-buefy": "^0.3.31",
     "nuxt-purgecss": "^0.2.1",
     "nuxt-trailingslash-module": "^1.1.0",
@@ -34,8 +34,8 @@
   },
   "devDependencies": {
     "@vue/cli-shared-utils": "^3.12.1",
-    "apollo-server-core": "^2.14.4",
-    "apollo-server-express": "^2.14.4",
+    "apollo-server-core": "^2.15.1",
+    "apollo-server-express": "^2.15.1",
     "core-js": "^2.6.11",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0"
