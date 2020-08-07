@@ -22,7 +22,7 @@
     "apollo-link-prismic": "^1.0.7",
     "graphql": "^14.7.0",
     "graphql-tag": "^2.11.0",
-    "nuxt": "^2.14.0",
+    "nuxt": "^2.14.1",
     "nuxt-buefy": "^0.3.31",
     "nuxt-purgecss": "^0.2.1",
     "nuxt-trailingslash-module": "^1.1.0",
@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "@vue/cli-shared-utils": "^3.12.1",
-    "core-js": "^2.6.11",
-    "dot-prop": "^5.2.0"
+    "core-js": "^2.6.11"
   }
 }

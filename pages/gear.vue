@@ -38,11 +38,11 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/2KHskFW"
+              href="https://amzn.to/3igqDgE"
               target="_blank"
               aria-label="mouse"
               rel="noopener"
-              >Mouse: Logitech G402</a
+              >Mouse: VicTsing Pioneer Bluetooth</a
             >
           </li>
           <li>
