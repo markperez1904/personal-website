@@ -10,3 +10,4 @@ I used GraphQL with Apollo Client to query each post and parsed what I wanted.
 - `cd` into the directory
 - run `npm install`
 - run `npm run dev` to view lives changes.
+Thanks for visiting
