@@ -8,27 +8,6 @@
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a
-              href="https://www.youtube.com/watch?v=vHuQMaVGMW8"
-              target="_blank"
-              aria-label="seo testimonial"
-              rel="noopener"
-            >
-              <img
-                src="~assets/images/mike-testimonial.jpg"
-                alt="seo testimonial"
-              />
-              <section class="overlay">
-                <i class="icon-search"></i>
-              </section>
-            </a>
-          </div>
-          <p class="title is-6">SEO Testimonial</p>
-        </article>
-
-        <!-- Project #2 -->
-        <article class="box column is-3-widescreen is-4-tablet">
-          <div class="project-image">
-            <a
               href="https://blog.skinsolutions.md/"
               target="_blank"
               aria-label="SkinSolutions.MD Blog"
@@ -46,7 +25,7 @@
           <p class="title is-6">SkinSolutions.MD</p>
         </article>
 
-        <!-- Project #3 -->
+        <!-- Project #2 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a
@@ -65,6 +44,27 @@
             </a>
           </div>
           <p class="title is-6">Reachify.io</p>
+        </article>
+
+        <!-- Project #3 -->
+        <article class="box column is-3-widescreen is-4-tablet">
+          <div class="project-image">
+            <a
+              href="https://www.youtube.com/watch?v=vHuQMaVGMW8"
+              target="_blank"
+              aria-label="seo testimonial"
+              rel="noopener"
+            >
+              <img
+                src="~assets/images/mike-testimonial.jpg"
+                alt="seo testimonial"
+              />
+              <section class="overlay">
+                <i class="icon-search"></i>
+              </section>
+            </a>
+          </div>
+          <p class="title is-6">SEO Testimonial</p>
         </article>
       </section>
     </header>
