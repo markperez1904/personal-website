@@ -13,7 +13,7 @@
               aria-label="seo testimonial"
               rel="noopener"
             >
-              <img src="~assets/images/seo-testimonial.jpg" alt="seo testimonial" />
+              <img src="~assets/images/mike-testimonial.jpg" alt="seo testimonial" />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
@@ -26,19 +26,38 @@
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a
-              href="https://github.com/markperez1904/personal-website"
+              href="https://blog.skinsolutions.md/"
               target="_blank"
-              aria-label="personal website"
+              aria-label="SkinSolutions.MD Blog"
               rel="noopener"
             >
-              <img src="~assets/images/personal-website.jpg" alt="personal website" />
+              <img src="~assets/images/skin-solutions-md-blog.jpg" alt="SkinSolutions.MD Blog" />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
             </a>
           </div>
-          <p class="title is-6">Personal Website</p>
+          <p class="title is-6">SkinSolutions.MD Blog</p>
         </article>
+
+        <!-- Project #3 -->
+        <article class="box column is-3-widescreen is-4-tablet">
+          <div class="project-image">
+            <a
+              href="https://reachify.io/blog/"
+              target="_blank"
+              aria-label="Reachify.io Blog"
+              rel="noopener"
+            >
+              <img src="~assets/images/reachify-io-blog.jpg" alt="Reachify Blog" />
+              <section class="overlay">
+                <i class="icon-search"></i>
+              </section>
+            </a>
+          </div>
+          <p class="title is-6">Reachify Blog</p>
+        </article>
+
       </section>
     </header>
   </div>

@@ -35,7 +35,7 @@
     <footer class="columns is-centered">
       <small class="column is-narrow">&copy; {{ getYear }} Mark Perez</small>
       <small class="column is-narrow">
-        Made with ❤️ in
+        Made with 💚 &nbsp;in
         <a
           class="framework"
           href="https://nuxtjs.org"

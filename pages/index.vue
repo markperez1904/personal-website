@@ -4,7 +4,7 @@
     <section class="hero is-fullheight">
       <div class="hero-body columns is-centered is-vcentered headshot">
         <!-- titles and resume button -->
-        <aside class="container section column is-narrow">
+        <aside class="container section column is-narrow has-text-right	">
           <!-- titles -->
           <h1 class="title">{{ title }}</h1>
 
@@ -130,6 +130,7 @@ button {
   font-weight: bold;
   color: #fff;
   background-color: #00c58e;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 .title {
@@ -144,39 +145,39 @@ button {
 .is-fullheight {
   min-height: calc(100vh - 6rem);
   background-color: #dbdbdb;
-  background-image: linear-gradient(to top, #dbdbdb 55%, #fff 100%);
+  background-image: linear-gradient(to top, #98a8ac 0%, #ffffff 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .headshot {
   min-height: calc(100vh - 6rem);
-  background-image: url('~assets/images/marks-headshot.png');
+  background-image: url('~assets/images/mark-suit-portrait.png');
   background-blend-mode: lighten;
   background-repeat: no-repeat;
-  background-size: 33%;
-  background-position: bottom 12px right 150px;
+  background-size: 30%;
+  background-position: bottom 12px left 20%;
 }
 
 /* specify background image size on certain breakpoint */
 @media only screen and (max-width: 1630px) {
   .headshot {
     background-size: 35%;
-    background-position: bottom 12px right 250px;
+    background-position: bottom 12px left 20%;
   }
 }
 
 @media only screen and (max-width: 1407px) {
   .headshot {
     background-size: 40%;
-    background-position: bottom 12px right 200px;
+    background-position: bottom 12px left 20%;
   }
 }
 
 @media only screen and (max-width: 1215px) {
   .headshot {
     background-size: 45%;
-    background-position: bottom 12px right 100px;
+    background-position: bottom 12px left 20%;
   }
 }
 
@@ -184,22 +185,22 @@ button {
 @media only screen and (max-width: 1023px) {
   .headshot {
     background-color: rgba(255, 255, 255, 0.65);
-    background-size: 60%;
-    background-position: bottom 12px right 75px;
+    background-size: 50%;
+    background-position: bottom 12px left 20%;
   }
 }
 
 @media only screen and (max-width: 780px) {
   .headshot {
-    background-size: 75%;
-    background-position: bottom 12px right 40px;
+    background-size: 70%;
+    background-position: bottom 12px left 30%;
   }
 }
 
 @media only screen and (max-width: 556px) {
   .headshot {
-    background-size: 80%;
-    background-position: bottom 12px right 50px;
+    background-size: 90%;
+    background-position: bottom 12px left 40%;
   }
 }
 </style>
