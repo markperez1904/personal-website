@@ -13,7 +13,10 @@
               aria-label="seo testimonial"
               rel="noopener"
             >
-              <img src="~assets/images/mike-testimonial.jpg" alt="seo testimonial" />
+              <img
+                src="~assets/images/mike-testimonial.jpg"
+                alt="seo testimonial"
+              />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
@@ -31,13 +34,16 @@
               aria-label="SkinSolutions.MD Blog"
               rel="noopener"
             >
-              <img src="~assets/images/skin-solutions-md-blog.jpg" alt="SkinSolutions.MD Blog" />
+              <img
+                src="~assets/images/skin-solutions-md-blog.jpg"
+                alt="SkinSolutions.MD Blog"
+              />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
             </a>
           </div>
-          <p class="title is-6">SkinSolutions.MD Blog</p>
+          <p class="title is-6">SkinSolutions.MD</p>
         </article>
 
         <!-- Project #3 -->
@@ -49,15 +55,17 @@
               aria-label="Reachify.io Blog"
               rel="noopener"
             >
-              <img src="~assets/images/reachify-io-blog.jpg" alt="Reachify Blog" />
+              <img
+                src="~assets/images/reachify-io-blog.jpg"
+                alt="Reachify Blog"
+              />
               <section class="overlay">
                 <i class="icon-search"></i>
               </section>
             </a>
           </div>
-          <p class="title is-6">Reachify Blog</p>
+          <p class="title is-6">Reachify.io</p>
         </article>
-
       </section>
     </header>
   </div>
@@ -84,6 +92,11 @@ img {
 
 .project-image:hover .overlay {
   opacity: 1;
+}
+
+.project-image:hover img {
+  transition: 0.2s ease;
+  opacity: 0.4;
 }
 
 .overlay {
