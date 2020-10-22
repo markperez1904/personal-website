@@ -4,7 +4,7 @@
     <section class="hero is-fullheight">
       <div class="hero-body columns is-centered is-vcentered headshot">
         <!-- titles and resume button -->
-        <aside class="container section column is-narrow has-text-right	">
+        <aside class="container section column is-narrow has-text-right">
           <!-- titles -->
           <h1 class="title">{{ title }}</h1>
 
@@ -193,14 +193,27 @@ button {
 @media only screen and (max-width: 780px) {
   .headshot {
     background-size: 70%;
-    background-position: bottom 12px left 30%;
+    background-position: bottom 12px right 20%;
+  }
+
+  .has-text-right {
+    text-align: left !important;
   }
 }
 
 @media only screen and (max-width: 556px) {
   .headshot {
     background-size: 90%;
-    background-position: bottom 12px left 40%;
+    background-position: bottom 12px right 10%;
+  }
+
+  .title {
+    font-size: 50px;
+    letter-spacing: 4px;
+  }
+
+  .has-text-right {
+    text-align: left !important;
   }
 }
 </style>
