@@ -46,7 +46,28 @@
           <p class="title is-6">Reachify.io</p>
         </article>
 
-        <!-- Project #3 -->
+          <!-- Project #3 -->
+        <article class="box column is-3-widescreen is-4-tablet">
+          <div class="project-image">
+            <a
+              href="https://lepragma.com/"
+              target="_blank"
+              aria-label="Le Pragma website"
+              rel="noopener"
+            >
+              <img
+                src="~assets/images/le-pragma-site.jpg"
+                alt="Le Pragma website"
+              />
+              <section class="overlay">
+                <i class="icon-search"></i>
+              </section>
+            </a>
+          </div>
+          <p class="title is-6">Le Pragma</p>
+        </article>
+
+        <!-- Project #4 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a
