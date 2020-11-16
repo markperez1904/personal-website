@@ -64,7 +64,7 @@
               </section>
             </a>
           </div>
-          <p class="title is-6">Le Pragma</p>
+          <p class="title is-6">Le Pragma (under development)</p>
         </article>
 
         <!-- Project #4 -->
