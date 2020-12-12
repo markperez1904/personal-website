@@ -100,7 +100,6 @@ export default {
 
   // Plugins to load before mounting the App
   plugins: [
-    '~/plugins/disqus.js',
     '~/plugins/moment.js',
     '~/plugins/typer.js',
     '~/plugins/spinner.js'

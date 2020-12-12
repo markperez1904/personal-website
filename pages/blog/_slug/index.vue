@@ -4,7 +4,6 @@
     <section class="columns is-centered is-multiline">
       <!-- Blog Post -->
       <article class="column is-7">
-        
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
         <p class="date">
@@ -33,15 +32,6 @@
             )
           "
         ></div>
-
-        <!-- Disqus Comment Section -->
-        <div class="comments">
-          <vue-disqus
-            shortname="mark-perez"
-            :identifier="blog_posts._meta.id"
-            :url="`https://markperez.dev/blog/${getRoute}/`"
-          ></vue-disqus>
-        </div>
       </article>
 
       <!-- Side Bar -->
