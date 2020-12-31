@@ -14,7 +14,7 @@
 
       <!-- Odysee (LBRY) -->
       <a
-        href="https://odysee.com/@markster1904:8"
+        href="https://odysee.com/@markster1904:7"
         target="_blank"
         aria-label="odysee"
         rel="noopener"
