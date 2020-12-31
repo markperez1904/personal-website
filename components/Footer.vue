@@ -12,6 +12,16 @@
         <i class="icon-youtube"></i>
       </a>
 
+      <!-- Odysee (LBRY) -->
+      <a
+        href="https://odysee.com/@markster1904:8"
+        target="_blank"
+        aria-label="odysee"
+        rel="noopener"
+      >
+        <i class="icon-odysee"></i>
+      </a>
+
       <!-- GitHub -->
       <a
         href="https://github.com/markperez1904"
