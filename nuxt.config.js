@@ -102,7 +102,8 @@ export default {
   plugins: [
     '~/plugins/moment.js',
     '~/plugins/typer.js',
-    '~/plugins/spinner.js'
+    '~/plugins/spinner.js',
+    '~/plugins/silentbox.js'
   ],
 
   // Nuxt.js modules

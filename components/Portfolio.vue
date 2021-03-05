@@ -7,82 +7,44 @@
         <!-- Project #1 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
-            <a
-              href="https://blog.skinsolutions.md/"
-              target="_blank"
-              aria-label="SkinSolutions.MD Blog"
-              rel="noopener"
-            >
-              <img
-                src="~assets/images/skin-solutions-md-blog.jpg"
-                alt="SkinSolutions.MD Blog"
-              />
-              <section class="overlay">
-                <i class="icon-search"></i>
-              </section>
+            <a aria-label="SkinSolutions.MD Blog" rel="noopener">
+              <ClientOnly>
+                <silent-box :gallery="ssmd" :preview-count="1"></silent-box
+              ></ClientOnly>
             </a>
           </div>
-          <p class="title is-6">SkinSolutions.MD</p>
+          <p class="title is-6">SkinSolutions.MD (B2C)</p>
         </article>
 
         <!-- Project #2 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
-            <a
-              href="https://reachify.io/blog/"
-              target="_blank"
-              aria-label="Reachify.io Blog"
-              rel="noopener"
-            >
-              <img
-                src="~assets/images/reachify-io-blog.jpg"
-                alt="Reachify Blog"
-              />
-              <section class="overlay">
-                <i class="icon-search"></i>
-              </section>
+            <a aria-label="Reachify.io Blog" rel="noopener">
+              <ClientOnly>
+                <silent-box :gallery="reachify" :preview-count="1"></silent-box
+              ></ClientOnly>
             </a>
           </div>
-          <p class="title is-6">Reachify.io</p>
+          <p class="title is-6">Reachify.io (B2B)</p>
         </article>
 
-          <!-- Project #3 -->
+        <!-- Project #3 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
-            <a
-              href="https://lepragma.com/"
-              target="_blank"
-              aria-label="Le Pragma website"
-              rel="noopener"
-            >
-              <img
-                src="~assets/images/le-pragma-site.jpg"
-                alt="Le Pragma website"
-              />
-              <section class="overlay">
-                <i class="icon-search"></i>
-              </section>
+            <a aria-label="Le Pragma website" rel="noopener">
+              <ClientOnly>
+                <silent-box :gallery="lepragma" :preview-count="1"></silent-box
+              ></ClientOnly>
             </a>
           </div>
-          <p class="title is-6">Le Pragma (under development)</p>
+          <p class="title is-6">Le Pragma (Website Building)</p>
         </article>
 
         <!-- Project #4 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
-            <a
-              href="https://www.youtube.com/watch?v=vHuQMaVGMW8"
-              target="_blank"
-              aria-label="seo testimonial"
-              rel="noopener"
-            >
-              <img
-                src="~assets/images/mike-testimonial.jpg"
-                alt="seo testimonial"
-              />
-              <section class="overlay">
-                <i class="icon-search"></i>
-              </section>
+            <a aria-label="SEO testimonial" rel="noopener">
+              <ClientOnly> <silent-box :image="mike"></silent-box></ClientOnly>
             </a>
           </div>
           <p class="title is-6">SEO Testimonial</p>
@@ -92,7 +54,85 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      ssmd: [
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/efa8e0d6-c913-48ac-af7e-bd484c9c6ee5_skin-solutions-md-blog.jpg?auto=compress,format',
+          alt: 'skinsolutions.md blog page',
+          description: "I've lead the development of SkinSolutions.MD's blog"
+        },
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/388ccaa3-2cb2-4263-82e2-e4fe50b39de3_ssmd-featured-snippet.png?auto=compress,format',
+          alt: 'ranking a featured snippet',
+          description:
+            'Within the first 4 months getting started, featured snippets started to populate over our keywords'
+        },
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/27c328c7-0a2d-4b69-9a8c-0687c1e600a6_ssmd-results.png?auto=compress,format',
+          alt: 'ssmd ranking over 50+ keywords on page 1',
+          description: 'Over 50+ keyphrases ranking on page 1'
+        }
+      ],
+      reachify: [
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/02680204-59f1-4b67-90d0-ca767e09338d_reachify-io-blog.jpg?auto=compress,format',
+          alt: 'reachify blog page',
+          description:
+            'In Reachify.io, I gave SEO conseling on B2B-content efforts for a difficult, but worthy IT niche'
+        },
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/6efd7984-304c-47d2-b509-29f3fe9e4684_reachify-organic-growth-1yr.png?auto=compress,format',
+          alt: 'reachify gaining traffic within a year',
+          description:
+            'Within a year, the website has experienced exponential growth in the organic spectrum'
+        }
+      ],
+      lepragma: [
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/0b692127-13fe-4a64-9524-ac2af9e58137_le-pragma-site.jpg?auto=compress,format',
+          alt: 'le pragma showcase',
+          description:
+            'I built the lepragma.com website entirely from scratch within a week'
+        },
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/d0b0b261-187c-4717-af1c-547f120f7fb4_le-pragma-elementor.png?auto=compress,format',
+          alt: 'le pragma website builder',
+          description:
+            'The Le Pragma cannabis products are built & presented through Elementor'
+        }
+      ],
+      mike: {
+        src: 'https://www.youtube.com/watch?v=vHuQMaVGMW8',
+        alt: 'SEO testinomial',
+        description:
+          'SEO testinomial from Michael Grabham (Startup Consultant)',
+        thumbnail:
+          'https://images.prismic.io/marks-personal-website/31a8a365-1b2d-450b-aa66-3dc5988bdb8a_mike-testimonial.jpg?auto=compress,format',
+        controls: true
+      }
+    }
+  }
+}
+</script>
+
 <style scoped>
+/* This snippet of code here fixes the stupid iframe issue (for portfolio only) */
+embed,
+iframe,
+video {
+  height: 100% !important;
+}
+
 article {
   text-align: center;
 }
@@ -134,17 +174,6 @@ img {
   border-radius: 6px;
 }
 
-.icon-search {
-  color: #00c58e;
-  font-size: 100px;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .title {
   text-align: center;
   padding: 1rem 5px;
@@ -161,7 +190,6 @@ img {
 
 .box:hover {
   transition: all 0.2s;
-  transform: scale(1.03);
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
 }
 </style>
