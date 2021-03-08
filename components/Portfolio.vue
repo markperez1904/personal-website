@@ -77,6 +77,11 @@ export default {
             'https://images.prismic.io/marks-personal-website/27c328c7-0a2d-4b69-9a8c-0687c1e600a6_ssmd-results.png?auto=compress,format',
           alt: 'ssmd ranking over 50+ keywords on page 1',
           description: 'Over 50+ keyphrases ranking on page 1'
+        },
+        {
+          src: 'https://images.prismic.io/marks-personal-website/b0003255-1533-42d4-835b-4fff1cc9ac49_ssmd-tech-seo.png?auto=compress,format',
+          alt: 'SkinSolutions.MD Technical SEO',
+          description: "As overall size of blog increased, I've conducted Technical SEO requisites to maintain consistent speeds"
         }
       ],
       reachify: [
@@ -85,7 +90,7 @@ export default {
             'https://images.prismic.io/marks-personal-website/02680204-59f1-4b67-90d0-ca767e09338d_reachify-io-blog.jpg?auto=compress,format',
           alt: 'reachify blog page',
           description:
-            'In Reachify.io, I gave SEO conseling on B2B-content efforts for a difficult, but worthy IT niche'
+            'In Reachify.io, I gave SEO counseling on B2B-content efforts for a difficult, but worthy IT niche'
         },
         {
           src:
@@ -115,7 +120,7 @@ export default {
         src: 'https://www.youtube.com/watch?v=vHuQMaVGMW8',
         alt: 'SEO testinomial',
         description:
-          'SEO testinomial from Michael Grabham (Startup Consultant)',
+          'SEO testimonial from Michael Grabham (Startup Consultant)',
         thumbnail:
           'https://images.prismic.io/marks-personal-website/31a8a365-1b2d-450b-aa66-3dc5988bdb8a_mike-testimonial.jpg?auto=compress,format',
         controls: true
