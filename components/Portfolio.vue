@@ -120,7 +120,7 @@ export default {
         src: 'https://www.youtube.com/watch?v=vHuQMaVGMW8',
         alt: 'SEO testinomial',
         description:
-          'SEO testimonial from Michael Grabham (Startup Consultant)',
+          'SEO testimonial from Michael Grabham at Esidarap Inc. (Startup Consultant)',
         thumbnail:
           'https://images.prismic.io/marks-personal-website/31a8a365-1b2d-450b-aa66-3dc5988bdb8a_mike-testimonial.jpg?auto=compress,format',
         controls: true
