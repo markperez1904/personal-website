@@ -32,7 +32,7 @@
           <!-- resume button -->
           <a
             rel="noopener"
-            href="https://drive.google.com/file/d/1E0CqQ5x301p_cMT5g2BpYyYi959eCCsC/view?usp=sharing"
+            href="https://drive.google.com/file/d/1mhUXamaTTD7SGpQVVZIsDlZZ3N_gSsyN/view?usp=sharing"
             target="_blank"
           >
             <button class="button is-centered">Resume</button>
