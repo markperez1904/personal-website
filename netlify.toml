@@ -14,4 +14,4 @@
 [build.processing.images]
   compress = true
 [build.environment]
-  NODE_VERSION = "15.13.0"
+  NODE_VERSION = "14.16.1"
