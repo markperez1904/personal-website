@@ -1,3 +1,5 @@
+[build]
+  publish = "dist"
 # If skip_processing = true, all other settings are ignored
 [build.processing]
   skip_processing = false
@@ -18,3 +20,4 @@
 
 [build.environment]
   CI = "1"
+  NODE_VERSION = "15.13.0"

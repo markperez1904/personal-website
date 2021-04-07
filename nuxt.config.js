@@ -80,7 +80,7 @@ export default {
           alternateName: 'MP Digital',
           url: 'https://markperez.dev/',
           logo:
-            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
+            'https://raw.githubusercontent.com/markperez1904/personal-website/master/assets/images/markperez-digital-black.png',
           email: 'info@markperez.dev',
           sameAs: [
             'https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w',
