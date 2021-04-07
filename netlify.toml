@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "yarn generate"# If skip_processing = true, all other settings are ignored
+  command = "npm run generate"# If skip_processing = true, all other settings are ignored
 [build.processing]
   skip_processing = false
 [build.processing.css]
@@ -15,4 +15,3 @@
   compress = true
 [build.environment]
   NODE_VERSION = "15.13.0"
-  YARN_VERSION = "1.22.10"
