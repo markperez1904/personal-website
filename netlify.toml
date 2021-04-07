@@ -11,5 +11,5 @@
 [build.processing.images]
   compress = true
 [build.environment]
-  C1 = "1"
+  CI = "1"
   NODE_VERSION = "14.16.1"
