@@ -87,7 +87,7 @@ export default {
             'https://github.com/markperez1904'
           ]
         })
-      }
+      },
     ],
     __dangerouslyDisableSanitizers: ['script']
   },
@@ -127,7 +127,9 @@ export default {
   // Keep Google AdSense code private
   'google-adsense': {
     id: process.env.GOOGLE_ADSENSE_PUBLISHER,
-    analyticsUacct: process.env.GOOGLE_ANALYTICS
+    analyticsUacct: process.env.GOOGLE_ANALYTICS,
+    includeQuery: true,
+    pageLevelAds: true
   },
 
   // Using apollo to query blog posts
