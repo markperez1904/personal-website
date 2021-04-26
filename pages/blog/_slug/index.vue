@@ -59,7 +59,7 @@
           >
             <img
               class="box banner-image"
-              src="~assets/images/vidtoon-banner-2.jpg"
+              src="~assets/images/vidtoon-banner.jpg"
               alt="2D Cartoon Animation Software"
             />
           </a>
