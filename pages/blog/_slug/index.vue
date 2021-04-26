@@ -32,6 +32,15 @@
             )
           "
         ></div>
+
+        <!-- Disqus Comment Section -->
+        <div class="comments">
+          <vue-disqus
+            shortname="mark-perez"
+            :identifier="blog_posts._meta.id"
+            :url="`https://markperez.dev/blog/${getRoute}/`"
+          ></vue-disqus>
+        </div>
       </article>
 
       <!-- Side Bar -->

@@ -87,7 +87,7 @@ export default {
             'https://github.com/markperez1904'
           ]
         })
-      },
+      }
     ],
     __dangerouslyDisableSanitizers: ['script']
   },
@@ -103,7 +103,8 @@ export default {
     '~/plugins/moment.js',
     '~/plugins/typer.js',
     '~/plugins/spinner.js',
-    '~/plugins/silentbox.js'
+    '~/plugins/silentbox.js',
+    '~/plugins/disqus.js'
   ],
 
   // Nuxt.js modules
