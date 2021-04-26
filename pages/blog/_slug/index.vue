@@ -36,6 +36,7 @@
         <!-- Disqus Comment Section -->
         <div class="comments">
           <Disqus
+            shortname="mark-perez"
             :identifier="blog_posts._meta.id"
             :url="`https://markperez.dev/blog/${getRoute}/`"
           ></Disqus>
