@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@vue/cli-shared-utils": "^3.12.1",
-    "core-js": "^2.6.11"
+    "core-js": "^2.6.11",
+    "typescript": "^4.2.4"
   }
 }
