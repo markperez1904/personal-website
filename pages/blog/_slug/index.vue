@@ -35,11 +35,11 @@
 
         <!-- Disqus Comment Section -->
         <div class="comments">
-          <Disqus
+          <vue-disqus
             shortname="mark-perez"
             :identifier="blog_posts._meta.id"
             :url="`https://markperez.dev/blog/${getRoute}/`"
-          ></Disqus>
+          ></vue-disqus>
         </div>
       </article>
 
