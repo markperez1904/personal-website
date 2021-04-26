@@ -4,6 +4,22 @@
     <section class="columns is-centered is-multiline">
       <!-- Blog Post -->
       <article class="column is-7">
+        <!-- 1st ClickBank Banner -->
+        <figure class="banner">
+          <a
+            href="http://mperez1904.viddyoze.hop.clickbank.net"
+            target="_blank"
+            rel="noopener"
+            aria-label="viddyoze software"
+          >
+            <img
+              class="box banner-image"
+              src="~assets/images/viddyoze-banner.png"
+              alt="Automated Video Animation Software"
+            />
+          </a>
+        </figure>
+
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
         <p class="date">
@@ -32,6 +48,22 @@
             )
           "
         ></div>
+
+        <!-- 1st ClickBank Banner -->
+        <figure class="banner">
+          <a
+            href="http://mperez1904.abdo120.hop.clickbank.net/"
+            target="_blank"
+            rel="noopener"
+            aria-label="vidtoon software"
+          >
+            <img
+              class="box banner-image"
+              src="~assets/images/vidtoon-banner-2.jpg"
+              alt="2D Cartoon Animation Software"
+            />
+          </a>
+        </figure>
 
         <!-- Disqus Comment Section -->
         <div class="comments">
