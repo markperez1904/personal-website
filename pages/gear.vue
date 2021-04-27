@@ -6,11 +6,11 @@
       <div class="content column is-4-widescreen is-6-tablet">
         <h5>Software</h5>
         <ul>
-          <li>OS: macOS Catalina</li>
+          <li>OS: Ubuntu</li>
           <li>Text Editor: VSCode</li>
           <li>Screen Recorder: OBS</li>
-          <li>Video Editor: FCPX</li>
-          <li>Photo Editor: Affinity Photo</li>
+          <li>Video Editor: KdenLive</li>
+          <li>Photo Editor: GIMP & Canva</li>
         </ul>
       </div>
 
@@ -20,11 +20,11 @@
         <ul>
           <li>
             <a
-              href="https://amzn.to/30BkKoC"
+              href="https://amzn.to/32U0uhX"
               target="_blank"
               aria-label="laptop"
               rel="noopener"
-              >Macbook Pro (A2251)</a
+              >Zenbook 13 (UX325)</a
             >
           </li>
           <li>
@@ -91,11 +91,11 @@
           </li>
           <li>
             <a
-              href="https://amzn.to/31vmFvy"
+              href="https://amzn.to/3dRhLPb"
               target="_blank"
               aria-label="camera"
               rel="noopener"
-              >Camera: iPhone SE2</a
+              >Camera: Lumix G7</a
             >
           </li>
           <li>
