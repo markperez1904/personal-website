@@ -12,7 +12,7 @@
           <h2 class="subtitle">
             <vue-typer
               :text="[
-                'SEO specialist',
+                'Web Consultant',
                 'Produced over ' + allBlog_postss.totalCount + ' tutorials',
                 'Tech enthusiast'
               ]"
@@ -31,11 +31,10 @@
 
           <!-- resume button -->
           <a
-            rel="noopener"
-            href="https://markperez.dev/mperez-resume.pdf"
             target="_blank"
+            href="https://calendly.com/info-30250/discovery-call"
           >
-            <button class="button is-centered">Resume</button>
+            <button class="button is-centered">Book a Call</button>
           </a>
         </aside>
       </div>
@@ -62,13 +61,13 @@ export default {
     return {
       title: 'Mark Perez',
       description:
-        'Mark Perez is an SEO Specialist and Self-learning enthusiast in technology. Produces content on YouTube.'
+        'Mark Perez is an Web Consultant and self-learning enthusiast in technology. Produces content on YouTube.'
     }
   },
 
   head() {
     return {
-      title: 'SEO Specialist',
+      title: 'Web Consultant',
       meta: [
         {
           hid: 'description',

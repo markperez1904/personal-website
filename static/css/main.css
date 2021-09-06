@@ -34,10 +34,15 @@ a:hover {
 }
 
 /* This snippet of code here fixes the stupid iframe issue */
-embed,
-iframe,
-video {
-  height: 28vh;
+iframe {
+  height: 30vh;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* This snippet of code here fixes the stupid iframe issue */
+.youtube-embed {
+  height: 32vh !important;
   max-width: 100%;
   border-radius: 6px;
 }
