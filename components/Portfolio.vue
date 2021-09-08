@@ -100,8 +100,10 @@ export default {
       ],
       revive: [
         {
-          src:
+          src:"https://youtu.be/Zs0HvrQTlNs",
+          thumbnail:
             'https://images.prismic.io/marks-personal-website/784c55e8-3948-4c6a-ae79-ea07a0e18e78_revive-partners.jpg?auto=compress,format',
+          controls: true,
           alt: 'revive video SEO',
           description:
             'In partnership with SkinSolutions.MD, we helped Revive Med Spa gain attraction through social media'
