@@ -33,13 +33,23 @@ a:hover {
   color: #00c58e; /* NuxtJS color scheme */
 }
 
+iframe {
+  height: 80%;
+  width: 80%;
+  border-radius: 6px;
+}
 
 /* add box shadow on YouTube videos */
 .youtube-embed iframe {
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-  height: 32vh !important;
-  max-width: 100%;
-  border-radius: 6px;
+  height: 39vh !important;
+}
+
+/* yt video height for phones */
+@media only screen and (max-width: 556px) {
+  .youtube-embed iframe {
+    height: 23vh !important;
+  }
 }
 
 /* specify what type of page transitions should be on the PWA */
