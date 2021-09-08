@@ -19,6 +19,18 @@
         <!-- Project #2 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
+            <a aria-label="Revive Med Spa" rel="noopener">
+              <ClientOnly>
+                <silent-box :gallery="revive" :preview-count="1"></silent-box
+              ></ClientOnly>
+            </a>
+          </div>
+          <p class="title is-6">Revive Med Spa & GMB (B2C)</p>
+        </article>
+
+        <!-- Project #3 -->
+        <article class="box column is-3-widescreen is-4-tablet">
+          <div class="project-image">
             <a aria-label="Reachify.io Blog" rel="noopener">
               <ClientOnly>
                 <silent-box :gallery="reachify" :preview-count="1"></silent-box
@@ -28,7 +40,7 @@
           <p class="title is-6">Reachify.io (B2B)</p>
         </article>
 
-        <!-- Project #3 -->
+        <!-- Project #4 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a aria-label="Le Pragma website" rel="noopener">
@@ -40,7 +52,7 @@
           <p class="title is-6">Le Pragma (Website Building)</p>
         </article>
 
-        <!-- Project #4 -->
+        <!-- Project #5 -->
         <article class="box column is-3-widescreen is-4-tablet">
           <div class="project-image">
             <a aria-label="SEO testimonial" rel="noopener">
@@ -79,9 +91,28 @@ export default {
           description: 'Over 50+ keyphrases ranking on page 1'
         },
         {
-          src: 'https://images.prismic.io/marks-personal-website/b0003255-1533-42d4-835b-4fff1cc9ac49_ssmd-tech-seo.png?auto=compress,format',
+          src:
+            'https://images.prismic.io/marks-personal-website/b0003255-1533-42d4-835b-4fff1cc9ac49_ssmd-tech-seo.png?auto=compress,format',
           alt: 'SkinSolutions.MD Technical SEO',
-          description: "As overall size of blog increased, I've conducted Technical SEO requisites to maintain consistent speeds"
+          description:
+            "As overall size of blog increased, I've conducted Technical SEO requisites to maintain consistent speeds"
+        }
+      ],
+      revive: [
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/784c55e8-3948-4c6a-ae79-ea07a0e18e78_revive-partners.jpg?auto=compress,format',
+          alt: 'revive video SEO',
+          description:
+            'In partnership with SkinSolutions.MD, we helped Revive Med Spa gain attraction through social media'
+        },
+
+        {
+          src:
+            'https://images.prismic.io/marks-personal-website/6c817f6d-853f-4d6d-8c88-4424f5efd4ce_revive-reviews.jpg?auto=compress,format',
+          alt: 'Revive GMB ratings',
+          description:
+            "I optimzied Revive's Google My Business pages for multilpe locations in San Diego, which still receives many reviews to this day"
         }
       ],
       reachify: [
@@ -98,6 +129,12 @@ export default {
           alt: 'reachify gaining traffic within a year',
           description:
             'Within a year, the website has experienced exponential growth in the organic spectrum'
+        },
+        {
+          src: "https://youtu.be/96XZZ43aP4k",
+          alt: 'Reachify working with Revive Med Spa',
+          description: "Reachify and Revive Med Spa working together in unison",
+          controls: true
         }
       ],
       lepragma: [

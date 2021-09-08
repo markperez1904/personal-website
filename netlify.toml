@@ -12,4 +12,4 @@
   compress = true
 [build.environment]
   CI = "1"
-  NODE_VERSION = "14.16.1"
+  NODE_VERSION = "14.17.6"
