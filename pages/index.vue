@@ -1,44 +1,59 @@
 <template>
   <div>
-    <!-- main background image -->
-    <section class="hero is-fullheight">
-      <div class="hero-body columns is-centered is-vcentered headshot">
-        <!-- titles and resume button -->
-        <aside class="container section column is-narrow has-text-right">
-          <!-- titles -->
-          <h1 class="title">{{ title }}</h1>
+    <!-- assign your video to the following class below -->
+    <region>
+      <!-- navbar put manually for customization -->
+      <app-navhome class="homepage"></app-navhome>
 
-          <!-- subtitles with vue-typer -->
-          <h2 class="subtitle">
-            <vue-typer
-              :text="[
-                'SEO Consultant',
-                'Produced over ' + allBlog_postss.totalCount + ' tutorials',
-                'Tech enthusiast'
-              ]"
-              :repeat="Infinity"
-              :shuffle="false"
-              initial-action="typing"
-              :pre-type-delay="70"
-              :type-delay="70"
-              :pre-erase-delay="2000"
-              :erase-delay="250"
-              erase-style="select-all"
-              :erase-on-complete="false"
-              caret-animation="blink"
-            ></vue-typer>
-          </h2>
+      <!-- main background image -->
+      <section class="hero is-fullheight homepage">
+        <div class="hero-body columns">
+          <!-- titles and resume button -->
+          <aside class="column">
+            <!-- titles -->
+            <h1 class="title">{{ title }}</h1>
 
-          <!-- resume button -->
-          <a
-            target="_blank"
-            href="https://calendly.com/info-30250/discovery-call"
-          >
-            <button class="button is-centered">Book a Call</button>
-          </a>
-        </aside>
-      </div>
-    </section>
+            <!-- subtitles with vue-typer -->
+            <h2 class="subtitle">
+              <vue-typer
+                :text="[
+                  'Ready to scale your salon?',
+                  'Produced over ' +
+                    allBlog_postss.totalCount +
+                    ' recreational tutorials',
+                  'Community-driven team of SEO professionals'
+                ]"
+                :repeat="Infinity"
+                :shuffle="false"
+                initial-action="typing"
+                :pre-type-delay="70"
+                :type-delay="70"
+                :pre-erase-delay="2000"
+                :erase-delay="250"
+                erase-style="select-all"
+                :erase-on-complete="false"
+                caret-animation="blink"
+              ></vue-typer>
+            </h2>
+
+            <!-- resume button -->
+            <a
+              target="_blank"
+              href="https://calendly.com/info-30250/discovery-call"
+            >
+              <button class="button is-centered">Book a Call</button>
+            </a>
+          </aside>
+        </div>
+      </section>
+      <!-- place the video here -->
+      <video id="salon-vid" autoplay muted loop>
+        <source
+          src="https://prismic-io.s3.amazonaws.com/marks-personal-website/251ccb95-fcdd-44e4-b9cc-9678f9e3dd0a_salon-homepage.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </region>
 
     <app-portfolio></app-portfolio>
   </div>
@@ -46,6 +61,7 @@
 
 <script>
 import Portfolio from '@/components/Portfolio.vue'
+import NavHome from '@/components/NavHome.vue'
 import gql from 'graphql-tag'
 
 const articles = gql`
@@ -57,17 +73,18 @@ const articles = gql`
 `
 
 export default {
+  layout: 'homepage',
   data() {
     return {
-      title: 'Mark Perez',
+      title: 'MP Digital',
       description:
-        'Mark Perez is an SEO Consultant and self-learning enthusiast in technology. Produces content on YouTube.'
+        'MP Digital is a well-versed SEO Agency empowering beauty salons to be 1st-choice within their region.'
     }
   },
 
   head() {
     return {
-      title: 'SEO Consultant',
+      title: 'SEO for Beauty Salons',
       meta: [
         {
           hid: 'description',
@@ -110,7 +127,8 @@ export default {
   },
 
   components: {
-    'app-portfolio': Portfolio
+    'app-portfolio': Portfolio,
+    'app-navhome': NavHome
   },
 
   apollo: {
@@ -127,92 +145,53 @@ button {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #fff;
+  color: black;
   background-color: #00c58e;
   border-color: rgba(255, 255, 255, 0);
+}
+
+aside {
+  margin-bottom: 10rem;
+}
+
+#salon-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.is-fullheight {
+  min-height: calc(100vh - 3rem);
+}
+
+.homepage {
+  text-align: center;
+  vertical-align: top;
 }
 
 .title {
   font-size: 70px;
   letter-spacing: 12px;
+  padding-bottom: 1rem;
 }
 
 .subtitle {
   font-size: 24px;
 }
 
-.is-fullheight {
-  min-height: calc(100vh - 6rem);
-  background-color: #dbdbdb;
-  background-image: linear-gradient(to top, #98a8ac 0%, #ffffff 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.headshot {
-  min-height: calc(100vh - 6rem);
-  background-image: url('~assets/images/mark-suit-portrait.png');
-  background-blend-mode: lighten;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  background-position: bottom 12px left 20%;
-}
-
-/* specify background image size on certain breakpoint */
-@media only screen and (max-width: 1630px) {
-  .headshot {
-    background-size: 35%;
-    background-position: bottom 12px left 20%;
-  }
-}
-
-@media only screen and (max-width: 1407px) {
-  .headshot {
-    background-size: 40%;
-    background-position: bottom 12px left 20%;
-  }
-}
-
-@media only screen and (max-width: 1215px) {
-  .headshot {
-    background-size: 45%;
-    background-position: bottom 12px left 20%;
-  }
-}
-
-/* change image transparency when window is smaller */
-@media only screen and (max-width: 1023px) {
-  .headshot {
-    background-color: rgba(255, 255, 255, 0.65);
-    background-size: 50%;
-    background-position: bottom 12px left 20%;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  .headshot {
-    background-size: 70%;
-    background-position: bottom 12px right 20%;
-  }
-
-  .has-text-right {
-    text-align: left !important;
-  }
-}
-
 @media only screen and (max-width: 556px) {
-  .headshot {
-    background-size: 90%;
-    background-position: bottom 12px right 10%;
-  }
-
   .title {
     font-size: 50px;
     letter-spacing: 4px;
   }
-
-  .has-text-right {
-    text-align: left !important;
+  .subtitle {
+    font-size: 20px;
   }
 }
 </style>

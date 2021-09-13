@@ -14,7 +14,7 @@
           >
             <img
               class="box banner-image"
-              src="~assets/images/viddyoze-banner.png"
+              src="~assets/images/viddyoze-banner.jpg"
               alt="Automated Video Animation Software"
             />
           </a>

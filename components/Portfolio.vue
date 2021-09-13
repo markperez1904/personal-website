@@ -171,12 +171,6 @@ export default {
 
 <style scoped>
 /* This snippet of code here fixes the stupid iframe issue (for portfolio only) */
-embed,
-iframe,
-video {
-  height: 100% !important;
-}
-
 article {
   text-align: center;
 }
