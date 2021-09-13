@@ -12,7 +12,7 @@
           <h2 class="subtitle">
             <vue-typer
               :text="[
-                'Web Consultant',
+                'SEO Consultant',
                 'Produced over ' + allBlog_postss.totalCount + ' tutorials',
                 'Tech enthusiast'
               ]"
@@ -61,13 +61,13 @@ export default {
     return {
       title: 'Mark Perez',
       description:
-        'Mark Perez is an Web Consultant and self-learning enthusiast in technology. Produces content on YouTube.'
+        'Mark Perez is an SEO Consultant and self-learning enthusiast in technology. Produces content on YouTube.'
     }
   },
 
   head() {
     return {
-      title: 'Web Consultant',
+      title: 'SEO Consultant',
       meta: [
         {
           hid: 'description',
