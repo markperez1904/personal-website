@@ -43,7 +43,7 @@
       </a>
     </footer>
     <footer class="columns is-centered">
-      <small class="column is-narrow">&copy; {{ getYear }} Mark Perez</small>
+      <small class="column is-narrow">&copy; {{ getYear }} MP Digital</small>
       <small class="column is-narrow">
         Made with 💚 &nbsp;in
         <a
