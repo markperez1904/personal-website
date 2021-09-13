@@ -191,7 +191,7 @@ aside {
     letter-spacing: 4px;
   }
   .subtitle {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 </style>

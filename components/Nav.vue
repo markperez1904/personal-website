@@ -74,10 +74,6 @@ a:focus {
   max-height: 3rem;
 }
 
-.navbar-menu {
-  background-color: transparent;
-}
-
 .navbar {
   background-color: transparent;
   padding: 0 1rem;
