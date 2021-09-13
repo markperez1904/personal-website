@@ -128,7 +128,7 @@ export default {
     return {
       title: 'Gear',
       description:
-        'Here is a list of all of the gear I use on a daily basis. As an Amazon Associate, I will earn from qualified commissions.'
+        'Here is a list of all of the gear we all use on a daily basis. As Amazon Associates, we will earn from qualified commissions.'
     }
   },
 

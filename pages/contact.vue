@@ -59,7 +59,7 @@ export default {
     return {
       title: 'Contact',
       description:
-        'Feel free to contact and send me an email. I will get back to them in no time!'
+        'Feel free to contact and send us an email. We will get back to them in no time!'
     }
   },
 

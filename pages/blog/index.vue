@@ -99,7 +99,7 @@ export default {
     return {
       title: 'Blog',
       description:
-        'Welcome to my blog. Browse through a streamline of tech tutorials that suits your needs.',
+        'Welcome to our blog. Browse through a streamline of tech tutorials that suits your needs.',
 
       loading: 0,
       color: '#00c58e',

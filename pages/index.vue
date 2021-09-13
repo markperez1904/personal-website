@@ -21,7 +21,7 @@
                   'Produced over ' +
                     allBlog_postss.totalCount +
                     ' recreational tutorials',
-                  'Community-driven team of SEO professionals'
+                  'Synergistic team of SEO professionals'
                 ]"
                 :repeat="Infinity"
                 :shuffle="false"

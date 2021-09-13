@@ -55,12 +55,6 @@ export default {
 </script>
 
 <style scoped>
-
-hr {
-  background-color: transparent
-}
-
-
 a:hover,
 a:active,
 a:focus {

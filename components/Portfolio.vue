@@ -1,6 +1,6 @@
 <template>
   <div class="hero is-bold is-medium">
-    <h3 class="hero-head has-text-centered">Portfolio</h3>
+    <h3 class="hero-head has-text-centered">Clients</h3>
 
     <header class="hero-body container">
       <section class="columns is-multiline is-centered">
@@ -49,7 +49,7 @@
               ></ClientOnly>
             </a>
           </div>
-          <p class="title is-6">Le Pragma (Website Building)</p>
+          <p class="title is-6">Le Pragma (Web Design)</p>
         </article>
 
         <!-- Project #5 -->
@@ -59,7 +59,7 @@
               <ClientOnly> <silent-box :image="mike"></silent-box></ClientOnly>
             </a>
           </div>
-          <p class="title is-6">SEO Testimonial</p>
+          <p class="title is-6">Startup Consultant</p>
         </article>
       </section>
     </header>
@@ -75,14 +75,14 @@ export default {
           src:
             'https://images.prismic.io/marks-personal-website/efa8e0d6-c913-48ac-af7e-bd484c9c6ee5_skin-solutions-md-blog.jpg?auto=compress,format',
           alt: 'skinsolutions.md blog page',
-          description: "I've lead the development of SkinSolutions.MD's blog"
+          description: "We've lead the development of SkinSolutions.MD's blog"
         },
         {
           src:
             'https://images.prismic.io/marks-personal-website/388ccaa3-2cb2-4263-82e2-e4fe50b39de3_ssmd-featured-snippet.png?auto=compress,format',
           alt: 'ranking a featured snippet',
           description:
-            'Within the first 4 months getting started, featured snippets started to populate over our keywords'
+            'Within the first few months, featured snippets started to populate over our targeted keywords'
         },
         {
           src:
@@ -95,7 +95,7 @@ export default {
             'https://images.prismic.io/marks-personal-website/b0003255-1533-42d4-835b-4fff1cc9ac49_ssmd-tech-seo.png?auto=compress,format',
           alt: 'SkinSolutions.MD Technical SEO',
           description:
-            "As overall size of blog increased, I've conducted Technical SEO requisites to maintain consistent speeds"
+            "As overall size of blog increased, we've conducted Technical SEO requisites to maintain consistent speeds"
         }
       ],
       revive: [
@@ -114,7 +114,7 @@ export default {
             'https://images.prismic.io/marks-personal-website/6c817f6d-853f-4d6d-8c88-4424f5efd4ce_revive-reviews.jpg?auto=compress,format',
           alt: 'Revive GMB ratings',
           description:
-            "I optimzied Revive's Google My Business pages for multilpe locations in San Diego, which still receives many reviews to this day"
+            "We optimzied Revive's Google My Business pages for multilpe locations in San Diego, which still receives many reviews to this day"
         }
       ],
       reachify: [
@@ -123,7 +123,7 @@ export default {
             'https://images.prismic.io/marks-personal-website/02680204-59f1-4b67-90d0-ca767e09338d_reachify-io-blog.jpg?auto=compress,format',
           alt: 'reachify blog page',
           description:
-            'In Reachify.io, I gave SEO counseling on B2B-content efforts for a difficult, but worthy IT niche'
+            'In Reachify.io, we gave SEO counseling on B2B-content efforts for a difficult, but worthy IT niche'
         },
         {
           src:
@@ -145,7 +145,7 @@ export default {
             'https://images.prismic.io/marks-personal-website/0b692127-13fe-4a64-9524-ac2af9e58137_le-pragma-site.jpg?auto=compress,format',
           alt: 'le pragma showcase',
           description:
-            'I built the lepragma.com website entirely from scratch within a week'
+            'Mark personally built the lepragma.com website efficiently within a week'
         },
         {
           src:
@@ -187,6 +187,10 @@ img {
   margin-top: 2rem;
   font-size: 40px;
   letter-spacing: 12px;
+}
+
+.hero-body {
+  padding-top: 4rem !important;
 }
 
 .project-image:hover .overlay {
