@@ -60,7 +60,7 @@ export default {
     // Link to Google Fonts and Website Image
     link: [
       // Favicon icon
-      { rel: 'icon', type: 'image/x-icon', href: '/markperez_logo.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
 
       // Google Fonts CDN
       {
@@ -80,7 +80,7 @@ export default {
           alternateName: 'MP Digital',
           url: 'https://markperez.dev/',
           logo:
-            'https://raw.githubusercontent.com/markperez1904/personal-website/master/assets/images/markperez-digital-black.png',
+            'https://markperez.dev/mp-digital-logo-dark.png',
           email: 'info@markperez.dev',
           sameAs: [
             'https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w',

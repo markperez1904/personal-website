@@ -6,7 +6,7 @@
           <n-link class="navbar-item" to="/">
             <img
               class="logo"
-              src="~assets/images/markperez-digital-black.png"
+              src="~static/mp-digital-logo-dark.png"
               alt="Mark Perez Digital"
             />
           </n-link>
