@@ -1,7 +1,8 @@
 <template>
   <div class="container has-text-centered">
     <hr />
-    <footer class="columns is-centered">
+    <!-- social media icon links -->
+    <footer class="columns is-centered start">
       <!-- YouTube -->
       <a
         href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos"
@@ -42,19 +43,16 @@
         <i class="icon-paypal"></i>
       </a>
     </footer>
-    <footer class="columns is-centered">
-      <small class="column is-narrow">&copy; {{ getYear }} MP Digital</small>
+
+    <!-- legal pages and copyright message -->
+    <footer class="columns is-centered end">
       <small class="column is-narrow">
-        Made with 💚 &nbsp;in
-        <a
-          class="framework"
-          href="https://nuxtjs.org"
-          target="_blank"
-          aria-label="nuxt"
-          rel="noopener"
-          >Nuxt</a
-        >
+        <n-link to="/terms/" class="legal">Terms of Service</n-link>
       </small>
+      <small class="column is-narrow">
+        <n-link to="/privacy/" class="legal">Privacy Policy</n-link>
+      </small>
+      <small class="column is-narrow">&copy;{{ getYear }} MP Digital</small>
     </footer>
   </div>
 </template>
@@ -79,7 +77,19 @@ a {
   text-decoration: unset;
 }
 
+small .legal {
+  color: #2f495e;
+}
+
 .framework {
   font-weight: bold;
+}
+
+.start {
+  margin-top: 1rem;
+}
+
+.end {
+  margin-bottom: 1rem;
 }
 </style>
