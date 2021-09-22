@@ -9,4 +9,5 @@ I used GraphQL with Apollo Client to query each post and parsed what I wanted.
 - Clone the repo
 - `cd` into the directory
 - run `npm install`
-- run `npm run dev` to view lives changes.
+- run `npm run generate` to generate the files.
+- run `npm run start` to preview the changes.
