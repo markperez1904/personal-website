@@ -89,9 +89,9 @@ a:focus {
   transition: 0.3s all;
 }
 
-.navbar-item:hover {
+/* .navbar-item:hover {
   color: #fff;
-}
+} */
 
 .navbar-brand {
   font-size: 22px;
