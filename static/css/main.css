@@ -39,6 +39,10 @@ iframe {
   border-radius: 6px;
 }
 
+.container {
+  padding: 0 2rem;
+}
+
 /* add box shadow on YouTube videos */
 .youtube-embed iframe {
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
@@ -55,7 +59,7 @@ iframe {
 /* specify what type of page transitions should be on the PWA */
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.10s;
+  transition: opacity 0.1s;
 }
 
 .page-enter,

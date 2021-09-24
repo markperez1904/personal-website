@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="terms container">
     <h1>Terms of Service</h1>
 
     <h3>Overview</h3>
@@ -424,7 +424,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h1 {
   font-size: 30px;
   padding-top: 0.5rem;

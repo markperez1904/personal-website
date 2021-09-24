@@ -66,7 +66,7 @@ a:focus {
   letter-spacing: 1px;
   font-weight: bold;
   color: #fff;
-  background-color: #00c58e;
+  background-color: #2f495d;
   border-color: rgba(255, 255, 255, 0);
 }
 
@@ -84,7 +84,13 @@ a:focus {
 .navbar-item {
   font-size: 18px;
   padding-right: 2rem;
+  color: #2f495d;
   font-weight: bolder;
+  transition: 0.3s all;
+}
+
+.navbar-item:hover {
+  color: #fff;
 }
 
 .navbar-brand {
