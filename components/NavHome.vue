@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <section class="navbar">
       <nav class="container">
         <div class="navbar-brand">
@@ -29,6 +29,10 @@
             <n-link class="navbar-item" to="/blog/">Blog</n-link>
             <n-link class="navbar-item" to="/gear/">Gear</n-link>
             <n-link class="navbar-item" to="/contact/">Contact</n-link>
+            <n-link class="navbar-item" to="/casestudy/">Case Study</n-link>
+            <div class="navbar-item">
+              <img class="search" src="~/assets/svg/search.svg" alt="search" />
+            </div>
             <a
               class="navbar-item"
               target="_blank"
@@ -55,11 +59,9 @@ export default {
 </script>
 
 <style scoped>
-
 hr {
-  background-color: transparent
+  background-color: transparent;
 }
-
 
 a:hover,
 a:active,
@@ -71,8 +73,8 @@ a:focus {
 .button {
   letter-spacing: 1px;
   font-weight: bold;
-  color: #black;
-  background-color: #00c58e;
+  color: #fff;
+  background-color: #2f495d;
   border-color: rgba(255, 255, 255, 0);
 }
 
@@ -94,8 +96,19 @@ a:focus {
 .navbar-item {
   font-size: 18px;
   padding-right: 2rem;
-  color: black;
+  color: #2f495d;
   font-weight: bolder;
+  transition: 0.3s all;
+}
+
+.navbar-item .search {
+  height: 20px;
+  width: 20px;
+  /* filter: brightness(100%) invert(100%); */
+}
+
+.navbar-item:hover {
+  color: #fff;
 }
 
 .navbar-brand {

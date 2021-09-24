@@ -79,8 +79,7 @@ export default {
           name: 'Mark Perez Digital',
           alternateName: 'MP Digital',
           url: 'https://markperez.dev/',
-          logo:
-            'https://markperez.dev/mp-digital-logo-dark.png',
+          logo: 'https://markperez.dev/mp-digital-logo-dark.png',
           email: 'info@markperez.dev',
           sameAs: [
             'https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w',
@@ -104,7 +103,8 @@ export default {
     '~/plugins/typer.js',
     '~/plugins/spinner.js',
     '~/plugins/silentbox.js',
-    '~/plugins/disqus.js'
+    '~/plugins/disqus.js',
+    { src: '~/plugins/scrollreveal.js', ssr: false }
   ],
 
   // Nuxt.js modules

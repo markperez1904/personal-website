@@ -214,13 +214,12 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
   data() {
     return {
       title: 'Privacy Policy',
-      description:
-        'Click here to read the Privacy Policy for MP Digital.'
+      description: 'Click here to read the Privacy Policy for MP Digital.'
     }
   },
 

@@ -6,34 +6,20 @@
       <app-navhome class="homepage"></app-navhome>
 
       <!-- main background image -->
-      <section class="hero is-fullheight homepage">
+      <section class="hero homepage container">
         <div class="hero-body columns">
           <!-- titles and resume button -->
-          <aside class="column">
+          <aside class="left column">
             <!-- titles -->
             <h1 class="title">{{ title }}</h1>
 
             <!-- subtitles with vue-typer -->
             <h2 class="subtitle">
-              <vue-typer
-                :text="[
-                  'Ready to scale your salon?',
-                  'Produced over ' +
-                    allBlog_postss.totalCount +
-                    ' recreational tutorials',
-                  'Synergistic team of SEO professionals'
-                ]"
-                :repeat="Infinity"
-                :shuffle="false"
-                initial-action="typing"
-                :pre-type-delay="70"
-                :type-delay="70"
-                :pre-erase-delay="2000"
-                :erase-delay="250"
-                erase-style="select-all"
-                :erase-on-complete="false"
-                caret-animation="blink"
-              ></vue-typer>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English.
             </h2>
 
             <!-- resume button -->
@@ -41,27 +27,40 @@
               target="_blank"
               href="https://calendly.com/info-30250/discovery-call"
             >
-              <button class="button is-centered">Book a Call</button>
+              <button class="button is-rounded">Book a Call</button>
             </a>
+          </aside>
+          <aside class="right column">
+            <img class="mainpng" src="~/assets/svg/mainsvg.svg" alt="spec" />
           </aside>
         </div>
       </section>
       <!-- place the video here -->
-      <video id="salon-vid" autoplay muted loop>
-        <source
-          src="https://prismic-io.s3.amazonaws.com/marks-personal-website/251ccb95-fcdd-44e4-b9cc-9678f9e3dd0a_salon-homepage.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <div id="salon-vid"></div>
     </region>
 
-    <app-portfolio></app-portfolio>
+    <home-numbers></home-numbers>
+    <home-homeblocks></home-homeblocks>
+    <home-aboutus></home-aboutus>
+    <home-whoweare></home-whoweare>
+    <home-contactus></home-contactus>
+    <home-testimonial></home-testimonial>
+    <home-companies></home-companies>
   </div>
 </template>
 
 <script>
 import Portfolio from '@/components/Portfolio.vue'
 import NavHome from '@/components/NavHome.vue'
+import Numbers from '@/components/Numbers.vue'
+import AboutUs from '@/components/AboutUs.vue'
+import HomeBlocks from '@/components/HomeBlocks.vue'
+import WhoWeAre from '@/components/WhoWeAre.vue'
+import ContactUs from '@/components/ContactUs.vue'
+import Companies from '@/components/Companies.vue'
+import HomeFooter from '@/components/HomeFooter.vue'
+import Testimonial from '@/components/Testimonial.vue'
+
 import gql from 'graphql-tag'
 
 const articles = gql`
@@ -119,8 +118,7 @@ export default {
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content:
-            'https://markperez.dev/mp-digital-logo-dark.png'
+          content: 'https://markperez.dev/mp-digital-logo-dark.png'
         }
       ]
     }
@@ -128,7 +126,15 @@ export default {
 
   components: {
     'app-portfolio': Portfolio,
-    'app-navhome': NavHome
+    'app-navhome': NavHome,
+    'home-numbers': Numbers,
+    'home-aboutus': AboutUs,
+    'home-homeblocks': HomeBlocks,
+    'home-whoweare': WhoWeAre,
+    'home-contactus': ContactUs,
+    'home-companies': Companies,
+    'home-footer': HomeFooter,
+    'home-testimonial': Testimonial
   },
 
   apollo: {
@@ -141,29 +147,67 @@ export default {
 </script>
 
 <style scoped>
+.mainpng {
+  position: absolute;
+  width: 100%;
+}
+
+.hero-body .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
 button {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: black;
-  background-color: #00c58e;
-  border-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  background-color: #2f495d;
+  z-index: 3;
 }
 
 aside {
   margin-bottom: 10rem;
 }
 
+aside.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+aside.left a {
+  display: block;
+}
+
+aside.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside.right img {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #salon-vid {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
   pointer-events: none;
-  opacity: 0.3;
   z-index: -1;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00c58d, #b9ffeb);
+  box-shadow: 0 12px 22px -2px gray;
+  overflow: hidden;
 }
 
 .is-fullheight {
@@ -176,22 +220,122 @@ aside {
 }
 
 .title {
-  font-size: 70px;
+  font-size: 90px;
+  text-transform: uppercase;
+  line-height: 175px;
+  color: #ffffff;
   letter-spacing: 12px;
   padding-bottom: 1rem;
+  text-align: left;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 5.5px 9.526px 16px rgba(0, 0, 0, 0.35);
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 16px;
+  text-align: left;
+  color: #ffffff;
+  width: 570px;
+  line-height: 28px;
+  font-weight: 300;
 }
 
-@media only screen and (max-width: 556px) {
+@media only screen and (max-width: 1200px) {
+  #salon-vid {
+    height: 100vh;
+    z-index: 1;
+  }
+  aside.left a {
+    width: 100%;
+  }
+  .hero-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .title {
     font-size: 50px;
     letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 100px;
+    z-index: 3;
   }
   .subtitle {
-    font-size: 18px;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    line-height: 20px;
+    z-index: 3;
+  }
+
+  aside.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 8rem;
+  }
+
+  aside.right {
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 50vh !important;
+  }
+}
+
+@media only screen and (max-width: 556px) {
+  .hero-body {
+    padding: 0px 1.5rem;
+  }
+  .title {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+  .subtitle {
+    font-size: 10px;
+  }
+  aside.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 4rem;
+  }
+
+  aside.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 40vh !important;
+  }
+  aside.right img {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  #salon-vid {
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  aside.left {
+    margin-bottom: 1rem;
+  }
+  aside.right {
+    margin-bottom: 1rem;
   }
 }
 </style>
