@@ -9,7 +9,7 @@
       class="whoweare-top v-scroll-reveal"
       v-scroll-reveal.reset="{ delay: 250 }"
     >
-      <div class="whoweare-top-title">Who we are !</div>
+      <div class="whoweare-top-title">Who We Are</div>
     </div>
     <div class="whoweare-items">
       <div class="whoweare-left">
@@ -19,10 +19,9 @@
           </div>
           <div class="whoweare-item-title">Boutique Approach</div>
           <div class="whoweare-item-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.
+            Your business will be a success if you can meet your customer's
+            needs and expectations - It's important to have the right products
+            and services to sell, especially online.
           </div>
         </div>
       </div>
@@ -34,12 +33,11 @@
           <div class="whoweare-item-img">
             <img src="~/assets/svg/star.svg" alt="star" />
           </div>
-          <div class="whoweare-item-title">Proven Exprets</div>
+          <div class="whoweare-item-title">Proven Experts</div>
           <div class="whoweare-item-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.
+            When you're looking for credible beauty and cosmetic services, who
+            do you turn to? Experienced professionals with proven track records.
+            Same thing with marketing agencies.
           </div>
         </div>
         <div class="whoweare-item">
@@ -48,10 +46,10 @@
           </div>
           <div class="whoweare-item-title">Problem Solvers</div>
           <div class="whoweare-item-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.
+            If you are looking to get ahead of the competition in your beauty or
+            cosmetic business, good SEO services can make sure that your website
+            is at the top of search results, but effective SEO can help you
+            expand your business and reach a larger audience.
           </div>
         </div>
       </div>
@@ -65,10 +63,10 @@
           </div>
           <div class="whoweare-item-title">Growth Fuelers</div>
           <div class="whoweare-item-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.
+            SEO is nothing new, especially within the beauty industry. However,
+            it is an aspect of digital marketing that must constantly evolve to
+            meet the needs of customers. Growth is essential for any business
+            that wants to stay afloat in today's competitive business landscape.
           </div>
         </div>
       </div>
@@ -79,9 +77,10 @@
           How We Make You Differentiable
         </div>
         <div class="whoweare-bottom-text">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
+          So, you want to know how we make your business stand out against the
+          rest. We all know that SEO is a popular marketing strategy. However,
+          with so many different strategies out there, how do you know which is
+          the right one?
         </div>
       </div>
       <div class="whoweare-bottom-right">

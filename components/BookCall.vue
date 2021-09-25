@@ -8,8 +8,12 @@
         Want To Be Our Next Success Story?
       </div>
       <div class="request-text">
-        Our track record proves we know how to help you make more money and fuel
-        business growth
+        You probably don't want to read this. You probably want everything
+        handed to you on a silver platter with your name already spelled out in
+        glittery letters. But don't worry, we're not like other agencies (though
+        we do love the sparkly things). Instead of telling you what we can do
+        for you and how much better we are than everyone else, we'd rather just
+        show you. Because that's what it's really all about anyway, right?
       </div>
       <div class="request-button">
         <!-- call button -->
@@ -34,7 +38,7 @@ a {
   padding: 20px;
 }
 .request-wrap {
-  height: 308px;
+  height: auto;
   background-color: #2f485d;
   border-radius: 30px;
   margin-top: 20px;
@@ -56,7 +60,7 @@ a {
 }
 
 .request-text {
-  font-size: 24px;
+  font-size: 16px;
   color: #ffffff;
   text-align: center;
   width: 100%;
@@ -64,7 +68,7 @@ a {
 }
 
 .request-button {
-  width: 100%;
+  width: auto%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +89,7 @@ a {
 
 @media screen and (max-width: 906px) {
   .request-button button {
-    width: 80%;
+    width: auto;
     font-size: 16px;
     line-height: 30px;
   }

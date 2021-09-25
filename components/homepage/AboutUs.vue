@@ -7,15 +7,15 @@
       <div class="about-us-h1">About Us</div>
 
       <div class="about-us-text">
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like)
+        MP Digital is a worldwide leader in SEO and digital marketing. We
+        provide industry-leading services to both local and national businesses,
+        helping them expand and thrive within the competitive online space. As
+        we continue to grow our personal brand we strive to maintain our honest
+        values of providing top notch customer service and continuing education
+        for all team members. Our team works diligently every day to bring you the
+        very best results possible. We are constantly learning new techniques to
+        assist your company's website with its development, which ultimately
+        drives traffic back to your business' webpage(s).
       </div>
     </div>
   </div>

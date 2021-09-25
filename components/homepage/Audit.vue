@@ -65,6 +65,10 @@
   </div>
 </template>
 <style scoped>
+button:hover {
+  color: white;
+}
+
 .contactus {
   display: flex;
   flex-direction: row;

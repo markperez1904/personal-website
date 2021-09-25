@@ -12,7 +12,7 @@
           <aside class="left column">
             <!-- titles -->
             <h1 class="title">
-              SEO for<br>
+              SEO for<br />
               <vue-typer
                 :text="['Beauty Salons', 'Skincare Brands', 'Med Spas']"
                 :repeat="Infinity"
@@ -30,11 +30,10 @@
 
             <!-- subtitle: description of MP Digital -->
             <h2 class="subtitle">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English.
+              Get your beauty and cosmetic services in front of your target
+              audience with SEO services that specifically cater to the needs of
+              customers. Our comprehensive marketing services can help you get
+              ahead of the competition by expanding within the online space.
             </h2>
 
             <!-- call button -->
@@ -75,7 +74,6 @@ import Numbers from '@/components/homepage/Numbers.vue'
 import AboutUs from '@/components/homepage/AboutUs.vue'
 import HomeBlocks from '@/components/homepage/HomeBlocks.vue'
 import WhoWeAre from '@/components/homepage/WhoWeAre.vue'
-import Companies from '@/components/homepage/Companies.vue'
 
 import gql from 'graphql-tag'
 
@@ -149,8 +147,7 @@ export default {
     'home-numbers': Numbers,
     'home-aboutus': AboutUs,
     'home-homeblocks': HomeBlocks,
-    'home-whoweare': WhoWeAre,
-    'home-companies': Companies
+    'home-whoweare': WhoWeAre
   },
 
   apollo: {

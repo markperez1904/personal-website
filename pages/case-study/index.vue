@@ -59,15 +59,45 @@ export default {
     }
   },
 
-  head() {
+ head() {
     return {
       title: this.title,
-      description: this.description,
       meta: [
         {
-          hid: 'robots',
-          name: 'robots',
-          content: 'noindex,noarchive,nofollow'
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:type', // open graph type
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'apple-mobile-web-app-title', // open graph mobile web app title
+          name: 'apple-mobile-web-app-title',
+          content: this.title
+        },
+        {
+          hid: 'og:title', // open graph title
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description', // open graph description
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:url', // open graph url
+          property: 'og:url',
+          content: 'https://markperez.dev' + this.$route.fullPath + '/'
+        },
+        {
+          hid: 'og:image', // open graph image
+          property: 'og:image',
+          content:
+            'https://markperez.dev/mp-digital-logo-dark.png'
         }
       ]
     }
