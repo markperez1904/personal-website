@@ -1,13 +1,12 @@
 <template>
   <div>
     <nuxt />
-    <!-- <app-footer></app-footer> -->
-    <app-footer></app-footer>
+    <app-footerlogo></app-footerlogo>
   </div>
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue'
+import FooterLogo from '@/components/FooterLogo.vue'
 
 export default {
   computed: {
@@ -16,7 +15,7 @@ export default {
     }
   },
   components: {
-    'app-footer': Footer,
-    }
+    'app-footerlogo': FooterLogo
+  }
 }
 </script>

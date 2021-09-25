@@ -1,16 +1,13 @@
 <template>
   <div>
-    <home-nav></home-nav>
-
     <nuxt />
 
-    <app-footer></app-footer>
+    <app-footerlogo></app-footerlogo>
   </div>
 </template>
 
 <script>
-import NavHome from '@/components/NavHome.vue'
-import Footer from '@/components/Footer.vue'
+import FooterLogo from '@/components/FooterLogo.vue'
 
 export default {
   computed: {
@@ -19,8 +16,7 @@ export default {
     }
   },
   components: {
-    'home-nav': NavHome,
-    'app-footer': Footer
+    'app-footerlogo': FooterLogo
   }
 }
 </script>

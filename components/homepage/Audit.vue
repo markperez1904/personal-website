@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="contactus-right">
-      <div class="contactus-title">Contact Us</div>
+      <div class="contactus-title">Business Audit</div>
 
       <!-- Email API form submission -->
       <form
@@ -16,15 +16,17 @@
         action="https://formspree.io/info@markperez.dev"
         method="POST"
       >
-        <!-- Name nad Email -->
+        <!-- Full Name -->
         <input
           class="contactus-name"
           name="name"
-          placeholder="name"
+          placeholder="Full Name"
           type="text"
           aria-label="full name"
           required
         />
+
+        <!-- Email -->
         <input
           class="contactus-email"
           name="email"
@@ -34,18 +36,29 @@
           required
         />
 
-        <!-- Message -->
-        <textarea
-          placeholder="Message"
-          name="message"
-          class="contactus-text"
-          aria-label="message"
+        <!-- Company name -->
+        <input
+          class="contactus-name"
+          name="name"
+          placeholder="Company"
+          type="text"
+          aria-label="company name"
           required
-        ></textarea>
+        />
+
+        <!-- website -->
+        <input
+          class="contactus-name"
+          name="website"
+          placeholder="Website"
+          type="text"
+          aria-label="website"
+          required
+        />
 
         <!-- Submit -->
         <button class="contactus-buton button is-rounded" type="submit">
-          Submit
+          Request Audit
         </button>
       </form>
     </div>

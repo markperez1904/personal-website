@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- assign your video to the following class below -->
-    <region>
+    <div id="case-studies-section">
       <!-- navbar put manually for customization -->
-      <app-navhome class="homepage"></app-navhome>
+      <app-navhome></app-navhome>
 
       <!-- main background image -->
       <section class="hero homepage container">
@@ -35,21 +35,20 @@
           </aside>
         </div>
       </section>
-      <!-- place the video here -->
-      <div id="salon-vid"></div>
-    </region>
+    </div>
 
-    <case-volume></case-volume>
-    <case-quick></case-quick>
-    <case-text></case-text>
+    <!-- component apps -->
+    <app-studies></app-studies>
+    <app-audit></app-audit>
     <app-bookcall></app-bookcall>
   </div>
 </template>
 <script>
 import BookCall from '@/components/BookCall.vue'
-import QuickQuestion from '@/components/case-study/QuickQuestion.vue'
-import Volume from '@/components/case-study/Volume.vue'
-import CaseText from '@/components/case-study/CaseText.vue'
+import Studies from '@/components/Studies.vue'
+import NavHome from '@/components/NavHome.vue'
+import Audit from '@/components/homepage/Audit.vue'
+
 
 export default {
   layout: 'case-study',
@@ -76,13 +75,21 @@ export default {
 
   components: {
     'app-bookcall': BookCall,
-    'case-quick': QuickQuestion,
-    'case-volume': Volume,
-    'case-text': CaseText
+    'app-studies': Studies,
+    'app-navhome': NavHome,
+    'app-audit': Audit
   }
 }
 </script>
 <style scoped>
+#case-studies-section {
+  background: linear-gradient(135deg, #00966b, #17ffbe);
+}
+
+.call-button:hover {
+  color: white;
+}
+
 .mainpng {
   position: absolute;
   width: 100%;
@@ -131,57 +138,43 @@ aside.right img {
   transform: translateX(-50%);
 }
 
-#salon-vid {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  object-fit: cover;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  pointer-events: none;
-  z-index: -1;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #00c58d, #b9ffeb);
-  box-shadow: 0 12px 22px -2px gray;
-  overflow: hidden;
+#navbar-and-content {
+  background: linear-gradient(135deg, #00966b, #17ffbe);
 }
 
 .is-fullheight {
-  min-height: calc(100vh - 3rem);
-}
-
-.homepage {
-  text-align: center;
-  vertical-align: top;
+  min-height: calc(100vh - 6rem);
 }
 
 .title {
-  font-size: 69px;
-  text-transform: uppercase;
-  line-height: 175px;
+  font-size: 65px;
   color: #ffffff;
-  letter-spacing: 12px;
+  letter-spacing: 4px;
   padding-bottom: 1rem;
   text-align: left;
-  color: #fff;
   font-weight: bold;
   text-shadow: 5.5px 9.526px 16px rgba(0, 0, 0, 0.35);
 }
 
 .subtitle {
-  font-size: 16px;
+  margin-top: unset !important;
+  font-size: 20px;
   text-align: left;
   color: #ffffff;
   width: 570px;
   line-height: 28px;
-  font-weight: 300;
+}
+
+@media only screen and (max-width: 1500px) {
+  .title {
+    font-size: 55px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-  #salon-vid {
-    height: 100vh;
-    z-index: 1;
-  }
   aside.left a {
     width: 100%;
   }
@@ -192,18 +185,17 @@ aside.right img {
     flex-direction: column;
   }
   .title {
-    font-size: 50px;
-    letter-spacing: 4px;
+    font-size: 45px;
     margin: 0;
     padding: 0;
     text-align: center;
     width: 100%;
-    line-height: 100px;
     z-index: 3;
+    margin-bottom: 1rem;
   }
   .subtitle {
     text-align: center;
-    font-size: 12px;
+    font-size: 17px;
     width: 100%;
     line-height: 20px;
     z-index: 3;
@@ -214,6 +206,7 @@ aside.right img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 
     margin-bottom: 8rem;
   }
@@ -233,17 +226,20 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .title {
-    font-size: 20px;
-    letter-spacing: 4px;
+    font-size: 40px;
   }
   .subtitle {
-    font-size: 10px;
+    font-size: 15px;
+  }
+  .call-button {
+    font-size: 14px;
   }
   aside.left {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 
     margin-bottom: 4rem;
   }
@@ -260,17 +256,10 @@ aside.right img {
   }
 }
 
-@media screen and (min-width: 1441px) {
-  #salon-vid {
-    height: 80vh;
-  }
-}
-
 @media screen and (max-width: 350px) {
   aside.left {
     margin-bottom: 1rem;
   }
-
   aside.right {
     margin-bottom: 1rem;
   }

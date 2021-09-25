@@ -139,6 +139,11 @@
                     <i class="icon-paypal"></i>
                   </a> -->
                 </div>
+                <img
+                  class="logo"
+                  src="~static/mp-digital-logo-dark.png"
+                  alt="Mark Perez Digital"
+                />
               </div>
             </div>
           </div>
@@ -211,6 +216,11 @@ hr {
 
 .centerism {
   text-align: center;
+}
+
+.logo {
+  margin-top: 3rem;
+  max-height: 3rem;
 }
 
 /* forked css */

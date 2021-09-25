@@ -11,9 +11,24 @@
           <!-- titles and resume button -->
           <aside class="left column">
             <!-- titles -->
-            <h1 class="title">{{ title }}</h1>
+            <h1 class="title">
+              SEO for<br>
+              <vue-typer
+                :text="['Beauty Salons', 'Skincare Brands', 'Med Spas']"
+                :repeat="Infinity"
+                :shuffle="false"
+                initial-action="typing"
+                :pre-type-delay="70"
+                :type-delay="70"
+                :pre-erase-delay="2000"
+                :erase-delay="250"
+                erase-style="select-all"
+                :erase-on-complete="false"
+                caret-animation="blink"
+              ></vue-typer>
+            </h1>
 
-            <!-- subtitles with vue-typer -->
+            <!-- subtitle: description of MP Digital -->
             <h2 class="subtitle">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
@@ -42,7 +57,7 @@
     <home-homeblocks></home-homeblocks>
     <home-aboutus></home-aboutus>
     <home-whoweare></home-whoweare>
-    <home-contactus></home-contactus>
+    <app-audit></app-audit>
     <app-stories></app-stories>
     <app-bookcall></app-bookcall>
   </div>
@@ -50,18 +65,16 @@
 
 <script>
 // from mark
-import Portfolio from '@/components/Portfolio.vue'
 import Stories from '@/components/Stories.vue'
 import NavHome from '@/components/NavHome.vue'
 import BookCall from '@/components/BookCall.vue'
-
+import Audit from '@/components/homepage/Audit.vue'
 
 // from freelancer
 import Numbers from '@/components/homepage/Numbers.vue'
 import AboutUs from '@/components/homepage/AboutUs.vue'
 import HomeBlocks from '@/components/homepage/HomeBlocks.vue'
 import WhoWeAre from '@/components/homepage/WhoWeAre.vue'
-import ContactUs from '@/components/homepage/ContactUs.vue'
 import Companies from '@/components/homepage/Companies.vue'
 
 import gql from 'graphql-tag'
@@ -78,7 +91,7 @@ export default {
   layout: 'homepage',
   data() {
     return {
-      title: 'MP Digital',
+      title: 'SEO for Beauty Brands',
       description:
         'MP Digital is a well-versed SEO Agency empowering beauty salons to be 1st-choice within their region.'
     }
@@ -86,7 +99,7 @@ export default {
 
   head() {
     return {
-      title: 'SEO for Beauty Salons',
+      title: this.title,
       meta: [
         {
           hid: 'description',
@@ -128,16 +141,15 @@ export default {
   },
 
   components: {
-    'app-portfolio': Portfolio,
     'app-stories': Stories,
     'app-navhome': NavHome,
     'app-bookcall': BookCall,
+    'app-audit': Audit,
 
     'home-numbers': Numbers,
     'home-aboutus': AboutUs,
     'home-homeblocks': HomeBlocks,
     'home-whoweare': WhoWeAre,
-    'home-contactus': ContactUs,
     'home-companies': Companies
   },
 
@@ -151,6 +163,11 @@ export default {
 </script>
 
 <style scoped>
+/* https://github.com/cngu/vue-typer/issues/45 for reference */
+::v-deep .typed {
+  color: #fff !important;
+}
+
 .call-button:hover {
   color: white;
 }
@@ -158,7 +175,6 @@ export default {
 .mainpng {
   position: absolute;
   width: 100%;
-  transition-delay: 250ms;
 }
 
 .hero-body .column {
@@ -213,11 +229,9 @@ aside.right img {
 }
 
 .title {
-  font-size: 90px;
-  text-transform: uppercase;
-  line-height: 175px;
+  font-size: 65px;
   color: #ffffff;
-  letter-spacing: 12px;
+  letter-spacing: 4px;
   padding-bottom: 1rem;
   text-align: left;
   font-weight: bold;
@@ -225,6 +239,7 @@ aside.right img {
 }
 
 .subtitle {
+  margin-top: unset !important;
   font-size: 20px;
   text-align: left;
   color: #ffffff;
@@ -234,7 +249,7 @@ aside.right img {
 
 @media only screen and (max-width: 1500px) {
   .title {
-    font-size: 75px;
+    font-size: 55px;
   }
   .subtitle {
     font-size: 18px;
@@ -252,13 +267,11 @@ aside.right img {
     flex-direction: column;
   }
   .title {
-    font-size: 50px;
-    letter-spacing: 4px;
+    font-size: 45px;
     margin: 0;
     padding: 0;
     text-align: center;
     width: 100%;
-    line-height: 100px;
     z-index: 3;
     margin-bottom: 1rem;
   }
@@ -275,7 +288,7 @@ aside.right img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-        text-align: center;
+    text-align: center;
 
     margin-bottom: 8rem;
   }
@@ -295,15 +308,13 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .title {
-    font-size: 30px;
-    letter-spacing: 4px;
+    font-size: 40px;
   }
   .subtitle {
     font-size: 15px;
   }
   .call-button {
     font-size: 14px;
-
   }
   aside.left {
     display: flex;
@@ -330,11 +341,9 @@ aside.right img {
 @media screen and (max-width: 350px) {
   aside.left {
     margin-bottom: 1rem;
-
   }
   aside.right {
     margin-bottom: 1rem;
   }
-
 }
 </style>
