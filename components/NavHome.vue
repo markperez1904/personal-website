@@ -1,12 +1,12 @@
 <template>
-  <div class="">
+  <div>
     <section class="navbar">
       <nav class="container">
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/">
             <img
               class="logo"
-              src="~static/mp-digital-logo-dark.png"
+              src="~static/mp-digital-logo-light.png"
               alt="Mark Perez Digital"
             />
           </n-link>
@@ -17,6 +17,7 @@
             @click="showNav = !showNav"
             data-target="navMenu"
           >
+            <!-- hamburger lines -->
             <span></span>
             <span></span>
             <span></span>
@@ -29,10 +30,7 @@
             <n-link class="navbar-item" to="/blog/">Blog</n-link>
             <n-link class="navbar-item" to="/gear/">Gear</n-link>
             <n-link class="navbar-item" to="/contact/">Contact</n-link>
-            <n-link class="navbar-item" to="/casestudy/">Case Study</n-link>
-            <div class="navbar-item">
-              <img class="search" src="~/assets/svg/search.svg" alt="search" />
-            </div>
+            <n-link class="navbar-item" to="/case-study/">Case Studies</n-link>
             <a
               class="navbar-item"
               target="_blank"
@@ -83,7 +81,7 @@ a:focus {
 }
 
 .navbar-menu {
-  background-color: transparent;
+  background-color:#00966b, #17ffbe;
 }
 
 .navbar {
@@ -99,12 +97,6 @@ a:focus {
   color: #2f495d;
   font-weight: bolder;
   transition: 0.3s all;
-}
-
-.navbar-item .search {
-  height: 20px;
-  width: 20px;
-  /* filter: brightness(100%) invert(100%); */
 }
 
 .navbar-item:hover {

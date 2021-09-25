@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container privacy">
     <h1>Privacy Policy</h1>
 
     <p>
@@ -251,7 +251,7 @@ h3 {
   margin: 1rem 0;
 }
 
-p {
+.privacy p {
   margin-bottom: 1.5rem;
 }
 

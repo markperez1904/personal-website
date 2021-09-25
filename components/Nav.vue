@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <section class="navbar">
       <nav class="container">
         <div class="navbar-brand">
@@ -17,6 +17,7 @@
             @click="showNav = !showNav"
             data-target="navMenu"
           >
+            <!-- hamburger lines -->
             <span></span>
             <span></span>
             <span></span>
@@ -29,6 +30,7 @@
             <n-link class="navbar-item" to="/blog/">Blog</n-link>
             <n-link class="navbar-item" to="/gear/">Gear</n-link>
             <n-link class="navbar-item" to="/contact/">Contact</n-link>
+            <n-link class="navbar-item" to="/case-study/">Case Studies</n-link>
             <a
               class="navbar-item"
               target="_blank"
@@ -88,10 +90,6 @@ a:focus {
   font-weight: bolder;
   transition: 0.3s all;
 }
-
-/* .navbar-item:hover {
-  color: #fff;
-} */
 
 .navbar-brand {
   font-size: 22px;

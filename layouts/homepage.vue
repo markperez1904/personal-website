@@ -2,13 +2,12 @@
   <div>
     <nuxt />
     <!-- <app-footer></app-footer> -->
-    <home-footer></home-footer>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import Footer from '@/components/Footer.vue'
-import HomeFooter from '@/components/HomeFooter.vue'
 
 export default {
   computed: {
@@ -18,7 +17,6 @@ export default {
   },
   components: {
     'app-footer': Footer,
-    'home-footer': HomeFooter
-  }
+    }
 }
 </script>

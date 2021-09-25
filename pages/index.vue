@@ -1,12 +1,12 @@
 <template>
   <div>
     <!-- assign your video to the following class below -->
-    <region>
+    <div id="navbar-and-content">
       <!-- navbar put manually for customization -->
-      <app-navhome class="homepage"></app-navhome>
+      <app-navhome></app-navhome>
 
       <!-- main background image -->
-      <section class="hero homepage container">
+      <section class="hero is-fullheight container">
         <div class="hero-body columns">
           <!-- titles and resume button -->
           <aside class="left column">
@@ -22,12 +22,13 @@
               content here', making it look like readable English.
             </h2>
 
-            <!-- resume button -->
+            <!-- call button -->
             <a
               target="_blank"
               href="https://calendly.com/info-30250/discovery-call"
+              id="call-link"
             >
-              <button class="button is-rounded">Book a Call</button>
+              <button class="button is-rounded call-button">Book a Call</button>
             </a>
           </aside>
           <aside class="right column">
@@ -35,31 +36,33 @@
           </aside>
         </div>
       </section>
-      <!-- place the video here -->
-      <div id="salon-vid"></div>
-    </region>
+    </div>
 
     <home-numbers></home-numbers>
     <home-homeblocks></home-homeblocks>
     <home-aboutus></home-aboutus>
     <home-whoweare></home-whoweare>
     <home-contactus></home-contactus>
-    <home-testimonial></home-testimonial>
-    <home-companies></home-companies>
+    <app-stories></app-stories>
+    <app-bookcall></app-bookcall>
   </div>
 </template>
 
 <script>
+// from mark
 import Portfolio from '@/components/Portfolio.vue'
+import Stories from '@/components/Stories.vue'
 import NavHome from '@/components/NavHome.vue'
-import Numbers from '@/components/Numbers.vue'
-import AboutUs from '@/components/AboutUs.vue'
-import HomeBlocks from '@/components/HomeBlocks.vue'
-import WhoWeAre from '@/components/WhoWeAre.vue'
-import ContactUs from '@/components/ContactUs.vue'
-import Companies from '@/components/Companies.vue'
-import HomeFooter from '@/components/HomeFooter.vue'
-import Testimonial from '@/components/Testimonial.vue'
+import BookCall from '@/components/BookCall.vue'
+
+
+// from freelancer
+import Numbers from '@/components/homepage/Numbers.vue'
+import AboutUs from '@/components/homepage/AboutUs.vue'
+import HomeBlocks from '@/components/homepage/HomeBlocks.vue'
+import WhoWeAre from '@/components/homepage/WhoWeAre.vue'
+import ContactUs from '@/components/homepage/ContactUs.vue'
+import Companies from '@/components/homepage/Companies.vue'
 
 import gql from 'graphql-tag'
 
@@ -126,15 +129,16 @@ export default {
 
   components: {
     'app-portfolio': Portfolio,
+    'app-stories': Stories,
     'app-navhome': NavHome,
+    'app-bookcall': BookCall,
+
     'home-numbers': Numbers,
     'home-aboutus': AboutUs,
     'home-homeblocks': HomeBlocks,
     'home-whoweare': WhoWeAre,
     'home-contactus': ContactUs,
-    'home-companies': Companies,
-    'home-footer': HomeFooter,
-    'home-testimonial': Testimonial
+    'home-companies': Companies
   },
 
   apollo: {
@@ -147,9 +151,14 @@ export default {
 </script>
 
 <style scoped>
+.call-button:hover {
+  color: white;
+}
+
 .mainpng {
   position: absolute;
   width: 100%;
+  transition-delay: 250ms;
 }
 
 .hero-body .column {
@@ -195,28 +204,12 @@ aside.right img {
   transform: translateX(-50%);
 }
 
-#salon-vid {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  object-fit: cover;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  pointer-events: none;
-  z-index: -1;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #00c58d, #b9ffeb);
-  box-shadow: 0 12px 22px -2px gray;
-  overflow: hidden;
+#navbar-and-content {
+  background: linear-gradient(135deg, #00966b, #17ffbe);
 }
 
 .is-fullheight {
-  min-height: calc(100vh - 3rem);
-}
-
-.homepage {
-  text-align: center;
-  vertical-align: top;
+  min-height: calc(100vh - 6rem);
 }
 
 .title {
@@ -227,25 +220,28 @@ aside.right img {
   letter-spacing: 12px;
   padding-bottom: 1rem;
   text-align: left;
-  color: #fff;
   font-weight: bold;
   text-shadow: 5.5px 9.526px 16px rgba(0, 0, 0, 0.35);
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 20px;
   text-align: left;
   color: #ffffff;
   width: 570px;
   line-height: 28px;
-  font-weight: 300;
+}
+
+@media only screen and (max-width: 1500px) {
+  .title {
+    font-size: 75px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-  #salon-vid {
-    height: 100vh;
-    z-index: 1;
-  }
   aside.left a {
     width: 100%;
   }
@@ -264,10 +260,11 @@ aside.right img {
     width: 100%;
     line-height: 100px;
     z-index: 3;
+    margin-bottom: 1rem;
   }
   .subtitle {
     text-align: center;
-    font-size: 12px;
+    font-size: 17px;
     width: 100%;
     line-height: 20px;
     z-index: 3;
@@ -278,6 +275,7 @@ aside.right img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+        text-align: center;
 
     margin-bottom: 8rem;
   }
@@ -297,17 +295,22 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .title {
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: 4px;
   }
   .subtitle {
-    font-size: 10px;
+    font-size: 15px;
+  }
+  .call-button {
+    font-size: 14px;
+
   }
   aside.left {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 
     margin-bottom: 4rem;
   }
@@ -324,18 +327,14 @@ aside.right img {
   }
 }
 
-@media screen and (min-width: 1441px) {
-  #salon-vid {
-    height: 80vh;
-  }
-}
-
 @media screen and (max-width: 350px) {
   aside.left {
     margin-bottom: 1rem;
+
   }
   aside.right {
     margin-bottom: 1rem;
   }
+
 }
 </style>

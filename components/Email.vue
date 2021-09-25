@@ -109,13 +109,11 @@ span {
 
 #mc_embed_signup .button {
   background-color: #00c58e;
-  /* font-family: 'Ubuntu', sans-serif; */
   font-weight: bold;
   font-size: 20px;
 }
 
 #mc_embed_signup input {
-  /* font-family: 'Ubuntu', sans-serif; */
   font-size: 12px;
 }
 </style>

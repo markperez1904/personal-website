@@ -22,6 +22,7 @@
     "apollo-link-prismic": "^1.0.9",
     "graphql": "^14.7.0",
     "graphql-tag": "^2.12.5",
+    "jsdom": "^17.0.0",
     "nuxt": "^2.15.8",
     "nuxt-buefy": "^0.3.31",
     "nuxt-purgecss": "^0.2.1",

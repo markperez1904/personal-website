@@ -436,7 +436,7 @@ h3 {
   margin: 1rem 0;
 }
 
-p {
+.terms p {
   margin-bottom: 1.5rem;
 }
 
