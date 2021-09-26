@@ -58,11 +58,9 @@ import gql from 'graphql-tag'
 
 import BookCall from '@/components/BookCall.vue'
 import NavHome from '@/components/NavHome.vue'
-import Audit from '@/components/homepage/Audit.vue'
-import StudiesSidebar from '@/components/studies/StudiesSidebar.vue'
 
 // blog post query
-const currentPost = gql`
+const currentStudy = gql`
   query case_studies($uid: String!) {
     case_studies(uid: $uid, lang: "en-us") {
       title
@@ -82,10 +80,8 @@ const currentPost = gql`
 export default {
   layout: 'case-study',
   components: {
-    'app-studiessidebar': StudiesSidebar,
     'app-bookcall': BookCall,
-    'app-navhome': NavHome,
-    'app-audit': Audit
+    'app-navhome': NavHome
   },
 
   data() {
@@ -138,18 +134,8 @@ export default {
         }
       ],
 
-      // schema markup for mailchimp & current article
+      // schema markup for case study
       script: [
-        {
-          type: 'text/javascript', // mailchimp universal script
-          src:
-            '//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js',
-          'data-dojo-config': 'usePlainJson: true, isDebug: false'
-        },
-        {
-          type: 'text/javascript', // mailchimp script for specific popup form
-          innerHTML: this.getMailchimp
-        },
         {
           type: 'application/ld+json',
           innerHTML: this.getArticleSchema
@@ -188,21 +174,6 @@ export default {
       }
     },
 
-    getMailchimp() {
-      if (process.client) {
-        return JSON.stringify(
-          window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
-            L.start({
-              baseUrl: 'mc.us20.list-manage.com',
-              uuid: '0e646f9cc09aa7c7a450ae8b6',
-              lid: 'a5dd106a2e',
-              uniqueMethods: true
-            })
-          })
-        )
-      }
-    },
-
     getArticleSchema() {
       return JSON.stringify({
         '@context': 'https://schema.org',
@@ -236,7 +207,7 @@ export default {
 
   apollo: {
     case_studies: {
-      query: currentPost,
+      query: currentStudy,
 
       variables() {
         return {

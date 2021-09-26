@@ -52,14 +52,14 @@
             :key="post.node._meta.id"
             class="box column is-3-widescreen is-4-tablet"
           >
-            <nuxt-link :to="`/case-study/${post.node._meta.uid}/`">
+            <a :href="`/case-study/${post.node._meta.uid}/`">
               <img
                 class="post-image"
                 :src="post.node.image.url"
                 :alt="post.node.image.alt"
               />
               <p class="study-title is-6">{{ post.node.title[0].text }}</p>
-            </nuxt-link>
+            </a>
           </article>
         </section>
       </transition>
@@ -262,7 +262,6 @@ export default {
 </script>
 
 <style scoped>
-
 /* styling for querying blogs */
 #case-studies-section {
   background: linear-gradient(135deg, #00966b, #17ffbe);
