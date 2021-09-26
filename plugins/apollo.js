@@ -18,7 +18,7 @@ export const linkages = () => {
     .query({
       query: gql`
         {
-          _allDocuments(sortBy: meta_firstPublicationDate_DESC) {
+          _allDocuments{
             edges {
               node {
                 _meta {
