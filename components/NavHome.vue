@@ -27,10 +27,18 @@
         <!-- Navbar Menu -->
         <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
           <div @click="showNav = !showNav" class="navbar-end">
-            <n-link class="navbar-item" to="/blog/">Blog</n-link>
-            <n-link class="navbar-item" to="/gear/">Gear</n-link>
-            <n-link class="navbar-item" to="/contact/">Contact</n-link>
-            <n-link class="navbar-item" to="/case-study/">Case Studies</n-link>
+            <n-link :style="changeColor" class="navbar-item" to="/blog/"
+              >Blog</n-link
+            >
+            <n-link :style="changeColor" class="navbar-item" to="/gear/"
+              >Gear</n-link
+            >
+            <n-link :style="changeColor" class="navbar-item" to="/contact/"
+              >Contact</n-link
+            >
+            <n-link :style="changeColor" class="navbar-item" to="/case-study/"
+              >Case Studies</n-link
+            >
             <a
               class="navbar-item"
               target="_blank"
@@ -51,6 +59,19 @@ export default {
   data() {
     return {
       showNav: false
+    }
+  },
+
+  computed: {
+    changeColor() {
+      if (this.showNav == false)
+        return {
+          color: '#ffffff'
+        }
+      else
+        return {
+          color: '#000000'
+        }
     }
   }
 }
@@ -81,7 +102,7 @@ a:focus {
 }
 
 .navbar-menu {
-  background-color:#00966b, #17ffbe;
+  background-color: #00966b, #17ffbe;
 }
 
 .navbar {
@@ -94,7 +115,6 @@ a:focus {
 .navbar-item {
   font-size: 18px;
   padding-right: 2rem;
-  color: #2f495d;
   font-weight: bolder;
   transition: 0.3s all;
 }

@@ -274,7 +274,7 @@ aside.right img {
   }
   .subtitle {
     text-align: center;
-    font-size: 17px;
+    font-size: 18px;
     width: 100%;
     line-height: 20px;
     z-index: 3;
@@ -308,7 +308,7 @@ aside.right img {
     font-size: 40px;
   }
   .subtitle {
-    font-size: 15px;
+    font-size: 18px;
   }
   .call-button {
     font-size: 14px;

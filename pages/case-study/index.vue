@@ -11,24 +11,12 @@
           <!-- titles and resume button -->
           <aside class="left column">
             <!-- titles -->
-            <h1 class="title">{{ title }}</h1>
+            <h1 class="bigtitle">{{ title }}</h1>
 
             <!-- subtitles with vue-typer -->
             <h2 class="subtitle">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English.
+              {{ description }}
             </h2>
-
-            <!-- resume button -->
-            <a
-              target="_blank"
-              href="https://calendly.com/info-30250/discovery-call"
-            >
-              <button class="button is-rounded">Book a Call</button>
-            </a>
           </aside>
           <aside class="right column">
             <img class="mainpng" src="~/assets/svg/case.svg" alt="spec" />
@@ -37,29 +25,122 @@
       </section>
     </div>
 
+    <!-- showing section of search bar and all case studies -->
+    <div class="container">
+      <!-- search bar -->
+      <section class="field columns is-centered searchbar">
+        <div class="control has-icons-left column is-3-widescreen is-4-tablet">
+          <input
+            @keyup.passive="searchPosts(keyword)"
+            v-model="keyword"
+            type="search"
+            class="input is-rounded"
+            placeholder="Type to search..."
+          />
+          <i class="icon is-small is-left icon-search"></i>
+        </div>
+      </section>
+
+      <!-- blog posts -->
+      <transition name="fade">
+        <section
+          class="posts columns is-multiline is-centered"
+          v-if="loading == 0"
+        >
+          <article
+            v-for="post in allCase_studiess.edges"
+            :key="post.node._meta.id"
+            class="box column is-3-widescreen is-4-tablet"
+          >
+            <nuxt-link :to="`/case-study/${post.node._meta.uid}/`">
+              <img
+                class="post-image"
+                :src="post.node.image.url"
+                :alt="post.node.image.alt"
+              />
+              <p class="study-title is-6">{{ post.node.title[0].text }}</p>
+            </nuxt-link>
+          </article>
+        </section>
+      </transition>
+
+      <!-- loading bar -->
+      <aside class="loading-bar columns is-multiline is-centered is-mobile">
+        <pulse-loader
+          :loading="loading"
+          :color="color"
+          :size="size"
+        ></pulse-loader>
+      </aside>
+
+      <!-- button -->
+      <aside class="columns is-multiline is-centered is-mobile">
+        <button
+          v-if="allCase_studiess.pageInfo.hasNextPage && loading == 0"
+          class="button"
+          @click="loadMorePosts(keyword, allCase_studiess.pageInfo.endCursor)"
+        >
+          {{ loading ? 'Loading...' : 'Show more' }}
+        </button>
+      </aside>
+    </div>
+
     <!-- component apps -->
-    <app-studies></app-studies>
     <app-audit></app-audit>
     <app-bookcall></app-bookcall>
   </div>
 </template>
+
 <script>
 import BookCall from '@/components/BookCall.vue'
-import Studies from '@/components/Studies.vue'
 import NavHome from '@/components/NavHome.vue'
 import Audit from '@/components/homepage/Audit.vue'
 
+import gql from 'graphql-tag'
+
+const studies = gql`
+  query($fulltext: String, $cursor: String) {
+    allCase_studiess(
+      lang: "en-us"
+      fulltext: $fulltext
+      sortBy: date_DESC
+      first: 3
+      after: $cursor
+    ) {
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+      edges {
+        node {
+          title
+          image
+          _meta {
+            uid
+            id
+          }
+        }
+      }
+    }
+  }
+`
 
 export default {
   layout: 'case-study',
   data() {
     return {
       title: 'Case Studies',
-      description: 'description'
+      description:
+        "Are you set on success in the beauty and cosmetics industry? Then think of SEO services as your bread and butter. You can't skimp out on digital marketing if you want to prosper; this is especially true when it comes to online visibility for your brand.",
+      loading: 0,
+      color: '#00c58e',
+      keyword: '' // for searchPosts()
     }
   },
 
- head() {
+  head() {
     return {
       title: this.title,
       meta: [
@@ -96,8 +177,7 @@ export default {
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content:
-            'https://markperez.dev/mp-digital-logo-dark.png'
+          content: 'https://markperez.dev/mp-digital-logo-dark.png'
         }
       ]
     }
@@ -105,15 +185,91 @@ export default {
 
   components: {
     'app-bookcall': BookCall,
-    'app-studies': Studies,
     'app-navhome': NavHome,
     'app-audit': Audit
+  },
+
+  apollo: {
+    allCase_studiess: {
+      query: studies,
+
+      variables() {
+        return {
+          fullText: '',
+          cursor: ''
+        }
+      },
+
+      loadingKey: 'loading', // loading animation
+      fetchPolicy: 'cache-and-network'
+    }
+  },
+
+  methods: {
+    loadMorePosts(searchTerm, currentCursor) {
+      this.$apollo.queries.allCase_studiess.fetchMore({
+        variables: {
+          fullText: searchTerm,
+          cursor: currentCursor
+        },
+
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          if (!fetchMoreResult) return previousResult
+
+          return {
+            allCase_studiess: Object.assign(
+              {},
+              fetchMoreResult.allCase_studiess,
+              {
+                __typename: fetchMoreResult.allCase_studiess.__typename,
+                edges: previousResult.allCase_studiess.edges.concat(
+                  fetchMoreResult.allCase_studiess.edges
+                ),
+                pageInfo: fetchMoreResult.allCase_studiess.pageInfo
+              }
+            )
+          }
+        }
+      })
+    },
+
+    searchPosts(searchTerm) {
+      this.$apollo.queries.allCase_studiess.fetchMore({
+        variables: {
+          fullText: searchTerm,
+          cursor: ''
+        },
+
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          if (!fetchMoreResult) return previousResult
+
+          return {
+            allCase_studiess: Object.assign(
+              {},
+              fetchMoreResult.allCase_studiess,
+              {
+                __typename: fetchMoreResult.allCase_studiess.__typename,
+                edges: [...fetchMoreResult.allCase_studiess.edges],
+                pageInfo: fetchMoreResult.allCase_studiess.pageInfo
+              }
+            )
+          }
+        }
+      })
+    }
   }
 }
 </script>
+
 <style scoped>
+
+/* styling for querying blogs */
 #case-studies-section {
   background: linear-gradient(135deg, #00966b, #17ffbe);
+}
+
+.searchbar {
+  margin-top: 5rem !important;
 }
 
 .call-button:hover {
@@ -125,14 +281,6 @@ export default {
   width: 100%;
 }
 
-.hero-body .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-}
-
 button {
   font-size: 20px;
   letter-spacing: 1px;
@@ -142,6 +290,7 @@ button {
   z-index: 3;
 }
 
+/* styling for hero of title and description */
 aside {
   margin-bottom: 10rem;
 }
@@ -168,15 +317,15 @@ aside.right img {
   transform: translateX(-50%);
 }
 
-#navbar-and-content {
-  background: linear-gradient(135deg, #00966b, #17ffbe);
+.hero-body .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
 }
 
-.is-fullheight {
-  min-height: calc(100vh - 6rem);
-}
-
-.title {
+.bigtitle {
   font-size: 65px;
   color: #ffffff;
   letter-spacing: 4px;
@@ -196,7 +345,7 @@ aside.right img {
 }
 
 @media only screen and (max-width: 1500px) {
-  .title {
+  .bigtitle {
     font-size: 55px;
   }
   .subtitle {
@@ -214,7 +363,7 @@ aside.right img {
     align-items: center;
     flex-direction: column;
   }
-  .title {
+  .bigtitle {
     font-size: 45px;
     margin: 0;
     padding: 0;
@@ -242,7 +391,6 @@ aside.right img {
   }
 
   aside.right {
-    /* width: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,7 +403,7 @@ aside.right img {
   .hero-body {
     padding: 0px 1.5rem;
   }
-  .title {
+  .bigtitle {
     font-size: 40px;
   }
   .subtitle {
@@ -293,5 +441,80 @@ aside.right img {
   aside.right {
     margin-bottom: 1rem;
   }
+}
+
+/* styling forked from blog mainpage  */
+h1 {
+  font-size: 30px;
+  padding-top: 0.5rem;
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+/* add transitions to input boxes */
+input {
+  transition: all 0.2s;
+  background-color: #edf2f7;
+}
+
+/* adopt color scheme to input boxes */
+input:focus {
+  transition: all 0.2s;
+  border-color: #00c58e;
+}
+
+.loading-bar {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.column {
+  padding: unset;
+}
+
+.posts {
+  margin-top: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.post-image {
+  border-radius: 6px;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.box {
+  transition: all 0.2s;
+  margin: 1rem;
+}
+
+.box:hover {
+  transition: all 0.2s;
+  transform: scale(1.03);
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
+}
+
+.study-title {
+  text-align: center;
+  padding: 1rem 5px;
+  font-weight: bold;
+  color: #2f495d;
+}
+
+.pagination {
+  margin: 1rem;
+}
+
+.button {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-color: #00c58e;
 }
 </style>

@@ -94,4 +94,8 @@ a:focus {
 .navbar-brand {
   font-size: 22px;
 }
+
+#navMenu {
+  color: #2f495d;
+}
 </style>

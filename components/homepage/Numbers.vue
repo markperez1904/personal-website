@@ -8,7 +8,7 @@
         <span class="numbers-number">10</span
         ><span class="numbers-plus">+</span>
       </div>
-      <div>Years of Experience</div>
+      <div class="sizer">Years of Experience</div>
     </div>
     <div class="numbers-item">
       <div class="numbers-icon">
@@ -18,7 +18,7 @@
         <span class="numbers-number">350</span
         ><span class="numbers-plus">+</span>
       </div>
-      <div>Project Completed</div>
+      <div class="sizer">Project Completed</div>
     </div>
     <div class="numbers-item">
       <div class="numbers-icon">
@@ -28,21 +28,24 @@
         <span class="numbers-number">100</span
         ><span class="numbers-plus">+</span>
       </div>
-      <div>Happy Clients</div>
+      <div class="sizer">Happy Clients</div>
     </div>
     <div class="numbers-item">
       <div class="numbers-icon">
         <img src="~/assets/svg/trophy.svg" alt="number" />
       </div>
       <div class="numbers-info">
-        <span class="numbers-number">25</span
+        <span class="numbers-number">15</span
         ><span class="numbers-plus">+</span>
       </div>
-      <div>Award Winner</div>
+      <div class="sizer">Endorsements</div>
     </div>
   </div>
 </template>
 <style scoped>
+.sizer {
+  font-size: 18px;
+}
 .numbers {
   margin-top: 50px;
   display: flex;

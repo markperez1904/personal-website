@@ -78,7 +78,7 @@
         </div>
         <div class="whoweare-bottom-text">
           So, you want to know how we make your business stand out against the
-          rest. We all know that SEO is a popular marketing strategy. However,
+          rest? We all know that SEO is a popular marketing strategy. However,
           with so many different strategies out there, how do you know which is
           the right one?
         </div>
@@ -121,7 +121,7 @@
 .whoweare-background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -148,7 +148,7 @@
 
 .whoweare-item-text {
   padding: 20px 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #797979;
   font-weight: 400;
@@ -173,8 +173,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  width: 597px;
-  height: 597px;
+  width: auto;
+  height: auto;
   border-radius: 298px;
   background-color: #2f495e;
 }
@@ -185,8 +185,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -2;
-  width: 830px;
-  height: 830px;
+  width: auto;
+  height: auto;
   border-radius: 415px;
   background-color: #00c58e;
 }
@@ -197,8 +197,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -3;
-  width: 1131px;
-  height: 1131px;
+  width: auto;
+  height: auto;
   border-radius: 566px;
   background-color: transparent;
   border: 2px solid #00c58e;
@@ -212,8 +212,8 @@
   align-items: center;
   margin: 20px;
 
-  width: 981px;
-  height: 217px;
+  width: auto;
+  height: auto;
   border-radius: 10px;
   background-image: linear-gradient(0deg, #00966b 0%, #00f0ad 100%);
 }
@@ -281,9 +281,9 @@
 
   .whoweare-item-text {
     width: 100%;
-    height: 161px;
-    font-size: 11.5px;
-    line-height: 14px;
+    height: auto;
+    font-size: 14px;
+    line-height: 20px;
     color: #797979;
     font-weight: 400;
     text-align: center;
@@ -292,7 +292,7 @@
   }
 
   .whoweare-item-title {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 22px;
     color: #2f495e;
   }
@@ -300,7 +300,7 @@
   .whoweare-center {
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     order: 1;
     width: 100%;
     justify-content: space-around;
@@ -311,11 +311,11 @@
   }
 
   .whoweare-left {
-    width: 50%;
+    width: auto;
     order: 2;
   }
   .whoweare-right {
-    width: 50%;
+    width: auto;
     order: 2;
   }
 
@@ -326,7 +326,7 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     width: 265px;
-    height: 265px;
+    height: auto;
     border-radius: 298px;
     background-color: #2f495e;
   }
@@ -338,7 +338,7 @@
     transform: translate(-50%, -50%);
     z-index: -2;
     width: 368px;
-    height: 368px;
+    height: auto;
     border-radius: 415px;
     background-color: #00c58e;
   }
@@ -415,7 +415,7 @@
     align-items: center;
     margin: 0;
 
-    height: 217px;
+    height: auto;
     border-radius: 10px;
 
     width: 100%;
@@ -423,7 +423,7 @@
 
   .whoweare-item {
     width: 80%;
-    height: 310px;
+    height: auto;
   }
 
   .whoweare-bottom .whoweare-bottom-title {
@@ -452,7 +452,7 @@
     text-align: center;
     border: none;
     width: 130px;
-    height: 34px;
+    height: auto;
 
     font-size: 14px;
     color: #ffffff;
@@ -473,8 +473,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    width: 265px;
-    height: 265px;
+    width: auto;
+    height: auto;
     border-radius: 298px;
     background-color: #2f495e;
   }
@@ -485,8 +485,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -2;
-    width: 368px;
-    height: 368px;
+    width: auto;
+    height: auto;
     border-radius: 415px;
     background-color: #00c58e;
   }

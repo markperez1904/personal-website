@@ -130,7 +130,7 @@
 }
 
 .homeblocks-item-title {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 30px;
   color: #2f495e;
   padding-bottom: 15px;
@@ -139,7 +139,7 @@
 .homeblocks-item-text {
   width: auto;
   height: auto;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #2f495e;
   font-weight: 300;

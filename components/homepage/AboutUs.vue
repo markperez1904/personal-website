@@ -38,7 +38,7 @@
   padding-bottom: 20px;
 }
 .about-us-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
   color: #797979;
   font-weight: 300;
@@ -82,7 +82,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     padding: 0 20px;
   }

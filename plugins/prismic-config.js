@@ -2,9 +2,13 @@ import PrismicDOM from 'prismic-dom'
 
 const Elements = PrismicDOM.RichText.Elements
 
+// marks article API
+export const apiEndpoint = 'https://marks-personal-website.prismic.io/graphql'
+
 // Fetch the link resolver
 export const linkResolver = doc => {
   if (doc.type === 'blog_posts') return `/blog/${doc.uid}`
+  else if (doc.type === 'case_studies') return `/case-study/${doc.uid}`
   return `/${doc.uid}`
 }
 

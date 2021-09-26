@@ -1,38 +1,4 @@
-import { PrismicLink } from 'apollo-link-prismic'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import ApolloClient from 'apollo-client'
-import gql from 'graphql-tag'
-
-const client = new ApolloClient({
-  link: PrismicLink({
-    uri: 'https://marks-personal-website.prismic.io/graphql'
-  }),
-  cache: new InMemoryCache()
-})
-
-const linkages = () => {
-  return client
-    .query({
-      query: gql`
-        {
-          allBlog_postss(sortBy: date_DESC) {
-            edges {
-              node {
-                _meta {
-                  uid
-                }
-              }
-            }
-          }
-        }
-      `
-    })
-    .then(res => {
-      return res.data.allBlog_postss.edges.map(posts => {
-        return '/blog/' + posts.node._meta.uid
-      })
-    })
-}
+import { linkages } from "./plugins/apollo"
 
 export default {
   // full static mode (as of v2.14.0): https://nuxtjs.org/blog/going-full-static/
