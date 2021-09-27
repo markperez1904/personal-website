@@ -39,10 +39,10 @@
         <!-- Company name -->
         <input
           class="contactus-name"
-          name="name"
+          name="company"
           placeholder="Company"
           type="text"
-          aria-label="company name"
+          aria-label="company"
           required
         />
 

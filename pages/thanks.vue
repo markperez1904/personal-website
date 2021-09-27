@@ -15,7 +15,7 @@ export default {
     return {
       title: 'Thank You',
       description:
-        'Your Linux Guide will be availible in your inbox. Give it around a few minutes to arrive.'
+        "Thank you for subscribing to our newsletter. In addition to this, we'll be sending you a free Linux guide."
     }
   },
 
