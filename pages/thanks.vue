@@ -4,7 +4,7 @@
     <h2>{{description}}</h2>
 
     <aside class="links">
-      <nuxt-link to="/blog/">Return to Blog >></nuxt-link>
+      <nuxt-link to="/">Return to Homepage >></nuxt-link>
     </aside>
   </div>
 </template>

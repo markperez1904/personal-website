@@ -31,7 +31,7 @@
     <div class="container">
       <section class="columns is-centered is-multiline study">
         <!-- Case Study -->
-        <article class="column is-9">
+        <article class="column is-8">
           <!-- Blog Content (lazy load dynamic HTML) -->
           <div
             v-html="
@@ -43,7 +43,8 @@
             "
           ></div>
 
-          <!-- book a call CTA at end of case study -->
+          <!-- audit and CTA at end of case study -->
+          <app-audit></app-audit>
           <app-bookcall></app-bookcall>
         </article>
       </section>
@@ -58,6 +59,7 @@ import gql from 'graphql-tag'
 
 import BookCall from '@/components/BookCall.vue'
 import NavHome from '@/components/NavHome.vue'
+import Audit from "@/components/homepage/Audit.vue";
 
 // blog post query
 const currentStudy = gql`
@@ -82,7 +84,8 @@ export default {
   layout: 'case-study',
   components: {
     'app-bookcall': BookCall,
-    'app-navhome': NavHome
+    'app-navhome': NavHome,
+    'app-audit': Audit
   },
 
   data() {
@@ -169,12 +172,6 @@ export default {
     lighten() {
       return {
         color: '#ffffff'
-      }
-    },
-
-    darken() {
-      return {
-        color: '#000000'
       }
     },
 
@@ -410,40 +407,11 @@ aside {
 }
 
 h1,
-h2,
-.date {
+h2 {
   text-align: center;
 }
 
 .container {
   padding: 0 2rem;
-}
-
-.date {
-  font-size: 15px;
-  color: #718096;
-  margin: 0 0 30px;
-  letter-spacing: 1px;
-}
-
-.featured-img {
-  margin: 1rem 0;
-  border-radius: 6px;
-  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-}
-
-.banner {
-  text-align: center;
-  margin: 0.5rem 0 0 0;
-}
-
-.banner .box {
-  padding: unset;
-  display: inline-block;
-  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
-}
-
-.banner-image {
-  border-radius: 6px;
 }
 </style>

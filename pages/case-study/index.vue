@@ -195,7 +195,7 @@ export default {
 
       variables() {
         return {
-          fullText: '',
+          fulltext: '',
           cursor: ''
         }
       },
@@ -209,7 +209,7 @@ export default {
     loadMorePosts(searchTerm, currentCursor) {
       this.$apollo.queries.allCase_studiess.fetchMore({
         variables: {
-          fullText: searchTerm,
+          fulltext: searchTerm,
           cursor: currentCursor
         },
 
@@ -236,7 +236,7 @@ export default {
     searchPosts(searchTerm) {
       this.$apollo.queries.allCase_studiess.fetchMore({
         variables: {
-          fullText: searchTerm,
+          fulltext: searchTerm,
           cursor: ''
         },
 
