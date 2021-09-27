@@ -424,7 +424,7 @@
   }
 
   .whoweare-bottom .whoweare-bottom-title {
-    font-size: 22px;
+    font-size: 24px;
     color: #ffffff;
     font-weight: bold;
     text-align: center;
@@ -432,7 +432,7 @@
   }
   .whoweare-bottom .whoweare-bottom-text {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
     font-weight: 300;
     text-align: center;
@@ -446,11 +446,11 @@
     background-color: #2f495e;
     text-align: center;
     border: none;
-    width: 140px;
-    height: 40px;
+    width: 160px;
+    height: 50px;
     margin-top: unset;
 
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
     font-weight: bold;
   }

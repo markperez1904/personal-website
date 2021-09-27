@@ -305,13 +305,13 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .title {
-    font-size: 40px;
+    font-size: 25px;
   }
   .subtitle {
-    font-size: 18px;
+    font-size: 16px;
   }
   .call-button {
-    font-size: 14px;
+    font-size: 16px;
   }
   aside.left {
     display: flex;

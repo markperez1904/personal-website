@@ -351,10 +351,10 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .bigtitle {
-    font-size: 40px;
+    font-size: 32px;
   }
   .subtitle {
-    font-size: 15px;
+    font-size: 16px;
   }
   .call-button {
     font-size: 14px;

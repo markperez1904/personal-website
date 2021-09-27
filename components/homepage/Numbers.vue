@@ -96,5 +96,8 @@
     width: 50%;
     padding-top: 10px;
   }
+  .sizer {
+    font-size: 15px
+  }
 }
 </style>

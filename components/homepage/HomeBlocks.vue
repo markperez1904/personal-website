@@ -52,8 +52,8 @@
         We are a team of beauty and skincare insiders with extensive knowledge
         of the industry. Our aim is to help you get your products in front of
         your target audience by matching you with experienced beauty and
-        skincare team. We pride ourselves on personalized services so
-        each client gets the assistance they deserve.
+        skincare team. We pride ourselves on personalized services so each
+        client gets the assistance they deserve.
       </div>
     </div>
   </div>
