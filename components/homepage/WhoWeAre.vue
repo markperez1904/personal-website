@@ -12,7 +12,7 @@
       <div class="whoweare-top-title">Who We Are</div>
     </div>
     <div class="whoweare-items">
-      <div class="whoweare-left">
+      <div class="whoweare-center">
         <div class="whoweare-item">
           <div class="whoweare-item-img">
             <img src="~/assets/svg/star.svg" alt="star" />
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div
-        class="whoweare-right v-scroll-reveal"
+        class="whoweare-center v-scroll-reveal"
         v-scroll-reveal.reset="{ delay: 250 }"
       >
         <div class="whoweare-item">
@@ -130,7 +130,7 @@
 }
 
 .whoweare-item {
-  width: 279px;
+  width: 300px;
   padding: 20px;
   margin: 20px 0;
   border-radius: 15px;
@@ -215,7 +215,7 @@
   width: auto;
   height: auto;
   border-radius: 10px;
-  background-image: linear-gradient(0deg, #00966b 0%, #00f0ad 100%);
+  background-image: linear-gradient(0deg, #005d42 0%, #00f0ad 100%);
 }
 
 .whoweare-bottom-left {
@@ -228,17 +228,15 @@
 
 .whoweare-bottom .whoweare-bottom-title {
   font-size: 30px;
-  line-height: 36px;
   color: #ffffff;
   font-weight: bold;
   text-align: left;
-  padding-bottom: 30px;
+  /* margin-top: 1rem; */
 }
 .whoweare-bottom .whoweare-bottom-text {
-  width: 446px;
-  height: 87px;
-  font-size: 14px;
-  line-height: 24px;
+  width: 90%;
+  height: auto;
+  font-size: 18px;
   color: #ffffff;
   font-weight: 300;
   text-align: left;
@@ -250,11 +248,11 @@
   background-color: #2f495e;
   text-align: center;
   border: none;
+  margin-top: 1rem;
 
   font-size: 20px;
-  line-height: 47px;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .whoweare-center {
@@ -266,7 +264,7 @@
 .whoweare-left {
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: block;
   padding: 20px;
 }
 
@@ -282,7 +280,7 @@
   .whoweare-item-text {
     width: 100%;
     height: auto;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     color: #797979;
     font-weight: 400;
@@ -308,14 +306,15 @@
 
   .whoweare-center .whoweare-item {
     margin: 20px;
+    width: auto;
   }
 
   .whoweare-left {
-    width: auto;
+    width: 100%;
     order: 2;
   }
   .whoweare-right {
-    width: auto;
+    width: 100%;
     order: 2;
   }
 
@@ -348,8 +347,7 @@
   }
 
   .whoweare-bottom .whoweare-bottom-title {
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 26px;
     color: #ffffff;
     font-weight: bold;
     text-align: center;
@@ -357,8 +355,7 @@
   }
   .whoweare-bottom .whoweare-bottom-text {
     width: 100%;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
     color: #ffffff;
     font-weight: 300;
     text-align: center;
@@ -371,12 +368,12 @@
     background-color: #2f495e;
     text-align: center;
     border: none;
-    width: 130px;
-    height: 34px;
+    width: 150px;
+    height: 40px;
 
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
-    font-weight: 400;
+    font-weight: bold;
   }
   .whoweare-bottom-left,
   .whoweare-bottom-right {
@@ -395,10 +392,10 @@
     align-items: center;
     margin: 0;
 
-    height: 217px;
+    height: auto;
     border-radius: 10px;
 
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -422,13 +419,12 @@
   }
 
   .whoweare-item {
-    width: 80%;
+    width: auto;
     height: auto;
   }
 
   .whoweare-bottom .whoweare-bottom-title {
-    font-size: 18px;
-    line-height: 36px;
+    font-size: 22px;
     color: #ffffff;
     font-weight: bold;
     text-align: center;
@@ -437,7 +433,6 @@
   .whoweare-bottom .whoweare-bottom-text {
     width: 100%;
     font-size: 14px;
-    line-height: 16px;
     color: #ffffff;
     font-weight: 300;
     text-align: center;
@@ -451,12 +446,13 @@
     background-color: #2f495e;
     text-align: center;
     border: none;
-    width: 130px;
-    height: auto;
+    width: 140px;
+    height: 40px;
+    margin-top: unset;
 
     font-size: 14px;
     color: #ffffff;
-    font-weight: 400;
+    font-weight: bold;
   }
   .whoweare-bottom-left,
   .whoweare-bottom-right {

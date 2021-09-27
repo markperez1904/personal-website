@@ -31,7 +31,7 @@
     <div class="container">
       <section class="columns is-centered is-multiline study">
         <!-- Case Study -->
-        <article class="column is-7">
+        <article class="column is-9">
           <!-- Blog Content (lazy load dynamic HTML) -->
           <div
             v-html="

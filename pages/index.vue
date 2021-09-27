@@ -218,7 +218,7 @@ aside.right img {
 }
 
 #navbar-and-content {
-  background: linear-gradient(135deg, #00966b, #17ffbe);
+  background: linear-gradient(135deg, #005d42, #17ffbe);
 }
 
 .is-fullheight {

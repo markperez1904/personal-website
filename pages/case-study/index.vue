@@ -264,7 +264,7 @@ export default {
 <style scoped>
 /* styling for querying blogs */
 #case-studies-section {
-  background: linear-gradient(135deg, #00966b, #17ffbe);
+  background: linear-gradient(135deg, #005d42, #17ffbe);
 }
 
 .searchbar {

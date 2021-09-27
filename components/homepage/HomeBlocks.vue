@@ -87,7 +87,7 @@
 .homeblocks-item.active {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s;
-  background-image: linear-gradient(0deg, #00966b 0%, #00f0ad 100%);
+  background-image: linear-gradient(0deg, #005d42 0%, #00f0ad 100%);
   overflow: hidden;
 }
 

@@ -21,7 +21,7 @@ export const linkages = () => {
           _allDocuments{
             edges {
               node {
-                _meta {
+                _meta { 
                   uid
                   type
                 }
