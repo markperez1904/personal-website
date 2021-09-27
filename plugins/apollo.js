@@ -12,16 +12,16 @@ const client = new ApolloClient({
   defaultHttpLink: false,
   cache: new InMemoryCache()
 })
-// hola lety
+// generate links from graphql documents
 export const linkages = () => {
   return client
     .query({
       query: gql`
         {
-          _allDocuments{
+          _allDocuments {
             edges {
               node {
-                _meta { 
+                _meta {
                   uid
                   type
                 }

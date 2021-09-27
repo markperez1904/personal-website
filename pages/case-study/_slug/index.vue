@@ -66,6 +66,7 @@ const currentStudy = gql`
       title
       date
       description
+      theme
       image
       content
       _meta {
@@ -88,7 +89,8 @@ export default {
     return {
       PrismicDOM,
       linkResolver,
-      htmlSerializer
+      htmlSerializer,
+      visibility: 0.8
     }
   },
 
@@ -154,7 +156,9 @@ export default {
       return {
         overflow: 'hidden',
         background:
-          'linear-gradient(360deg, rgba(0, 150, 107, 0.9), rgba(0, 0, 0, 1)), url(' +
+          'linear-gradient(360deg,' +
+          this.convertHex(this.case_studies.theme) +
+          ', rgba(0, 0, 0, 1)), url(' +
           this.case_studies.image.url +
           ')',
         backgroundSize: 'cover',
@@ -216,6 +220,16 @@ export default {
       },
 
       fetchPolicy: 'cache-and-network'
+    }
+  },
+
+  methods: {
+    convertHex(color) {
+      color = color.replace('#', '')
+      const r = parseInt(color.substring(0, 2), 16)
+      const g = parseInt(color.substring(2, 4), 16)
+      const b = parseInt(color.substring(4, 6), 16)
+      return `rgba(${r}, ${g}, ${b}, ${this.visibility})`
     }
   }
 }
