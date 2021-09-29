@@ -141,7 +141,7 @@ export default {
   robots: {
     UserAgent: '*',
 
-    Disallow: () => ['/thanks/', '/200.html', '/README.md'],
+    Disallow: () => ['/thanks/', '/200.html', '/README.md', '/blog/'],
 
     Sitemap: 'https://markperez.dev/sitemap.xml'
   },
