@@ -263,7 +263,10 @@ export default {
 <style scoped>
 /* styling for querying blogs */
 #case-studies-section {
-  background: linear-gradient(135deg, #005d42, #17ffbe);
+  background: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('~assets/images/cool-analytics.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .searchbar {

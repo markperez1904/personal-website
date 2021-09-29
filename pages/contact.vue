@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>{{ title }}</h1>
-    <h2>{{ description }}</h2>
+    <h2 class="hours">{{ description }}</h2>
 
     <!-- contact component -->
     <app-contact></app-contact>
@@ -113,5 +113,9 @@ textarea:active {
   margin-bottom: 1rem;
   color: #fff;
   background-color: #00c58e;
+}
+
+.hours {
+  margin-bottom: 1rem;
 }
 </style>

@@ -57,7 +57,7 @@ export default {
     return {
       title: 'SEO Audit',
       description:
-        'Want to see the issues yourself? Our free SEO Audit shows unbiased results in real-time, reported here & to your inbox.'
+        'Want to see the website issues for yourself? Our free SEO Audit shows unbiased results in real-time, reported here.'
     }
   },
 
@@ -110,7 +110,12 @@ export default {
 <style>
 /* styling for seo audit forms */
 #case-studies-section {
-  background: linear-gradient(135deg, #005d42, #17ffbe);
+  background: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('~assets/images/google-eye.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
 }
 
 #roboaudit .sf-cnt-embed {
