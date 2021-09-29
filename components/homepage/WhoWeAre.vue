@@ -46,10 +46,9 @@
           </div>
           <div class="whoweare-item-title">Problem Solvers</div>
           <div class="whoweare-item-text">
-            If you are looking to get ahead of the competition in your beauty or
-            cosmetic business, good SEO services can make sure that your website
-            is at the top of search results, but effective SEO can help you
-            expand your business and reach a larger audience.
+            Good SEO services can make sure that your website is at the top of
+            search results, but effective SEO can help you expand your business
+            and reach a larger audience.
           </div>
         </div>
       </div>
@@ -63,10 +62,9 @@
           </div>
           <div class="whoweare-item-title">Growth Fuelers</div>
           <div class="whoweare-item-text">
-            SEO is nothing new, especially within the beauty industry. However,
-            it is an aspect of digital marketing that must constantly evolve to
+            SEO is an aspect of digital marketing that's constantly evolving to
             meet the needs of customers. Growth is essential for any business
-            that wants to stay afloat in today's competitive business landscape.
+            that wants to stay afloat in today's competitive landscape.
           </div>
         </div>
       </div>
@@ -77,10 +75,9 @@
           How We Make You Differentiable
         </div>
         <div class="whoweare-bottom-text">
-          So, you want to know how we make your business stand out against the
-          rest? We all know that SEO is a popular marketing strategy. However,
-          with so many different strategies out there, how do you know which is
-          the right one?
+          We all know that SEO is a popular marketing strategy. However, with so
+          many different strategies out there, how do you know which is the
+          right one?
         </div>
       </div>
       <div class="whoweare-bottom-right">

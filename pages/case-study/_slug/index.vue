@@ -2,36 +2,34 @@
 <template>
   <div>
     <!-- assign your video to the following class below -->
-    <div id="case-studies-section">
-      <div :style="backgroundPresets">
-        <!-- navbar put manually for customization -->
-        <app-navhome></app-navhome>
+    <div :style="backgroundPresets">
+      <!-- navbar put manually for customization -->
+      <app-navhome></app-navhome>
 
-        <!-- title and description -->
-        <section class="hero homepage container">
-          <div class="hero-body columns">
-            <!-- titles and resume button -->
-            <aside class="left column">
-              <!-- titles -->
-              <h1 class="bigtitle" :style="lighten">
-                {{ case_studies.title[0].text }}
-              </h1>
-            </aside>
-            <aside class="right column">
-              <!-- subtitles in description -->
-              <h2 class="subtitle" :style="lighten">
-                {{ case_studies.description[0].text }}
-              </h2>
-            </aside>
-          </div>
-        </section>
-      </div>
+      <!-- title and description -->
+      <section class="hero homepage container">
+        <div class="hero-body columns">
+          <!-- titles and resume button -->
+          <aside class="left column">
+            <!-- titles -->
+            <h1 class="bigtitle">
+              {{ case_studies.title[0].text }}
+            </h1>
+          </aside>
+          <aside class="right column">
+            <!-- subtitles in description -->
+            <h2 class="subtitle">
+              {{ case_studies.description[0].text }}
+            </h2>
+          </aside>
+        </div>
+      </section>
     </div>
 
     <div class="container">
       <section class="columns is-centered is-multiline study">
         <!-- Case Study -->
-        <article class="column is-8">
+        <article class="column is-7">
           <!-- Blog Content (lazy load dynamic HTML) -->
           <div
             v-html="
@@ -44,7 +42,6 @@
           ></div>
 
           <!-- audit and CTA at end of case study -->
-          <app-audit></app-audit>
           <app-bookcall></app-bookcall>
         </article>
       </section>
@@ -59,10 +56,9 @@ import gql from 'graphql-tag'
 
 import BookCall from '@/components/BookCall.vue'
 import NavHome from '@/components/NavHome.vue'
-import Audit from "@/components/homepage/Audit.vue";
 
 // blog post query
-const currentStudy = gql`
+const currentPost = gql`
   query case_studies($uid: String!) {
     case_studies(uid: $uid, lang: "en-us") {
       title
@@ -84,8 +80,7 @@ export default {
   layout: 'case-study',
   components: {
     'app-bookcall': BookCall,
-    'app-navhome': NavHome,
-    'app-audit': Audit
+    'app-navhome': NavHome
   },
 
   data() {
@@ -130,7 +125,7 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath + '/'
+          content: 'https://markperez.dev.dev' + this.$route.fullPath + '/'
         },
         {
           hid: 'og:image', // open graph image
@@ -157,7 +152,6 @@ export default {
 
     backgroundPresets() {
       return {
-        overflow: 'hidden',
         background:
           'linear-gradient(360deg,' +
           this.convertHex(this.case_studies.theme) +
@@ -181,7 +175,7 @@ export default {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://markperez.dev' + this.$route.fullPath + '/'
+          '@id': 'https://markperez.dev.dev' + this.$route.fullPath + '/'
         },
         headline: this.case_studies.title[0].text,
         description: this.case_studies.description[0].text,
@@ -195,7 +189,7 @@ export default {
           name: 'Mark Perez Digital',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://markperez.dev/mp-digital-logo-dark.png',
+            url: 'https://markperez.dev.dev/mp-digital-logo-dark.png',
             width: 169.66,
             height: 47.98
           }
@@ -208,7 +202,7 @@ export default {
 
   apollo: {
     case_studies: {
-      query: currentStudy,
+      query: currentPost,
 
       variables() {
         return {
@@ -261,7 +255,6 @@ aside.right {
 
 aside.right img {
   left: 50%;
-  transform: translateX(-50%);
 }
 
 .hero-body .column {

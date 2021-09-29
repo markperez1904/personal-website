@@ -8,6 +8,64 @@
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div
+                class="f_widget social-widget pl_70 wow fadeInLeft aligner"
+                data-wow-delay="0.8s"
+                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;"
+              >
+                <!-- <h3 class="f-title f_600 t_color f_size_18">Social Links</h3> -->
+                <div>
+                  <img
+                    class="logo"
+                    src="~static/mp-digital-logo-dark.png"
+                    alt="Mark Perez Digital"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget about-widget pl_70 wow fadeInLeft aligner"
+                data-wow-delay="0.4s"
+                style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;"
+              >
+                <h3 class="f-title f_600 t_color f_size_18">Menu</h3>
+                <ul class="list-unstyled f_list leftism">
+                  <li>
+                    <n-link to="/about/">About Us</n-link>
+                  </li>
+                  <li>
+                    <n-link to="/case-study/">Case Studies</n-link>
+                  </li>
+                  <li>
+                    <n-link to="/audit/">Free Audit</n-link>
+                  </li>
+                  <li>
+                    <n-link to="/contact/">Contact</n-link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="f_widget about-widget pl_70 wow fadeInLeft aligner"
+                data-wow-delay="0.6s"
+                style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;"
+              >
+                <h3 class="f-title f_600 t_color f_size_18">Legal</h3>
+                <ul class="list-unstyled f_list leftism">
+                  <li>
+                    <n-link to="/terms/">Terms of Service</n-link>
+                  </li>
+                  <li>
+                    <n-link to="/privacy/">Privacy Policy</n-link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div
                 class="f_widget company_widget wow fadeInLeft aligner"
                 data-wow-delay="0.2s"
                 style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;"
@@ -53,97 +111,6 @@
                   <p class="mchimp-errmessage" style="display: none;"></p>
                   <p class="mchimp-sucmessage" style="display: none;"></p>
                 </form>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div
-                class="f_widget about-widget pl_70 wow fadeInLeft aligner"
-                data-wow-delay="0.4s"
-                style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;"
-              >
-                <h3 class="f-title f_600 t_color f_size_18">Menu</h3>
-                <ul class="list-unstyled f_list leftism">
-                  <li><n-link to="/blog/">Blog</n-link></li>
-                  <li><n-link to="/gear/">Gear</n-link></li>
-                  <li>
-                    <n-link to="/contact/">Contact</n-link>
-                  </li>
-                  <li>
-                    <n-link to="/case-study/">Case Studies</n-link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div
-                class="f_widget about-widget pl_70 wow fadeInLeft aligner"
-                data-wow-delay="0.6s"
-                style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;"
-              >
-                <h3 class="f-title f_600 t_color f_size_18">Legal</h3>
-                <ul class="list-unstyled f_list leftism">
-                  <li>
-                    <n-link to="/terms/">Terms of Service</n-link>
-                  </li>
-                  <li>
-                    <n-link to="/privacy/">Privacy Policy</n-link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div
-                class="f_widget social-widget pl_70 wow fadeInLeft aligner"
-                data-wow-delay="0.8s"
-                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;"
-              >
-                <h3 class="f-title f_600 t_color f_size_18">Social Links</h3>
-                <div>
-                  <!-- YouTube -->
-                  <a
-                    href="https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w/videos"
-                    target="_blank"
-                    aria-label="youtube"
-                    rel="noopener"
-                  >
-                    <i class="icon-youtube"></i>
-                  </a>
-
-                  <!-- Odysee (LBRY) -->
-                  <a
-                    href="https://odysee.com/@markster1904:7"
-                    target="_blank"
-                    aria-label="odysee"
-                    rel="noopener"
-                  >
-                    <i class="icon-odysee"></i>
-                  </a>
-
-                  <!-- GitHub -->
-                  <a
-                    href="https://github.com/markperez1904"
-                    target="_blank"
-                    aria-label="github"
-                    rel="noopener"
-                  >
-                    <i class="icon-github"></i>
-                  </a>
-
-                  <!-- Paypal -->
-                  <!-- <a
-                    href="https://www.paypal.com/paypalme2/markperez1904"
-                    target="_blank"
-                    aria-label="paypal"
-                    rel="noopener"
-                  >
-                    <i class="icon-paypal"></i>
-                  </a> -->
-                </div>
-                <img
-                  class="logo"
-                  src="~static/mp-digital-logo-dark.png"
-                  alt="Mark Perez Digital"
-                />
               </div>
             </div>
           </div>

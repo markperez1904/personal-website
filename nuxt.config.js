@@ -1,4 +1,4 @@
-import { linkages } from "./plugins/apollo"
+import { linkages } from './plugins/apollo'
 
 export default {
   // full static mode (as of v2.14.0): https://nuxtjs.org/blog/going-full-static/
@@ -48,9 +48,11 @@ export default {
 
     script: [
       {
+        type: 'text/javascript',
         src: 'https://code.jquery.com/jquery-3.6.0.min.js'
       },
       {
+        type: 'text/javascript',
         src:
           'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'
       },

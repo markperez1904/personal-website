@@ -5,15 +5,13 @@
   >
     <div class="request-wrap">
       <div class="request-title">
-        Want To Be Our Next Success Story?
+        Want to be our next success story?
       </div>
-      <div class="request-text">
-        You probably don't want to read this. You probably want everything
-        handed to you on a silver platter with your name already spelled out in
-        glittery letters. But don't worry, we're not like other agencies (though
-        we do love the sparkly things). Instead of telling you what we can do
-        for you and how much better we are than everyone else, we'd rather just
-        show you. Because that's what it's really all about anyway, right?
+      <div class="request-text container">
+        This isn't a sales pitch - don't you worry. But we're not like other
+        agencies (though we do love the sparkly things). Instead, we'd rather
+        just show you our strategies because that's what it's really all about
+        anyway, right?
       </div>
       <div class="request-button">
         <!-- call button -->
@@ -39,13 +37,12 @@ a {
 }
 .request-wrap {
   height: auto;
-  background-color: #2f485d;
   border-radius: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 30px;
   overflow: hidden;
-  background-image: url('~/assets/svg/proposal.svg');
+  background: linear-gradient(#2f485d, #1b3246);
   background-size: auto auto;
 }
 
@@ -68,7 +65,7 @@ a {
 }
 
 .request-button {
-  width: auto%;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;

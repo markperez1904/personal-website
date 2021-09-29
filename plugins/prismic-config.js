@@ -2,9 +2,6 @@ import PrismicDOM from 'prismic-dom'
 
 const Elements = PrismicDOM.RichText.Elements
 
-// marks article API
-export const apiEndpoint = 'https://marks-personal-website.prismic.io/graphql'
-
 // Fetch the link resolver
 export const linkResolver = doc => {
   if (doc.type === 'blog_posts') return `/blog/${doc.uid}`
@@ -63,15 +60,19 @@ export const htmlSerializer = (type, element, content, children) => {
       return `<h2>${children.join('')}</h2>`
 
     case Elements.heading3:
-      return `<h3 style="margin-bottom: 1.5rem; font-size: 22px; letter-spacing: 1px; font-weight: bold">${children.join(
+      return `<h3 style="margin-bottom: 1.5rem; font-size: 26px; letter-spacing: 1px; font-weight: bold">${children.join(
         ''
       )}</h3>`
 
     case Elements.heading4:
-      return `<h4>${children.join('')}</h4>`
+      return `<h4 style="margin-bottom: 1.5rem; font-size: 22px; letter-spacing: 1px; font-weight: bold">${children.join(
+        ''
+      )}</h4>`
 
     case Elements.heading5:
-      return `<h5>${children.join('')}</h5>`
+      return `<h5 style="margin-bottom: 1.5rem; font-size: 19px; letter-spacing: 1px; font-weight: bold">${children.join(
+        ''
+      )}</h5>`
 
     case Elements.heading6:
       return `<h6>${children.join('')}</h6>`

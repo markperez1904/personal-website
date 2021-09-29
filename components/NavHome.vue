@@ -27,17 +27,17 @@
         <!-- Navbar Menu -->
         <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
           <div @click="showNav = !showNav" class="navbar-end">
-            <n-link :style="changeColor" class="navbar-item" to="/blog/"
-              >Blog</n-link
-            >
-            <n-link :style="changeColor" class="navbar-item" to="/gear/"
-              >Gear</n-link
-            >
-            <n-link :style="changeColor" class="navbar-item" to="/contact/"
-              >Contact</n-link
+            <n-link :style="changeColor" class="navbar-item" to="/about/"
+              >About Us</n-link
             >
             <n-link :style="changeColor" class="navbar-item" to="/case-study/"
               >Case Studies</n-link
+            >
+            <n-link :style="changeColor" class="navbar-item" to="/audit/"
+              >Free Audit</n-link
+            >
+            <n-link :style="changeColor" class="navbar-item" to="/contact/"
+              >Contact</n-link
             >
             <a
               class="navbar-item"

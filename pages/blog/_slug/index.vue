@@ -4,22 +4,6 @@
     <section class="columns is-centered is-multiline">
       <!-- Blog Post -->
       <article class="column is-7">
-        <!-- 1st ClickBank Banner -->
-        <figure class="banner">
-          <a
-            href="http://mperez1904.viddyoze.hop.clickbank.net"
-            target="_blank"
-            rel="noopener"
-            aria-label="viddyoze software"
-          >
-            <img
-              class="box banner-image"
-              src="~assets/images/viddyoze-banner.jpg"
-              alt="Automated Video Animation Software"
-            />
-          </a>
-        </figure>
-
         <!-- Title, Date, and Description -->
         <h1>{{ blog_posts.title[0].text }}</h1>
         <p class="date">
@@ -48,22 +32,6 @@
             )
           "
         ></div>
-
-        <!-- 1st ClickBank Banner -->
-        <figure class="banner">
-          <a
-            href="http://mperez1904.abdo120.hop.clickbank.net/"
-            target="_blank"
-            rel="noopener"
-            aria-label="vidtoon software"
-          >
-            <img
-              class="box banner-image"
-              src="~assets/images/vidtoon-banner.jpg"
-              alt="2D Cartoon Animation Software"
-            />
-          </a>
-        </figure>
 
         <!-- Disqus Comment Section -->
         <div class="comments">
@@ -126,39 +94,9 @@ export default {
       title: this.blog_posts.title[0].text,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
-          content: this.blog_posts.description[0].text
-        },
-        {
-          hid: 'og:type', // open graph type
-          property: 'og:type',
-          content: 'article'
-        },
-        {
-          hid: 'apple-mobile-web-app-title', // open graph mobile web app title
-          name: 'apple-mobile-web-app-title',
-          content: this.blog_posts.title[0].text
-        },
-        {
-          hid: 'og:title', // open graph title
-          property: 'og:title',
-          content: this.blog_posts.title[0].text
-        },
-        {
-          hid: 'og:description', // open graph description
-          property: 'og:description',
-          content: this.blog_posts.description[0].text
-        },
-        {
-          hid: 'og:url', // open graph url
-          property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath + '/'
-        },
-        {
-          hid: 'og:image', // open graph image
-          property: 'og:image',
-          content: this.blog_posts.image.url
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex,noarchive,nofollow'
         }
       ],
 
@@ -223,8 +161,7 @@ export default {
           name: 'Mark Perez Digital',
           logo: {
             '@type': 'ImageObject',
-            url:
-              'https://markperez.dev/mp-digital-logo-dark.png',
+            url: 'https://markperez.dev/mp-digital-logo-dark.png',
             width: 169.66,
             height: 47.98
           }

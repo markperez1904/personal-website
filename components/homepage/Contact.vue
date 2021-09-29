@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="contactus-right">
-      <div class="contactus-title">Business Audit</div>
+      <!-- <div class="contactus-title">Business Audit</div> -->
 
       <!-- Email API form submission -->
       <form
@@ -20,7 +20,7 @@
         <input
           class="contactus-name"
           name="name"
-          placeholder="Full Name"
+          placeholder="Full Name*"
           type="text"
           aria-label="full name"
           required
@@ -30,19 +30,9 @@
         <input
           class="contactus-email"
           name="email"
-          placeholder="email"
+          placeholder="Email*"
           type="text"
           aria-label="email address"
-          required
-        />
-
-        <!-- Company name -->
-        <input
-          class="contactus-name"
-          name="company"
-          placeholder="Company"
-          type="text"
-          aria-label="company"
           required
         />
 
@@ -50,15 +40,23 @@
         <input
           class="contactus-name"
           name="website"
-          placeholder="Website"
+          placeholder="Website*"
           type="text"
           aria-label="website"
           required
         />
 
+        <textarea
+          class="contactus-text"
+          name="message"
+          placeholder="What is it you need help with?*"
+          aria-label="message"
+          required
+        ></textarea>
+
         <!-- Submit -->
         <button class="contactus-buton button is-rounded" type="submit">
-          Request Audit
+          Submit
         </button>
       </form>
     </div>
@@ -121,7 +119,7 @@ button {
 
 .contactus-text {
   width: 100%;
-  height: 192px;
+  height: 250px;
   border-radius: 5px;
   background-color: #edf2f7;
   border: 1px solid #dbdbdb;
@@ -139,7 +137,7 @@ button {
   color: #626262;
   font-weight: 300;
   text-align: left;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .contactus-email::placeholder {
   font-size: 20px;

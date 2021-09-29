@@ -3,11 +3,10 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 
 import gql from 'graphql-tag'
-import { apiEndpoint } from './prismic-config'
 
 const client = new ApolloClient({
   link: PrismicLink({
-    uri: apiEndpoint
+    uri: 'https://marks-personal-website.prismic.io/graphql'
   }),
   defaultHttpLink: false,
   cache: new InMemoryCache()
@@ -35,7 +34,8 @@ export const linkages = () => {
       return res.data._allDocuments.edges.map(posts => {
         if (posts.node._meta.type === 'blog_posts')
           return '/blog/' + posts.node._meta.uid
-        else return '/case-study/' + posts.node._meta.uid
+        else if (posts.node._meta.type === 'case_studies')
+          return '/case-study/' + posts.node._meta.uid
       })
     })
 }

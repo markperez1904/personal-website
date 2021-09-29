@@ -55,11 +55,11 @@
             <a :href="`/case-study/${post.node._meta.uid}/`">
               <img
                 class="post-image"
-                :src="post.node.image.url"
-                :alt="post.node.image.alt"
+                :src="post.node.results.url"
+                :alt="post.node.results.alt"
               />
-              <p class="study-title is-6">{{ post.node.title[0].text }}</p>
             </a>
+            <p class="study-title is-6">{{ post.node.title[0].text }}</p>
           </article>
         </section>
       </transition>
@@ -86,7 +86,6 @@
     </div>
 
     <!-- component apps -->
-    <app-audit></app-audit>
     <app-bookcall></app-bookcall>
   </div>
 </template>
@@ -94,7 +93,7 @@
 <script>
 import BookCall from '@/components/BookCall.vue'
 import NavHome from '@/components/NavHome.vue'
-import Audit from '@/components/homepage/Audit.vue'
+import Contact from '@/components/homepage/Contact.vue'
 
 import gql from 'graphql-tag'
 
@@ -116,7 +115,7 @@ const studies = gql`
       edges {
         node {
           title
-          image
+          results
           _meta {
             uid
             id
@@ -186,7 +185,7 @@ export default {
   components: {
     'app-bookcall': BookCall,
     'app-navhome': NavHome,
-    'app-audit': Audit
+    'app-contact': Contact
   },
 
   apollo: {
@@ -291,7 +290,7 @@ button {
 
 /* styling for hero of title and description */
 aside {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 aside.left {

@@ -1,85 +1,63 @@
 <template>
   <div>
+    <!-- other stuff -->
     <!-- assign your video to the following class below -->
-    <div id="navbar-and-content">
+    <div id="case-studies-section">
       <!-- navbar put manually for customization -->
       <app-navhome></app-navhome>
 
       <!-- main background image -->
-      <section class="hero is-fullheight container">
+      <section class="hero homepage container">
         <div class="hero-body columns">
           <!-- titles and resume button -->
           <aside class="left column">
             <!-- titles -->
-            <h1 class="title">
-              SEO for<br />
-              <vue-typer
-                :text="['Beauty Salons', 'Skincare Brands', 'Med Spas']"
-                :repeat="Infinity"
-                :shuffle="false"
-                initial-action="typing"
-                :pre-type-delay="70"
-                :type-delay="70"
-                :pre-erase-delay="2000"
-                :erase-delay="250"
-                erase-style="select-all"
-                :erase-on-complete="false"
-                caret-animation="blink"
-              ></vue-typer>
-            </h1>
+            <h1 class="bigtitle">{{ title }}</h1>
 
-            <!-- subtitle: description of MP Digital -->
+            <!-- subtitles with vue-typer -->
             <h2 class="subtitle">
-              Get your beauty and cosmetic services in front of your target
-              audience with SEO services that specifically cater to the needs of
-              customers.
+              {{ description }}
             </h2>
-
-            <!-- call button -->
-            <a
-              target="_blank"
-              href="https://calendly.com/info-30250/discovery-call"
-              id="call-link"
-            >
-              <button class="button is-rounded call-button">Book a Call</button>
-            </a>
           </aside>
-          <aside class="right column">
-            <img class="mainpng" src="~/assets/svg/mainsvg.svg" alt="spec" />
+
+          <!-- right-side column -->
+          <aside class="right column auditor">
+            <div id="roboaudit"></div>
+            <script
+              id="growthrobo"
+              src="https://cdn.siteauditor.com/assets/site/js/v2.sitecheck.js"
+              data-content="7382"
+            ></script>
+            <div id="growthembed" data-content="7382"></div>
           </aside>
         </div>
       </section>
     </div>
 
-    <!-- multiple components -->
-    <home-numbers></home-numbers>
-    <home-whoweare></home-whoweare>
-    <home-homeblocks></home-homeblocks>
+    <!-- component apps -->
     <app-stories></app-stories>
     <app-bookcall></app-bookcall>
   </div>
 </template>
 
 <script>
-// from mark
-import Stories from '@/components/Stories.vue'
-import NavHome from '@/components/NavHome.vue'
 import BookCall from '@/components/BookCall.vue'
-import Contact from '@/components/homepage/Contact.vue'
-
-// from freelancer
-import Numbers from '@/components/homepage/Numbers.vue'
-import AboutUs from '@/components/homepage/AboutUs.vue'
-import HomeBlocks from '@/components/homepage/HomeBlocks.vue'
-import WhoWeAre from '@/components/homepage/WhoWeAre.vue'
+import NavHome from '@/components/NavHome.vue'
+import Stories from '@/components/Stories.vue'
 
 export default {
-  layout: 'homepage',
+  layout: 'case-study',
+  components: {
+    'app-bookcall': BookCall,
+    'app-navhome': NavHome,
+    'app-stories': Stories
+  },
+
   data() {
     return {
-      title: 'SEO for Beauty Brands',
+      title: 'SEO Audit',
       description:
-        'MP Digital is a well-versed SEO Agency empowering beauty salons to be 1st-choice within their region.'
+        'Want to see the issues yourself? Our free SEO Audit shows unbiased results in real-time, reported here & to your inbox.'
     }
   },
 
@@ -115,35 +93,48 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath
+          content: 'https://markperez.dev' + this.$route.fullPath + '/'
         },
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
           content: 'https://markperez.dev/mp-digital-logo-dark.png'
         }
-      ]
+      ],
+      __dangerouslyDisableSanitizers: ['script']
     }
-  },
-
-  components: {
-    'app-stories': Stories,
-    'app-navhome': NavHome,
-    'app-bookcall': BookCall,
-    'app-contact': Contact,
-
-    'home-numbers': Numbers,
-    'home-aboutus': AboutUs,
-    'home-homeblocks': HomeBlocks,
-    'home-whoweare': WhoWeAre
   }
 }
 </script>
 
-<style scoped>
-/* https://github.com/cngu/vue-typer/issues/45 for reference */
-::v-deep .typed {
-  color: #fff !important;
+<style>
+/* styling for seo audit forms */
+#case-studies-section {
+  background: linear-gradient(135deg, #005d42, #17ffbe);
+}
+
+#roboaudit .sf-cnt-embed {
+  width: 50vw;
+}
+
+#roboaudit * {
+  font-family: 'Oxygen', sans-serif;
+  line-height: unset !important;
+}
+
+#roboaudit .sf-cnt-form .btn {
+  width: auto !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 10px !important;
+}
+
+.auditor {
+  flex-direction: unset !important;
+}
+
+.searchbar {
+  margin-top: 5rem !important;
 }
 
 .call-button:hover {
@@ -155,14 +146,6 @@ export default {
   width: 100%;
 }
 
-.hero-body .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-}
-
 button {
   font-size: 20px;
   letter-spacing: 1px;
@@ -172,8 +155,9 @@ button {
   z-index: 3;
 }
 
+/* styling for hero of title and description */
 aside {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 aside.left {
@@ -198,15 +182,15 @@ aside.right img {
   transform: translateX(-50%);
 }
 
-#navbar-and-content {
-  background: linear-gradient(135deg, #005d42, #17ffbe);
+.hero-body .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
 }
 
-.is-fullheight {
-  min-height: calc(100vh - 6rem);
-}
-
-.title {
+.bigtitle {
   font-size: 65px;
   color: #ffffff;
   letter-spacing: 4px;
@@ -226,7 +210,7 @@ aside.right img {
 }
 
 @media only screen and (max-width: 1500px) {
-  .title {
+  .bigtitle {
     font-size: 55px;
   }
   .subtitle {
@@ -244,7 +228,7 @@ aside.right img {
     align-items: center;
     flex-direction: column;
   }
-  .title {
+  .bigtitle {
     font-size: 45px;
     margin: 0;
     padding: 0;
@@ -255,7 +239,7 @@ aside.right img {
   }
   .subtitle {
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
     width: 100%;
     line-height: 20px;
     z-index: 3;
@@ -272,12 +256,20 @@ aside.right img {
   }
 
   aside.right {
-    /* width: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
-    width: 50vh !important;
+    /* width: 50vh !important; */
+  }
+}
+@media only screen and (max-width: 768px) {
+  #roboaudit .form-control {
+    font-size: 16px !important;
+  }
+
+  #roboaudit .sf-cnt-form .form-control {
+    height: 4vh !important;
   }
 }
 
@@ -285,8 +277,8 @@ aside.right img {
   .hero-body {
     padding: 0px 1.5rem;
   }
-  .title {
-    font-size: 25px;
+  .bigtitle {
+    font-size: 35px;
   }
   .subtitle {
     font-size: 16px;
@@ -309,7 +301,7 @@ aside.right img {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    width: 40vh !important;
+    /* width: 40vh !important; */
   }
   aside.right img {
     position: relative;

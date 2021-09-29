@@ -99,7 +99,7 @@ export default {
     return {
       title: 'Blog',
       description:
-        'Welcome to our blog. Browse through a streamline of tech tutorials that suits your needs.',
+        'Welcome to our tech blog. Within our spare time, we enjoy making videos and helping people',
 
       loading: 0,
       color: '#00c58e',
@@ -112,40 +112,9 @@ export default {
       title: this.title,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
-          content: this.description
-        },
-        {
-          hid: 'og:type', // open graph type
-          property: 'og:type',
-          content: 'blog'
-        },
-        {
-          hid: 'apple-mobile-web-app-title', // open graph mobile web app title
-          name: 'apple-mobile-web-app-title',
-          content: this.title
-        },
-        {
-          hid: 'og:title', // open graph title
-          property: 'og:title',
-          content: this.title
-        },
-        {
-          hid: 'og:description', // open graph description
-          property: 'og:description',
-          content: this.description
-        },
-        {
-          hid: 'og:url', // open graph url
-          property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath + '/'
-        },
-        {
-          hid: 'og:image', // open graph image
-          property: 'og:image',
-          content:
-            'https://markperez.dev/mp-digital-logo-dark.png'
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex,noarchive,nofollow'
         }
       ]
     }

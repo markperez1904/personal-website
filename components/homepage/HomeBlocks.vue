@@ -12,10 +12,9 @@
       </div>
       <div class="homeblocks-item-title">Future Vision</div>
       <div class="homeblocks-item-text">
-        What if you could see the future of beauty and skincare today? By using
-        SEO services to your advantage, we can help expand your presence within
-        the online space to create a better customer service experience for
-        potential customers searching for salons.
+        We can help expand your presence within the online space to create a
+        better customer service experience for potential customers searching for
+        salons.
       </div>
     </div>
     <div
@@ -30,10 +29,8 @@
       </div>
       <div class="homeblocks-item-title">Boost Campaign</div>
       <div class="homeblocks-item-text">
-        When you're a beauty salon or med spa, it can be difficult to compete
-        with other local area businesses for web rankings via search engines. By
-        using our curated services that are targeted to the needs of salons and
-        spas, your business can get ahead of its competitors by expanding
+        By using our curated services that are targeted to the needs of salons
+        and spas, your business can get ahead of its competitors by expanding
         online.
       </div>
     </div>
@@ -49,11 +46,9 @@
       </div>
       <div class="homeblocks-item-title">Inovative Solutions</div>
       <div class="homeblocks-item-text">
-        We are a team of beauty and skincare insiders with extensive knowledge
-        of the industry. Our aim is to help you get your products in front of
-        your target audience by matching you with experienced beauty and
-        skincare team. We pride ourselves on personalized services so each
-        client gets the assistance they deserve.
+        Our mission is to help you get your services in front of your target
+        audience. We pride ourselves on personalized services so each client
+        gets the assistance they deserve.
       </div>
     </div>
   </div>

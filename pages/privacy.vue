@@ -182,12 +182,13 @@
       services must do to protect children&rsquo;s privacy and safety online.
     </p>
     <h3>
-      We do not specifically market to children under the age of 13 years old.
+      Do we let third-parties, including ad networks or plug-ins collect PII
+      from children under 13?
     </h3>
     <p>
-      Do we let third-parties, including ad networks or plug-ins collect PII
-      from children under 13
+      We do not specifically market to children under the age of 13 years old.
     </p>
+
     <h3>Fair Information Practices</h3>
     <p>
       The Fair Information Practices Principles form the backbone of privacy law

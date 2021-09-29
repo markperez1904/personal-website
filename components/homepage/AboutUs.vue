@@ -1,26 +1,141 @@
 <template>
-  <div class="about-us container v-scroll-reveal" v-scroll-reveal.reset>
-    <div class="about-us-img">
-      <img src="~/assets/svg/aboutus.svg" alt="about-us" />
-    </div>
-    <div class="about-us-info">
-      <div class="about-us-h1">About Us</div>
+  <div class="main-page">
+    <!-- 1st section -->
+    <div class="about-us container">
+      <!-- column -->
+      <div class="about-us-info">
+        <div class="about-us-h1">About Us</div>
 
-      <div class="about-us-text">
-        MP Digital is a worldwide leader in SEO and digital marketing. We
-        provide industry-leading services to both local and national businesses,
-        helping them expand and thrive within the competitive online space. As
-        we continue to grow our personal brand we strive to maintain our honest
-        values of providing top notch customer service and continuing education
-        for all team members. Our team works diligently every day to bring you the
-        very best results possible. We are constantly learning new techniques to
-        assist your company's website with its development, which ultimately
-        drives traffic back to your business' webpage(s).
+        <div class="about-us-text">
+          <p>
+            MP Digital is a worldwide leader in SEO and digital marketing. We
+            provide industry-leading services to both local and national
+            businesses, helping them expand and thrive within the competitive
+            online space. As we continue to grow our personal brand we strive to
+            maintain our honest values of providing top notch customer service
+            and continuing education for all team members. Our team works
+            diligently every day to bring you the very best results possible. We
+            are constantly learning new techniques to assist your company's
+            website with its development, which ultimately drives traffic back
+            to your business' webpage(s).
+          </p>
+        </div>
+      </div>
+
+      <!-- column -->
+      <div class="about-us-img">
+        <img src="~/assets/svg/aboutus.svg" alt="about-us" />
+      </div>
+    </div>
+
+    <!-- 2nd section -->
+    <div class="about-us second-sec">
+      <!-- column -->
+      <div class="about-us-img" :style="centerism">
+        <img
+          class="founder"
+          src="~/assets/images/mark-portrait.png"
+          alt="about-us"
+        />
+      </div>
+
+      <!-- column -->
+      <div class="about-us-info container">
+        <div class="about-us-h1">Meet the Founder</div>
+
+        <p class="info">
+          With an extensive background centered around entrepreneurship, Mark
+          has over 5+ years of experience in the PaaS, marketing, and
+          advertising industry - bringing unique and innovative perspectives as
+          an online professional to B2C & B2B companies.
+        </p>
+        <br />
+        <p class="info">
+          When he isn't working with his clients on new projects, he can be
+          found jogging around his hometown, or uncovering the latest gadget
+          trends on his
+          <n-link to="/blog/" :style="bolden">personal blog</n-link>.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3rd section -->
+    <div class="about-us container">
+      <!-- column -->
+      <div class="about-us-info">
+        <div class="about-us-h1">Enough about us, what about you?</div>
+
+        <p class="info">
+          Do you want to see how your website could be performing better in
+          search engines? Of course you do! And thanks to our free SEO Auditor,
+          you can! We study your website and provide a range of recommendations
+          to help you on your way.
+        </p>
+
+        <button class="button cta" :style="cta">
+          <n-link to="/audit/" :style="lighten">Free SEO Audit</n-link>
+        </button>
+      </div>
+
+      <!-- column -->
+      <div class="about-us-img" :style="centerism">
+        <img
+          class="auditor"
+          src="~/assets/svg/client-focus.svg"
+          alt="about-us"
+        />
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    centerism() {
+      return {
+        textAlign: 'center'
+      }
+    },
+    bolden() {
+      return {
+        fontWeight: 'bold'
+      }
+    },
+    cta() {
+      return {
+        backgroundColor: '#00c58e'
+      }
+    },
+    lighten() {
+      return {
+        color: '#ffffff'
+      }
+    }
+  }
+}
+</script>
+
 <style scoped>
+.founder {
+  width: 60%;
+}
+
+.auditor {
+  width: 80%;
+}
+
+.info {
+  font-size: 18px;
+  line-height: 30px;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.second-sec {
+  background: linear-gradient(180deg, rgba(255, 255, 255), rgb(237, 255, 239));
+}
+
 .about-us {
   padding-top: 40px;
   display: flex;
@@ -85,6 +200,9 @@
     font-size: 16px;
     text-align: center;
     padding: 0 20px;
+  }
+  .cta {
+    margin-bottom: 2rem;
   }
 }
 </style>
