@@ -63,8 +63,8 @@ export default {
           '@type': 'Organization',
           name: 'Mark Perez Digital',
           alternateName: 'MP Digital',
-          url: 'https://markperez.dev/',
-          logo: 'https://markperez.dev/mp-digital-logo-dark.png',
+          url: 'https://mpdigital.org/',
+          logo: 'https://mpdigital.org/mp-digital-logo-dark.png',
           email: 'info@markperez.dev',
           sameAs: [
             'https://www.youtube.com/channel/UCCZ1Yo4NOdWW03jamsNFA8w',
@@ -132,7 +132,7 @@ export default {
 
   // generate sitemap.xml for Search Console
   sitemap: {
-    hostname: 'https://markperez.dev',
+    hostname: 'https://mpdigital.org',
     routes: linkages,
     trailingSlash: true
   },
@@ -143,7 +143,7 @@ export default {
 
     Disallow: () => ['/thanks/', '/200.html', '/README.md', '/blog/'],
 
-    Sitemap: 'https://markperez.dev/sitemap.xml'
+    Sitemap: 'https://mpdigital.org/sitemap.xml'
   },
 
   // purge unnecessary CSS

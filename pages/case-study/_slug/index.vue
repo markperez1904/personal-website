@@ -125,7 +125,7 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev.dev' + this.$route.fullPath + '/'
+          content: 'https://mpdigital.org' + this.$route.fullPath + '/'
         },
         {
           hid: 'og:image', // open graph image
@@ -175,7 +175,7 @@ export default {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://markperez.dev.dev' + this.$route.fullPath + '/'
+          '@id': 'https://mpdigital.org' + this.$route.fullPath + '/'
         },
         headline: this.case_studies.title[0].text,
         description: this.case_studies.description[0].text,
@@ -189,7 +189,7 @@ export default {
           name: 'Mark Perez Digital',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://markperez.dev.dev/mp-digital-logo-dark.png',
+            url: 'https://mpdigital.org/mp-digital-logo-dark.png',
             width: 169.66,
             height: 47.98
           }

@@ -115,12 +115,12 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath
+          content: 'https://mpdigital.org' + this.$route.fullPath
         },
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content: 'https://markperez.dev/mp-digital-logo-dark.png'
+          content: 'https://mpdigital.org/mp-digital-logo-dark.png'
         }
       ]
     }
