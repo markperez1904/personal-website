@@ -8,16 +8,14 @@
 
         <div class="about-us-text">
           <p>
-            MP Digital is a worldwide leader in SEO and digital marketing. We
-            provide industry-leading services to both local and national
+            MP Digital is an inclusive group in SEO and marketing professionals.
+            We provide industry-leading services to both local and national
             businesses, helping them expand and thrive within the competitive
-            online space. As we continue to grow our personal brand we strive to
-            maintain our honest values of providing top notch customer service
-            and continuing education for all team members. Our team works
-            diligently every day to bring you the very best results possible. We
-            are constantly learning new techniques to assist your company's
-            website with its development, which ultimately drives traffic back
-            to your business' webpage(s).
+            online space. As we continue to grow our personal brand, we strive
+            to maintain our honest values of providing top-notch customer
+            service and continuing education for all team members. Our team
+            works diligently to bring you the very best results possible. We are
+            constantly learning new techniques to assist your company's growth.
           </p>
         </div>
       </div>
@@ -41,7 +39,7 @@
 
       <!-- column -->
       <div class="about-us-info container">
-        <div class="about-us-h1">Meet the Founder</div>
+        <div class="about-us-h1">Meet the Team Lead</div>
 
         <p class="info">
           With an extensive background centered around entrepreneurship, Mark
