@@ -61,8 +61,8 @@ export default {
         innerHTML: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'Mark Perez Digital',
-          alternateName: 'MP Digital',
+          name: 'MP Digital',
+          alternateName: 'Mark Perez Digital',
           url: 'https://mpdigital.org/',
           logo: 'https://mpdigital.org/mp-digital-logo-dark.png',
           email: 'info@markperez.dev',

@@ -43,14 +43,14 @@
 
         <p class="info">
           With an extensive background centered around entrepreneurship, Mark
-          has over 5+ years of experience in the PaaS, marketing, and
+          has over 3+ years of experience in the PaaS, marketing, and
           advertising industry - bringing unique and innovative perspectives as
           an online professional to B2C & B2B companies.
         </p>
         <br />
         <p class="info">
           When he isn't working with his clients on new projects, he can be
-          found jogging around his hometown, or uncovering the latest gadget
+          found jogging around his hometown, or uncovering the latest software
           trends on his
           <n-link to="/blog/" :style="bolden">personal blog</n-link>.
         </p>

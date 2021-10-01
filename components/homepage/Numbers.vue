@@ -15,7 +15,7 @@
         <img src="~/assets/svg/rocket-ship.svg" alt="number" />
       </div>
       <div class="numbers-info">
-        <span class="numbers-number">40</span
+        <span class="numbers-number">30</span
         ><span class="numbers-plus">+</span>
       </div>
       <div class="sizer">Projects Completed</div>
@@ -25,7 +25,7 @@
         <img src="~/assets/svg/smiling.svg" alt="number" />
       </div>
       <div class="numbers-info">
-        <span class="numbers-number">25</span
+        <span class="numbers-number">15</span
         ><span class="numbers-plus">+</span>
       </div>
       <div class="sizer">Happy Clients</div>
@@ -35,7 +35,7 @@
         <img id="hand-shake" src="~/assets/svg/hand-shake.svg" alt="number"/>
       </div>
       <div class="numbers-info">
-        <span class="numbers-number">5</span
+        <span class="numbers-number">4</span
         ><span class="numbers-plus">+</span>
       </div>
       <div class="sizer">Partnerships</div>
