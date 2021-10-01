@@ -9,7 +9,7 @@
       </div>
       <div class="request-text container">
         This isn't a sales pitch - don't you worry. But we're not like other
-        agencies (though we do love the sparkly things). Instead, we'd rather
+        companies (though we do love the sparkly things). Instead, we'd rather
         just show you our strategies because that's what it's really all about
         anyway, right?
       </div>

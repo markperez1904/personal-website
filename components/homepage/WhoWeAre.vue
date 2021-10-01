@@ -37,7 +37,7 @@
           <div class="whoweare-item-text">
             When you're looking for credible beauty and cosmetic services, who
             do you turn to? Experienced professionals with proven track records.
-            Same thing with marketing agencies.
+            Same thing with marketing services.
           </div>
         </div>
         <div class="whoweare-item">
