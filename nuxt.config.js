@@ -20,7 +20,7 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'Mark Perez'
+        content: 'MP Digital'
       }
     ],
     // Link to Google Fonts and Website Image
