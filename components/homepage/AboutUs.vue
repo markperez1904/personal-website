@@ -51,8 +51,7 @@
         <p class="info">
           When he isn't working with his clients on new projects, he can be
           found jogging around his hometown, or uncovering the latest software
-          trends on his
-          <n-link to="/blog/" :style="bolden">personal blog</n-link>.
+          trends.
         </p>
       </div>
     </div>

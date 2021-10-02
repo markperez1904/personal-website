@@ -36,9 +36,9 @@
             <n-link :style="changeColor" class="navbar-item" to="/audit/"
               >Free Audit</n-link
             >
-            <n-link :style="changeColor" class="navbar-item" to="/contact/"
+            <!-- <n-link :style="changeColor" class="navbar-item" to="/contact/"
               >Contact</n-link
-            >
+            > -->
             <a
               class="navbar-item"
               target="_blank"

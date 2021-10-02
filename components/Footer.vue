@@ -6,13 +6,13 @@
       <div class="new_footer_top">
         <div class="container">
           <div class="row">
-            <!-- <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-8">
               <div
                 class="f_widget social-widget pl_70 wow fadeInLeft aligner"
                 data-wow-delay="0.8s"
                 style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;"
               >
-                <h3 class="f-title f_600 t_color f_size_18">Social Links</h3>
+                <!-- <h3 class="f-title f_600 t_color f_size_18">Social Links</h3> -->
                 <div>
                   <img
                     class="logo"
@@ -21,7 +21,7 @@
                   />
                 </div>
               </div>
-            </div> -->
+            </div>
 
             <div class="col-lg-4 col-md-8">
               <div
@@ -64,7 +64,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-8">
+            <!-- <div class="col-lg-4 col-md-8">
               <div
                 class="f_widget company_widget wow fadeInLeft aligner"
                 data-wow-delay="0.2s"
@@ -83,16 +83,16 @@
                   target="_blank"
                   novalidate
                 >
-                  <!-- email -->
-                  <input
+                  <!- email -->
+            <!-- <input
                     type="text"
                     name="EMAIL"
                     class="form-control memail"
                     placeholder="Email"
-                  />
+                  /> -->
 
-                  <!-- fake button for bots -->
-                  <div
+            <!-- fake button for bots -->
+            <!-- <div
                     style="position: absolute; left: -5000px;"
                     aria-hidden="true"
                   >
@@ -102,17 +102,17 @@
                       tabindex="-1"
                       value
                     />
-                  </div>
+                  </div> -->
 
-                  <!-- real sub button -->
-                  <button class="btn btn_get btn_get_two" type="submit">
+            <!-- real sub button -->
+            <!-- <button class="btn btn_get btn_get_two" type="submit">
                     Subscribe
                   </button>
                   <p class="mchimp-errmessage" style="display: none;"></p>
                   <p class="mchimp-sucmessage" style="display: none;"></p>
                 </form>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="footer_bg">

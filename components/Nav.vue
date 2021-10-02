@@ -30,7 +30,7 @@
             <n-link class="navbar-item" to="/about/">About Us</n-link>
             <n-link class="navbar-item" to="/case-study/">Case Studies</n-link>
             <n-link class="navbar-item" to="/audit/">Free Audit</n-link>
-            <n-link class="navbar-item" to="/contact/">Contact</n-link>
+            <!-- <n-link class="navbar-item" to="/contact/">Contact</n-link> -->
             <a
               class="navbar-item"
               target="_blank"
