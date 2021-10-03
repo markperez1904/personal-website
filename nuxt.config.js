@@ -102,7 +102,8 @@ export default {
     '@nuxtjs/google-adsense',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    'nuxt-purgecss'
+    'nuxt-purgecss',
+    'nuxt-facebook-pixel-module'
   ],
 
   // Keep Tracking ID private
@@ -116,6 +117,14 @@ export default {
     analyticsUacct: process.env.GOOGLE_ANALYTICS,
     includeQuery: true,
     pageLevelAds: true
+  },
+
+  // facebook ads - pixel
+  facebook: {
+    track: 'PageView',
+    pixelId: process.env.FACEBOOK_PIXEL,
+    autoPageView: true,
+    disabled: false
   },
 
   // Using apollo to query blog posts
