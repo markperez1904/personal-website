@@ -41,8 +41,7 @@
             > -->
             <a
               class="navbar-item"
-              target="_blank"
-              href="https://calendly.com/info-30250/discovery-call"
+              href="/book"
               ><button class="button is-rounded">Book a Call</button></a
             >
           </div>

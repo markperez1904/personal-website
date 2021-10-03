@@ -70,7 +70,7 @@
         </p>
 
         <button class="button cta" :style="cta">
-          <n-link to="/audit/" :style="lighten">Free SEO Audit</n-link>
+          <a href="/audit/" :style="lighten">Free SEO Audit</a>
         </button>
       </div>
 

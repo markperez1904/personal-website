@@ -103,7 +103,7 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     'nuxt-purgecss',
-    'nuxt-facebook-pixel-module'
+    // 'nuxt-facebook-pixel-module'
   ],
 
   // Keep Tracking ID private
@@ -120,12 +120,12 @@ export default {
   },
 
   // facebook ads - pixel
-  facebook: {
-    track: 'PageView',
-    pixelId: process.env.FACEBOOK_PIXEL,
-    autoPageView: true,
-    disabled: false
-  },
+  // facebook: {
+  //   track: 'PageView',
+  //   pixelId: process.env.FACEBOOK_PIXEL,
+  //   autoPageView: true,
+  //   disabled: false
+  // },
 
   // Using apollo to query blog posts
   apollo: {

@@ -17,8 +17,7 @@
         <!-- call button -->
         <button class="button is-rounded call-button">
           <a
-            target="_blank"
-            href="https://calendly.com/info-30250/discovery-call"
+            href="/book/"
             >Book a Call
           </a>
         </button>

@@ -43,6 +43,19 @@ iframe {
   padding: 0 2rem;
 }
 
+/* calendly embed */
+.calendly-inline-widget iframe {
+  height: 125vh !important;
+  width: 100% !important;
+}
+
+/* fix calendly on tablet/mobile */
+@media only screen and (max-width: 1216px) {
+  .calendly-inline-widget iframe {
+    height: 160vh !important; 
+  }
+}
+
 /* add box shadow on YouTube videos */
 .youtube-embed iframe {
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
