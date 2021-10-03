@@ -37,8 +37,7 @@
 
             <!-- call button -->
             <a
-              target="_blank"
-              href="https://calendly.com/info-30250/discovery-call"
+              href="/book/"
               id="call-link"
             >
               <button class="button is-rounded call-button">Book a Call</button>
