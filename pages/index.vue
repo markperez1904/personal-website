@@ -14,7 +14,7 @@
             <h1 class="title">
               SEO for<br />
               <vue-typer
-                :text="['Beauty Salons', 'Skincare Brands', 'Med Spas']"
+                :text="['Skincare Brands', 'Beauty Salons', 'Med Spas']"
                 :repeat="Infinity"
                 :shuffle="false"
                 initial-action="typing"
@@ -36,12 +36,9 @@
             </h2>
 
             <!-- call button -->
-            <a
-              href="/book/"
-              id="call-link"
-            >
+            <n-link to="/book/" id="call-link">
               <button class="button is-rounded call-button">Book a Call</button>
-            </a>
+            </n-link>
           </aside>
           <aside class="right column">
             <img class="mainpng" src="~/assets/svg/mainsvg.svg" alt="spec" />

@@ -39,10 +39,8 @@
             <!-- <n-link :style="changeColor" class="navbar-item" to="/contact/"
               >Contact</n-link
             > -->
-            <a
-              class="navbar-item"
-              href="/book"
-              ><button class="button is-rounded">Book a Call</button></a
+            <n-link class="navbar-item" to="/book/"
+              ><button class="button is-rounded">Book a Call</button></n-link
             >
           </div>
         </div>

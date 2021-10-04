@@ -1,9 +1,6 @@
 <template>
   <div class="homeblocks container ">
-    <div
-      class="homeblocks-item v-scroll-reveal"
-      v-scroll-reveal.reset="{ delay: 250 }"
-    >
+    <div class="homeblocks-item">
       <div class="homeblocks-item-overlay">
         <img src="~/assets/svg/target.svg" alt="target" />
       </div>
@@ -17,10 +14,7 @@
         salons.
       </div>
     </div>
-    <div
-      class="homeblocks-item active v-scroll-reveal"
-      v-scroll-reveal.reset="{ delay: 250 }"
-    >
+    <div class="homeblocks-item active">
       <div class="homeblocks-item-overlay">
         <img src="~/assets/svg/rocket-ship-over.svg" alt="rocket" />
       </div>
@@ -34,10 +28,7 @@
         online.
       </div>
     </div>
-    <div
-      class="homeblocks-item v-scroll-reveal"
-      v-scroll-reveal.reset="{ delay: 250 }"
-    >
+    <div class="homeblocks-item ">
       <div class="homeblocks-item-overlay">
         <img src="~/assets/svg/lamp.svg" alt="lamp" />
       </div>

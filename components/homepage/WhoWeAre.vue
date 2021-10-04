@@ -5,10 +5,7 @@
       <div class="item2"></div>
       <div class="item3"></div>
     </div>
-    <div
-      class="whoweare-top v-scroll-reveal"
-      v-scroll-reveal.reset="{ delay: 250 }"
-    >
+    <div class="whoweare-top ">
       <div class="whoweare-top-title">Who We Are</div>
     </div>
     <div class="whoweare-items">
@@ -25,10 +22,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="whoweare-center v-scroll-reveal"
-        v-scroll-reveal.reset="{ delay: 250 }"
-      >
+      <div class="whoweare-center ">
         <div class="whoweare-item">
           <div class="whoweare-item-img">
             <img src="~/assets/svg/star.svg" alt="star" />
@@ -52,10 +46,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="whoweare-center v-scroll-reveal"
-        v-scroll-reveal.reset="{ delay: 250 }"
-      >
+      <div class="whoweare-center ">
         <div class="whoweare-item">
           <div class="whoweare-item-img">
             <img src="~/assets/svg/star.svg" alt="star" />

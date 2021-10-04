@@ -1,5 +1,5 @@
 <template>
-  <div class="numbers container v-scroll-reveal" v-scroll-reveal.reset>
+  <div class="numbers container" >
     <div class="numbers-item">
       <div class="numbers-icon">
         <img src="~/assets/svg/sticker.svg" alt="number" />

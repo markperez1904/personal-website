@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="request container v-scroll-reveal"
-    v-scroll-reveal.reset="{ delay: 250 }"
-  >
+  <div class="request container ">
     <div class="request-wrap">
       <div class="request-title">
         Want to be our next success story?
@@ -16,10 +13,7 @@
       <div class="request-button">
         <!-- call button -->
         <button class="button is-rounded call-button">
-          <a
-            href="/book/"
-            >Book a Call
-          </a>
+          <n-link to="/book/">Book a Call </n-link>
         </button>
       </div>
     </div>
