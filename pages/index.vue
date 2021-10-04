@@ -73,14 +73,15 @@ export default {
   layout: 'homepage',
   data() {
     return {
-      title: 'SEO for Beauty Brands',
+      title: 'SEO Services for Beauty & Cosmetic Brands',
       description:
-        'MP Digital is a well-versed SEO Agency empowering beauty salons to be 1st-choice within their region.'
+        'MP Digital focuses on empowering skincare brands and local salons through Google.'
     }
   },
 
   head() {
     return {
+      titleTemplate: '',
       title: this.title,
       meta: [
         {
