@@ -51,7 +51,7 @@
     <home-numbers></home-numbers>
     <home-whoweare></home-whoweare>
     <home-homeblocks></home-homeblocks>
-    <app-stories></app-stories>
+    <!-- <app-stories></app-stories> -->
     <app-bookcall></app-bookcall>
   </div>
 </template>

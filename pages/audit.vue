@@ -35,7 +35,7 @@
     </div>
 
     <!-- component apps -->
-    <app-stories></app-stories>
+    <!-- <app-stories></app-stories> -->
     <app-bookcall></app-bookcall>
   </div>
 </template>
