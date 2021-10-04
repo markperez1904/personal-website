@@ -150,7 +150,7 @@ export default {
   robots: {
     UserAgent: '*',
 
-    Disallow: () => ['/thanks/', '/200.html', '/README.md', '/blog/'],
+    Disallow: () => ['/thanks/', '/200.html', '/README.md'],
 
     Sitemap: 'https://mpdigital.org/sitemap.xml'
   },
