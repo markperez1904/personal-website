@@ -14,20 +14,23 @@
             brands build their online presence. At MP digital we strive to
             maintain our core values:
           </p>
-          <ul>
-            <li>
-              Execute best-in-class SEO campaigns for beauty brands with a core
-              focus on producing positive results
-            </li>
-            <li>
-              Provide top-notch customer service and excellent communication
-              with every client
-            </li>
-            <li>
-              Continue to learn and educate team members to implement the best
-              strategies for every client
-            </li>
-          </ul>
+          <br>
+          <div class="content">
+            <ul>
+              <li>
+                Execute best-in-class SEO campaigns for beauty brands with a
+                core focus on producing positive results
+              </li>
+              <li>
+                Provide top-notch customer service and excellent communication
+                with every client
+              </li>
+              <li>
+                Continue to learn and educate team members to implement the best
+                strategies for every client
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -199,13 +202,9 @@ export default {
     padding: 0 20px;
   }
   .about-us-text {
-    display: flex;
-    justify-self: center;
-    align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    font-size: 16px;
-    text-align: center;
+    font-size: 18px;
     padding: 0 20px;
   }
   .cta {
