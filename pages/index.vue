@@ -48,14 +48,15 @@
       </section>
     </div>
     <!-- counter -->
-    <home-numbers></home-numbers>
 
     <!-- services and industries-->
+    <app-reviews></app-reviews>
     <app-services></app-services>
     <app-industries></app-industries>
 
     <!-- multiple components -->
     <home-whoweare></home-whoweare>
+    <home-numbers></home-numbers>
     <home-homeblocks></home-homeblocks>
     <app-bookcall></app-bookcall>
   </div>
@@ -69,6 +70,7 @@ import BookCall from '@/components/BookCall.vue'
 import Contact from '@/components/homepage/Contact.vue'
 import Services from '@/components/homepage/Services.vue'
 import Industries from '@/components/homepage/Industries.vue'
+import Reviews from '@/components/homepage/Reviews.vue'
 
 // from freelancer
 import Numbers from '@/components/homepage/Numbers.vue'
@@ -135,6 +137,7 @@ export default {
     'app-navhome': NavHome,
     'app-bookcall': BookCall,
     'app-contact': Contact,
+    'app-reviews': Reviews,
 
     'app-services': Services,
     'app-industries': Industries,
