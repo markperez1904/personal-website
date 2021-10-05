@@ -1,5 +1,5 @@
 <template>
-  <div class="gtco-testimonials">
+  <div class="gtco-testimonials" v-scroll-reveal.reset="{ delay: 100 }">
     <h2>Testimonials</h2>
     <div class="owl-carousel owl-carousel1 owl-theme">
       <div>

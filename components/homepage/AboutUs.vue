@@ -1,22 +1,33 @@
 <template>
   <div class="main-page">
     <!-- 1st section -->
-    <div class="about-us container">
+    <div class="about-us container" v-scroll-reveal.reset="{ delay: 100 }">
       <!-- column -->
       <div class="about-us-info">
         <div class="about-us-h1">About Us</div>
 
         <div class="about-us-text">
           <p>
-            MP Digital is an inclusive group in SEO and marketing professionals.
-            We provide industry-leading services to both local and national
-            businesses, helping them expand and thrive within the competitive
-            online space. As we continue to grow our personal brand, we strive
-            to maintain our honest values of providing top-notch customer
-            service and continuing education for all team members. Our team
-            works diligently to bring you the very best results possible. We are
-            constantly learning new techniques to assist your company's growth.
+            MP Digital is an inclusive group of marketing professionals
+            specializing in SEO services. We’re proud to provide best-in-class
+            services to both local and national businesses, helping beauty
+            brands build their online presence. At MP digital we strive to
+            maintain our core values:
           </p>
+          <ul>
+            <li>
+              Execute best-in-class SEO campaigns for beauty brands with a core
+              focus on producing positive results
+            </li>
+            <li>
+              Provide top-notch customer service and excellent communication
+              with every client
+            </li>
+            <li>
+              Continue to learn and educate team members to implement the best
+              strategies for every client
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -27,7 +38,7 @@
     </div>
 
     <!-- 2nd section -->
-    <div class="about-us second-sec">
+    <div class="about-us second-sec" v-scroll-reveal.reset="{ delay: 100 }">
       <!-- column -->
       <div class="about-us-img" :style="centerism">
         <img
@@ -63,10 +74,9 @@
         <div class="about-us-h1">Enough about us, what about you?</div>
 
         <p class="info">
-          Do you want to see how your website could be performing better in
-          search engines? Of course you do! And thanks to our free SEO Auditor,
-          you can! We study your website and provide a range of recommendations
-          to help you on your way.
+          Want to take a peak at what SEO services can do for you without
+          hopping on a call? Use our free SEO auditor to assess how a tactical
+          solution can drive new revenue and power your brands growth.
         </p>
 
         <button class="button cta" :style="cta">

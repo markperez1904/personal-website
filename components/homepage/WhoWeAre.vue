@@ -5,10 +5,10 @@
       <div class="item2"></div>
       <div class="item3"></div>
     </div>
-    <div class="whoweare-top ">
+    <div class="whoweare-top " v-scroll-reveal.reset="{ delay: 100 }">
       <div class="whoweare-top-title">Who We Are</div>
     </div>
-    <div class="whoweare-items">
+    <div class="whoweare-items" v-scroll-reveal.reset="{ delay: 100 }">
       <div class="whoweare-center">
         <div class="whoweare-item">
           <div class="whoweare-item-img">
@@ -16,9 +16,9 @@
           </div>
           <div class="whoweare-item-title">Boutique Approach</div>
           <div class="whoweare-item-text">
-            Your business will be a success if you can meet your customer's
-            needs and expectations - It's important to have the right products
-            and services to sell, especially online.
+            Beauty brands choose MP Digital because we provide fully customized
+            solutions that are tailored to your company’s immediate and
+            long-term goals.
           </div>
         </div>
       </div>
@@ -29,9 +29,11 @@
           </div>
           <div class="whoweare-item-title">Proven Experts</div>
           <div class="whoweare-item-text">
-            When you're looking for credible beauty and cosmetic services, who
-            do you turn to? Experienced professionals with proven track records.
-            Same thing with marketing services.
+            You wouldn’t turn to a do-it-all beauty service to address a
+            specific aesthetic concern, would you? The same goes for your
+            marketing services. We know the industry inside and out and are
+            ready to consult with you to address trends and other insider
+            information.
           </div>
         </div>
         <div class="whoweare-item">
@@ -40,9 +42,10 @@
           </div>
           <div class="whoweare-item-title">Problem Solvers</div>
           <div class="whoweare-item-text">
-            Good SEO services can make sure that your website is at the top of
-            search results, but effective SEO can help you expand your business
-            and reach a larger audience.
+            Good SEO services will ensure your website is at the top of search
+            engines, but outstanding SEO services should also expand your
+            audience's reach, widen your target market, and increase
+            conversions.
           </div>
         </div>
       </div>
@@ -53,22 +56,22 @@
           </div>
           <div class="whoweare-item-title">Growth Fuelers</div>
           <div class="whoweare-item-text">
-            SEO is an aspect of digital marketing that's constantly evolving to
-            meet the needs of customers. Growth is essential for any business
-            that wants to stay afloat in today's competitive landscape.
+            SEO and digital marketing solutions are constantly being updated. To
+            build brand loyalty and an everlasting presence online, you need the
+            right content and a team of digital marketers that are in sync with
+            your vision.
           </div>
         </div>
       </div>
     </div>
-    <div class="whoweare-bottom">
+    <div class="whoweare-bottom" v-scroll-reveal.reset="{ delay: 100 }">
       <div class="whoweare-bottom-left">
         <div class="whoweare-bottom-title">
-          How We Make You Differentiable
+          How Will SEO Services Set You Apart?
         </div>
         <div class="whoweare-bottom-text">
-          We all know that SEO is a popular marketing strategy. However, with so
-          many different strategies out there, how do you know which is the
-          right one?
+          How do you know SEO is the strategy that will result in real business
+          growth and increased conversion rates?
         </div>
       </div>
       <div class="whoweare-bottom-right">

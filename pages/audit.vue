@@ -162,7 +162,7 @@ button {
 
 /* styling for hero of title and description */
 aside {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 aside.left {

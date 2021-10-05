@@ -15,11 +15,14 @@
 
             <!-- subtitles with vue-typer -->
             <h2 class="subtitle">
-              {{ description }}
+              A strong digital marketing campaign can sometimes require many
+              components. At the foundation of it all sits an effective SEO
+              strategy. Take a look at beauty brands who have implemented SEO
+              strategies the right way.
             </h2>
           </aside>
           <aside class="right column">
-            <img class="mainpng" src="~/assets/svg/case.svg" alt="spec" />
+            <!-- <img class="mainpng" src="~/assets/svg/case.svg" alt="spec" /> -->
           </aside>
         </div>
       </section>
@@ -28,7 +31,7 @@
     <!-- showing section of search bar and all case studies -->
     <div class="container">
       <!-- search bar -->
-      <section class="field columns is-centered searchbar">
+      <!-- <section class="field columns is-centered searchbar">
         <div class="control has-icons-left column is-3-widescreen is-4-tablet">
           <input
             @keyup.passive="searchPosts(keyword)"
@@ -39,7 +42,7 @@
           />
           <i class="icon is-small is-left icon-search"></i>
         </div>
-      </section>
+      </section> -->
 
       <!-- blog posts -->
       <transition name="fade">
@@ -65,16 +68,16 @@
       </transition>
 
       <!-- loading bar -->
-      <aside class="loading-bar columns is-multiline is-centered is-mobile">
+      <!-- <aside class="loading-bar columns is-multiline is-centered is-mobile">
         <pulse-loader
           :loading="loading"
           :color="color"
           :size="size"
         ></pulse-loader>
-      </aside>
+      </aside> -->
 
       <!-- button -->
-      <aside class="columns is-multiline is-centered is-mobile">
+      <!-- <aside class="columns is-multiline is-centered is-mobile">
         <button
           v-if="allCase_studiess.pageInfo.hasNextPage && loading == 0"
           class="button"
@@ -82,11 +85,11 @@
         >
           {{ loading ? 'Loading...' : 'Show more' }}
         </button>
-      </aside>
-    </div>
+      </aside> -->
 
-    <!-- component apps -->
-    <app-bookcall></app-bookcall>
+      <!-- component apps -->
+      <app-bookcall></app-bookcall>
+    </div>
   </div>
 </template>
 
@@ -293,7 +296,7 @@ button {
 
 /* styling for hero of title and description */
 aside {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 aside.left {

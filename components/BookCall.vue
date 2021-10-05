@@ -1,26 +1,27 @@
 <template>
-  <div class="request container ">
+  <div class="request container " v-scroll-reveal.reset="{ delay: 100 }">
     <div class="request-wrap">
       <div class="request-title">
-        Want to be our next success story?
+        Ready to see what we can do for you?
       </div>
       <div class="request-text container">
-        This isn't a sales pitch - don't you worry. But we're not like other
-        companies (though we do love the sparkly things). Instead, we'd rather
-        just show you our strategies because that's what it's really all about
-        anyway, right?
+        Book a free consultation and we’ll discuss a customized SEO strategy to
+        grow your business. If you work with us for the 1st 30 days, we'll build
+        a <em>FREE </em> backlink profile across <strong>100+</strong> reputable
+        social networks.
       </div>
       <div class="request-button">
         <!-- call button -->
         <button class="button is-rounded call-button">
-          <n-link to="/book/">Book a Call </n-link>
+          <n-link to="/book/">Book a Call</n-link>
         </button>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
-a {
+a,
+strong {
   color: #ffffff;
 }
 

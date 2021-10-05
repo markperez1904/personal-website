@@ -80,7 +80,7 @@ export default {
   loading: { color: '#2f495e' },
 
   // Global CSS
-  css: ['@/static/css/main.css', '@/static/css/fonts.css'],
+  css: ['@/static/css/main.css', '@/static/css/fonts.css' ],
 
   // Plugins to load before mounting the App
   plugins: [

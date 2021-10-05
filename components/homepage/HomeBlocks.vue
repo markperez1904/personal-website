@@ -1,5 +1,5 @@
 <template>
-  <div class="homeblocks container ">
+  <div class="homeblocks container " v-scroll-reveal.reset="{ delay: 100 }">
     <div class="homeblocks-item">
       <div class="homeblocks-item-overlay">
         <img src="~/assets/svg/target.svg" alt="target" />
@@ -9,9 +9,10 @@
       </div>
       <div class="homeblocks-item-title">Future Vision</div>
       <div class="homeblocks-item-text">
-        We can help expand your presence within the online space to create a
-        better customer service experience for potential customers searching for
-        salons.
+        Great SEO strategy starts by addressing what you want to achieve in your
+        business, whether audience building or competitive positioning. We’ll
+        work to expand your online presence by creating an improved experience
+        for customers while browsing your website and social accounts.
       </div>
     </div>
     <div class="homeblocks-item active">
@@ -23,9 +24,8 @@
       </div>
       <div class="homeblocks-item-title">Boost Campaign</div>
       <div class="homeblocks-item-text">
-        By using our curated services that are targeted to the needs of salons
-        and spas, your business can get ahead of its competitors by expanding
-        online.
+        Next we’ll address your target audience, their pain points and desires
+        in congruence with your website's messaging and content deliverables.
       </div>
     </div>
     <div class="homeblocks-item ">
@@ -37,9 +37,10 @@
       </div>
       <div class="homeblocks-item-title">Inovative Solutions</div>
       <div class="homeblocks-item-text">
-        Our mission is to help you get your services in front of your target
-        audience. We pride ourselves on personalized services so each client
-        gets the assistance they deserve.
+        We understand one-size doesn’t fit all and take a tailored approach to
+        every campaign. We’ll take a holistic approach when addressing your
+        businesses current status, goals, and then strategize the deliverables
+        that will help you execute on those objectives.
       </div>
     </div>
   </div>

@@ -30,14 +30,15 @@
 
             <!-- subtitle: description of MP Digital -->
             <h2 class="subtitle">
-              Get your beauty and cosmetic services in front of your target
-              audience with SEO services that specifically cater to the needs of
-              customers.
+              All the beauty in the world, but it won’t get noticed unless you
+              put it out there.
             </h2>
 
             <!-- call button -->
             <n-link to="/book/" id="call-link">
-              <button class="button is-rounded call-button">Book a Call</button>
+              <button class="button is-rounded call-button">
+                Help Me Get Noticed
+              </button>
             </n-link>
           </aside>
           <aside class="right column">
@@ -46,12 +47,16 @@
         </div>
       </section>
     </div>
+    <!-- counter -->
+    <home-numbers></home-numbers>
+
+    <!-- services and industries-->
+    <app-services></app-services>
+    <app-industries></app-industries>
 
     <!-- multiple components -->
-    <home-numbers></home-numbers>
     <home-whoweare></home-whoweare>
     <home-homeblocks></home-homeblocks>
-    <!-- <app-stories></app-stories> -->
     <app-bookcall></app-bookcall>
   </div>
 </template>
@@ -62,6 +67,8 @@ import Stories from '@/components/Stories.vue'
 import NavHome from '@/components/NavHome.vue'
 import BookCall from '@/components/BookCall.vue'
 import Contact from '@/components/homepage/Contact.vue'
+import Services from '@/components/homepage/Services.vue'
+import Industries from '@/components/homepage/Industries.vue'
 
 // from freelancer
 import Numbers from '@/components/homepage/Numbers.vue'
@@ -128,6 +135,9 @@ export default {
     'app-navhome': NavHome,
     'app-bookcall': BookCall,
     'app-contact': Contact,
+
+    'app-services': Services,
+    'app-industries': Industries,
 
     'home-numbers': Numbers,
     'home-aboutus': AboutUs,
