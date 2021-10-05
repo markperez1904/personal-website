@@ -14,7 +14,7 @@
             brands build their online presence. At MP digital we strive to
             maintain our core values:
           </p>
-          <br>
+          <br />
           <div class="content">
             <ul>
               <li>
@@ -205,7 +205,6 @@ export default {
     width: 100%;
     margin-bottom: 20px;
     font-size: 18px;
-    padding: 0 20px;
   }
   .cta {
     margin-bottom: 2rem;
