@@ -14,9 +14,18 @@
           </h2>
         </div>
         <div class="row">
+
+          <!-- review -->
           <div class="col-md-6 my-2">
             <div class="px-3 my-5">
-              <div>
+              <div style="text-align: center">
+                <div class="snippets">
+                  <span
+                    style="color: #00c58e; font-weight:bold; font-style: italic"
+                    >43% more calls</span
+                  >
+                  from traffic boosts:
+                </div>
                 <iframe
                   class="youtube-vid"
                   src="https://www.youtube.com/embed/vHuQMaVGMW8"
@@ -28,17 +37,18 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 my-2">
+
+          <!-- review -->
+          <!-- <div class="col-md-6 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
                 style="width: 100px;height: 100px; "
               >
-                <!-- svg goes here -->
-        
               </div>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </section>
     </div>
@@ -66,5 +76,10 @@ h5 {
 
 .mb-4 {
   margin-bottom: unset !important;
+}
+
+.snippets {
+  font-size: 20px;
+  margin: 0.5rem 0;
 }
 </style>

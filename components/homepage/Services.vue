@@ -1,6 +1,9 @@
 <template>
-  <div class="outer" style="margin-top: 5rem"     v-scroll-reveal.reset="{ delay: 100 }"
->
+  <div
+    class="outer"
+    style="margin-top: 5rem"
+    v-scroll-reveal.reset="{ delay: 100 }"
+  >
     <div class="container my-5">
       <div class="row">
         <div class="col-md-4">
@@ -14,12 +17,13 @@
               customers <em>look</em> and <em>feel</em> good.
             </p>
             <p class="para-secondary" style="line-height: 2;">
-              However, opportunities to be found online are being lost due to the lack of effective SEO strategies,
+              However, opportunities to be found online are being lost due to
+              the lack of effective SEO strategies,
               <strong>and that's where we come in.</strong>
             </p>
             <p class="para-secondary" style="line-height: 2;">
-              We ensure your company shines from the inside out resulting from
-              our proven framework:
+              We ensure your company shines from the inside-out with
+              our proven framework (applicable even outside the industry):
             </p>
           </div>
         </div>
@@ -37,9 +41,9 @@
                   <a href="#" style="color: #00c58e">1. Full-Scale SEO</a>
                 </h5>
                 <p class="text-secondary">
-                  Our SEO services start by analyzing current trends and
-                  understanding the search words that will help your business
-                  rank on search engines.
+                  We start by analyzing current trends and understanding the
+                  search words that will help your business rank on search
+                  engines.
                 </p>
               </div>
             </div>
@@ -55,8 +59,7 @@
                   <a href="#" style="color: #00c58e">2. Content Plan</a>
                 </h5>
                 <p class="text-secondary">
-                  Once we’ve gained a full comprehension of the tactics needed,
-                  we’ll create your personalized content strategy; always built
+                  We’ll create your personalized content strategy; always built
                   uniquely for each and every company.
                 </p>
               </div>
@@ -75,9 +78,8 @@
                   >
                 </h5>
                 <p class="text-secondary">
-                  Too many brands are selling themselves short when it comes to
-                  their online presentation with wider audiences; we'll help you
-                  secure your business name across multiple profiles.
+                  We'll help you secure your business name across multiple
+                  profiles.
                 </p>
               </div>
             </div>
@@ -93,9 +95,9 @@
                   <a href="#" style="color: #00c58e">4. Backlink Acqusition</a>
                 </h5>
                 <p class="text-secondary">
-                  Finally, we'll do competitor analaysis to determine the type
-                  of backlinks to acquire. This will ultimately set the stage
-                  for building your authority on Google.
+                  We determine the type of backlinks to acquire, which
+                  ultimately sets the stage for building your authority on
+                  Google.
                 </p>
               </div>
             </div>

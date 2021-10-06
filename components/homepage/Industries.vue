@@ -14,7 +14,9 @@
           </h2>
         </div>
         <div class="row">
-          <div class="col-md-3 my-2">
+
+          <!-- skincare brands -->
+          <div class="col-md-4 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -34,7 +36,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2 my-2">
+
+          <!-- hair salons -->
+          <div class="col-md-4 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -54,7 +58,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2 my-2">
+
+          <!-- med spas -->
+          <div class="col-md-4 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -75,14 +81,13 @@
             </div>
           </div>
 
-          <!-- 2nd row -->
-          <div class="col-md-2 my-2">
+          <!-- nail salons -->
+          <!-- <div class="col-md-2 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
                 style="width: 100px;height: 100px;"
               >
-                <!-- svg goes here -->
                 <img
                   class="beauty-icons"
                   src="~/assets/svg/nail-salon.svg"
@@ -95,14 +100,15 @@
                 </h5>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 my-2">
+          </div> -->
+
+          <!-- misc -->
+          <!-- <div class="col-md-3 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
                 style="width: 100px;height: 100px;"
               >
-                <!-- svg goes here -->
                 <img
                   class="beauty-icons"
                   src="~/assets/svg/acupuncturists.svg"
@@ -115,7 +121,7 @@
                 </h5>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>

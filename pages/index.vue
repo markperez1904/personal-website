@@ -47,17 +47,19 @@
         </div>
       </section>
     </div>
-    <!-- counter -->
-
-    <!-- services and industries-->
-    <app-reviews></app-reviews>
+    <!-- services-->
     <app-services></app-services>
+    
+    <!-- reviews -->
+    <app-reviews></app-reviews>
+
+    <!-- industries -->
     <app-industries></app-industries>
 
     <!-- multiple components -->
-    <home-whoweare></home-whoweare>
+    <!-- <home-whoweare></home-whoweare> -->
     <!-- <home-numbers></home-numbers> -->
-    <home-homeblocks></home-homeblocks>
+    <!-- <home-homeblocks></home-homeblocks> -->
     <app-bookcall></app-bookcall>
   </div>
 </template>
