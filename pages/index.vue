@@ -56,7 +56,7 @@
 
     <!-- multiple components -->
     <home-whoweare></home-whoweare>
-    <home-numbers></home-numbers>
+    <!-- <home-numbers></home-numbers> -->
     <home-homeblocks></home-homeblocks>
     <app-bookcall></app-bookcall>
   </div>
