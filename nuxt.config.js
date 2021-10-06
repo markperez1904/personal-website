@@ -103,7 +103,7 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     'nuxt-purgecss',
-    'nuxt-facebook-pixel-module'
+    // 'nuxt-facebook-pixel-module'
   ],
 
   // Keep Tracking ID private

@@ -27,9 +27,9 @@
         <!-- Navbar Menu -->
         <div id="navMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
           <div @click="showNav = !showNav" class="navbar-end">
-            <n-link class="navbar-item" to="/about/">About Us</n-link>
+            <!-- <n-link class="navbar-item" to="/about/">About Us</n-link> -->
             <n-link class="navbar-item" to="/case-study/">Case Studies</n-link>
-            <n-link class="navbar-item" to="/audit/">Free Audit</n-link>
+            <!-- <n-link class="navbar-item" to="/audit/">Free Audit</n-link> -->
             <!-- <n-link class="navbar-item" to="/contact/">Contact</n-link> -->
             <n-link class="navbar-item" to="/book/"
               ><button class="button is-rounded">Book a Call</button></n-link

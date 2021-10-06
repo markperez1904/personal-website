@@ -77,13 +77,13 @@
         <div class="about-us-h1">Enough about us, what about you?</div>
 
         <p class="info">
-          Want to take a peak at what SEO services can do for you without
-          hopping on a call? Use our free SEO auditor to assess how a tactical
-          solution can drive new revenue and power your brands growth.
+          Want to take a peak at what SEO services can do for you? If you work
+          with us for the 1st 30 days, we'll build a <em>FREE </em> backlink
+          profile across <strong>100+</strong> reputable social networks.
         </p>
 
         <button class="button cta" :style="cta">
-          <a href="/audit/" :style="lighten">Free SEO Audit</a>
+          <n-link to="/book/" :style="lighten">Book Call</n-link>
         </button>
       </div>
 
