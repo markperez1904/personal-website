@@ -38,7 +38,7 @@
               />
               <div class="mt-3">
                 <h5 class="mb-2" style="font-weight: 600;">
-                  <a href="#" style="color: #00c58e">1. Full-Scale SEO</a>
+                  <a href="#" style="color: #00c58e">1. Site-Wide Analysis</a>
                 </h5>
                 <p class="text-secondary">
                   We start by analyzing current trends and understanding the

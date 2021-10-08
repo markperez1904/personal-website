@@ -16,7 +16,7 @@
         <div class="row">
 
           <!-- skincare brands -->
-          <div class="col-md-4 my-2">
+          <div class="col-md-3 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -26,7 +26,7 @@
                 <img
                   class="beauty-icons"
                   src="~/assets/svg/skincare.svg"
-                  alt="skincare"
+                  alt="skincare brands"
                 />
               </div>
               <div class="px-3 text-center pb-3">
@@ -38,7 +38,7 @@
           </div>
 
           <!-- hair salons -->
-          <div class="col-md-4 my-2">
+          <div class="col-md-3 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -60,7 +60,7 @@
           </div>
 
           <!-- med spas -->
-          <div class="col-md-4 my-2">
+          <div class="col-md-3 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -82,7 +82,7 @@
           </div>
 
           <!-- nail salons -->
-          <!-- <div class="col-md-2 my-2">
+          <div class="col-md-3 my-2">
             <div class="px-3 my-5">
               <div
                 class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
@@ -90,17 +90,17 @@
               >
                 <img
                   class="beauty-icons"
-                  src="~/assets/svg/nail-salon.svg"
-                  alt="nail-salon"
+                  src="~/assets/svg/med-spa.svg"
+                  alt="beauty salons"
                 />
               </div>
               <div class="px-3 text-center pb-3">
                 <h5 style="font-weight: 600">
-                  Nail Salons
+                  Beauty Salons
                 </h5>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <!-- misc -->
           <!-- <div class="col-md-3 my-2">
