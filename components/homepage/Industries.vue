@@ -47,13 +47,13 @@
                 <!-- svg goes here -->
                 <img
                   class="beauty-icons"
-                  src="~/assets/svg/hair-salon.svg"
-                  alt="hair salon"
+                  src="~/assets/svg/makeup.svg"
+                  alt="makeup stores"
                 />
               </div>
               <div class="px-3 text-center pb-3">
                 <h5 style="font-weight: 600">
-                  Hair Salons
+                  Cosmetic Stores
                 </h5>
               </div>
             </div>
@@ -70,12 +70,12 @@
                 <img
                   class="beauty-icons"
                   src="~/assets/svg/med-spa.svg"
-                  alt="med-spa"
+                  alt="beauty salons"
                 />
               </div>
               <div class="px-3 text-center pb-3">
                 <h5 style="font-weight: 600">
-                  Med Spas
+                  Beauty Salons
                 </h5>
               </div>
             </div>

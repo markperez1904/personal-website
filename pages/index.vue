@@ -14,7 +14,7 @@
             <h1 class="title">
               SEO for<br />
               <vue-typer
-                :text="['Skincare Brands', 'Beauty Salons', 'Med Spas']"
+                :text="['Skincare Brands', 'Cosmetic Stores', 'Beauty Salons']"
                 :repeat="Infinity"
                 :shuffle="false"
                 initial-action="typing"
@@ -86,7 +86,7 @@ export default {
     return {
       title: 'SEO Services for Beauty & Cosmetic Brands',
       description:
-        'MP Digital focuses on empowering skincare brands and local salons through Google.'
+        'MP Digital focuses on empowering skincare brands and beauty stores through Google.'
     }
   },
 
