@@ -51,7 +51,7 @@
     <app-services></app-services>
     
     <!-- reviews -->
-    <app-reviews></app-reviews>
+    <!-- <app-reviews></app-reviews> -->
 
     <!-- industries -->
     <app-industries></app-industries>
