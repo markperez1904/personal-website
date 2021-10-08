@@ -14,7 +14,7 @@
             <h1 class="title">
               SEO for<br />
               <vue-typer
-                :text="['Skincare Brands', 'Cosmetic Resellers', 'Beauty Subscriptions']"
+                :text="['Skincare Brands', 'Cosmetic Resellers', 'Beauty Subscriptions', 'Beauty Salons']"
                 :repeat="Infinity"
                 :shuffle="false"
                 initial-action="typing"
