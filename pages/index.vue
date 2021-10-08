@@ -14,7 +14,7 @@
             <h1 class="title">
               SEO for<br />
               <vue-typer
-                :text="['Skincare Brands', 'Cosmetic Stores', 'Beauty Salons']"
+                :text="['Skincare Brands', 'Cosmetic Resellers', 'Beauty Subscriptions']"
                 :repeat="Infinity"
                 :shuffle="false"
                 initial-action="typing"
@@ -219,7 +219,7 @@ aside.right img {
 }
 
 .title {
-  font-size: 65px;
+  font-size: 48px;
   color: #ffffff;
   letter-spacing: 4px;
   padding-bottom: 1rem;
@@ -239,7 +239,7 @@ aside.right img {
 
 @media only screen and (max-width: 1500px) {
   .title {
-    font-size: 55px;
+    font-size: 34px;
   }
   .subtitle {
     font-size: 18px;
@@ -257,7 +257,7 @@ aside.right img {
     flex-direction: column;
   }
   .title {
-    font-size: 45px;
+    font-size: 34px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -298,7 +298,7 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .title {
-    font-size: 25px;
+    font-size: 19px;
   }
   .subtitle {
     font-size: 16px;

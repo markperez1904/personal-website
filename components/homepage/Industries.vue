@@ -53,7 +53,7 @@
               </div>
               <div class="px-3 text-center pb-3">
                 <h5 style="font-weight: 600">
-                  Cosmetic Stores
+                  Cosmetic Resellers
                 </h5>
               </div>
             </div>
@@ -69,13 +69,13 @@
                 <!-- svg goes here -->
                 <img
                   class="beauty-icons"
-                  src="~/assets/svg/med-spa.svg"
-                  alt="beauty salons"
+                  src="~/assets/svg/subscription.svg"
+                  alt="subscription services"
                 />
               </div>
               <div class="px-3 text-center pb-3">
                 <h5 style="font-weight: 600">
-                  Beauty Salons
+                 Subscription Services
                 </h5>
               </div>
             </div>
