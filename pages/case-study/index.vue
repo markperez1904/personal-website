@@ -88,8 +88,8 @@
       </aside> -->
 
       <!-- component apps -->
-      <app-bookcall></app-bookcall>
     </div>
+    <app-bookcall></app-bookcall>
   </div>
 </template>
 

@@ -2,109 +2,120 @@
   <div
     class="outer"
     style="margin-top: 5rem"
-    v-scroll-reveal.reset="{ delay: 100 }"
+    v-scroll-reveal.reset="{ delay: 50 }"
   >
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="py-4">
-            <!-- <span class="text-secondary text-uppercase">services</span> -->
-            <h2 class="text-capitalize font-weight-bold my-3">
-              Our <span style="color: #00c58e">Services</span>
-            </h2>
-            <p class="para-secondary" style="line-height: 2;">
-              You're a beauty brand. You could write a handbook on helping your
-              customers <em>look</em> and <em>feel</em> good.
-            </p>
-            <p class="para-secondary" style="line-height: 2;">
-              However, opportunities to be found online are being lost due to
-              the lack of effective SEO strategies,
-              <strong>and that's where we come in.</strong>
-            </p>
-            <p class="para-secondary" style="line-height: 2;">
-              We ensure your company shines from the inside-out with
-              our proven framework (applicable even outside the industry):
-            </p>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="row">
-            <div class="col-md-6 px-4 my-2">
-              <!-- put svg here -->
-              <img
-                class="mini-icons"
-                src="~/assets/svg/seo-analysis.svg"
-                alt="seo analysis"
-              />
-              <div class="mt-3">
-                <h5 class="mb-2" style="font-weight: 600;">
-                  <a href="#" style="color: #00c58e">1. Site-Wide Analysis</a>
-                </h5>
-                <p class="text-secondary">
-                  We start by analyzing current trends and understanding the
-                  search words that will help your business rank on search
-                  engines.
+    <section>
+      <div class="py-20 radius-for-skewed">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap items-center">
+            <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+              <div class="max-w-md lg:mx-auto">
+                <span class="text-green-600 font-bold"></span>
+                <h2 class="my-2 text-4xl lg:text-5xl font-bold font-heading">
+                  Our Services
+                </h2>
+                <p
+                  class="mb-6 text-gray-500 leading-loose"
+                  style="margin-top: 1.5rem"
+                >
+                  You're a beauty brand. You could write a handbook on helping
+                  your customers look and feel good.
+                </p>
+                <p class="mb-6 text-gray-500 leading-loose">
+                  However, opportunities to be found online are being lost due
+                  to the lack of effective SEO strategies,
+                  <strong>and that's where we come in.</strong>
+                </p>
+                <p class="mb-6 text-gray-500 leading-loose">
+                  We ensure your company shines from the inside-out with our
+                  proven framework:
                 </p>
               </div>
             </div>
-            <div class="col-md-6 px-4 my-2">
-              <!-- put svg here -->
-              <img
-                class="mini-icons"
-                src="~/assets/svg/chess.svg"
-                alt="content-plan"
-              />
-              <div class="mt-3">
-                <h5 class="mb-2" style="font-weight: 600;">
-                  <a href="#" style="color: #00c58e">2. Content Plan</a>
-                </h5>
-                <p class="text-secondary">
-                  We’ll create your personalized content strategy; always built
-                  uniquely for each and every company.
-                </p>
+            <div class="w-full lg:w-1/2 flex flex-wrap -mx-4">
+              <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
+                <div class="mb-8 py-6 pl-6 pr-4 shadow rounded bg-white">
+                  <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
+                     <img
+                      class="w-10 h-10 text-green-500"
+                      src="~assets/svg/seo-analysis.svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    />
+                  </span>
+                  <h4 class="mb-2 text-2xl font-bold font-heading">
+                    1. Site Analysis
+                  </h4>
+                  <p class="text-gray-500 leading-loose">
+                    We start by analyzing current trends and understanding the
+                    search words that will help your business rank on search
+                    engines.
+                  </p>
+                </div>
+                <div class="py-6 pl-6 pr-4 shadow rounded bg-white">
+                  <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
+                    <img
+                      class="w-10 h-10 text-green-500"
+                      src="~assets/svg/content-plan.svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    />
+                  </span>
+                  <h4 class="mb-2 text-2xl font-bold font-heading">
+                    2. Content Plan
+                  </h4>
+                  <p class="text-gray-500 leading-loose">
+                    We’ll create your personalized content strategy; always
+                    built uniquely for each and every company.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 px-4 my-2">
-              <!-- put svg here -->
-              <img
-                class="mini-icons"
-                src="~/assets/svg/search.svg"
-                alt="social media"
-              />
-              <div class="mt-3">
-                <h5 class="mb-2" style="font-weight: 600;">
-                  <a href="#" style="color: #00c58e"
-                    >3. Social Media Analysis</a
-                  >
-                </h5>
-                <p class="text-secondary">
-                  We'll help you secure your business name across multiple
-                  profiles.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 px-4 my-2">
-              <!-- put svg here -->
-              <img
-                class="mini-icons"
-                src="~/assets/svg/backlink.svg"
-                alt="backlink"
-              />
-              <div class="mt-3">
-                <h5 class="mb-2" style="font-weight: 600;">
-                  <a href="#" style="color: #00c58e">4. Backlink Acqusition</a>
-                </h5>
-                <p class="text-secondary">
-                  We determine the type of backlinks to acquire, which
-                  ultimately sets the stage for building your authority on
-                  Google.
-                </p>
+              <div class="w-full md:w-1/2 lg:mt-20 px-4">
+                <div class="mb-8 py-6 pl-6 pr-4 shadow rounded-lg bg-white">
+                  <span class="mb-4 inline-block p-3 rounded bg-green-100">
+                     <img
+                      class="w-10 h-10 text-green-500"
+                      src="~assets/svg/social-media.svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    />
+                  </span>
+                  <h4 class="mb-2 text-2xl font-bold font-heading">
+                    3. Social Media Audit
+                  </h4>
+                  <p class="text-gray-500 leading-loose">
+                    We'll help you secure your business name across multiple
+                    profiles.
+                  </p>
+                </div>
+                <div class="py-6 pl-6 pr-4 shadow rounded-lg bg-white">
+                  <span class="mb-4 inline-block p-3 rounded bg-green-100">
+                    <img
+                      class="w-10 h-10 text-green-500"
+                      src="~assets/svg/backlink.svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    />
+                  </span>
+                  <h4 class="mb-2 text-2xl font-bold font-heading">
+                    4. Backlink Acquisition
+                  </h4>
+                  <p class="text-gray-500 leading-loose">
+                    We determine the type of backlinks to acquire, which
+                    ultimately sets the stage for building your authority on
+                    Google.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -136,27 +147,13 @@ export default {
 </script>
 
 <style scoped>
-.text-capitalize {
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.para-secondary {
-  font-size: 18px;
-  padding-bottom: 1rem;
-}
-
-.text-secondary {
-  padding-bottom: 1rem;
-}
-
-.mb-2 {
-  font-size: 20px;
-}
-
 .mini-icons {
   width: 10%;
   filter: invert(47%) sepia(82%) saturate(815%) hue-rotate(124deg)
     brightness(98%) contrast(101%);
+}
+
+.max-w-md p {
+  font-size: 18px;
 }
 </style>

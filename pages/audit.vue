@@ -35,7 +35,6 @@
     </div>
 
     <!-- component apps -->
-    <!-- <app-stories></app-stories> -->
     <app-bookcall></app-bookcall>
   </div>
 </template>
@@ -43,14 +42,12 @@
 <script>
 import BookCall from '@/components/BookCall.vue'
 import NavHome from '@/components/NavHome.vue'
-import Stories from '@/components/Stories.vue'
 
 export default {
   layout: 'case-study',
   components: {
     'app-bookcall': BookCall,
-    'app-navhome': NavHome,
-    'app-stories': Stories
+    'app-navhome': NavHome
   },
 
   data() {

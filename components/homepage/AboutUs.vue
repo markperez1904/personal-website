@@ -1,7 +1,7 @@
 <template>
   <div class="main-page">
     <!-- 1st section -->
-    <div class="about-us container" v-scroll-reveal.reset="{ delay: 100 }">
+    <div class="about-us container">
       <!-- column -->
       <div class="about-us-info">
         <div class="about-us-h1">About Us</div>
@@ -41,7 +41,7 @@
     </div>
 
     <!-- 2nd section -->
-    <div class="about-us second-sec" v-scroll-reveal.reset="{ delay: 100 }">
+    <div class="about-us second-sec">
       <!-- column -->
       <div class="about-us-img" :style="centerism">
         <img
@@ -104,7 +104,7 @@ export default {
   computed: {
     centerism() {
       return {
-        textAlign: 'center'
+        textAlign: '-webkit-center'
       }
     },
     bolden() {
@@ -127,12 +127,16 @@ export default {
 </script>
 
 <style scoped>
+.cta {
+  font-weight: bold;
+}
+
 .founder {
-  width: 60%;
+  width: 50%;
 }
 
 .auditor {
-  width: 80%;
+  width: 70%;
 }
 
 .info {

@@ -36,26 +36,11 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'
+        href: 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'
       }
     ],
 
     script: [
-      {
-        type: 'text/javascript',
-        src: 'https://code.jquery.com/jquery-3.6.0.min.js'
-      },
-      {
-        type: 'text/javascript',
-        src:
-          'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'
-      },
       {
         type: 'application/ld+json',
         innerHTML: JSON.stringify({
@@ -80,7 +65,7 @@ export default {
   loading: { color: '#2f495e' },
 
   // Global CSS
-  css: ['@/static/css/main.css', '@/static/css/fonts.css' ],
+  css: ['@/static/css/main.css', '@/static/css/fonts.css'],
 
   // Plugins to load before mounting the App
   plugins: [

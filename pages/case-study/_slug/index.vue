@@ -40,12 +40,10 @@
               )
             "
           ></div>
-
-          <!-- audit and CTA at end of case study -->
-          <app-bookcall></app-bookcall>
         </article>
       </section>
     </div>
+    <app-bookcall></app-bookcall>
   </div>
 </template>
 

@@ -14,7 +14,7 @@
             <h1 class="title">
               SEO for<br />
               <vue-typer
-                :text="['Skincare Brands', 'Cosmetic Resellers', 'Beauty Subscriptions', 'Beauty Salons']"
+                :text="['Skincare Brands', 'Cosmetic Goods', 'Beauty Salons']"
                 :repeat="Infinity"
                 :shuffle="false"
                 initial-action="typing"
@@ -66,7 +66,6 @@
 
 <script>
 // from mark
-import Stories from '@/components/Stories.vue'
 import NavHome from '@/components/NavHome.vue'
 import BookCall from '@/components/BookCall.vue'
 import Contact from '@/components/homepage/Contact.vue'
@@ -135,7 +134,6 @@ export default {
   },
 
   components: {
-    'app-stories': Stories,
     'app-navhome': NavHome,
     'app-bookcall': BookCall,
     'app-contact': Contact,
@@ -219,7 +217,7 @@ aside.right img {
 }
 
 .title {
-  font-size: 48px;
+  font-size: 55px;
   color: #ffffff;
   letter-spacing: 4px;
   padding-bottom: 1rem;
@@ -239,7 +237,7 @@ aside.right img {
 
 @media only screen and (max-width: 1500px) {
   .title {
-    font-size: 34px;
+    font-size: 45px;
   }
   .subtitle {
     font-size: 18px;
@@ -257,7 +255,7 @@ aside.right img {
     flex-direction: column;
   }
   .title {
-    font-size: 34px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -298,7 +296,7 @@ aside.right img {
     padding: 0px 1.5rem;
   }
   .title {
-    font-size: 19px;
+    font-size: 25px;
   }
   .subtitle {
     font-size: 16px;

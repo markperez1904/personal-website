@@ -1,136 +1,79 @@
 <template>
-  <div
-    class="outer"
-    style="margin-top: 6rem"
-    v-scroll-reveal.reset="{ delay: 100 }"
-  >
-    <div class="container my-5">
-      <section>
-        <!-- 1st row -->
-        <div class="text-center mb-5">
-          <!-- <span>SERVICES</span> -->
-          <h2 class="font-weight-bold display-6 ">
-            Who We <span style="color: #00c58e">Help</span>
-          </h2>
-        </div>
-        <div class="row">
-
-          <!-- skincare brands -->
-          <div class="col-md-3 my-2">
-            <div class="px-3 my-5">
-              <div
-                class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                style="width: 100px;height: 100px; "
-              >
-                <!-- svg goes here -->
-                <img
-                  class="beauty-icons"
-                  src="~/assets/svg/skincare.svg"
-                  alt="skincare brands"
-                />
-              </div>
-              <div class="px-3 text-center pb-3">
-                <h5 style="font-weight: 600">
+  <div class="outer" v-scroll-reveal.reset="{ delay: 50 }">
+    <!-- main component -->
+    <section>
+      <div class="py-20 radius-for-skewed">
+        <div class="container mx-auto px-4">
+          <div class="mb-16 max-w-md mx-auto text-center">
+            <span class="text-green-600 font-bold"></span>
+            <h2 class="text-4xl lg:text-5xl font-bold font-heading">
+              Who We Help
+            </h2>
+          </div>
+          <div class="flex flex-wrap -mx-4">
+            <div class="mb-8 lg:mb-0 w-full lg:w-1/3 px-4">
+              <div class="py-12 px-6 bg-white rounded shadow text-center">
+                <span class="mb-6 inline-block p-2 rounded-lg bg-green-100">
+                  <img
+                    class="w-10 h-10 text-green-500"
+                    src="~assets/svg/skincare.svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  />
+                </span>
+                <h3 class="px-8 mb-4 text-2xl font-bold font-heading">
                   Skincare Brands
-                </h5>
+                </h3>
+                <p class="text-gray-500 underline">
+                  <n-link to="/skincare-brands/">Learn more</n-link>
+                </p>
               </div>
             </div>
-          </div>
-
-          <!-- hair salons -->
-          <div class="col-md-3 my-2">
-            <div class="px-3 my-5">
-              <div
-                class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                style="width: 100px;height: 100px; "
-              >
-                <!-- svg goes here -->
-                <img
-                  class="beauty-icons"
-                  src="~/assets/svg/makeup.svg"
-                  alt="makeup stores"
-                />
-              </div>
-              <div class="px-3 text-center pb-3">
-                <h5 style="font-weight: 600">
-                  Cosmetic Resellers
-                </h5>
+            <div class="mb-8 lg:mb-0 w-full lg:w-1/3 px-4">
+              <div class="py-12 px-6 bg-white rounded shadow text-center">
+                <span class="mb-6 inline-block p-2 rounded-lg bg-green-100">
+                  <img
+                    class="w-10 h-10 text-green-500"
+                    src="~assets/svg/cosmetics.svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  />
+                </span>
+                <h3 class="px-8 mb-4 text-2xl font-bold font-heading">
+                  Cosmetic Goods
+                </h3>
+                <p class="text-gray-500 underline">
+                  <n-link to="/cosmetic-goods/">Learn more</n-link>
+                </p>
               </div>
             </div>
-          </div>
-
-          <!-- med spas -->
-          <div class="col-md-3 my-2">
-            <div class="px-3 my-5">
-              <div
-                class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                style="width: 100px;height: 100px; "
-              >
-                <!-- svg goes here -->
-                <img
-                  class="beauty-icons"
-                  src="~/assets/svg/subscription.svg"
-                  alt="subscription services"
-                />
-              </div>
-              <div class="px-3 text-center pb-3">
-                <h5 style="font-weight: 600">
-                 Subscription Services
-                </h5>
-              </div>
-            </div>
-          </div>
-
-          <!-- nail salons -->
-          <div class="col-md-3 my-2">
-            <div class="px-3 my-5">
-              <div
-                class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                style="width: 100px;height: 100px;"
-              >
-                <img
-                  class="beauty-icons"
-                  src="~/assets/svg/med-spa.svg"
-                  alt="beauty salons"
-                />
-              </div>
-              <div class="px-3 text-center pb-3">
-                <h5 style="font-weight: 600">
+            <div class="w-full lg:w-1/3 px-4">
+              <div class="py-12 px-6 bg-white rounded shadow text-center">
+                <span class="mb-6 inline-block p-2 rounded bg-green-100">
+                  <img
+                    class="w-10 h-10 text-green-500"
+                    src="~assets/svg/med-spa.svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  />
+                </span>
+                <h3 class="px-8 mb-4 text-2xl font-bold font-heading">
                   Beauty Salons
-                </h5>
+                </h3>
+                <p class="text-gray-500 underline">
+                  <n-link to="/beauty-salons/">Learn more</n-link>
+                </p>
               </div>
             </div>
           </div>
-
-          <!-- misc -->
-          <!-- <div class="col-md-3 my-2">
-            <div class="px-3 my-5">
-              <div
-                class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                style="width: 100px;height: 100px;"
-              >
-                <img
-                  class="beauty-icons"
-                  src="~/assets/svg/acupuncturists.svg"
-                  alt="acupuncturists"
-                />
-              </div>
-              <div class="px-3 text-center pb-3">
-                <h5 style="font-weight: 600">
-                  Acupuncturists
-                </h5>
-              </div>
-            </div>
-          </div> -->
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style scoped>
 a:hover {
@@ -141,13 +84,5 @@ a:hover {
   width: 80%;
   filter: invert(47%) sepia(82%) saturate(815%) hue-rotate(124deg)
     brightness(98%) contrast(101%);
-}
-
-h5 {
-  font-size: 18px;
-}
-
-.mb-4 {
-  margin-bottom: unset !important;
 }
 </style>
