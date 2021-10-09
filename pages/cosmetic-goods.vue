@@ -20,13 +20,13 @@
                   </p>
                 </div>
                 <div class="flex flex-wrap lg:-ml-5">
-                  <button
-                    class="lg:w-auto py-2 px-6 leading-loose lg:ml-5 text-gray-50 font-bold bg-green-600 hover:bg-green-700 transition duration-200 rounded-l-xl rounded-t-xl"
-                  >
-                    <n-link to="/book/" style="color: #ffffff"
-                      >Show Me How</n-link
+                  <n-link to="/book/" style="color: #ffffff">
+                    <button
+                      class="lg:w-auto py-2 px-6 leading-loose lg:ml-5 text-gray-50 font-bold bg-green-600 hover:bg-green-700 transition duration-200 rounded-l-xl rounded-t-xl"
                     >
-                  </button>
+                      Show Me How
+                    </button>
+                  </n-link>
                 </div>
               </div>
             </div>
