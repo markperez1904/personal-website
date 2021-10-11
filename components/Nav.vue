@@ -32,7 +32,7 @@
               class="navbar-item has-dropdown is-hoverable"
               style="padding-right: 0"
             >
-              <a :style="changeColor" class="navbar-item">Who We Help ⬇</a>
+              <a class="navbar-item">Who We Help ⬇</a>
               <div class="navbar-dropdown">
                 <n-link class="navbar-item" to="/skincare-brands/">
                   Skincare Brands

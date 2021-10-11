@@ -1,0 +1,27 @@
+<svg width="77.73623046875px" height="121.4052734375px"
+  xmlns="http://www.w3.org/2000/svg" viewBox="211.131884765625 14.29736328125 77.73623046875 121.4052734375" style="background: none;" preserveAspectRatio="xMidYMid">
+  <defs>
+    <linearGradient id="editing-glowing-gradient" x1="0.8146601955249185" x2="0.18533980447508147" y1="0.8885729807284856" y2="0.11142701927151444">
+      <stop offset="0" stop-color="#67ff43"></stop>
+      <stop offset="1" stop-color="#90ffff"></stop>
+    </linearGradient>
+    <filter id="editing-glowing" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#editing-glowing)">
+    <g transform="translate(231.89093589782715, 96.76000022888184)">
+      <path d="M29.18 1.28L29.18 1.28L29.18 1.28Q20.99 1.28 20.22-10.37L20.22-10.37L9.22-10.37L9.22-10.37Q7.94-7.42 7.04-4.86L7.04-4.86L5.38 0L-3.58 0L16.58-42.24L30.34-42.24L33.02-11.14L33.02-11.14Q33.66-4.42 36.22-2.43L36.22-2.43L36.22-2.43Q34.37 1.28 29.18 1.28ZM14.72-23.17L11.20-15.04L20.03-15.04L19.26-31.49L19.26-33.22L14.72-23.17Z" fill="url(#editing-glowing-gradient)"></path>
+    </g>
+  </g>
+  <style>text {
+  font-size: 64px;
+  font-family: Arial Black;
+  dominant-baseline: central;
+  text-anchor: middle;
+}</style>
+</svg>
