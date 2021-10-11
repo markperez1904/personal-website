@@ -27,8 +27,8 @@
                   <strong>and that's where we come in.</strong>
                 </p>
                 <p class="mb-6 text-gray-500 leading-loose">
-                  We ensure your company shines from the inside-out with our
-                  proven framework:
+                  We ensure your company shines from the inside-out with
+                  strategies from our proprietary framework:
                 </p>
               </div>
             </div>
@@ -36,7 +36,7 @@
               <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
                 <div class="mb-8 py-6 pl-6 pr-4 shadow rounded bg-white">
                   <span class="mb-4 inline-block p-3 rounded-lg bg-green-100">
-                     <img
+                    <img
                       class="w-10 h-10 text-green-500"
                       src="~assets/svg/seo-analysis.svg"
                       fill="none"
@@ -75,7 +75,7 @@
               <div class="w-full md:w-1/2 lg:mt-20 px-4">
                 <div class="mb-8 py-6 pl-6 pr-4 shadow rounded-lg bg-white">
                   <span class="mb-4 inline-block p-3 rounded bg-green-100">
-                     <img
+                    <img
                       class="w-10 h-10 text-green-500"
                       src="~assets/svg/social-media.svg"
                       fill="none"
