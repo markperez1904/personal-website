@@ -11,7 +11,7 @@
               id="big-title"
               class="mb-2 text-4xl lg:text-5xl font-bold font-heading"
             >
-              How We Can Help You With Our Strategic
+              How We Can Help You With Our Proprietary
               <span class="text-green-600">C.A.R.E.</span> System
             </h2>
           </div>
