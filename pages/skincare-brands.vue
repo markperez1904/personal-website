@@ -10,9 +10,9 @@
                 <span class="text-green-600 font-bold"
                   >Slight Edge on Your Competition</span
                 >
-                <h2 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
-                  Marketing for Skincare Brands
-                </h2>
+                <h1 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
+                  SEO for Skincare Brands
+                </h1>
                 <div class="mb-6 max-w-sm">
                   <p class="text-gray-500 leading-loose">
                     Learn how you can grow your skincare business with
@@ -35,15 +35,15 @@
                 <div class="mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
                   <img
                     class="w-full h-32 lg:h-48 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-gustavo-fring-4148931.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/005425bd-3cd1-4b20-b1b6-1afed3d7ce29_skincare-1.jpg?auto=compress,format"
+                    alt="girls with kiwis"
                   />
                 </div>
                 <div class="w-full lg:w-1/3 px-3">
                   <img
                     class="w-full h-32 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-polina-kovaleva-5928039.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/087992f6-43ef-4039-9476-04d893ad20d7_skincare-2.jpg?auto=compress,format"
+                    alt="smokin woman with face cream"
                   />
                 </div>
               </div>
@@ -51,15 +51,15 @@
                 <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
                   <img
                     class="w-full h-32 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612135.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/452f5733-3788-43f6-88a7-cadad2becf60_skincare-3.jpg?auto=compress,format"
+                    alt="lady performing anti-aging remedy"
                   />
                 </div>
                 <div class="w-full lg:w-2/3 px-3">
                   <img
                     class="w-full h-32 lg:h-48 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-rodnae-productions-6724502.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/7c35d8c8-329b-447f-98b2-73de70f5104a_skincare-4.jpg?auto=compress,format"
+                    alt="woman using charcoal skincare"
                   />
                 </div>
               </div>
@@ -77,8 +77,8 @@
             <div class="w-full lg:w-1/2 px-6 h-96">
               <img
                 class="h-full mx-auto object-cover rounded-lg"
-                src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612159.jpeg"
-                alt=""
+                src="https://images.prismic.io/marks-personal-website/db676f4d-6ed8-4fba-bf6c-63aca6d1255f_skincare-5.jpg?auto=compress,format"
+                alt="showing skincare science"
               />
             </div>
             <div class="mb-6 w-full lg:w-1/2 px-6">
@@ -94,8 +94,8 @@
               <p class="text-gray-500 leading-loose">
                 Founded on the concept that digital marketing represents the new
                 age of business dynamics, MP Digital is designed to be an
-                extension of the skincare brand using our service: <strong>a proven,
-                potent, powerhouse.</strong>
+                extension of the skincare brand using our service:
+                <strong>a proven, potent, powerhouse.</strong>
               </p>
               <br />
               <p class="text-gray-500 leading-loose">
@@ -135,9 +135,10 @@
                 Just a few years ago, skincare brands could rely on marketing
                 their products as “natural” or “organic” in order to stand out
                 as different in a market dominated by synthetic-chemical-based
-                pills and potions. But in today’s modern market, <strong>natural and
-                organic is considered the new standard</strong>, and it certainly won’t
-                help you cut through the noise.
+                pills and potions. But in today’s modern market,
+                <strong
+                  >natural and organic is considered the new standard</strong
+                >, and it certainly won’t help you cut through the noise.
               </p>
               <br />
               <p class="text-gray-500 leading-loose">
@@ -151,8 +152,8 @@
             <div class="w-full lg:w-1/2 px-6 h-96">
               <img
                 class="h-full mx-auto object-cover rounded-lg"
-                src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612159.jpeg"
-                alt=""
+                src="https://images.prismic.io/marks-personal-website/333f135f-4c90-48bc-a6ee-8e53f5706330_skincare-6.jpg?auto=compress,format"
+                alt="skincare art form"
               />
             </div>
           </div>

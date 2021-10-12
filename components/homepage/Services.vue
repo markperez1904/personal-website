@@ -18,8 +18,8 @@
                   class="mb-6 text-gray-500 leading-loose"
                   style="margin-top: 1.5rem"
                 >
-                  You're a beauty brand. You could write a handbook on helping
-                  your customers look and feel good.
+                  <u>You're a beauty brand</u>! You could write a handbook on
+                  helping your customers look and feel good.
                 </p>
                 <p class="mb-6 text-gray-500 leading-loose">
                   However, opportunities to be found online are being lost due
@@ -28,7 +28,7 @@
                 </p>
                 <p class="mb-6 text-gray-500 leading-loose">
                   We ensure your company shines from the inside-out with
-                  strategies from our proprietary framework:
+                  strategies from our <em>proprietary</em> framework:
                 </p>
               </div>
             </div>

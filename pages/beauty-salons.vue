@@ -10,9 +10,9 @@
                 <span class="text-green-600 font-bold"
                   >Slight Edge on Your Competition</span
                 >
-                <h2 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
-                  Marketing for Beauty Salons
-                </h2>
+                <h1 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
+                  SEO for Beauty Salons
+                </h1>
                 <div class="mb-6 max-w-sm">
                   <p class="text-gray-500 leading-loose">
                     Learn how you can grow your salon business with full-scale
@@ -35,15 +35,15 @@
                 <div class="mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
                   <img
                     class="w-full h-32 lg:h-48 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-gustavo-fring-4148931.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/b460271e-44e4-493d-b41f-09582e7d0b2b_salon-1.jpg?auto=compress,format"
+                    alt="girl in salon"
                   />
                 </div>
                 <div class="w-full lg:w-1/3 px-3">
                   <img
                     class="w-full h-32 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-polina-kovaleva-5928039.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/33c1103b-0a82-44e1-83d5-0d4995430e75_salon-2.jpg?auto=compress,format"
+                    alt="woman using tablet"
                   />
                 </div>
               </div>
@@ -51,15 +51,15 @@
                 <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
                   <img
                     class="w-full h-32 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612135.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/9ba9f626-a763-4b15-afed-a1bc29340d00_salon-3.jpg?auto=compress,format"
+                    alt="woman getting hair done"
                   />
                 </div>
                 <div class="w-full lg:w-2/3 px-3">
                   <img
                     class="w-full h-32 lg:h-48 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-rodnae-productions-6724502.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/cd408daa-d78b-4955-b9e2-8e897c3eb534_salon-4.jpg?auto=compress,format"
+                    alt="woman getting hair washed"
                   />
                 </div>
               </div>
@@ -77,8 +77,8 @@
             <div class="w-full lg:w-1/2 px-6 h-96">
               <img
                 class="h-full mx-auto object-cover rounded-lg"
-                src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612159.jpeg"
-                alt=""
+                src="https://images.prismic.io/marks-personal-website/eb67b9cd-298a-4dd3-af6a-14e34de8b013_salon-5.jpg?auto=compress,format"
+                alt="salon experts"
               />
             </div>
             <div class="mb-6 w-full lg:w-1/2 px-6">
@@ -150,8 +150,8 @@
             <div class="w-full lg:w-1/2 px-6 h-96">
               <img
                 class="h-full mx-auto object-cover rounded-lg"
-                src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612159.jpeg"
-                alt=""
+                src="https://images.prismic.io/marks-personal-website/3405eb93-71cd-4804-8419-7b4f8b6cd7eb_salon-6.jpg?auto=compress,format"
+                alt="woman getting nails curated"
               />
             </div>
           </div>

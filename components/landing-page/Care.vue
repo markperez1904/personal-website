@@ -103,15 +103,7 @@ export default {}
   text-align: -webkit-center;
 }
 
-/* #image-bg {
-  background: linear-gradient(270deg, rgb(0, 0, 0), rgba(22, 22, 22));
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
-/* p,
-h2,
-strong {
-  color: #ffffff;
-} */
+.leading-loose {
+  font-size: 18px;
+}
 </style>

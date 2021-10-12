@@ -10,9 +10,9 @@
                 <span class="text-green-600 font-bold"
                   >Slight Edge on Your Competition</span
                 >
-                <h2 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
-                  Marketing for Cosmetic Stores
-                </h2>
+                <h1 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
+                  SEO for Cosmetic Stores
+                </h1>
                 <div class="mb-6 max-w-sm">
                   <p class="text-gray-500 leading-loose">
                     Learn how you can grow your cosmetics business with
@@ -35,15 +35,15 @@
                 <div class="mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
                   <img
                     class="w-full h-32 lg:h-48 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-gustavo-fring-4148931.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/f2dfdad4-bb15-4a67-a592-70f1e81e7ba1_cosmetics-1.jpg?auto=compress,format"
+                    alt="collection of skincare goods"
                   />
                 </div>
                 <div class="w-full lg:w-1/3 px-3">
                   <img
                     class="w-full h-32 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-polina-kovaleva-5928039.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/ad9ef255-b398-401e-bf41-512668dfaa7a_cosmetics-2.jpg?auto=compress,format"
+                    alt="nail product"
                   />
                 </div>
               </div>
@@ -51,15 +51,15 @@
                 <div class="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
                   <img
                     class="w-full h-32 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612135.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/e08fcb67-7338-470e-96e5-b43bc2bfdca6_cosmetics-3.jpg?auto=compress,format"
+                    alt="woman holding mystery cosmetic"
                   />
                 </div>
                 <div class="w-full lg:w-2/3 px-3">
                   <img
                     class="w-full h-32 lg:h-48 object-cover rounded"
-                    src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-rodnae-productions-6724502.jpeg"
-                    alt=""
+                    src="https://images.prismic.io/marks-personal-website/cd732cf7-7ecb-420c-bf48-80d1d6d21b89_cosmetics-4.jpg?auto=compress,format"
+                    alt="lady holding dropper bottle"
                   />
                 </div>
               </div>
@@ -77,8 +77,8 @@
             <div class="w-full lg:w-1/2 px-6 h-96">
               <img
                 class="h-full mx-auto object-cover rounded-lg"
-                src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612159.jpeg"
-                alt=""
+                src="https://images.prismic.io/marks-personal-website/2bf3ea80-58f2-4ac5-8838-16e70633b150_cosmetics-5.jpg?auto=compress,format"
+                alt="a premium photoshot of dropper"
               />
             </div>
             <div class="mb-6 w-full lg:w-1/2 px-6">
@@ -150,18 +150,18 @@
                 it means being able to reach more customers, by making your
                 business accessible across both physical and digital worlds.
               </p>
-              <br>
+              <br />
               <p class="text-gray-500 leading-loose">
                 We help showcase your offerings on social media, with content
                 that is laser focused to attract your target demographic.
               </p>
             </div>
-            <br>
+            <br />
             <div class="w-full lg:w-1/2 px-6 h-96">
               <img
                 class="h-full mx-auto object-cover rounded-lg"
-                src="https://static.shuffle.dev/uploads/files/e6/e6103e9ee5e6f70fb092ea52a973c697881ba267/pexels-cottonbro-4612159.jpeg"
-                alt=""
+                src="https://images.prismic.io/marks-personal-website/52920250-9a47-418f-b6bf-923e41b3bf57_cosmetics-6.jpg?auto=compress,format"
+                alt="mystery cream"
               />
             </div>
           </div>
