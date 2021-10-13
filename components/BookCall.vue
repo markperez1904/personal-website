@@ -13,17 +13,6 @@
       <div class="py-6 bg-gray-50 radius-for-skewed">
         <div class="container mx-auto px-4">
           <div class="max-w-xl mx-auto text-center">
-            <a
-              class="mb-6 inline-block text-3xl font-bold leading-none"
-              href="#"
-            >
-              <img
-                class="h-12"
-                src="atis-assets/logo/atis/atis-mono-sign.svg"
-                alt=""
-                width="auto"
-              />
-            </a>
             <h2 class="mb-4 text-4xl lg:text-5xl font-bold font-heading">
               Ready to see what we can do for you?
             </h2>
