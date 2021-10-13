@@ -20,7 +20,7 @@
               class="w-full lg:w-2/3 lg:pl-16 flex flex-wrap justify-between"
             >
               <div class="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
-                <h3 class="mb-6 text-2xl font-bold">Company</h3>
+                <div class="mb-6 text-2xl font-bold">Company</div>
                 <ul class="listings">
                   <li class="mb-4">
                     <n-link class="text-gray-800 hover:text-gray-600" to="/about/"
@@ -45,7 +45,7 @@
                 </ul>
               </div>
               <div class="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
-                <h3 class="mb-6 text-2xl font-bold">Industries</h3>
+                <div class="mb-6 text-2xl font-bold">Industries</div>
                 <ul class="listings">
                   <li class="mb-4">
                     <n-link class="text-gray-800 hover:text-gray-600" to="/skincare-brands/"
@@ -65,7 +65,7 @@
                 </ul>
               </div>
               <div class="w-full md:w-1/3 lg:w-auto">
-                <h3 class="mb-6 text-2xl font-bold">Legal</h3>
+                <div class="mb-6 text-2xl font-bold">Legal</div>
                 <ul class="listings">
                   <li class="mb-4">
                     <n-link class="text-gray-800 hover:text-gray-600" to="/terms/"
