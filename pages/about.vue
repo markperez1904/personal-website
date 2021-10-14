@@ -16,7 +16,7 @@ export default {
     return {
       title: 'About',
       description:
-        'MP Digital is a well-versed SEO Agency empowering beauty salons to be 1st-choice within their region.'
+        'MP Digital is a small SEO Agency empowering beauty salons to be 1st-choice within their region.'
     }
   },
 

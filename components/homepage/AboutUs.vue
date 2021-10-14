@@ -8,7 +8,7 @@
 
         <div class="about-us-text">
           <p>
-            MP Digital is an inclusive group of marketing professionals
+            MP Digital is a small, inclusive group of marketing professionals
             specializing in SEO services. We’re proud to provide best-in-class
             services to both local and national businesses, helping beauty
             brands build their online presence. At MP digital we strive to
