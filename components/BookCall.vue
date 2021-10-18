@@ -12,9 +12,9 @@
       </div>
       <div class="py-6 bg-gray-50 radius-for-skewed">
         <div class="container mx-auto px-4">
-          <div class="max-w-xl mx-auto text-center">
+          <div class="max-w-3xl mx-auto text-center">
             <h2 class="mb-4 text-4xl lg:text-5xl font-bold font-heading">
-              Ready to see what we can do for you?
+              Get <span class="text-green-600">100+</span> High-Quality Social Backlinks Within <span class="text-green-600"><u>30 days</u></span>
             </h2>
             <p class="max-w-md mx-auto mb-6 text-gray-500 leading-loose">
               Book a free consultation and we’ll discuss a customized SEO
@@ -45,5 +45,9 @@
 <style scoped>
 .leading-loose {
 font-size: 18px;
+}
+
+.font-heading {
+  line-height: 1.2;
 }
 </style>

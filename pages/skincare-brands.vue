@@ -6,17 +6,21 @@
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap items-center -mx-4">
             <div class="mb-12 lg:mb-0 w-full lg:w-1/2 flex px-4">
-              <div class="max-w-md">
-                <span class="text-green-600 font-bold"
-                  >Slight Edge on Your Competition</span
-                >
-                <h1 class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
-                  SEO for Skincare Brands
+              <div class="max-w-2xl">
+                <h1 class="text-green-600 font-bold mini">
+                  SEO Services for Skincare Brands
                 </h1>
+                <div class="mb-6 text-4xl lg:text-5xl font-bold font-heading">
+                  Get <span class="text-green-600">100+</span> High-Quality
+                  Social Backlinks Within
+                  <span class="text-green-600"><u>30 days</u></span>
+                </div>
                 <div class="mb-6 max-w-sm">
                   <p class="text-gray-500 leading-loose">
-                    Learn how you can grow your skincare business with
-                    full-scale SEO services.
+                    Grow your skincare brand with full-scale SEO services from
+                    our exclusive
+                    <span class="text-green-600 italic">C.A.R.E.</span>
+                    system.
                   </p>
                 </div>
                 <div class="flex flex-wrap lg:-ml-5">
@@ -234,10 +238,15 @@ export default {
 
 <style scoped>
 .font-heading {
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .leading-loose {
   font-size: 18px;
+}
+
+.mini {
+  font-size: 1em;
+  margin-bottom: unset;
 }
 </style>
