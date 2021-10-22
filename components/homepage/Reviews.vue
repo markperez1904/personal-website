@@ -1,6 +1,6 @@
 <template>
   <div
-    class="outer"
+    id="outer"
     style="margin-top: 6rem"
     v-scroll-reveal.reset="{ delay: 100 }"
   >
@@ -9,46 +9,51 @@
         <!-- 1st row -->
         <div class="text-center mb-5">
           <!-- <span>SERVICES</span> -->
-          <h2 class="font-weight-bold display-6 ">
+          <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">
             Don't Take Our <span style="color: #00c58e">Word</span> For It
           </h2>
         </div>
-        <div class="row">
-
-          <!-- review -->
-          <div class="col-md-6 my-2">
-            <div class="px-3 my-5">
-              <div style="text-align: center">
-                <div class="snippets">
-                  <span
-                    style="color: #00c58e; font-weight:bold; font-style: italic"
-                    >43% more calls</span
-                  >
-                  from traffic boosts:
-                </div>
-                <iframe
-                  class="youtube-vid"
-                  src="https://www.youtube.com/embed/vHuQMaVGMW8"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+        <div>
+          <!-- reviews -->
+          <div class="flex flex-wrap">
+            <!-- 1st review -->
+            <div class="md:w-1/2 sm:w-full">
+              <div class="snippets" style="text-align:left">
+                <span
+                  style="color: #00c58e; font-weight:bold; font-style: italic"
+                  >43% more appointments</span
+                >
+                from traffic boosts:
               </div>
+              <iframe
+                class="youtube-vid"
+                src="https://www.youtube.com/embed/vHuQMaVGMW8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
+
+            <!-- 2nd review -->
+            <div class="md:w-1/2 sm:w-full">
+              <!-- <div class="snippets" style="text-align:left">
+                <span
+                  style="color: #00c58e; font-weight:bold; font-style: italic"
+                  >43% more appointments</span
+                >
+                from traffic boosts:
+              </div>
+              <iframe
+                class="youtube-vid"
+                src="https://www.youtube.com/embed/vHuQMaVGMW8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe> -->
+            </div>  
           </div>
-
-          <!-- review -->
-          <!-- <div class="col-md-6 my-2">
-            <div class="px-3 my-5">
-              <div
-                class="circle text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                style="width: 100px;height: 100px; "
-              >
-              </div>
-            </div>
-          </div> -->
-
         </div>
       </section>
     </div>
@@ -62,6 +67,10 @@ export default {}
 <style scoped>
 a:hover {
   text-decoration: none;
+}
+
+#outer {
+  margin-bottom: 5rem;
 }
 
 .beauty-icons {

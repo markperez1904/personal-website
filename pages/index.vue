@@ -49,12 +49,12 @@
     </div>
     <!-- services-->
     <app-services></app-services>
-    
-    <!-- reviews -->
-    <!-- <app-reviews></app-reviews> -->
-
+  
     <!-- industries -->
     <app-industries></app-industries>
+
+        <!-- reviews -->
+    <app-reviews></app-reviews>
 
     <!-- multiple components -->
     <!-- <home-whoweare></home-whoweare> -->
