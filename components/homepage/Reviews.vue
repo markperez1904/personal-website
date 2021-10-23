@@ -10,7 +10,7 @@
         <div class="text-center mb-5">
           <!-- <span>SERVICES</span> -->
           <h2 class="mb-2 text-4xl lg:text-5xl font-bold font-heading">
-            Don't Take Our <span style="color: #00c58e">Word</span> For It
+            Don't Take Our <span class="text-green-600">Word</span> For It
           </h2>
         </div>
         <div>
@@ -20,14 +20,15 @@
             <div class="md:w-1/2 sm:w-full">
               <div class="snippets" style="text-align:left">
                 <span
-                  style="color: #00c58e; font-weight:bold; font-style: italic"
+                  style="font-weight:bold; font-style: italic"
+                  class="text-green-600"
                   >43% more appointments</span
                 >
                 from traffic boosts:
               </div>
               <iframe
                 class="youtube-vid"
-                src="https://www.youtube.com/embed/vHuQMaVGMW8"
+                src="https://drive.google.com/file/d/1FG6pyVlheUq-gw1pH9rZvmhge199AJja/preview"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
