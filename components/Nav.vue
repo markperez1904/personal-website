@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="navbar">
+    <section class="navbar" id="toppy">
       <nav class="container">
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/">
@@ -91,7 +91,18 @@ hr {
 }
 
 .logo {
-  max-height: 3rem;
+  max-height: 110px;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1023px) {
+  .logo {
+    margin-top: unset;
+  }
+}
+
+#toppy {
+  margin-bottom: 4rem;
 }
 
 .navbar {

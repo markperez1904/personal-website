@@ -213,7 +213,7 @@ aside.right img {
 }
 
 .is-fullheight {
-  min-height: calc(100vh - 6rem);
+  min-height: calc(95vh - 6rem);
 }
 
 .title {

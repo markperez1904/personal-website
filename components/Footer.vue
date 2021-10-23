@@ -7,14 +7,14 @@
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
             <div class="w-full lg:w-1/3 mb-16 lg:mb-0">
-              <a
+              <n-link
                 class="inline-block mb-3 text-3xl font-bold leading-none"
-                href="#"
+                to="/"
                 ><img
                   src="~static/mp-digital-logo-dark.png"
                   alt=""
                   width="160"
-              /></a>
+              /></n-link>
             </div>
             <div
               class="w-full lg:w-2/3 lg:pl-16 flex flex-wrap justify-between"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="navbar">
+    <section class="navbar" id="toppy">
       <nav class="container">
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/">
@@ -8,6 +8,7 @@
               class="logo"
               src="~static/mp-digital-logo-light.png"
               alt="Mark Perez Digital"
+              width="160"
             />
           </n-link>
 
@@ -97,16 +98,27 @@ a:focus {
   background-color: transparent;
 }
 
+.logo {
+  max-height: 110px;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1023px) {
+  .logo {
+    margin-top: unset;
+  }
+}
+
+#toppy {
+  margin-bottom: 4rem;
+}
+
 .button {
   letter-spacing: 1px;
   font-weight: bold;
   color: #fff;
   background-color: #2f495d;
   border-color: rgba(255, 255, 255, 0);
-}
-
-.logo {
-  max-height: 3rem;
 }
 
 .navbar-menu {
