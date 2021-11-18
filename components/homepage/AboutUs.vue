@@ -81,11 +81,11 @@
           with us for the 1st 30 days, we'll build a <em>FREE </em> backlink
           profile across <strong>100+</strong> reputable social networks.
         </p>
-        <n-link to="/book/">
+        <a href="/book/">
           <button class="button cta" :style="cta">
             Book Call
           </button>
-        </n-link>
+        </a>
       </div>
 
       <!-- column -->

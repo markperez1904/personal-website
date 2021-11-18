@@ -35,11 +35,11 @@
             </h2>
 
             <!-- call button -->
-            <n-link to="/book/" id="call-link">
+            <a href="/book/" id="call-link">
               <button class="button is-rounded call-button">
                 Help Me Get Noticed
               </button>
-            </n-link>
+            </a>
           </aside>
           <aside class="right column">
             <img class="mainpng" src="~/assets/svg/mainsvg.svg" alt="spec" />

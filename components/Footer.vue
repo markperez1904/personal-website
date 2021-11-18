@@ -38,8 +38,8 @@
                     >
                   </li>
                   <li class="mb-4">
-                    <n-link class="text-gray-800 hover:text-gray-600" to="/book/"
-                      >Book a Call</n-link
+                    <a class="text-gray-800 hover:text-gray-600" href="/book/"
+                      >Book a Call</a
                     >
                   </li>
                 </ul>

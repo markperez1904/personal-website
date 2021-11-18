@@ -22,10 +22,10 @@
               <u>first 30 days</u>, we'll build a <em>FREE</em> backlink profile
               across <strong>100+</strong> reputable social networks.
             </p>
-            <n-link
+            <a
               class="inline-block py-2 px-6 bg-green-600 hover:bg-green-700 text-white font-bold leading-loose rounded-l-xl rounded-t-xl transition duration-200"
-              to="/book/"
-              >Book a Call</n-link
+              href="/book/"
+              >Book a Call</a
             >
           </div>
         </div>

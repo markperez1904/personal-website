@@ -51,8 +51,8 @@
             <n-link :style="changeColor" class="navbar-item" to="/case-study/"
               >Case Studies</n-link
             >
-            <n-link class="navbar-item" to="/book/"
-              ><button class="button is-rounded">Book a Call</button></n-link
+            <a class="navbar-item" href="/book/"
+              ><button class="button is-rounded">Book a Call</button></a
             >
           </div>
         </div>
