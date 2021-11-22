@@ -15,15 +15,20 @@
       async
     ></script>
     <!-- Calendly inline widget end -->
+
+    <!-- testimonials -->
+    <app-reviews></app-reviews>
   </div>
 </template>
 
 <script>
 import Contact from '@/components/homepage/Contact.vue'
+import Reviews from '@/components/homepage/Reviews.vue'
 
 export default {
   components: {
-    'app-contact': Contact
+    'app-contact': Contact,
+    'app-reviews': Reviews
   },
 
   data() {

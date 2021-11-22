@@ -2,7 +2,6 @@
   <div
     id="outer"
     style="margin-top: 6rem"
-    v-scroll-reveal.reset="{ delay: 100 }"
   >
     <div class="container my-5">
       <section>
@@ -38,22 +37,23 @@
 
             <!-- 2nd review -->
             <div class="md:w-1/2 sm:w-full">
-              <!-- <div class="snippets" style="text-align:left">
+              <div class="snippets" style="text-align:left">
                 <span
-                  style="color: #00c58e; font-weight:bold; font-style: italic"
-                  >43% more appointments</span
+                  style="font-weight:bold; font-style: italic"
+                  class="text-green-600"
+                  >111.22% more leads</span
                 >
-                from traffic boosts:
+                from content strategy:
               </div>
               <iframe
                 class="youtube-vid"
-                src="https://www.youtube.com/embed/vHuQMaVGMW8"
+                src="https://drive.google.com/file/d/1anJIHKwrR4FEcLyQczKykdXh535YEhhU/preview"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-              ></iframe> -->
-            </div>  
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
