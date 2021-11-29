@@ -34,6 +34,9 @@
       </section>
     </div>
 
+    <!-- testimonials -->
+    <app-reviews></app-reviews>
+
     <!-- component apps -->
     <app-bookcall></app-bookcall>
   </div>
@@ -41,13 +44,15 @@
 
 <script>
 import BookCall from '@/components/BookCall.vue'
+import Reviews from '@/components/homepage/Reviews.vue'
 import NavHome from '@/components/NavHome.vue'
 
 export default {
   layout: 'case-study',
   components: {
     'app-bookcall': BookCall,
-    'app-navhome': NavHome
+    'app-navhome': NavHome,
+    'app-reviews': Reviews
   },
 
   data() {

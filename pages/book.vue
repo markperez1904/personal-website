@@ -3,7 +3,6 @@
     <h1>{{ title }}</h1>
     <h2 class="hours">{{ description }}</h2>
 
-    <!-- contact component -->
     <!-- Calendly inline widget begin -->
     <div
       class="calendly-inline-widget"
@@ -14,7 +13,6 @@
       src="https://assets.calendly.com/assets/external/widget.js"
       async
     ></script>
-    <!-- Calendly inline widget end -->
 
     <!-- testimonials -->
     <app-reviews></app-reviews>
