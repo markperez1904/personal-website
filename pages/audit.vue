@@ -71,6 +71,22 @@ export default {
           hid: 'robots',
           name: 'robots',
           content: 'noindex,noarchive,nofollow'
+        },
+        {
+          hid: 'og:title', // open graph title
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description', // open graph description
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image', // open graph image
+          property: 'og:image',
+          content:
+            'https://images.prismic.io/marks-personal-website/e9dea2ec-efb5-4543-ad26-a9bda9583b43_mperez-audit.jpg'
         }
       ],
       __dangerouslyDisableSanitizers: ['script']
