@@ -106,7 +106,7 @@ export default {
           hid: 'og:image', // open graph image
           property: 'og:image',
           content:
-            'https://images.prismic.io/marks-personal-website/e9dea2ec-efb5-4543-ad26-a9bda9583b43_mperez-audit.jpg'
+            'https://images.prismic.io/marks-personal-website/be20b88e-d042-4180-98ef-34e4f0ac4909_mperez-audit.png'
         }
       ],
       __dangerouslyDisableSanitizers: ['script']
