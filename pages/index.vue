@@ -30,7 +30,6 @@
 
           <!-- resume button -->
           <a
-            target="_blank"
             href="https://markperez.dev/blog/"
           >
             <button class="button is-centered">My tutorials</button>
