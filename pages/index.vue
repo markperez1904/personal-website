@@ -12,9 +12,8 @@
           <h2 class="subtitle">
             <vue-typer
               :text="[
-                'Web Consultant',
-                'Produced over ' + allBlog_postss.totalCount + ' tutorials',
-                'Tech enthusiast'
+                'Tech enthusiast',
+                'Produced over ' + allBlog_postss.totalCount + ' tutorials'
               ]"
               :repeat="Infinity"
               :shuffle="false"
@@ -32,9 +31,9 @@
           <!-- resume button -->
           <a
             target="_blank"
-            href="https://calendly.com/info-30250/discovery-call"
+            href="https://markperez.dev/blog/"
           >
-            <button class="button is-centered">Book a Call</button>
+            <button class="button is-centered">My tutorials</button>
           </a>
         </aside>
       </div>
@@ -61,13 +60,13 @@ export default {
     return {
       title: 'Mark Perez',
       description:
-        'Mark Perez is an Web Consultant and self-learning enthusiast in technology. Produces content on YouTube.'
+        'Mark Perez is a self-learning tech enthusiast in azure and linux. Produces content on YouTube.'
     }
   },
 
   head() {
     return {
-      title: 'Web Consultant',
+      title: 'Tech Enthusiast',
       meta: [
         {
           hid: 'description',
