@@ -71,3 +71,10 @@ if (errors.length) {
 }
 
 console.log('Generated site looks complete.')
+
+// Netlify projects created before the Nuxt 4 migration may still have their
+// publish directory set to `dist`. Keep a copy there as well as .output/public.
+const legacyDir = path.resolve(dirname, '..', 'dist')
+fs.rmSync(legacyDir, { recursive: true, force: true })
+fs.cpSync(distDir, legacyDir, { recursive: true })
+console.log('Copied output to dist/ for Netlify publish compatibility.')

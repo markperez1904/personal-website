@@ -10,10 +10,11 @@
   },
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postgenerate": "node scripts/verify-dist.js"
+    "postgenerate": "node scripts/verify-dist.js",
+    "postbuild": "node scripts/verify-dist.js"
   },
   "dependencies": {
     "@prismicio/client": "^7.23.0",
