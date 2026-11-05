@@ -1,19 +1,26 @@
 [build]
   command = "npm run generate"
-  publish = "dist"
+  publish = ".output/public"
 
-[build.processing]
-  skip_processing = false
-[build.processing.css]
-  minify = true
-  bundle = true
-[build.processing.js]
-  bundle = true
-  minify = true
-[build.processing.html]
-  pretty_urls = true
-[build.processing.images]
-  compress = true
 [build.environment]
   CI = "1"
   NODE_VERSION = "22"
+
+[build.processing]
+  skip_processing = true
+
+[[headers]]
+  for = "/_nuxt/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "public, max-age=0, must-revalidate"

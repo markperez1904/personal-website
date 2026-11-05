@@ -2,20 +2,23 @@
 
 /**
  * Fail the build if the generated site is missing pages that the sitemap
- * advertises. Nuxt can finish generation with per-route errors, which used to
- * publish a site with the whole blog missing.
+ * advertises. Nuxt 4's prerenderer should already fail on route errors, but
+ * this keeps the old Nuxt 2-era guarantee that a partial site is never
+ * published.
  */
 
-const fs = require('fs')
-const path = require('path')
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const distDir = path.resolve(__dirname, '..', 'dist')
+const dirname = path.dirname(fileURLToPath(import.meta.url))
+const distDir = path.resolve(dirname, '..', '.output', 'public')
 const errors = []
 
 const requiredFiles = [
   'index.html',
-  '200.html',
   'sitemap.xml',
+  'search-index.json',
   'blog/index.html',
   'contact/index.html',
   'gear/index.html',
@@ -52,7 +55,9 @@ if (fs.existsSync(sitemapPath)) {
     const pagePath = path.join(distDir, pathname, 'index.html')
 
     if (!fs.existsSync(pagePath)) {
-      errors.push(`sitemap lists ${url} but ${path.relative(distDir, pagePath)} is missing`)
+      errors.push(
+        `sitemap lists ${url} but ${path.relative(distDir, pagePath)} is missing`
+      )
     }
   })
 

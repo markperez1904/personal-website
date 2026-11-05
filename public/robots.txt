@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /thanks/
+Disallow: /200.html
+Disallow: /README.md
+
+Sitemap: https://markperez.dev/sitemap.xml
