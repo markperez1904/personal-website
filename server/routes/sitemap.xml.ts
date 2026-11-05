@@ -1,19 +1,12 @@
-import { createClient } from '@prismicio/client'
+import { getAllPostsForServer } from '../utils/prismic'
 
 const SITE_URL = 'https://markperez.dev'
 
 export default defineEventHandler(async event => {
-  const client = createClient('marks-personal-website')
-  const posts = await client.getAllByType('blog_posts', {
-    lang: 'en-us',
-    orderings: 'my.blog_posts.date desc',
-    fetch: ['blog_posts.title']
-  })
+  const posts = await getAllPostsForServer()
 
   const paths = [
-    ...posts
-      .filter(post => post.uid)
-      .map(post => `/blog/${post.uid}/`),
+    ...posts.filter(post => post.uid).map(post => `/blog/${post.uid}/`),
     '/',
     '/blog/',
     '/contact/',

@@ -1,15 +1,12 @@
-import { asText, createClient } from '@prismicio/client'
+import { asText } from '@prismicio/client'
+import { getAllPostsForServer } from '../utils/prismic'
 
 function toText(field) {
   return field ? asText(field) : ''
 }
 
 export default defineEventHandler(async () => {
-  const client = createClient('marks-personal-website')
-  const posts = await client.getAllByType('blog_posts', {
-    lang: 'en-us',
-    orderings: 'my.blog_posts.date desc'
-  })
+  const posts = await getAllPostsForServer()
 
   return posts
     .filter(post => post.uid)

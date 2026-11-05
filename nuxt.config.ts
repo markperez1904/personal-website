@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import { getAllPostsForServer } from './server/utils/prismic'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-11-05',
@@ -146,12 +147,7 @@ export default defineNuxtConfig({
 
   hooks: {
     async 'prerender:routes'({ routes }) {
-      const { createClient } = await import('@prismicio/client')
-      const client = createClient('marks-personal-website')
-      const posts = await client.getAllByType('blog_posts', {
-        lang: 'en-us',
-        fetch: ['blog_posts.title']
-      })
+      const posts = await getAllPostsForServer()
 
       for (const post of posts) {
         routes.add(`/blog/${post.uid}/`)

@@ -12,69 +12,110 @@ export const POST_SUMMARY_FIELDS = [
   'blog_posts.description'
 ]
 
-export const prismic = createClient(PRISMIC_REPOSITORY)
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-// The static build renders 37 post pages. Cache the queries that are identical
-// for every page so the build doesn't hit Prismic 30+ times for recent posts.
-let summariesPromise = null
-let countPromise = null
-const recentPromises = new Map()
+// Netlify's build network occasionally rate-limits or drops a request. Retry
+// transient failures instead of failing the whole static build.
+async function retryingFetch(input, init) {
+  let lastError
 
-export function getPostSummaries() {
-  if (!summariesPromise) {
-    summariesPromise = prismic
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetch(input, init)
+
+      if (
+        (response.status === 429 || response.status >= 500) &&
+        attempt < 2
+      ) {
+        await sleep(500 * (attempt + 1))
+        continue
+      }
+
+      return response
+    } catch (error) {
+      lastError = error
+
+      if (attempt < 2) {
+        await sleep(500 * (attempt + 1))
+        continue
+      }
+
+      throw error
+    }
+  }
+
+  throw lastError
+}
+
+export const prismic = createClient(PRISMIC_REPOSITORY, {
+  fetch: retryingFetch
+})
+
+// The build renders every page. Fetch the full post set once and reuse it for
+// post pages, the index summaries, the sidebar, and the homepage count.
+let allPostsPromise = null
+
+export function getAllPosts() {
+  if (!allPostsPromise) {
+    allPostsPromise = prismic
       .getAllByType('blog_posts', {
         lang: PRISMIC_LANG,
-        orderings: 'my.blog_posts.date desc',
-        fetch: POST_SUMMARY_FIELDS
+        orderings: 'my.blog_posts.date desc'
       })
       .catch(error => {
-        summariesPromise = null
+        allPostsPromise = null
         throw error
       })
   }
 
-  return summariesPromise
+  return allPostsPromise
 }
 
-export function getRecentPosts(limit = 3) {
-  if (!recentPromises.has(limit)) {
-    const promise = prismic
-      .getByType('blog_posts', {
-        lang: PRISMIC_LANG,
-        pageSize: limit,
-        orderings: 'my.blog_posts.date desc',
-        fetch: ['blog_posts.image', 'blog_posts.title']
-      })
-      .catch(error => {
-        recentPromises.delete(limit)
-        throw error
-      })
+export async function getPostSummaries() {
+  const posts = await getAllPosts()
 
-    recentPromises.set(limit, promise)
+  return posts.map(post => ({
+    ...post,
+    data: {
+      title: post.data.title,
+      image: post.data.image,
+      date: post.data.date,
+      description: post.data.description
+    }
+  }))
+}
+
+export async function getRecentPosts(limit = 3) {
+  const posts = await getAllPosts()
+
+  return {
+    results: posts.slice(0, limit).map(post => ({
+      ...post,
+      data: {
+        image: post.data.image,
+        title: post.data.title
+      }
+    })),
+    page: 1,
+    results_per_page: limit,
+    results_size: Math.min(limit, posts.length),
+    total_results_size: posts.length,
+    total_pages: 1
+  }
+}
+
+export async function getPost(uid) {
+  const posts = await getAllPosts()
+  const post = posts.find(candidate => candidate.uid === uid)
+
+  if (!post) {
+    throw new Error(`Prismic post not found: ${uid}`)
   }
 
-  return recentPromises.get(limit)
+  return post
 }
 
-export function getPost(uid: string) {
-  return prismic.getByUID('blog_posts', uid, { lang: PRISMIC_LANG })
-}
-
-export function getPostCount() {
-  if (!countPromise) {
-    countPromise = prismic
-      .getByType('blog_posts', {
-        lang: PRISMIC_LANG,
-        pageSize: 1,
-        fetch: ['blog_posts.title']
-      })
-      .then(response => response.total_results_size)
-      .catch(error => {
-        countPromise = null
-        throw error
-      })
-  }
-
-  return countPromise
+export async function getPostCount() {
+  const posts = await getAllPosts()
+  return posts.length
 }
