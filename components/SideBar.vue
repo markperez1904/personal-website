@@ -11,15 +11,16 @@
       <aside class="column is-narrow is-12-widescreen is-4-tablet">
         <p class="sidebar-title box">Recent Posts</p>
         <article
-          v-for="post in allBlog_postss.edges"
+          v-for="post in recentPosts"
           :key="post.node._meta.id"
           class=""
         >
           <nuxt-link :to="`/blog/${post.node._meta.uid}/`">
             <img
               class="post-image"
-              :src="post.node.image.url"
-              :alt="post.node.image.alt"
+              :src="getImage(post.node.image)"
+              :alt="getImageAlt(post.node.image)"
+              loading="lazy"
             />
           </nuxt-link>
         </article>
@@ -56,6 +57,22 @@ const recentPosts = gql`
 export default {
   components: {
     'app-email': Email
+  },
+
+  computed: {
+    recentPosts() {
+      return (this.allBlog_postss && this.allBlog_postss.edges) || []
+    }
+  },
+
+  methods: {
+    getImage(image) {
+      return (image && image.url) || '/images/blog-placeholder.png'
+    },
+
+    getImageAlt(image) {
+      return (image && image.alt) || 'Recent blog post'
+    }
   },
 
   apollo: {

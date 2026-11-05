@@ -164,13 +164,12 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath + '/'
+          content: 'https://markperez.dev' + this.$route.path
         },
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content:
-            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
+          content: 'https://markperez.dev/images/blog-placeholder.png'
         }
       ]
     }

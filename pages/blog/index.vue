@@ -7,7 +7,7 @@
     <section class="field columns is-centered">
       <div class="control has-icons-left column is-3-widescreen is-4-tablet">
         <input
-          @keyup.passive="searchPosts(keyword)"
+          @input="onSearch"
           v-model="keyword"
           type="search"
           class="input is-rounded"
@@ -21,24 +21,35 @@
     <transition name="fade">
       <section
         class="posts columns is-multiline is-centered"
-        v-if="loading == 0"
+        v-if="loading == 0 && posts.length"
       >
         <article
-          v-for="post in allBlog_postss.edges"
+          v-for="post in posts"
           :key="post.node._meta.id"
           class="box column is-3-widescreen is-4-tablet"
         >
           <nuxt-link :to="`/blog/${post.node._meta.uid}/`">
             <img
               class="post-image"
-              :src="post.node.image.url"
-              :alt="post.node.image.alt"
+              :src="getImage(post.node.image)"
+              :alt="getImageAlt(post.node.image, post.node.title)"
+              loading="lazy"
             />
-            <p class="title is-6">{{ post.node.title[0].text }}</p>
+            <p class="title is-6">{{ getTitle(post.node.title) }}</p>
           </nuxt-link>
         </article>
       </section>
     </transition>
+
+    <!-- empty state -->
+    <p class="empty-state" v-if="loading == 0 && !posts.length && !error">
+      No tutorials match “{{ keyword }}”.
+    </p>
+
+    <!-- error state -->
+    <p class="empty-state" v-if="error">
+      Unable to load tutorials right now. Please try again.
+    </p>
 
     <!-- loading bar -->
     <aside class="loading-bar columns is-multiline is-centered is-mobile">
@@ -52,11 +63,11 @@
     <!-- button -->
     <aside class="columns is-multiline is-centered is-mobile">
       <button
-        v-if="allBlog_postss.pageInfo.hasNextPage && loading == 0"
+        v-if="hasNextPage && loading == 0"
         class="button"
-        @click="loadMorePosts(keyword, allBlog_postss.pageInfo.endCursor)"
+        @click="loadMorePosts(keyword, endCursor)"
       >
-        {{ loading ? 'Loading...' : 'Show more' }}
+        Show more
       </button>
     </aside>
   </div>
@@ -64,6 +75,8 @@
 
 <script>
 import gql from 'graphql-tag'
+
+const PLACEHOLDER_IMAGE = '/images/blog-placeholder.png'
 
 const articles = gql`
   query($fulltext: String, $cursor: String) {
@@ -103,8 +116,38 @@ export default {
 
       loading: 0,
       color: '#00c58e',
-      keyword: '' // for searchPosts()
+      keyword: '', // for searchPosts()
+      error: null,
+      searchTimer: null
     }
+  },
+
+  computed: {
+    posts() {
+      return (this.allBlog_postss && this.allBlog_postss.edges) || []
+    },
+
+    hasNextPage() {
+      return !!(
+        this.allBlog_postss &&
+        this.allBlog_postss.pageInfo &&
+        this.allBlog_postss.pageInfo.hasNextPage
+      )
+    },
+
+    endCursor() {
+      return this.allBlog_postss && this.allBlog_postss.pageInfo
+        ? this.allBlog_postss.pageInfo.endCursor
+        : null
+    },
+
+    canonicalPath() {
+      return this.$route.path.replace(/\/+$/, '') + '/'
+    }
+  },
+
+  beforeDestroy() {
+    clearTimeout(this.searchTimer)
   },
 
   head() {
@@ -139,13 +182,12 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath + '/'
+          content: 'https://markperez.dev' + this.canonicalPath
         },
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content:
-            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
+          content: 'https://markperez.dev' + PLACEHOLDER_IMAGE
         }
       ]
     }
@@ -168,48 +210,94 @@ export default {
   },
 
   methods: {
+    getTitle(title) {
+      return (title && title[0] && title[0].text) || 'Untitled tutorial'
+    },
+
+    getImage(image) {
+      return (image && image.url) || PLACEHOLDER_IMAGE
+    },
+
+    getImageAlt(image, title) {
+      return (image && image.alt) || this.getTitle(title)
+    },
+
+    // Debounce search so typing doesn't fire a request per keystroke
+    onSearch() {
+      clearTimeout(this.searchTimer)
+      this.searchTimer = setTimeout(() => {
+        this.searchPosts(this.keyword)
+      }, 350)
+    },
+
     loadMorePosts(searchTerm, currentCursor) {
-      this.$apollo.queries.allBlog_postss.fetchMore({
-        variables: {
-          fulltext: searchTerm,
-          cursor: currentCursor
-        },
+      const query = this.$apollo && this.$apollo.queries.allBlog_postss
+      if (!query || !currentCursor) return
 
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          if (!fetchMoreResult) return previousResult
+      this.error = null
 
-          return {
-            allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
-              __typename: fetchMoreResult.allBlog_postss.__typename,
-              edges: previousResult.allBlog_postss.edges.concat(
-                fetchMoreResult.allBlog_postss.edges
-              ),
-              pageInfo: fetchMoreResult.allBlog_postss.pageInfo
-            })
+      query
+        .fetchMore({
+          variables: {
+            fulltext: searchTerm,
+            cursor: currentCursor
+          },
+
+          updateQuery: (previousResult, { fetchMoreResult }) => {
+            if (!fetchMoreResult || !fetchMoreResult.allBlog_postss) {
+              return previousResult
+            }
+
+            if (!previousResult || !previousResult.allBlog_postss) {
+              return fetchMoreResult
+            }
+
+            return {
+              allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
+                __typename: fetchMoreResult.allBlog_postss.__typename,
+                edges: previousResult.allBlog_postss.edges.concat(
+                  fetchMoreResult.allBlog_postss.edges
+                ),
+                pageInfo: fetchMoreResult.allBlog_postss.pageInfo
+              })
+            }
           }
-        }
-      })
+        })
+        .catch(() => {
+          this.error = true
+        })
     },
 
     searchPosts(searchTerm) {
-      this.$apollo.queries.allBlog_postss.fetchMore({
-        variables: {
-          fulltext: searchTerm,
-          cursor: ''
-        },
+      const query = this.$apollo && this.$apollo.queries.allBlog_postss
+      if (!query) return
 
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          if (!fetchMoreResult) return previousResult
+      this.error = null
 
-          return {
-            allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
-              __typename: fetchMoreResult.allBlog_postss.__typename,
-              edges: [...fetchMoreResult.allBlog_postss.edges],
-              pageInfo: fetchMoreResult.allBlog_postss.pageInfo
-            })
+      query
+        .fetchMore({
+          variables: {
+            fulltext: searchTerm,
+            cursor: ''
+          },
+
+          updateQuery: (previousResult, { fetchMoreResult }) => {
+            if (!fetchMoreResult || !fetchMoreResult.allBlog_postss) {
+              return previousResult
+            }
+
+            return {
+              allBlog_postss: Object.assign({}, fetchMoreResult.allBlog_postss, {
+                __typename: fetchMoreResult.allBlog_postss.__typename,
+                edges: [...fetchMoreResult.allBlog_postss.edges],
+                pageInfo: fetchMoreResult.allBlog_postss.pageInfo
+              })
+            }
           }
-        }
-      })
+        })
+        .catch(() => {
+          this.error = true
+        })
     }
   }
 }
@@ -286,5 +374,11 @@ input:focus {
   margin-bottom: 2rem;
   color: #fff;
   background-color: #00c58e;
+}
+
+.empty-state {
+  text-align: center;
+  margin: 2rem 0;
+  color: #718096;
 }
 </style>

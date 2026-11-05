@@ -21,33 +21,25 @@
         </figure>
 
         <!-- Title, Date, and Description -->
-        <h1>{{ blog_posts.title[0].text }}</h1>
+        <h1>{{ postTitle }}</h1>
         <p class="date">
           Updated
           <time>
-            {{ blog_posts._meta.lastPublicationDate | moment('MMM DD, YYYY') }}
+            {{ postDate }}
           </time>
         </p>
-        <h2>{{ blog_posts.description[0].text }}</h2>
+        <h2>{{ postDescription }}</h2>
 
         <!-- Main image -->
         <img
           class="featured-img"
-          :src="blog_posts.image.url"
-          :alt="blog_posts.image.alt"
+          :src="postImagePath"
+          :alt="postImageAlt"
         />
         <br />
 
         <!-- Blog Content (lazy load dynamic HTML) -->
-        <div
-          v-html="
-            PrismicDOM.RichText.asHtml(
-              blog_posts.content,
-              linkResolver,
-              htmlSerializer
-            )
-          "
-        ></div>
+        <div v-html="contentHtml"></div>
 
         <!-- 1st ClickBank Banner -->
         <figure class="banner">
@@ -69,8 +61,8 @@
         <div class="comments">
           <vue-disqus
             shortname="mark-perez"
-            :identifier="blog_posts._meta.id"
-            :url="`https://markperez.dev/blog/${getRoute}/`"
+            :identifier="postId"
+            :url="postUrl"
           ></vue-disqus>
         </div>
       </article>
@@ -107,28 +99,23 @@ const currentPost = gql`
   }
 `
 
+const SITE_URL = 'https://markperez.dev'
+const PLACEHOLDER_IMAGE = '/images/blog-placeholder.png'
+
 export default {
   components: {
     'app-sidebar': SideBar
   },
 
-  data() {
-    return {
-      PrismicDOM,
-      linkResolver,
-      htmlSerializer
-    }
-  },
-
   head() {
     return {
       // SEO on <title> and <meta> tags
-      title: this.blog_posts.title[0].text,
+      title: this.postTitle,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.blog_posts.description[0].text
+          content: this.postDescription
         },
         {
           hid: 'og:type', // open graph type
@@ -138,27 +125,27 @@ export default {
         {
           hid: 'apple-mobile-web-app-title', // open graph mobile web app title
           name: 'apple-mobile-web-app-title',
-          content: this.blog_posts.title[0].text
+          content: this.postTitle
         },
         {
           hid: 'og:title', // open graph title
           property: 'og:title',
-          content: this.blog_posts.title[0].text
+          content: this.postTitle
         },
         {
           hid: 'og:description', // open graph description
           property: 'og:description',
-          content: this.blog_posts.description[0].text
+          content: this.postDescription
         },
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath + '/'
+          content: SITE_URL + this.canonicalPath
         },
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content: this.blog_posts.image.url
+          content: this.postImage
         }
       ],
 
@@ -188,8 +175,70 @@ export default {
       return this.$route.params.slug
     },
 
+    canonicalPath() {
+      return this.$route.path.replace(/\/+$/, '') + '/'
+    },
+
+    postTitle() {
+      const title = this.blog_posts && this.blog_posts.title
+      return (title && title[0] && title[0].text) || 'Tutorial'
+    },
+
+    postDescription() {
+      const description = this.blog_posts && this.blog_posts.description
+      return (description && description[0] && description[0].text) || ''
+    },
+
+    postImagePath() {
+      const image = this.blog_posts && this.blog_posts.image
+      return (image && image.url) || PLACEHOLDER_IMAGE
+    },
+
+    postImage() {
+      const path = this.postImagePath
+      return path.startsWith('http') ? path : `${SITE_URL}${path}`
+    },
+
+    postImageAlt() {
+      const image = this.blog_posts && this.blog_posts.image
+      return (image && image.alt) || this.postTitle
+    },
+
+    postId() {
+      const meta = this.blog_posts && this.blog_posts._meta
+      return (meta && meta.id) || this.getRoute
+    },
+
+    postUrl() {
+      return `${SITE_URL}/blog/${this.getRoute}/`
+    },
+
+    postDate() {
+      const meta = this.blog_posts && this.blog_posts._meta
+      return this.formatDate(meta && meta.lastPublicationDate)
+    },
+
+    contentHtml() {
+      const content = this.blog_posts && this.blog_posts.content
+      if (!Array.isArray(content)) return ''
+
+      try {
+        return PrismicDOM.RichText.asHtml(
+          content,
+          linkResolver,
+          htmlSerializer
+        )
+      } catch (error) {
+        return ''
+      }
+    },
+
     getMailchimp() {
-      if (process.client) {
+      if (!process.client || typeof window.dojoRequire !== 'function') {
+        return ''
+      }
+
+      try {
         return JSON.stringify(
           window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
             L.start({
@@ -200,20 +249,24 @@ export default {
             })
           })
         )
+      } catch (error) {
+        return ''
       }
     },
 
     getArticleSchema() {
+      const meta = (this.blog_posts && this.blog_posts._meta) || {}
+
       return JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://markperez.dev' + this.$route.fullPath + '/'
+          '@id': SITE_URL + this.canonicalPath
         },
-        headline: this.blog_posts.title[0].text,
-        description: this.blog_posts.description[0].text,
-        image: this.blog_posts.image.url,
+        headline: this.postTitle,
+        description: this.postDescription,
+        image: this.postImage,
         author: {
           '@type': 'Person',
           name: 'Mark Perez'
@@ -223,15 +276,30 @@ export default {
           name: 'Mark Perez Digital',
           logo: {
             '@type': 'ImageObject',
-            url:
-              'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png',
-            width: 169.66,
-            height: 47.98
+            url: `${SITE_URL}${PLACEHOLDER_IMAGE}`,
+            width: 1200,
+            height: 675
           }
         },
-        datePublished: this.blog_posts._meta.firstPublicationDate,
-        dateModified: this.blog_posts._meta.lastPublicationDate
+        datePublished: meta.firstPublicationDate,
+        dateModified: meta.lastPublicationDate
       })
+    }
+  },
+
+  methods: {
+    formatDate(value) {
+      if (!value) return ''
+
+      const date = new Date(value)
+      if (Number.isNaN(date.getTime())) return ''
+
+      return new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: '2-digit',
+        timeZone: 'UTC'
+      }).format(date)
     }
   },
 

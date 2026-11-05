@@ -1,3 +1,7 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+
 [build.processing]
   skip_processing = false
 [build.processing.css]
@@ -12,4 +16,4 @@
   compress = true
 [build.environment]
   CI = "1"
-  NODE_VERSION = "14.17.6"
+  NODE_VERSION = "22"

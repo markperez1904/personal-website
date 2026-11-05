@@ -10,33 +10,78 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-const linkages = () => {
-  return client
-    .query({
-      query: gql`
-        {
-          allBlog_postss(sortBy: date_DESC) {
-            edges {
-              node {
-                _meta {
-                  uid
-                }
-              }
-            }
+const postsQuery = gql`
+  query allPostUids($cursor: String) {
+    allBlog_postss(sortBy: date_DESC, first: 100, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        node {
+          _meta {
+            uid
           }
         }
-      `
-    })
-    .then(res => {
-      return res.data.allBlog_postss.edges.map(posts => {
-        return '/blog/' + posts.node._meta.uid
+      }
+    }
+  }
+`
+
+// Prismic returns at most 20 documents per page by default. Walk every page so
+// all posts are generated (and listed in the sitemap), not just the newest 20.
+let routesPromise
+
+const fetchPostRoutes = () => {
+  const routes = []
+
+  const nextPage = cursor => {
+    return client
+      .query({
+        query: postsQuery,
+        variables: { cursor },
+        fetchPolicy: 'no-cache'
       })
+      .then(res => {
+        const connection = res.data.allBlog_postss
+
+        connection.edges.forEach(({ node }) => {
+          if (node._meta && node._meta.uid) {
+            routes.push(`/blog/${node._meta.uid}`)
+          }
+        })
+
+        if (connection.pageInfo.hasNextPage && connection.pageInfo.endCursor) {
+          return nextPage(connection.pageInfo.endCursor)
+        }
+
+        return Array.from(new Set(routes))
+      })
+  }
+
+  return nextPage(null)
+}
+
+const linkages = () => {
+  if (!routesPromise) {
+    routesPromise = fetchPostRoutes().catch(error => {
+      // Don't cache a failed request; let the next caller retry.
+      routesPromise = null
+      throw error
     })
+  }
+
+  return routesPromise
 }
 
 export default {
   // full static mode (as of v2.14.0): https://nuxtjs.org/blog/going-full-static/
   target: 'static',
+
+  // Use trailing slashes everywhere, matching the generated files and sitemap
+  router: {
+    trailingSlash: true
+  },
 
   // Headers of the page
   head: {
@@ -96,7 +141,6 @@ export default {
 
   // Plugins to load before mounting the App
   plugins: [
-    '~/plugins/moment.js',
     '~/plugins/typer.js',
     '~/plugins/spinner.js',
     '~/plugins/silentbox.js',
@@ -106,7 +150,6 @@ export default {
   // Nuxt.js modules
   modules: [
     '@nuxtjs/pwa', // this module will give me PWA benefits by default!
-    'nuxt-trailingslash-module', // add trailing slash on URLs
     'nuxt-buefy',
     '@nuxtjs/apollo',
     '@nuxtjs/google-analytics',

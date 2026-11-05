@@ -82,4 +82,10 @@ a {
 .framework {
   font-weight: bold;
 }
+
+/* Bulma's negative column gutters caused a small horizontal scroll on mobile */
+footer.columns {
+  margin-left: 0;
+  margin-right: 0;
+}
 </style>

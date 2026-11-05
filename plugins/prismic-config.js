@@ -4,47 +4,35 @@ const Elements = PrismicDOM.RichText.Elements
 
 // Fetch the link resolver
 export const linkResolver = doc => {
-  if (doc.type === 'blog_posts') return `/blog/${doc.uid}`
-  return `/${doc.uid}`
+  if (doc.type === 'blog_posts') return `/blog/${doc.uid}/`
+  return `/${doc.uid}/`
 }
 
 // Fetch, Create, and Send the html serializer
 export const htmlSerializer = (type, element, content, children) => {
-  // Generate links to Prismic Documents as <router-link> components
-  // Present by default, it is recommended to keep this
+  // Rendering inside v-html means these links must be real <a> tags; a
+  // <nuxt-link> would never be compiled and would not navigate.
   if (type === Elements.hyperlink) {
-    let result = ''
     const url = PrismicDOM.Link.url(element.data, linkResolver)
+    const target = element.data.target
+      ? ` target="${element.data.target}" rel="noopener"`
+      : ''
 
-    if (element.data.link_type === 'Document') {
-      result = `<nuxt-link to="${url}">${content}</nuxt-link>`
-    } else {
-      const target = element.data.target
-        ? `target="'${element.data.target}'" rel="noopener"`
-        : ''
-      result = `<a style="font-weight: bold" target="_blank" rel="noopener" href="${url}" ${target}>${content}</a>`
-    }
-    return result
+    return `<a style="font-weight: bold" href="${url}"${target}>${content}</a>`
   }
 
-  // If the image is also a link to a Prismic Document, it will return a <router-link> component
-  // Present by default, it is recommended to keep this
+  // If the image is also a link to a Prismic Document, wrap it in an <a>
   if (type === Elements.image) {
-    let result = `<img style="border-radius: 6px; box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3)" src="${
+    let result = `<img loading="lazy" style="border-radius: 6px; box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3)" src="${
       element.url
     }" alt="${element.alt || ''}" copyright="${element.copyright || ''}">`
 
     if (element.linkTo) {
       const url = PrismicDOM.Link.url(element.linkTo, linkResolver)
-
-      if (element.linkTo.link_type === 'Document') {
-        result = `<nuxt-link to="${url}">${result}</nuxt-link>`
-      } else {
-        const target = element.linkTo.target
-          ? `target="${element.linkTo.target}" rel="noopener"`
-          : ''
-        result = `<a href="${url}" ${target}>${result}</a>`
-      }
+      const target = element.linkTo.target
+        ? ` target="${element.linkTo.target}" rel="noopener"`
+        : ''
+      result = `<a href="${url}"${target}>${result}</a>`
     }
     const wrapperClassList = [element.label || '', 'block-img']
     result = `<p class="${wrapperClassList.join(' ')}">${result}</p> <br>`
@@ -97,7 +85,9 @@ export const htmlSerializer = (type, element, content, children) => {
     case Elements.oList:
       return `<div class="content"><ol type="1">${children.join('')}</ol></div>`
 
-    case Elements.embed:
+    case Elements.embed: {
+      if (!element.oembed) return ''
+
       return `
         <div
           class="youtube-embed"
@@ -109,6 +99,7 @@ export const htmlSerializer = (type, element, content, children) => {
 					${element.oembed.html}
 				</div>
 	  		`
+    }
 
     case Elements.label:
       const label = element.data.label ? ` class="${element.data.label}"` : ''

@@ -11,10 +11,7 @@
           <!-- subtitles with vue-typer -->
           <h2 class="subtitle">
             <vue-typer
-              :text="[
-                'Tech enthusiast',
-                'Produced over ' + allBlog_postss.totalCount + ' tutorials'
-              ]"
+              :text="typerText"
               :repeat="Infinity"
               :shuffle="false"
               initial-action="typing"
@@ -95,13 +92,12 @@ export default {
         {
           hid: 'og:url', // open graph url
           property: 'og:url',
-          content: 'https://markperez.dev' + this.$route.fullPath
+          content: 'https://markperez.dev' + this.canonicalPath
         },
         {
           hid: 'og:image', // open graph image
           property: 'og:image',
-          content:
-            'https://d33wubrfki0l68.cloudfront.net/f602ffaa7d56bbd9f27db7a08a0a7068462149e3/143f6/_nuxt/img/f9c805f.png'
+          content: 'https://markperez.dev/images/blog-placeholder.png'
         }
       ]
     }
@@ -109,6 +105,26 @@ export default {
 
   components: {
     'app-portfolio': Portfolio
+  },
+
+  computed: {
+    postCount() {
+      return (this.allBlog_postss && this.allBlog_postss.totalCount) || 0
+    },
+
+    typerText() {
+      const text = ['Tech enthusiast']
+
+      if (this.postCount) {
+        text.push(`Produced over ${this.postCount} tutorials`)
+      }
+
+      return text
+    },
+
+    canonicalPath() {
+      return this.$route.path.replace(/\/+$/, '') + '/'
+    }
   },
 
   apollo: {
@@ -149,6 +165,8 @@ button {
 
 .headshot {
   min-height: calc(100vh - 6rem);
+  margin-left: 0;
+  margin-right: 0;
   background-image: url('~assets/images/mark-suit-portrait.png');
   background-blend-mode: lighten;
   background-repeat: no-repeat;
