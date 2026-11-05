@@ -53,11 +53,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const title = 'Contact'
 const description =
   'Feel free to contact and send me an email. I will get back to them in no time!'
 
 const route = useRoute()
+const canonicalUrl = computed(
+  () => `https://markperez.dev${route.path.replace(/\/+$/, '')}/`
+)
 
 useSeoMeta({
   title,
@@ -65,10 +70,14 @@ useSeoMeta({
   ogType: 'website',
   ogTitle: title,
   ogDescription: description,
-  ogUrl: `https://markperez.dev${route.path.replace(/\/+$/, '')}/`,
+  ogUrl: canonicalUrl,
   ogImage: 'https://markperez.dev/images/blog-placeholder.png',
   appleMobileWebAppTitle: title
 })
+
+useHead(() => ({
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
+}))
 </script>
 
 <style scoped>

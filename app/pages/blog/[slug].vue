@@ -144,6 +144,7 @@ useSeoMeta({
 })
 
 useHead(() => ({
+  link: [{ rel: 'canonical', href: canonicalPath.value }],
   script: [
     {
       type: 'application/ld+json',

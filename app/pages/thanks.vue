@@ -19,6 +19,10 @@ useSeoMeta({
   description,
   robots: 'noindex,noarchive,nofollow'
 })
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://markperez.dev/thanks/' }]
+})
 </script>
 
 <style scoped>

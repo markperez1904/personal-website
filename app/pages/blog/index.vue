@@ -164,6 +164,10 @@ useSeoMeta({
   ogImage: `${SITE_URL}${PLACEHOLDER_IMAGE}`,
   appleMobileWebAppTitle: title
 })
+
+useHead(() => ({
+  link: [{ rel: 'canonical', href: canonicalPath.value }]
+}))
 </script>
 
 <style scoped>

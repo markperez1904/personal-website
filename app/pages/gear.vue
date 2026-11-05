@@ -123,11 +123,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const title = 'Gear'
 const description =
   'Here is a list of all of the gear I use on a daily basis. As an Amazon Associate, I will earn from qualified commissions.'
 
 const route = useRoute()
+const canonicalUrl = computed(
+  () => `https://markperez.dev${route.path.replace(/\/+$/, '')}/`
+)
 
 useSeoMeta({
   title,
@@ -135,10 +140,14 @@ useSeoMeta({
   ogType: 'website',
   ogTitle: title,
   ogDescription: description,
-  ogUrl: `https://markperez.dev${route.path.replace(/\/+$/, '')}/`,
+  ogUrl: canonicalUrl,
   ogImage: 'https://markperez.dev/images/blog-placeholder.png',
   appleMobileWebAppTitle: title
 })
+
+useHead(() => ({
+  link: [{ rel: 'canonical', href: canonicalUrl.value }]
+}))
 </script>
 
 <style scoped>

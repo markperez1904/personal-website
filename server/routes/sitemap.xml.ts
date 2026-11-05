@@ -10,8 +10,7 @@ export default defineEventHandler(async event => {
     '/',
     '/blog/',
     '/contact/',
-    '/gear/',
-    '/thanks/'
+    '/gear/'
   ]
 
   const urls = paths

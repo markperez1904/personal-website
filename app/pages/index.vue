@@ -37,6 +37,7 @@ const title = 'Mark Perez'
 const description =
   'Mark Perez is a self-learning tech enthusiast in azure and linux. Produces content on YouTube.'
 const canonicalPath = '/'
+const canonicalUrl = `https://markperez.dev${canonicalPath}`
 const ogImage = 'https://markperez.dev/images/blog-placeholder.png'
 
 const portraitStyle = {
@@ -61,9 +62,13 @@ useSeoMeta({
   ogType: 'website',
   ogTitle: title,
   ogDescription: description,
-  ogUrl: `https://markperez.dev${canonicalPath}`,
+  ogUrl: canonicalUrl,
   ogImage,
   appleMobileWebAppTitle: title
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: canonicalUrl }]
 })
 </script>
 
