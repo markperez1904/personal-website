@@ -18,12 +18,13 @@ through Prismic's REST API with `@prismicio/client`.
 npm run generate
 ```
 
-The static site is written to `.output/public`. The build fails on prerender
-errors, and `scripts/verify-dist.js` checks that every blog post listed in
-`sitemap.xml` was actually generated.
+The static site is written to `.output/public` locally. Netlify uses Nitro's
+`netlify-static` preset, which writes `dist`, so `.output/public` is copied to
+`dist` locally and the verification script detects either directory. The build
+fails on prerender errors, and `scripts/verify-dist.js` checks that every blog
+post listed in `sitemap.xml` was actually generated.
 
-Netlify runs `npm run generate` and publishes `.output/public` (see
-`netlify.toml`).
+Netlify runs `npm run generate` and publishes `dist` (see `netlify.toml`).
 
 ## Environment variables
 
