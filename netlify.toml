@@ -1,5 +1,5 @@
 [build]
-  command = "npm run generate"
+  command = "bash scripts/netlify-diagnose.sh"
   publish = ".output/public"
 
 [build.environment]
