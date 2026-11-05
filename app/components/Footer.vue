@@ -31,16 +31,6 @@
       >
         <i class="icon-github"></i>
       </a>
-
-      <!-- Paypal -->
-      <a
-        href="https://www.paypal.com/paypalme2/markperez1904"
-        target="_blank"
-        aria-label="paypal"
-        rel="noopener"
-      >
-        <i class="icon-paypal"></i>
-      </a>
     </footer>
     <footer class="columns is-centered">
       <small class="column is-narrow">&copy; {{ year }} Mark Perez</small>
