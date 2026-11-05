@@ -4,7 +4,7 @@
 
 [build.environment]
   CI = "1"
-  NODE_VERSION = "22.23.4"
+  NODE_VERSION = "24.22.2"
 
 [build.processing]
   skip_processing = true
