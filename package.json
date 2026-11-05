@@ -1,12 +1,12 @@
 {
   "name": "personal-website",
   "version": "4.0.0",
-  "description": "😎 My personal website built with Nuxt 4, Prismic.io, and the Prismic REST API",
+  "description": "\ud83d\ude0e My personal website built with Nuxt 4, Prismic.io, and the Prismic REST API",
   "author": "Mark Perez",
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.22.3"
   },
   "scripts": {
     "dev": "nuxt dev",
