@@ -8,7 +8,7 @@ through Prismic's REST API with `@prismicio/client`.
 
 - Clone the repo
 - `cd` into the directory
-- Use Node.js 22.23.4 (see `.nvmrc`)
+- Use Node.js 24.22.2 (see `.nvmrc`)
 - run `npm install`
 - run `npm run dev` to view live changes
 

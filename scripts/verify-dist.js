@@ -5,6 +5,10 @@
  * advertises. Nuxt 4's prerenderer should already fail on route errors, but
  * this keeps the old Nuxt 2-era guarantee that a partial site is never
  * published.
+ *
+ * The output directory depends on the Nitro preset:
+ *   - local `nuxi generate` -> .output/public
+ *   - Netlify (netlify-static preset) -> dist
  */
 
 import fs from 'node:fs'
@@ -12,8 +16,18 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
-const distDir = path.resolve(dirname, '..', '.output', 'public')
+const rootDir = path.resolve(dirname, '..')
+const candidates = [
+  path.join(rootDir, '.output', 'public'),
+  path.join(rootDir, 'dist')
+]
+
+const distDir =
+  candidates.find(dir => fs.existsSync(path.join(dir, 'index.html'))) ||
+  candidates[0]
 const errors = []
+
+console.log(`Using generated output: ${path.relative(rootDir, distDir) || '.'}`)
 
 const requiredFiles = [
   'index.html',
@@ -72,9 +86,12 @@ if (errors.length) {
 
 console.log('Generated site looks complete.')
 
-// Netlify projects created before the Nuxt 4 migration may still have their
-// publish directory set to `dist`. Keep a copy there as well as .output/public.
-const legacyDir = path.resolve(dirname, '..', 'dist')
-fs.rmSync(legacyDir, { recursive: true, force: true })
-fs.cpSync(distDir, legacyDir, { recursive: true })
-console.log('Copied output to dist/ for Netlify publish compatibility.')
+// Keep a dist copy for local builds and for Netlify projects whose publish
+// directory is still configured to `dist`. On Netlify the preset already
+// writes dist, so don't remove the directory we just verified.
+const publishDir = path.join(rootDir, 'dist')
+if (path.resolve(distDir) !== path.resolve(publishDir)) {
+  fs.rmSync(publishDir, { recursive: true, force: true })
+  fs.cpSync(distDir, publishDir, { recursive: true })
+  console.log('Copied output to dist/ for Netlify publish compatibility.')
+}
