@@ -26,15 +26,6 @@ post listed in `sitemap.xml` was actually generated.
 
 Netlify runs `npm run generate` and publishes `dist` (see `netlify.toml`).
 
-## Environment variables
-
-| Variable | Purpose |
-| --- | --- |
-| `GOOGLE_ANALYTICS` | Optional GA4 (`G-…`) or Google Ads (`AW-…`) measurement ID. Universal Analytics `UA-…` IDs are ignored because Google shut that service down. |
-| `GOOGLE_ADSENSE_PUBLISHER` | Optional AdSense publisher ID, e.g. `ca-pub-…`. |
-
-Both are exposed as public runtime config and baked into the static build.
-
 ## Project layout
 
 ```
